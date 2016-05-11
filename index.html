@@ -7,12 +7,12 @@
     
     @import url(https://fonts.googleapis.com/css?family=Open+Sans);
     ::-webkit-scrollbar {
-        width: 4px;
+        width: 3px;
     }
     
     ::-webkit-scrollbar-track {
-        background-color: #eaeaea;
-        border-left: 1px solid #ccc;
+        background-color: rgb(34,34,34);
+/*        border-left: 1px solid #ccc;*/
     }
     
     ::-webkit-scrollbar-thumb {
@@ -20,7 +20,27 @@
     }
     
     ::-webkit-scrollbar-thumb:hover {
-        background-color: #aaa;
+        background-color: white;
+    }
+    
+       #btnSearch {
+        text-align: right;
+        display: none;
+    }
+    
+    .sb {
+        text-align: left;
+/*        margin-right:8.5%;*/
+        /*         text-align: left;*/
+        /*    position: relative;*/
+        background: #111111;
+        font-size: 12px;
+        opacity: 1;
+        font-family: 'Raleway', sans-serif;
+        
+        /*        text-align:'center';*/
+        /*    top: 50%;*/
+        /*  transform: translateY(-50%);*/
     }
     
     body {
@@ -28,12 +48,16 @@
         margin: 0px;
         padding: 0px;
         background-color: #f9f9f9;
+        background-color: rgb(34,34,34);
         /*        background-color: black;*/
+        color:#f9f9f9;
         font-family: 'Open Sans';
         font-size: 14px;
+/*
         font-style: normal;
         font-variant: normal;
-        font-weight: 200;
+*/
+        font-weight: 100;
         line-height: 20px;
     }
     
@@ -45,17 +69,23 @@
         position: fixed;
         top: 0px;
         z-index: 2;
+        text-align:center;
+        vertical-align: middle;
+        line-height: 10px;
+        
     }
     
     .title {
-        font-size: 20px;
+        font-size: 14px;
         color: white;
         vertical-align: middle;
-        line-height: 0px;
+        line-height: 10px;
+        
+        font-weight: 100;
     }
     
     b {
-        font-weight: 400;
+        font-weight: 900;
     }
     
     .container {
@@ -73,19 +103,22 @@
         position: absolute;
         overflow: hidden;
         left: 0;
-        width: 28%;
+        width: 22%;
+        background: rgb(34,34,34);
+                border-right: 1px solid rgb(84,84,84);
     }
     
     .right-element {
-        left: 30%;
+        left: 24%;
         padding-top: 24px;
         display: inline-block;
         position: absolute;
         overflow: hidden;
-        width: 70%;
+        width: 74%;
         /*        background: red;*/
         /*        display: inline-block;*/
         /*        position: fixed;*/
+/*        background: rgb(34,34,34);*/
         right: 0;
     }
     
@@ -116,13 +149,16 @@
         margin: 1em 0;
         padding: 0;
     }
-    
+    .imageTiles{
+        vertical-align: middle;
+        line-height:0;
+    }
     .nodeName {
         margin-left: 20px;
         margin-top: 20px;
         font-size: 35px;
-        font-weight: 200;
-        color: #333333;
+        font-weight: 100;
+/*        color: #333333;*/
         /*        border-bottom: 1px solid #333333;*/
     }
     
@@ -138,7 +174,7 @@
         /*        margin-top:14px;*/
         font-size: 16px;
         font-weight: 100;
-        color: #333333;
+/*        color: #333333;*/
     }
     
     .ins,
@@ -147,8 +183,8 @@
         margin-left: 20px;
         /*        margin-top:14px;*/
         font-size: 16px;
-        font-weight: 100;
-        color: #333333;
+/*        font-weight: 100;*/
+/*        color: #333333;*/
     }
     
     u {
@@ -216,37 +252,43 @@
         max-height: 2500px;
         /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
     }
+    
+    #title{
+        margin-left:20%;
+        display: inline-block;
+/*        position:absolute;*/
+/*        text-align:center;*/
+/*        margin:0 auto;*/
+/*        width:20%;*/
+        margin-top:1%;
+        color:white;
+    }
+    #searchBar{
+/*        background:pink;*/
+/*        position:absolute;*/
+        float:right;
+/*        margin-top:1.5%;*/
+/*        width:20%;*/
+/*        margin:0 auto;*/
+        margin-right:3%;
+        color:white;
+    }
+    input#searchBox{
+        background: #333333;
+        border:1px solid #555555;
+        color:white;
+    }
 
 </style>
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
 
-</script>
-
-<script>
-    ! function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0],
-            p = /^http:/.test(d.location) ? 'http' : 'https';
-        if (!d.getElementById(id)) {
-            js = d.createElement(s);
-            js.id = id;
-            js.src = p + '://platform.twitter.com/widgets.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }
-    }(document, 'script', 'twitter-wjs');
-
-</script>
 
 <body>
 
-    <div class="titleDiv"><span class="title"><img src="images/src/icon.png" width="55" alt="dynamoIcon" align="middle">&nbsp&nbsp Dynamo Dictionary</span></div>
+<!--    <div class="titleDiv"><span class="title"><img src="images/src/icon.png" width="55" alt="dynamoIcon" align="middle"></span></div>-->
+    <div class="titleDiv">
+    <div id="title"><span class="title"><img src="images/src/icon.png" width="35" alt="dynamoIcon" align="middle">&nbsp&nbsp Dynamo Dictionary</span></div>
+    <div id="searchBar"><span><input type="text" size="30" id="searchBox" style="text-align:center;" placeholder="search..."></span></div>
+    </div>
     <!--    <hr>-->
     <div class="container">
         <div class="left-element">
