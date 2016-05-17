@@ -248,7 +248,7 @@
              lili.push(qq.Group);
 
              if (matrify == false) {
-                 var tt = d3.select(t.parentNode).append("span").style("position", "relative").style("top", "-10px").attr("class", 'addedText addedText' + r).text(function () {
+                 var tt = d3.select(t.parentNode).append("span").style("position", "relative").style("top", "4px").attr("class", 'addedText addedText' + r).text(function () {
                          return "  " + qq.Name + " ";
                      })
                      .on("mouseover", function () {
@@ -285,7 +285,7 @@
                      } else {
                          ttt = e;
                      }
-                     var catt = d3.select(t.parentNode).append('span').style("position", "relative").style("top", "-10px").attr("class", 'addedText').text(ttt).style("color", color)
+                     var catt = d3.select(t.parentNode).append('span').style("position", "relative").style("top", "4px").attr("class", 'addedText').text(ttt).style("color", color)
                          .on("click", function () {
                              wfalse = true;
                              var bbb = testButton(lili, e, f)
@@ -457,7 +457,7 @@
      if (error) throw error;
      xmldata = data;
 
-     console.log(data)
+     
      allData = [];
 
      data = [].map.call(data.querySelectorAll("Category"), function (cat) {
@@ -715,21 +715,6 @@
                      }
                  })
                  .style("width", "100%")
-                 .style("background-color", function (d) {
-
-                 })
-                 .on("mouseover", function () {
-                     if (d3.select(this).classed("active") == false) {
-
-                     }
-                 })
-                 .on("mouseout", function () {
-                     if (d3.select(this).classed("active") == false) {
-
-                     } else {
-
-                     }
-                 })
                  .on("click", function () {
                      document.getElementById("searchBox").value = "";
 
@@ -811,6 +796,7 @@
              if (obj["Arr"] != undefined) {
                  obj.Arr.forEach(function (k, z) {
                      if (k["FullCategoryName"] != undefined) {
+                         k.it=orderedList.length;
                          orderedList.push(k)
                          var spanner = bk0.append("span").attr("class", "middle")
                      }
@@ -823,7 +809,7 @@
                  var spanner = bk0.append("span").attr("class", "middle")
 
                  var image = getImagePath(obj)
-                 spanner.append("img").attr("src", image).attr("width", 20).style("background-color", d3.rgb(34, 34, 34)).attr("align", "middle").attr("onerror", "this.onerror=null;this.src='images/src/icon_offset.png';")
+                 spanner.append("img").attr("src", image).attr("class","copy"+obj.it).attr("width", 20).style("background-color", d3.rgb(34, 34, 34)).attr("align", "middle").attr("onerror", "this.onerror=null;this.src='images/src/icon_offset.png';")
 
                  function override(oo) {
                      var tl = "(";
@@ -873,7 +859,7 @@
 
      var bod = leftdiv;
 
-     addAccordion(mainlist, bod, 1)
+  addAccordion(mainlist, bod, 1)
      mainPages();
 
  });
@@ -887,21 +873,25 @@
  }
 
  function mainPages() {
+     
      entryText();
 
      var imdiv = rightdiv.append("div").attr("class", "imageTiles").style("margin-left", "3%").style("margin-right", "1%")
 
      orderedList.forEach(function (d, i) {
          var image = getImagePath(d)
-
-         var tile = imdiv.append("span").append("img").attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
+         var newim=(d3.select(".copy"+i)[0][0].cloneNode(true))
+         var tile = imdiv.append("span").attr("class","sp"+i);
+         var theimage=tile[0][0].appendChild(newim)
+         theimage.className="im"+i;
+         d3.select(".im"+i).attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
+         })
+         
          d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
 
-         if (i == orderedList.length - 1) {
-             d3.selectAll(".imageTiles").selectAll("img").attr("src", function (d) {
-                 return getImagePath(d);
-             }).attr("onerror", "this.onerror=null;this.src='images/src/icon_offset.png';")
 
+             d3.selectAll(".imageTiles")
+                 .selectAll("img")
              .on("mouseover", function (d, j) {
                      d3.select(this).style("background-color", "steelblue")
 
@@ -936,13 +926,11 @@
                          d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
 
                      }
-                     console.log(nodelevel)
-
                  })
                  .on("click", function (d) {
-                    d3.select(this).style("background-color", d3.rgb(34, 34, 34))
+                     d3.select(this).style("background-color", d3.rgb(34, 34, 34))
                      wfalse = true;
-                     console.log(d)
+                     
                      if (d.FullCategoryName != undefined) {
                          nodelevel = true;
                      } else {
@@ -957,8 +945,8 @@
                  });
 
              d3.selectAll("#wait").transition().duration(800).style("opacity", 0).delay(800).style("pointer-events", "none")
-         }
-     })
+
+
  }
 
  function getImagePath(ob) {
@@ -1052,7 +1040,7 @@
          var strr = hitob.inDepth;
 
          d3.select(".inDepth").append("html").html("&nbsp&nbsp").append("text").text(strr).style("color", "gray").append('html').html("<br><br><hr><br>")
-         var sampImage = "images/examples/pointByCoordinates.png";
+
          d3.select(".exampleFile").html("<hr><br><b>Example File:</b>&nbsp&nbsp&nbsp")
              .append("img").attr("hspace", 2).attr("width", "20px").attr("src", iconimage2).style("opacity", .25)
              .on("mouseover", function () {
@@ -1092,7 +1080,7 @@
              .on("click", function () {
 
                  var fp = hitob.folderPath;
-                 var dl = "/data/EXAMPLES/" + fp + "/dyn/" + hitob.dynFile[0] + ".dyn";
+                 var dl = "./data/EXAMPLES/" + fp + "/dyn/" + hitob.dynFile[0] + ".dyn";
 
                  var linker = $('<a href="' + dl + '" id="dl" download></a>').appendTo('body').click();
                  document.getElementById('dl').click();
@@ -1100,7 +1088,7 @@
          var impaths = hitob.imageFile;
          impaths.forEach(function (z, v) {
              var fp = hitob.folderPath;
-             var imp = "/data/EXAMPLES/" + fp + "/img/" + z + ".jpg";
+             var imp = "./data/EXAMPLES/" + fp + "/img/" + z + ".jpg";
              d3.select(".exampleFile").append('html').html("<br>").append("img").attr("src", imp).attr("width", "80%").attr("align", "middle")
          })
 
@@ -1147,7 +1135,7 @@
              })
          })
      }
-     console.log(related.length)
+     
 
      if (related.length > 0) {
          d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
