@@ -1,10 +1,9 @@
     ::-webkit-scrollbar {
-        width: 3px;
+        width: 6px;
     }
     
     ::-webkit-scrollbar-track {
-        background-color: rgb(34,34,34);
-/*        border-left: 1px solid #ccc;*/
+        background-color: rgb(34, 34, 34);
     }
     
     ::-webkit-scrollbar-thumb {
@@ -15,24 +14,24 @@
         background-color: white;
     }
     
-       #btnSearch {
+    #btnSearch {
         text-align: right;
         display: none;
     }
-    
+    a {
+    color: white;
+        text-decoration: none;
+}
+.graytext{
+    color:gray;
+    font-size:15px;
+}
     .sb {
         text-align: left;
-/*        margin-right:8.5%;*/
-        /*         text-align: left;*/
-        /*    position: relative;*/
         background: #111111;
         font-size: 12px;
         opacity: 1;
         font-family: 'Raleway', sans-serif;
-        
-        /*        text-align:'center';*/
-        /*    top: 50%;*/
-        /*  transform: translateY(-50%);*/
     }
     
     body {
@@ -40,15 +39,11 @@
         margin: 0px;
         padding: 0px;
         background-color: #f9f9f9;
-        background-color: rgb(34,34,34);
+        background-color: rgb(34, 34, 34);
         /*        background-color: black;*/
-        color:#f9f9f9;
+        color: #f9f9f9;
         font-family: 'Open Sans';
-        font-size: 14px;
-/*
-        font-style: normal;
-        font-variant: normal;
-*/
+        font-size: 15px;
         font-weight: 100;
         line-height: 20px;
     }
@@ -56,31 +51,29 @@
     .titleDiv {
         padding-top: 20px;
         padding-left: 20px;
-/*        margin-top:20px;*/
-/*        margin-left:10px;*/
+        /*        margin-top:20px;*/
+        /*        margin-left:10px;*/
         width: 100%;
         height: 5.5%;
         background: #111111;
         position: fixed;
         top: 0px;
         z-index: 2;
-        text-align:center;
+        text-align: center;
         vertical-align: middle;
         line-height: 10px;
-        
     }
     
     .title {
-        font-size: 14px;
-        color: white;
+        font-size: 26px;
+        color: gray;
         vertical-align: middle;
         line-height: 10px;
-        
         font-weight: 100;
     }
     
     b {
-        font-weight: 900;
+        font-weight: 100;
     }
     
     .container {
@@ -93,14 +86,16 @@
     }
     
     .left-element {
+        /*        resize:horizontal;*/
+        white-space: nowrap;
         margin-top: 0.3%;
         display: inline-block;
         position: absolute;
         overflow: hidden;
         left: 0;
         width: 22%;
-        background: rgb(34,34,34);
-                border-right: 1px solid rgb(84,84,84);
+        background: rgb(34, 34, 34);
+        border-right: 1px solid rgb(84, 84, 84);
     }
     
     .right-element {
@@ -109,12 +104,14 @@
         display: inline-block;
         position: absolute;
         overflow: hidden;
-        width: 74%;
+        width: 76%;
         /*        background: red;*/
         /*        display: inline-block;*/
         /*        position: fixed;*/
-/*        background: rgb(34,34,34);*/
-        right: 0;
+        /*        background: rgb(34,34,34);*/
+        /*        padding-right:10%;*/
+        /*        right:10%;*/
+        /*        right: 100px;*/
     }
     
     div.left-element {
@@ -129,11 +126,11 @@
     
     div.right-element {
         height: 92%;
-        overflow: hidden;
+        overflow: scroll;
     }
     
     div.right-element:hover {
-        overflow: auto;
+        /*        overflow: s;*/
     }
     
     hr {
@@ -142,19 +139,26 @@
         border: 0;
         border-top: 1px solid #ccc;
         margin: 1em 0;
+        /*        margin-right:5%;*/
         padding: 0;
     }
-    .imageTiles{
+    
+    .imageTiles {
         vertical-align: middle;
-/*        line-height:0;*/
+        padding-right:4%;
+        padding-bottom:4%;
     }
+    
+    .im:hover {
+        cursor: pointer;
+    }
+    
     .nodeName {
         margin-left: 20px;
+        margin-right: 50px;
         margin-top: 20px;
-        font-size: 35px;
+        font-size: 28px;
         font-weight: 100;
-/*        color: #333333;*/
-        /*        border-bottom: 1px solid #333333;*/
     }
     
     .nodeDesc,
@@ -166,20 +170,20 @@
     .inDepth {
         margin-left: 20px;
         line-height: 25px;
-        /*        margin-top:14px;*/
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 100;
-/*        color: #333333;*/
+        padding-right:4%;
     }
     
     .ins,
-    .outs,
-    .seeAlso {
+    .outs {
         margin-left: 20px;
-        /*        margin-top:14px;*/
-        font-size: 16px;
-/*        font-weight: 100;*/
-/*        color: #333333;*/
+        font-size: 15px;
+    }
+.seeAlso{
+        margin-left: 20px;
+        font-size: 15px;
+/*    padding-top:25%;*/
     }
     
     u {
@@ -187,9 +191,7 @@
         border-bottom: 50px solid black;
     }
     
-    span {
-        /*      letter-spacing: 1px;  */
-    }
+    span {}
     
     .middle > * {
         vertical-align: middle;
@@ -199,46 +201,119 @@
         vertical-align: middle;
     }
     
-    button.accordion {
+    button.accordion,
+    button.accordionM {
         display: inline;
-        background-color: #eee;
-        color: #444;
         cursor: pointer;
         padding: 0px;
-        /*        width: 28%;*/
         text-align: left;
         border: none;
         outline: none;
-        /*        height:500px;*/
         transition: 0.3s ease-in-out;
     }
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     
-    button.accordion.active,
-    button.accordion:hover {
-        background-color: #ddd;
+    .button1,
+    .button0 {
+        background-color: rgb(34, 34, 34);
+        color: white;
+    }
+    
+    .button1.active,
+    .button0.active {
+        background-color: rgb(74, 74, 74);
+    }
+    
+    .button1:hover,
+    .button0:hover {
+        background-color: rgb(114, 114, 114);
+    }
+    
+    .button2 {
+        background-color: rgb(140, 140, 140);
+        color: rgb(34, 34, 34);
+    }
+    
+    .button2.active {
+        background-color: rgb(170, 170, 170);
+    }
+    
+    .button2:hover {
+        background-color: rgb(200, 200, 200);
+    }
+    
+    .button3 {
+        background-color: rgb(210, 210, 210);
+        color: rgb(34, 34, 34);
+    }
+    
+    .button3.active {
+        background-color: rgb(240, 240, 240);
+    }
+    
+    .button3:hover {
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .button4 {
+        background-color: rgb(255, 255, 255);
+        color: rgb(34, 34, 34);
+    }
+    
+    .button4.active {
+        background-color: rgb(230, 230, 230);
+    }
+    
+    .button4:hover {
+        background-color: rgb(210, 210, 210);
+    }
+    
+    .button5 {
+        background-color: #666;
+    }
+    
+    .button5.active {
+        background-color: rgb(150, 150, 150);
+    }
+    
+    .button5:hover {
+        background-color: #D0D0D0;
     }
     
     button.accordion:after {
-/*                content: '\02795';*/
-        /* Unicode character for "plus" sign (+) */
         font-size: 6px;
         color: #fff;
         float: right;
         margin-left: 5px;
+        z-index: 10;
     }
     
-    button.accordion.active:after {
-/*                content: "\2796";*/
-        /* Unicode character for "minus" sign (-) */
+    button.accordion.active:after {}
+    
+    #load {
+        display: none;
+    }
+    
+    #wait {
+        background-color: #222;
+        width: 100%;
+        height: 100%;
+        margin-top: 4.5%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        padding-left: 4.5%;
+        padding-top: 25%;
+        opacity: 0.85;
+        font-size: 30px;
+        line-height: 0px;
     }
     
     div.panel {
         padding: 0 0px;
-        /*        background-color: white;*/
         max-height: 0;
         overflow: hidden;
-        /*                transition: 0.3s ease-in-out;*/
         opacity: 0;
     }
     
@@ -248,34 +323,23 @@
         /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
     }
     
-    #title{
-        margin-right:20%;
+    #title {
+        margin-right: 20%;
         display: inline-block;
-/*        position:absolute;*/
-/*        text-align:center;*/
-/*        margin:0 auto;*/
-/*        width:20%;*/
-        margin-top:1%;
-        color:white;
+        margin-top: 0.5%;
+        color: gray;
+
     }
-    #searchBar{
-        
-/*        background:pink;*/
-/*        position:absolute;*/
-        float:left;
-/*        margin-top:1.5%;*/
-/*        width:20%;*/
-/*        margin:0 auto;*/
-        margin-right:3%;
-/*        color:white;*/
+    
+    #searchBar {
+        float: left;
+        margin-right: 3%;
     }
-    input#searchBox{
-/*        background: #333333;*/
-        margin-left:15px;
-/*        margin-top:5px;*/
+    
+    input#searchBox {
+        margin-left: 15px;
         background: #ffffff;
-        border:1px solid #555555;
+        border: 1px solid #555555;
         border-radius: 10px;
-/*        border: 1px #000 solid;*/
-        color:#555555;
+        color: #555555;
     }
