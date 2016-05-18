@@ -11,14 +11,20 @@
  var wfalse = false;
  var maxhier = 0;
  var rightdiv = d3.select(".right-element")
- var matrify = true;
+ var matrify = false;
  var sbb = d3.select("#searchBar").select("span")
  addIcon("images/icons/list-01.svg", "list");
  addIcon("images/icons/matrix-01.svg", "matrix");
 
+// Define the div for the tooltip
+var ttDiv = d3.select("body").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
+
+
  function addIcon(ic, c) {
      var op = 0.25;
-     if (c == "matrix") {
+     if (c == "list") {
          op = 1;
      }
      sbb.append("img").attr("class", c).attr("hspace", 6).attr("width", "15px").attr("src", ic).style("opacity", op).style("float", "right").style("margin-top", "10px")
@@ -104,8 +110,9 @@
 
      })
 
- .on("click", function () {
-     goHome();
+ .on("click", function (d) {
+     endLoad({"FullCategoryName":""});
+     goHome(true);
  })
 
  function xmlToJson(xml) {
@@ -375,7 +382,7 @@
      }
  };
 
- function goHome() {
+ function goHome(reset) {
      document.getElementById("searchBox").value = "";
      st = "";
      searchSquish();
@@ -384,6 +391,34 @@
 
      for (var h = 0; h < 8; h++) {
          var s = d3.selectAll(".button" + h + "");
+     }
+
+     //          entryText();
+     if (reset == true) {
+         var imdiv = d3.selectAll(".imageTiles").style("display", "none").style("pointer-events", "none")
+         var loaddiv = d3.selectAll(".pageLoad")
+
+         loaddiv.html(`
+             <br><br><div class='imgHL'>
+                <a href='http://dynamobim.org/' target='_blank'><img src='images/home/dynamobim.jpg' width='100%'>
+                <div class='text_over_imageL'>Community</div></a>
+            </div>
+            <div class='imgHR'>
+                <a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'><img src='images/home/dynamostudio.jpg' width='100%'>
+                <div class='text_over_imageR'>Product</div></a>
+            </div>
+            <div id='clearer'><br></div>
+            <div class='imgHL'>
+                <a href='http://dynamoprimer.com/' target='_blank'><img src='images/home/dynamoprimer.jpg' width='100%'></a>
+                <div class='text_over_imageL'>Learning</div>
+            </div>
+            <div class='imgHR'>
+                <a href='https://github.com/DynamoDS/DynamoPrimer' target='_blank'><img src='images/home/dynamogithub.jpg' width='100%'></a>
+                <div class='text_over_imageR'>Development</div>
+            </div>
+            <div id='clearer'></div> 
+             `)
+         d3.select(".seeAlso").html("")
      }
  }
 
@@ -395,8 +430,9 @@
      d3.selectAll(".nodeHier").html("")
      d3.selectAll(".inDepth").html("")
      d3.selectAll(".exampleFile").html("")
+         //     if(reset==true){
      var tname = d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
-
+     //     }
      d3.selectAll(".imageTiles")
      if (st == "") {
          nameDiv("Welcome to the Dynamo Dictionary!")
@@ -447,6 +483,7 @@
      })
 
      function handleClick() {
+         endLoad({"FullCategoryName":""});
          imcount = [];
          st = (document.getElementById("searchBox").value).split(" ");
 
@@ -457,7 +494,6 @@
      if (error) throw error;
      xmldata = data;
 
-     
      allData = [];
 
      data = [].map.call(data.querySelectorAll("Category"), function (cat) {
@@ -716,6 +752,7 @@
                  })
                  .style("width", "100%")
                  .on("click", function () {
+                     endLoad(obj);
                      document.getElementById("searchBox").value = "";
 
                      imcount = [];
@@ -758,13 +795,13 @@
                                  if (iteration > 1) {
                                      imageActivate(q, w, 800)
                                  } else {
-                                     imageActivate(q, w, 0)
+                                     imageActivate(q, w, 800)
                                  }
                              } else {
                                  if (iteration > 1) {
                                      imageDeactivate(q, w, 800)
                                  } else {
-                                     imageDeactivate(q, w, 0)
+                                     imageDeactivate(q, w, 800)
                                  }
                              }
                              if (w == ims[0].length - 1) {
@@ -772,6 +809,7 @@
                              }
                          })
                      } else {
+                         nodelevel=true;
                          d3.selectAll(".imageTiles").selectAll("img").attr("width", "0")
                          var ddd = d3.select(this);
                          var displayObject = (obj)
@@ -796,7 +834,7 @@
              if (obj["Arr"] != undefined) {
                  obj.Arr.forEach(function (k, z) {
                      if (k["FullCategoryName"] != undefined) {
-                         k.it=orderedList.length;
+                         k.it = orderedList.length;
                          orderedList.push(k)
                          var spanner = bk0.append("span").attr("class", "middle")
                      }
@@ -809,7 +847,7 @@
                  var spanner = bk0.append("span").attr("class", "middle")
 
                  var image = getImagePath(obj)
-                 spanner.append("img").attr("src", image).attr("class","copy"+obj.it).attr("width", 20).style("background-color", d3.rgb(34, 34, 34)).attr("align", "middle").attr("onerror", "this.onerror=null;this.src='images/src/icon_offset.png';")
+                 spanner.append("img").attr("src", image).attr("class", "copy" + obj.it).attr("width", 20).style("background-color", d3.rgb(34, 34, 34)).attr("align", "middle").attr("onerror", "this.onerror=null;this.src='images/src/icon_offset.png';")
 
                  function override(oo) {
                      var tl = "(";
@@ -859,7 +897,7 @@
 
      var bod = leftdiv;
 
-  addAccordion(mainlist, bod, 1)
+     addAccordion(mainlist, bod, 1)
      mainPages();
 
  });
@@ -872,80 +910,120 @@
      d3.select(".nodeDesc").append("html").html(entryText).append('html').html("<br><hr>")
  }
 
+ function endLoad(oo) {
+     d3.selectAll(".pageLoad").html("");
+     d3.selectAll(".imageTiles").style("display", "inline").style("pointer-events", "all")
+
+     if(oo.FullCategoryName!=""){
+     d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
+     }
+     else{
+        d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>"); 
+     }
+     if(oo==undefined){
+        d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");  
+     }
+ }
+
  function mainPages() {
-     
+
      entryText();
 
-     var imdiv = rightdiv.append("div").attr("class", "imageTiles").style("margin-left", "3%").style("margin-right", "1%")
+     var imdiv = rightdiv.append("div").attr("class", "outer").append("div").style("display", "none").style("pointer-events", "none").attr("class", "imageTiles")
+     var loaddiv = rightdiv.append("div").attr("class", "pageLoad")
+
+     loaddiv.html(`
+             <br><br><div class='imgHL'>
+                <a href='http://dynamobim.org/' target='_blank'><img src='images/home/dynamobim.jpg' width='100%'>
+                <div class='text_over_imageL'>Community</div></a>
+            </div>
+            <div class='imgHR'>
+                <a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'><img src='images/home/dynamostudio.jpg' width='100%'>
+                <div class='text_over_imageR'>Product</div></a>
+            </div>
+            <div id='clearer'><br></div>
+            <div class='imgHL'>
+                <a href='http://dynamoprimer.com/' target='_blank'><img src='images/home/dynamoprimer.jpg' width='100%'></a>
+                <div class='text_over_imageL'>Learning</div>
+            </div>
+            <div class='imgHR'>
+                <a href='https://github.com/DynamoDS/DynamoPrimer' target='_blank'><img src='images/home/dynamogithub.jpg' width='100%'></a>
+                <div class='text_over_imageR'>Development</div>
+            </div>
+            <div id='clearer'></div> 
+             `)
 
      orderedList.forEach(function (d, i) {
          var image = getImagePath(d)
-         var newim=(d3.select(".copy"+i)[0][0].cloneNode(true))
-         var tile = imdiv.append("span").attr("class","sp"+i);
-         var theimage=tile[0][0].appendChild(newim)
-         theimage.className="im"+i;
-         d3.select(".im"+i).attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
+         var newim = (d3.select(".copy" + i)[0][0].cloneNode(true))
+         var tile = imdiv.append("span").attr("class", "sp" + i);
+         var theimage = tile[0][0].appendChild(newim)
+         theimage.className = "im" + i;
+         d3.select(".im" + i).attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
+     })
+
+     //     d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
+
+     d3.selectAll(".imageTiles")
+         .selectAll("img")
+         .on("mouseover", function (d, j) {
+             d3.select(this).style("background-color", "steelblue")
+
+             d3.select(".addedText" + j).style("color", "steelblue")
+             if (matrify == true) {
+                 var tname = "<b>Node:&nbsp&nbsp</b>" + d.Name + "<br><br>";
+
+                 if (d3.select(".nodeName").selectAll("text").text() == "Welcome to the Dynamo Dictionary!") {
+                     tname = "<b>Node:&nbsp&nbsp</b>" + d.Name + "<br><br>";
+                 }
+                 d3.selectAll(".seeAlso").html(tname);
+             }
          })
-         
-         d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
+         .on("mouseout", function (d, j) {
+//         console.log(nodelevel)
+             d3.select(".addedText" + j).style("color", "white")
+             d3.select(this).style("background-color", d3.rgb(34, 34, 34))
+    
+             tname = "<b>Nodes</b><br><br>";
+       
+             if (d3.select(".nodeName").selectAll("text").text() == "Welcome to the Dynamo Dictionary!") {
 
+             }
 
-             d3.selectAll(".imageTiles")
-                 .selectAll("img")
-             .on("mouseover", function (d, j) {
-                     d3.select(this).style("background-color", "steelblue")
+             if (related.length > 0) {
 
-                     d3.select(".addedText" + j).style("color", "steelblue")
-                     if (matrify == true) {
-                         var tname = "<b>Node:&nbsp&nbsp</b>" + d.Name + "<br><br>";
+                 d3.selectAll(".seeAlso").html(tname);
 
-                         if (d3.select(".nodeName").selectAll("text").text() == "Welcome to the Dynamo Dictionary!") {
-                             tname = "<b>Node:&nbsp&nbsp</b>" + d.Name + "<br><br>";
-                         }
-                         d3.selectAll(".seeAlso").html(tname);
-                     }
-                 })
-                 .on("mouseout", function (d, j) {
-                     d3.select(".addedText" + j).style("color", "white")
-                     d3.select(this).style("background-color", d3.rgb(34, 34, 34))
+             } else {
 
-                     tname = "<b>Nodes</b><br><br>";
-                     if (d3.select(".nodeName").selectAll("text").text() == "Welcome to the Dynamo Dictionary!") {
+                 d3.selectAll(".seeAlso").html("");
+             }
+             if (nodelevel == false) {
+                 d3.selectAll(".seeAlso").html(tname);
 
-                     }
+             }
+         else{
+             d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
+         }
+         })
+         .on("click", function (d) {
+             d3.select(this).style("background-color", d3.rgb(34, 34, 34))
+             wfalse = true;
 
-                     if (related.length > 0) {
+             if (d.FullCategoryName != undefined) {
+                 nodelevel = true;
+             } else {
+                 related = [];
+                 nodelevel = false;
+             }
+             var theb = testNodeButton(d)
 
-                         d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
+             $('.right-element').scrollTop(0);
 
-                     } else {
+             theb.click();
+         });
 
-                         d3.selectAll(".seeAlso").html("");
-                     }
-                     if (nodelevel == false) {
-                         d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
-
-                     }
-                 })
-                 .on("click", function (d) {
-                     d3.select(this).style("background-color", d3.rgb(34, 34, 34))
-                     wfalse = true;
-                     
-                     if (d.FullCategoryName != undefined) {
-                         nodelevel = true;
-                     } else {
-                         related = [];
-                         nodelevel = false;
-                     }
-                     var theb = testNodeButton(d)
-
-                     $('.right-element').scrollTop(0);
-
-                     theb.click();
-                 });
-
-             d3.selectAll("#wait").transition().duration(800).style("opacity", 0).delay(800).style("pointer-events", "none")
-
+     d3.selectAll("#wait").transition().duration(800).style("opacity", 0).delay(800).style("pointer-events", "none")
 
  }
 
@@ -1028,8 +1106,10 @@
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
                  d3.select("body").style("cursor", "pointer");
+             popUp(this,"Edit Text")
              })
              .on("mouseout", function () {
+             popOut();
                  d3.select(this).style("opacity", .25);
                  d3.select("body").style("cursor", "default");
              })
@@ -1038,6 +1118,22 @@
 
              })
          var strr = hitob.inDepth;
+         
+         function popUp(ob,text){
+             var re=d3.select(".right-element")[0][0].scrollTop
+//             console.log(re)
+             ttDiv.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            	ttDiv.html(text)	
+                .style("left", (d3.event.pageX)-100 + "px")		
+                .style("top", (ob.offsetTop-re+ 28) + "px");	
+         }
+         function popOut(){
+             ttDiv.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+         }
 
          d3.select(".inDepth").append("html").html("&nbsp&nbsp").append("text").text(strr).style("color", "gray").append('html').html("<br><br><hr><br>")
 
@@ -1046,10 +1142,19 @@
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
                  d3.select("body").style("cursor", "pointer");
+                popUp(this,"Edit Example File")
+             
+             
              })
              .on("mouseout", function () {
+                 
+                 popOut();
+                 
+                 
                  d3.select(this).style("opacity", .25);
                  d3.select("body").style("cursor", "default");
+             
+             
              })
              .on("click", function () {
                  alert("functionality not yet available.")
@@ -1059,10 +1164,12 @@
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
                  d3.select("body").style("cursor", "pointer");
+             popUp(this,"Add Example File")
              })
              .on("mouseout", function () {
                  d3.select(this).style("opacity", .25);
                  d3.select("body").style("cursor", "default");
+             popOut();
              })
              .on("click", function () {
                  alert("functionality not yet available.")
@@ -1072,10 +1179,12 @@
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
                  d3.select("body").style("cursor", "pointer");
+             popUp(this,"Download Example File")
              })
              .on("mouseout", function () {
                  d3.select(this).style("opacity", .25);
                  d3.select("body").style("cursor", "default");
+             popOut();
              })
              .on("click", function () {
 
@@ -1088,7 +1197,7 @@
          var impaths = hitob.imageFile;
          impaths.forEach(function (z, v) {
              var fp = hitob.folderPath;
-             var imp = "./data/EXAMPLES/" + fp + "/img/" + z + ".jpg";
+             var imp = "./data/EXAMPLES/" + fp + "/img/JPEG/" + z + ".jpg";
              d3.select(".exampleFile").append('html').html("<br>").append("img").attr("src", imp).attr("width", "80%").attr("align", "middle")
          })
 
@@ -1135,7 +1244,6 @@
              })
          })
      }
-     
 
      if (related.length > 0) {
          d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
@@ -1193,9 +1301,9 @@
              ttt = e;
          }
          if (f == 0) {
-             var catt = d3.select(".nodeHier").append('span').text(" Home > ").style("color", "gray")
+             var catt = d3.select(".nodeHier").append('span').text(" Root > ").style("color", "gray")
                  .on("click", function () {
-                     goHome();
+                     goHome(false);
                      related = [];
                      nodelevel = false;
                      d3.select('body').style("cursor", "default")
