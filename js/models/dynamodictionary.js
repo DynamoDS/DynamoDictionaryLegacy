@@ -65,9 +65,9 @@ var ttDiv = d3.select("body").append("div")
 
  rightdiv.append("div").attr("class", "nodeIn")
  rightdiv.append("div").attr("class", "nodeOut")
-
- rightdiv.append("div").attr("class", "exampleFile")
  rightdiv.append("div").attr("class", "inDepth")
+ rightdiv.append("div").attr("class", "exampleFile")
+ 
  rightdiv.append("div").attr("class", "seeAlso")
 
  function sortArrayOfObjectsByKey(arr, key) {
@@ -1101,7 +1101,7 @@ var ttDiv = d3.select("body").append("div")
          var iconimage1 = "images/icons/download.svg";
          var iconimage2 = "images/icons/edit.svg";
          var iconimage3 = "images/icons/add.svg";
-         d3.select(".inDepth").html("<b><br>In Depth:</b>&nbsp&nbsp")
+         d3.select(".inDepth").html("<hr><b><br>In Depth:</b>&nbsp&nbsp&nbsp")
              .append("img").attr("hspace", 2).attr("width", "20px").attr("src", iconimage2).style("opacity", .25)
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
@@ -1137,7 +1137,7 @@ var ttDiv = d3.select("body").append("div")
 
          d3.select(".inDepth").append("html").html("&nbsp&nbsp").append("text").text(strr).style("color", "gray").append('html').html("<br><br><hr><br>")
 
-         d3.select(".exampleFile").html("<hr><br><b>Example File:</b>&nbsp&nbsp&nbsp")
+         d3.select(".exampleFile").html("<br><b>Example File:</b>&nbsp&nbsp")
              .append("img").attr("hspace", 2).attr("width", "20px").attr("src", iconimage2).style("opacity", .25)
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
