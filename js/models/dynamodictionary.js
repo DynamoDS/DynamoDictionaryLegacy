@@ -448,7 +448,7 @@ var ttDiv = d3.select("body").append("div")
 
      ims[0].forEach(function (q, w) {
          var qq = d3.select(q).data()[0];
-         checkString = qq.Name + " " + qq.FullCategoryName + " " + qq.Description + " " + qq.SearchTags;
+         checkString = qq.Name + " " + qq.FullCategoryName + " " + qq.Description + " " + qq.SearchTags + " " + qq.CategorySearch;
          qq.Categories.forEach(function (d, i) {
              checkString += " " + d
          })
@@ -504,11 +504,12 @@ var ttDiv = d3.select("body").append("div")
              var nd = {};
              nd["FullCategoryName"] = cn.querySelector("FullCategoryName").textContent;
              nd["Categories"] = nd["FullCategoryName"].split(".")
+             
 
              nd["TopCategory"] = nd["Categories"][0];
              nd["activated"] = true;
              nd["Name"] = cn.querySelector("Name").textContent;
-
+             nd["CategorySearch"] = [nd["FullCategoryName"],nd["Name"]].join('.')
              nd["Group"] = cn.querySelector("Group").textContent;
 
              nd["Description"] = cn.querySelector("Description").textContent;
