@@ -1,9 +1,8 @@
-var inDepthObj = {
-    "nodes": [
+[
         {
             "Name": "Code Block",
             "description": "Allows for DesignScript code to be authored directly",
-            "categories":["Core","Input"],
+            "categories": ["Core", "Input"],
             "folderPath": "01_codeBlock",
             "dynFile": ["00_codeBlock"],
             "imageFile": ["01_codeBlock"],
@@ -12,7 +11,7 @@ var inDepthObj = {
         }, {
             "Name": "Number Slider",
             "description": "A slider that produces numeric values.",
-            "categories":["Core","Input"],
+            "categories": ["Core", "Input"],
             "folderPath": "02_numberSlider",
             "dynFile": ["01_numberSlider"],
             "imageFile": ["01_numberSlider"],
@@ -21,7 +20,7 @@ var inDepthObj = {
         }, {
             "Name": "Integer Slider",
             "description": "A slider that produces integer values.",
-            "categories":["Core","Input"],
+            "categories": ["Core", "Input"],
             "folderPath": "02_numberSlider",
             "dynFile": ["02_integerSlider"],
             "imageFile": ["02_integerSlider"],
@@ -30,7 +29,7 @@ var inDepthObj = {
         }, {
             "Name": "ByCoordinates (x, y)",
             "description": "Form a Point in the XY plane given two 2 cartesian coordinates. The Z component is 0.",
-            "categories":["Geometry","Point"],
+            "categories": ["Geometry", "Point"],
             "folderPath": "03_point",
             "dynFile": ["01_ByCoordinates", "02_ByCoordinates"],
             "imageFile": ["01_pointByCoordinates", "02_ByCoordinates"],
@@ -45,7 +44,7 @@ var inDepthObj = {
         }, {
             "Name": "ByCylindricalCoordinates",
             "description": "Form a Point in the given coordinate system given its position in cylindrical coordinates.",
-            "categories":["Geometry","Point"],
+            "categories": ["Geometry", "Point"],
             "folderPath": "03_point",
             "dynFile": ["03_ByCylindricalCoordinates"],
             "imageFile": ["03_ByCylindricalCoordinates"],
@@ -66,7 +65,7 @@ var inDepthObj = {
         }, {
             "Name": "BySphericalCoordinates",
             "description": "Form a Point in the given coordinate system given its position in spherical coordinates.",
-            "categories":["Geometry","Point"],
+            "categories": ["Geometry", "Point"],
             "folderPath": "03_point",
             "dynFile": ["04_BySphericalCoordinates"],
             "imageFile": ["04_BySphericalCoordinates"],
@@ -87,7 +86,7 @@ var inDepthObj = {
         }, {
             "Name": "ByCartesianCoordinates",
             "description": "Form a Point in the given coordinate system with 3 cartesian coordinates",
-            "categories":["Geometry","Point"],
+            "categories": ["Geometry", "Point"],
             "folderPath": "03_point",
             "dynFile": ["05_ByCartesianCoordinates"],
             "imageFile": ["05_ByCartesianCoordinates"],
@@ -109,7 +108,7 @@ var inDepthObj = {
         {
             "Name": "ByCenterPointRadiusNormal",
             "description": "Creates a Circle with specified center Point, radius, and normal direction.",
-            "categories":["Geometry","Circle"],
+            "categories": ["Geometry", "Circle"],
             "folderPath": "04_circle",
             "dynFile": ["ByCenterPointRadiusNormal"],
             "imageFile": ["09_ByCenterPointRadiusNormal"],
@@ -127,7 +126,7 @@ var inDepthObj = {
         }, {
             "Name": "ByPlaneRadius",
             "description": "Create a Circle centered at the input Plane origin (root), lying in the input Plane, with given radius.",
-            "categories":["Geometry","Circle"],
+            "categories": ["Geometry", "Circle"],
             "folderPath": "04_circle",
             "dynFile": ["ByPlaneRadius"],
             "imageFile": ["10_ByPlaneRadius"],
@@ -142,7 +141,7 @@ var inDepthObj = {
         }, {
             "Name": "ByCenterPointRadius",
             "description": "Creates a Circle with input center Point and radius in the world XY plane, with world Z as normal.",
-            "categories":["Geometry","Circle"],
+            "categories": ["Geometry", "Circle"],
             "folderPath": "04_circle",
             "dynFile": ["ByCenterPointRadius"],
             "imageFile": ["11_ByCenterPointRadius"],
@@ -157,7 +156,7 @@ var inDepthObj = {
         }, {
             "Name": "ByThreePoints",
             "description": "Create a Circle passing through three input Points.",
-            "categories":["Geometry","Circle"],
+            "categories": ["Geometry", "Circle"],
             "folderPath": "04_circle",
             "dynFile": ["ByThreePoints"],
             "imageFile": ["12_ByThreePoints"],
@@ -175,7 +174,7 @@ var inDepthObj = {
         }, {
             "Name": "ByBestFitThroughPoints",
             "description": "Best fit Circle through Points",
-            "categories":["Geometry","Circle"],
+            "categories": ["Geometry", "Circle"],
             "folderPath": "04_circle",
             "dynFile": ["ByBestFitThroughPoints"],
             "imageFile": ["13_ByBestFitThroughPoints"],
@@ -187,7 +186,7 @@ var inDepthObj = {
         }, {
             "Name": "ByPoints",
             "description": "Construct a Polygon Curve by connecting Points.",
-            "categories":["Geometry","Polygon"],
+            "categories": ["Geometry", "Polygon"],
             "folderPath": "05_polygon",
             "dynFile": ["ByPoints"],
             "imageFile": ["14_ByPoints"],
@@ -199,7 +198,7 @@ var inDepthObj = {
         }, {
             "Name": "RegularPolygon",
             "description": "Construct a Polygon Curve by connecting Points.",
-            "categories":["Geometry","Polygon"],
+            "categories": ["Geometry", "Polygon"],
             "folderPath": "05_polygon",
             "dynFile": ["RegularPolygon"],
             "imageFile": ["15_RegularPolygon"],
@@ -214,7 +213,7 @@ var inDepthObj = {
         }, {
             "Name": "ByWidthLength (width, length)",
             "description": "Create a Rectangle centered at the WCS origin in the WCS XY Plane, with specified width (X Axis length), and length (Y Axis length).",
-            "categories":["Geometry","Rectangle"],
+            "categories": ["Geometry", "Rectangle"],
             "folderPath": "06_rectangle",
             "dynFile": ["01_ByWidthLength"],
             "imageFile": ["16_ByWidthLength"],
@@ -229,7 +228,7 @@ var inDepthObj = {
         }, {
             "Name": "ByCornerPoints (p1, p2, p3, p4)",
             "description": "Create a Rectangle by four corner Points.",
-            "categories":["Geometry","Rectangle"],
+            "categories": ["Geometry", "Rectangle"],
             "folderPath": "06_rectangle",
             "dynFile": ["02_ByCornerPoints"],
             "imageFile": ["17_ByCornerPoints"],
@@ -250,7 +249,7 @@ var inDepthObj = {
         }, {
             "Name": "ByWidthLength (cs, width, length)",
             "description": "Create a Rectangle by four corner Points.",
-            "categories":["Geometry","Rectangle"],
+            "categories": ["Geometry", "Rectangle"],
             "folderPath": "06_rectangle",
             "dynFile": ["03_ByWidthLength"],
             "imageFile": ["18_ByWidthLength"],
@@ -268,7 +267,7 @@ var inDepthObj = {
         }, {
             "Name": "ByThickeningCurve",
             "description": "Make PolyCurve by thickening a curve.",
-            "categories":["Geometry","PolyCurve"],
+            "categories": ["Geometry", "PolyCurve"],
             "folderPath": "07_polycurve",
             "dynFile": ["ByThickeningCurve"],
             "imageFile": ["19_ByThickeningCurve"],
@@ -286,7 +285,7 @@ var inDepthObj = {
         }, {
             "Name": "ByPoints",
             "description": "Make PolyCurve from sequence of lines connecting points. For closed curve last point should be in same location as start point.",
-            "categories":["Geometry","PolyCurve"],
+            "categories": ["Geometry", "PolyCurve"],
             "folderPath": "07_polycurve",
             "dynFile": ["ByPoints"],
             "imageFile": ["20_ByPoints"],
@@ -301,7 +300,7 @@ var inDepthObj = {
         }, {
             "Name": "ByJoinedCurves",
             "description": "Make PolyCurve by joining curves. Flips curve as needed for connectivity",
-            "categories":["Geometry","PolyCurve"],
+            "categories": ["Geometry", "PolyCurve"],
             "folderPath": "07_polycurve",
             "dynFile": ["ByJoinedCurves"],
             "imageFile": ["21_ByJoinedCurves"],
@@ -313,7 +312,7 @@ var inDepthObj = {
         }, {
             "Name": "ByControlPoints (points)",
             "description": "Create a BSplineCurve by using explicit control points. NOTE 1: BSplineCurves with deg=1 have G1 discontinuities, which cause problems for extrusion, sweep, and other operations. They should be avoided. Use a PolyCurve instead. NOTE 2: If the curve is periodic (closed), then the first and last points MUST be the same.",
-            "categories":["Geometry","NurbsCurve"],
+            "categories": ["Geometry", "NurbsCurve"],
             "folderPath": "08_nurbsCurve",
             "dynFile": ["ByControlPoints1"],
             "imageFile": ["22_ByControlPoints1"],
@@ -325,7 +324,7 @@ var inDepthObj = {
         }, {
             "Name": "ByPointsTangents",
             "description": "Returns a BSplineCurve through the points, with tangent directions.",
-            "categories":["Geometry","NurbsCurve"],
+            "categories": ["Geometry", "NurbsCurve"],
             "folderPath": "08_nurbsCurve",
             "dynFile": ["ByPointsTangents"],
             "imageFile": ["23_ByPointsTangents"],
@@ -343,7 +342,7 @@ var inDepthObj = {
         }, {
             "Name": "ByPoints (points, degree)",
             "description": "Create a BSplineCurve by interpolating between points.",
-            "categories":["Geometry","NurbsCurve"],
+            "categories": ["Geometry", "NurbsCurve"],
             "folderPath": "08_nurbsCurve",
             "dynFile": ["ByPoints1"],
             "imageFile": ["24_ByPoints1"],
@@ -372,7 +371,7 @@ var inDepthObj = {
         }, {
             "Name": "ByPoints (points)",
             "description": "Create a BSplineCurve by interpolating between points.",
-            "categories":["Geometry","NurbsCurve"],
+            "categories": ["Geometry", "NurbsCurve"],
             "folderPath": "08_nurbsCurve",
             "dynFile": ["ByPoints3"],
             "imageFile": ["27_ByPoints3"],
@@ -384,7 +383,7 @@ var inDepthObj = {
         }, {
             "Name": "ByControlPoints (points, degree)",
             "description": "Create a BSplineCurve by using explicit control points. NOTE 1: BSplineCurves with deg=1 have G1 discontinuities, which cause problems for extrusion, sweep, and other operations. They should be avoided. Use a PolyCurve instead. NOTE 2: If the curve is periodic (closed), then the first and last points MUST be the same.",
-            "categories":["Geometry","NurbsCurve"],
+            "categories": ["Geometry", "NurbsCurve"],
             "folderPath": "08_nurbsCurve",
             "dynFile": ["ByControlPoints2"],
             "imageFile": ["26_ByControlPoints2"],
@@ -399,7 +398,7 @@ var inDepthObj = {
         }, {
             "Name": "ByControlPoints (points, degree, closeCurve)",
             "description": "Create a BSplineCurve by using explicit control points. NOTE 1: BSplineCurves with deg=1 have G1 discontinuities, which cause problems for extrusion, sweep, and other operations. They should be avoided. Use a PolyCurve instead. NOTE 2: If the curve is periodic (closed), then the first and last points MUST be the same.",
-            "categories":["Geometry","NurbsCurve"],
+            "categories": ["Geometry", "NurbsCurve"],
             "folderPath": "08_nurbsCurve",
             "dynFile": ["ByControlPoints3"],
             "imageFile": ["28_ByControlPoints3"],
@@ -417,7 +416,7 @@ var inDepthObj = {
         }, {
             "Name": "ByControlPoints",
             "description": " Create a NurbsSurface by using explicit control Points, with specified U and V degrees.",
-            "categories":["Geometry","NurbsSurface"],
+            "categories": ["Geometry", "NurbsSurface"],
             "folderPath": "09_nurbsSurface",
             "dynFile": ["ByControlPoints"],
             "imageFile": ["29_ByControlPoints"],
@@ -435,7 +434,7 @@ var inDepthObj = {
         }, {
             "Name": "ByPoints",
             "description": "Creates a NurbsSurface with specified interpolated points and U and V degrees. The resultant surface will pass through all of the points.",
-            "categories":["Geometry","NurbsSurface"],
+            "categories": ["Geometry", "NurbsSurface"],
             "folderPath": "09_nurbsSurface",
             "dynFile": ["ByPoints"],
             "imageFile": ["30_ByPoints"],
@@ -450,7 +449,6 @@ var inDepthObj = {
                 "Type": "int"
             }],
             "inDepth": "Nurbs Surface By Points takes in a two dimensional array of control vertices and outputs a Nurbs Surface. This node also gives us the ability to calibrate the degree in the U and V directions. In this example, a 50 by 50 grid of points is created with a Code Block Range. The grid is then scaled in the Z-direction at random, modulating the output surface from the By Control Points node. "
-        },
-
+        }
          ]
-}
+

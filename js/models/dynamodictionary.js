@@ -16,11 +16,10 @@
  addIcon("images/icons/list-01.svg", "list");
  addIcon("images/icons/matrix-01.svg", "matrix");
 
-// Define the div for the tooltip
-var ttDiv = d3.select("body").append("div")	
-    .attr("class", "tooltip")				
-    .style("opacity", 0);
-
+ // Define the div for the tooltip
+ var ttDiv = d3.select("body").append("div")
+     .attr("class", "tooltip")
+     .style("opacity", 0);
 
  function addIcon(ic, c) {
      var op = 0.25;
@@ -67,7 +66,7 @@ var ttDiv = d3.select("body").append("div")
  rightdiv.append("div").attr("class", "nodeOut")
  rightdiv.append("div").attr("class", "inDepth")
  rightdiv.append("div").attr("class", "exampleFile")
- 
+
  rightdiv.append("div").attr("class", "seeAlso")
 
  function sortArrayOfObjectsByKey(arr, key) {
@@ -111,7 +110,9 @@ var ttDiv = d3.select("body").append("div")
      })
 
  .on("click", function (d) {
-     endLoad({"FullCategoryName":""});
+     endLoad({
+         "FullCategoryName": ""
+     });
      goHome(true);
  })
 
@@ -220,7 +221,7 @@ var ttDiv = d3.select("body").append("div")
          d3.select(q).transition().duration("" + tim + "").attr("width", 30).style("opacity", 100)
 
      } else {
-         d3.select(q).attr("width", 0).transition().duration("" + tim + "").attr("width", 30).style("opacity", 100)
+         d3.select(q).attr("width", 30).style("opacity", 100).transition().duration("" + tim + "").attr("width", 30).style("opacity", 100)
 
      }
 
@@ -483,7 +484,9 @@ var ttDiv = d3.select("body").append("div")
      })
 
      function handleClick() {
-         endLoad({"FullCategoryName":""});
+         endLoad({
+             "FullCategoryName": ""
+         });
          imcount = [];
          st = (document.getElementById("searchBox").value).split(" ");
 
@@ -504,12 +507,11 @@ var ttDiv = d3.select("body").append("div")
              var nd = {};
              nd["FullCategoryName"] = cn.querySelector("FullCategoryName").textContent;
              nd["Categories"] = nd["FullCategoryName"].split(".")
-             
 
              nd["TopCategory"] = nd["Categories"][0];
              nd["activated"] = true;
              nd["Name"] = cn.querySelector("Name").textContent;
-             nd["CategorySearch"] = [nd["FullCategoryName"],nd["Name"]].join('.')
+             nd["CategorySearch"] = [nd["FullCategoryName"], nd["Name"]].join('.')
              nd["Group"] = cn.querySelector("Group").textContent;
 
              nd["Description"] = cn.querySelector("Description").textContent;
@@ -585,6 +587,8 @@ var ttDiv = d3.select("body").append("div")
              maxhier = ct.length;
          }
      })
+
+//     console.log(allData)
      var mainlist = objectify(allData, 0)
 
      function objectify(ad, q) {
@@ -810,7 +814,7 @@ var ttDiv = d3.select("body").append("div")
                              }
                          })
                      } else {
-                         nodelevel=true;
+                         nodelevel = true;
                          d3.selectAll(".imageTiles").selectAll("img").attr("width", "0")
                          var ddd = d3.select(this);
                          var displayObject = (obj)
@@ -915,14 +919,13 @@ var ttDiv = d3.select("body").append("div")
      d3.selectAll(".pageLoad").html("");
      d3.selectAll(".imageTiles").style("display", "inline").style("pointer-events", "all")
 
-     if(oo.FullCategoryName!=""){
-     d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
+     if (oo.FullCategoryName != "") {
+         d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
+     } else {
+         d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
      }
-     else{
-        d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>"); 
-     }
-     if(oo==undefined){
-        d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");  
+     if (oo == undefined) {
+         d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
      }
  }
 
@@ -981,12 +984,12 @@ var ttDiv = d3.select("body").append("div")
              }
          })
          .on("mouseout", function (d, j) {
-//         console.log(nodelevel)
+             //         console.log(nodelevel)
              d3.select(".addedText" + j).style("color", "white")
              d3.select(this).style("background-color", d3.rgb(34, 34, 34))
-    
+
              tname = "<b>Nodes</b><br><br>";
-       
+
              if (d3.select(".nodeName").selectAll("text").text() == "Welcome to the Dynamo Dictionary!") {
 
              }
@@ -1002,10 +1005,9 @@ var ttDiv = d3.select("body").append("div")
              if (nodelevel == false) {
                  d3.selectAll(".seeAlso").html(tname);
 
+             } else {
+                 d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
              }
-         else{
-             d3.selectAll(".seeAlso").html("<b>See Also</b><br><br>");
-         }
          })
          .on("click", function (d) {
              d3.select(this).style("background-color", d3.rgb(34, 34, 34))
@@ -1092,13 +1094,20 @@ var ttDiv = d3.select("body").append("div")
          return true;
      }
 
-     inDepthObj.nodes.forEach(function (j, h) {
-         if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
-             hit = true;
-             hitob = j;
-         }
-     })
+     d3.json("data/Dynamo_Nodes_Documentation.json", function (data) {
+         console.log(data)
+         data.forEach(function (j, h) {
+//             console.log(j.Name, ob.Name, ob.Categories, j.categories)
+             if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
+                 hit = true;
+//                 console.log('ithit')
+                 hitob = j;
+             }
+         })
+     
+
      if (hit == true) {
+         console.log('cookin')
          var iconimage1 = "images/icons/download.svg";
          var iconimage2 = "images/icons/edit.svg";
          var iconimage3 = "images/icons/add.svg";
@@ -1107,10 +1116,10 @@ var ttDiv = d3.select("body").append("div")
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
                  d3.select("body").style("cursor", "pointer");
-             popUp(this,"Edit Text")
+                 popUp(this, "Edit Text")
              })
              .on("mouseout", function () {
-             popOut();
+                 popOut();
                  d3.select(this).style("opacity", .25);
                  d3.select("body").style("cursor", "default");
              })
@@ -1119,21 +1128,22 @@ var ttDiv = d3.select("body").append("div")
 
              })
          var strr = hitob.inDepth;
-         
-         function popUp(ob,text){
-             var re=d3.select(".right-element")[0][0].scrollTop
-//             console.log(re)
-             ttDiv.transition()		
-                .duration(200)		
-                .style("opacity", .9);		
-            	ttDiv.html(text)	
-                .style("left", (d3.event.pageX)-100 + "px")		
-                .style("top", (ob.offsetTop-re+ 28) + "px");	
+
+         function popUp(ob, text) {
+             var re = d3.select(".right-element")[0][0].scrollTop
+                 //             console.log(re)
+             ttDiv.transition()
+                 .duration(200)
+                 .style("opacity", .9);
+             ttDiv.html(text)
+                 .style("left", (d3.event.pageX) - 100 + "px")
+                 .style("top", (ob.offsetTop - re + 28) + "px");
          }
-         function popOut(){
-             ttDiv.transition()		
-                .duration(500)		
-                .style("opacity", 0);	
+
+         function popOut() {
+             ttDiv.transition()
+                 .duration(500)
+                 .style("opacity", 0);
          }
 
          d3.select(".inDepth").append("html").html("&nbsp&nbsp").append("text").text(strr).style("color", "gray").append('html').html("<br><br><hr><br>")
@@ -1143,19 +1153,16 @@ var ttDiv = d3.select("body").append("div")
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
                  d3.select("body").style("cursor", "pointer");
-                popUp(this,"Edit Example File")
-             
-             
+                 popUp(this, "Edit Example File")
+
              })
              .on("mouseout", function () {
-                 
+
                  popOut();
-                 
-                 
+
                  d3.select(this).style("opacity", .25);
                  d3.select("body").style("cursor", "default");
-             
-             
+
              })
              .on("click", function () {
                  alert("functionality not yet available.")
@@ -1165,12 +1172,12 @@ var ttDiv = d3.select("body").append("div")
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
                  d3.select("body").style("cursor", "pointer");
-             popUp(this,"Add Example File")
+                 popUp(this, "Add Example File")
              })
              .on("mouseout", function () {
                  d3.select(this).style("opacity", .25);
                  d3.select("body").style("cursor", "default");
-             popOut();
+                 popOut();
              })
              .on("click", function () {
                  alert("functionality not yet available.")
@@ -1180,12 +1187,12 @@ var ttDiv = d3.select("body").append("div")
              .on("mouseover", function () {
                  d3.select(this).style("opacity", 1);
                  d3.select("body").style("cursor", "pointer");
-             popUp(this,"Download Example File")
+                 popUp(this, "Download Example File")
              })
              .on("mouseout", function () {
                  d3.select(this).style("opacity", .25);
                  d3.select("body").style("cursor", "default");
-             popOut();
+                 popOut();
              })
              .on("click", function () {
 
@@ -1206,7 +1213,7 @@ var ttDiv = d3.select("body").append("div")
          d3.select(".inDepth").html("")
          d3.select(".exampleFile").html("")
      }
-
+});
      tl = (ob.SearchTags.split(','))
 
      related = [];
