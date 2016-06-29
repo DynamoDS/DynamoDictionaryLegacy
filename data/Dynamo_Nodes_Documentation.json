@@ -1,38 +1,38 @@
 [
-        {
+            {
             "Name": "Code Block",
             "description": "Allows for DesignScript code to be authored directly",
             "categories": ["Core", "Input"],
-            "folderPath": "01_codeBlock",
-            "dynFile": ["00_codeBlock"],
-            "imageFile": ["01_codeBlock"],
+            "folderPath": "Core/Input/Create",
+            "dynFile": ["CodeBlock"],
+            "imageFile": ["CodeBlock"],
             "inputs": "",
             "inDepth": "The Code Block is universal and can be useful in all definitions. With this node, we can fully customize the Dynamo functionality and experience by coding directly into the graph. In this example, we see a range of possible uses including Numbers, Strings, Booleans for item based code, and Ranges and Sequences for creating lists of values."
         }, {
             "Name": "Number Slider",
             "description": "A slider that produces numeric values.",
             "categories": ["Core", "Input"],
-            "folderPath": "02_numberSlider",
-            "dynFile": ["01_numberSlider"],
-            "imageFile": ["01_numberSlider"],
+            "folderPath": "Core/Input/Create",
+            "dynFile": ["NumberSlider"],
+            "imageFile": ["NumberSlider"],
             "inputs": "",
             "inDepth": "The Number Slider is a customizable, tactile node that allows us to interface with the data driving our Dynamo definitions. Here, the number slider is paired with a code block to create a dynamic list sequence with a variable step size."
         }, {
             "Name": "Integer Slider",
             "description": "A slider that produces integer values.",
             "categories": ["Core", "Input"],
-            "folderPath": "02_numberSlider",
-            "dynFile": ["02_integerSlider"],
-            "imageFile": ["02_integerSlider"],
+            "folderPath": "Core/Input/Create",
+            "dynFile": ["IntegerSlider"],
+            "imageFile": ["IntegerSlider"],
             "inputs": "",
             "inDepth": "An Integer Slider works in the same way as a Number Slider but only outputs integers. The Integer Slider in the example definition allows us to control the list length, ensuring that we always have whole-number of list outputs. "
         }, {
             "Name": "ByCoordinates (x, y)",
             "description": "Form a Point in the XY plane given two 2 cartesian coordinates. The Z component is 0.",
             "categories": ["Geometry", "Point"],
-            "folderPath": "03_point",
-            "dynFile": ["01_ByCoordinates", "02_ByCoordinates"],
-            "imageFile": ["01_pointByCoordinates", "02_ByCoordinates"],
+            "folderPath": "ByCoordinates",
+            "dynFile": ["ByCoordinates", "ByCoordinates_crossReference"],
+            "imageFile": ["ByCoordinates", "ByCoordinates_crossReference"],
             "inputs": [{
                 "Name": "x",
                 "Type": "double"
@@ -45,9 +45,9 @@
             "Name": "ByCylindricalCoordinates",
             "description": "Form a Point in the given coordinate system given its position in cylindrical coordinates.",
             "categories": ["Geometry", "Point"],
-            "folderPath": "03_point",
-            "dynFile": ["03_ByCylindricalCoordinates"],
-            "imageFile": ["03_ByCylindricalCoordinates"],
+            "folderPath": "Geometry/Point/Create",
+            "dynFile": ["ByCylindricalCoordinates"],
+            "imageFile": ["ByCylindricalCoordinates"],
             "inputs": [{
                 "Name": "cs",
                 "Type": "CoordinateSystem"
@@ -66,9 +66,9 @@
             "Name": "BySphericalCoordinates",
             "description": "Form a Point in the given coordinate system given its position in spherical coordinates.",
             "categories": ["Geometry", "Point"],
-            "folderPath": "03_point",
-            "dynFile": ["04_BySphericalCoordinates"],
-            "imageFile": ["04_BySphericalCoordinates"],
+            "folderPath": "BySphericalCoordinates",
+            "dynFile": ["BySphericalCoordinates"],
+            "imageFile": ["BySphericalCoordinates"],
             "inputs": [{
                 "Name": "cs",
                 "Type": "CoordinateSystem"
@@ -87,9 +87,9 @@
             "Name": "ByCartesianCoordinates",
             "description": "Form a Point in the given coordinate system with 3 cartesian coordinates",
             "categories": ["Geometry", "Point"],
-            "folderPath": "03_point",
-            "dynFile": ["05_ByCartesianCoordinates"],
-            "imageFile": ["05_ByCartesianCoordinates"],
+            "folderPath": "Geometry/Point/Create",
+            "dynFile": ["ByCartesianCoordinates"],
+            "imageFile": ["ByCartesianCoordinates"],
             "inputs": [{
                 "Name": "cs",
                 "Type": "CoordinateSystem"
@@ -104,14 +104,13 @@
                 "Type": "double"
             }],
             "inDepth": "Point By Cartesian Coordinates gives us the ability to set the X, Y and Z values of a point’s location. In this example, we are setting multiple Code Block Ranges controlled by sliders to drive the three-dimensional array of points."
-        },
-        {
+        },{
             "Name": "ByCenterPointRadiusNormal",
             "description": "Creates a Circle with specified center Point, radius, and normal direction.",
             "categories": ["Geometry", "Circle"],
-            "folderPath": "04_circle",
+            "folderPath": "Geometry/Circle/Create",
             "dynFile": ["ByCenterPointRadiusNormal"],
-            "imageFile": ["09_ByCenterPointRadiusNormal"],
+            "imageFile": ["ByCenterPointRadiusNormal"],
             "inputs": [{
                 "Name": "centerPoint",
                 "Type": "Point"
@@ -142,9 +141,9 @@
             "Name": "ByCenterPointRadius",
             "description": "Creates a Circle with input center Point and radius in the world XY plane, with world Z as normal.",
             "categories": ["Geometry", "Circle"],
-            "folderPath": "04_circle",
+            "folderPath": "Geometry/Circle/Create",
             "dynFile": ["ByCenterPointRadius"],
-            "imageFile": ["11_ByCenterPointRadius"],
+            "imageFile": ["ByCenterPointRadius"],
             "inputs": [{
                 "Name": "centerPoint",
                 "Type": "Point"
@@ -157,9 +156,9 @@
             "Name": "ByThreePoints",
             "description": "Create a Circle passing through three input Points.",
             "categories": ["Geometry", "Circle"],
-            "folderPath": "04_circle",
+            "folderPath": "Geometry/Circle/Create",
             "dynFile": ["ByThreePoints"],
-            "imageFile": ["12_ByThreePoints"],
+            "imageFile": ["ByThreePoints"],
             "inputs": [{
                 "Name": "p1",
                 "Type": "Point"
@@ -199,9 +198,9 @@
             "Name": "RegularPolygon",
             "description": "Construct a Polygon Curve by connecting Points.",
             "categories": ["Geometry", "Polygon"],
-            "folderPath": "05_polygon",
+            "folderPath": "Geometry/Polygon/Create",
             "dynFile": ["RegularPolygon"],
-            "imageFile": ["15_RegularPolygon"],
+            "imageFile": ["RegularPolygon"],
             "inputs": [{
                 "Name": "circle",
                 "Type": "Circle"
@@ -214,9 +213,9 @@
             "Name": "ByWidthLength (width, length)",
             "description": "Create a Rectangle centered at the WCS origin in the WCS XY Plane, with specified width (X Axis length), and length (Y Axis length).",
             "categories": ["Geometry", "Rectangle"],
-            "folderPath": "06_rectangle",
-            "dynFile": ["01_ByWidthLength"],
-            "imageFile": ["16_ByWidthLength"],
+            "folderPath": "Geometry/Rectangle/Create",
+            "dynFile": ["ByWidthLength"],
+            "imageFile": ["ByWidthLength"],
             "inputs": [{
                 "Name": "width",
                 "Type": "double"
@@ -229,9 +228,9 @@
             "Name": "ByCornerPoints (p1, p2, p3, p4)",
             "description": "Create a Rectangle by four corner Points.",
             "categories": ["Geometry", "Rectangle"],
-            "folderPath": "06_rectangle",
-            "dynFile": ["02_ByCornerPoints"],
-            "imageFile": ["17_ByCornerPoints"],
+            "folderPath": "Geometry/Rectangle/Create",
+            "dynFile": ["ByCornerPoints"],
+            "imageFile": ["ByCornerPoints"],
             "inputs": [{
                 "Name": "p1",
                 "Type": "Point"
@@ -250,9 +249,9 @@
             "Name": "ByWidthLength (cs, width, length)",
             "description": "Create a Rectangle by four corner Points.",
             "categories": ["Geometry", "Rectangle"],
-            "folderPath": "06_rectangle",
-            "dynFile": ["03_ByWidthLength"],
-            "imageFile": ["18_ByWidthLength"],
+            "folderPath": "Geometry/Rectangle/Create",
+            "dynFile": ["ByWidthLength_cwl"],
+            "imageFile": ["ByWidthLength_cwl"],
             "inputs": [{
                 "Name": "cs",
                 "Type": "CoordinateSystem"
@@ -268,9 +267,9 @@
             "Name": "ByThickeningCurve",
             "description": "Make PolyCurve by thickening a curve.",
             "categories": ["Geometry", "PolyCurve"],
-            "folderPath": "07_polycurve",
+            "folderPath": "Geometry/Polycurve/Create",
             "dynFile": ["ByThickeningCurve"],
-            "imageFile": ["19_ByThickeningCurve"],
+            "imageFile": ["ByThickeningCurve"],
             "inputs": [{
                 "Name": "curve",
                 "Type": "Curve"
@@ -286,9 +285,9 @@
             "Name": "ByPoints",
             "description": "Make PolyCurve from sequence of lines connecting points. For closed curve last point should be in same location as start point.",
             "categories": ["Geometry", "PolyCurve"],
-            "folderPath": "07_polycurve",
+            "folderPath": "Geometry/Polycurve/Create",
             "dynFile": ["ByPoints"],
-            "imageFile": ["20_ByPoints"],
+            "imageFile": ["ByPoints"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[]"
@@ -301,9 +300,9 @@
             "Name": "ByJoinedCurves",
             "description": "Make PolyCurve by joining curves. Flips curve as needed for connectivity",
             "categories": ["Geometry", "PolyCurve"],
-            "folderPath": "07_polycurve",
+            "folderPath": "Geometry/Polycurve/Create",
             "dynFile": ["ByJoinedCurves"],
-            "imageFile": ["21_ByJoinedCurves"],
+            "imageFile": ["ByJoinedCurves"],
             "inputs": [{
                 "Name": "curves",
                 "Type": "Curve[]"
@@ -313,9 +312,9 @@
             "Name": "ByControlPoints (points)",
             "description": "Create a BSplineCurve by using explicit control points. NOTE 1: BSplineCurves with deg=1 have G1 discontinuities, which cause problems for extrusion, sweep, and other operations. They should be avoided. Use a PolyCurve instead. NOTE 2: If the curve is periodic (closed), then the first and last points MUST be the same.",
             "categories": ["Geometry", "NurbsCurve"],
-            "folderPath": "08_nurbsCurve",
+            "folderPath": "Geometry/NurbsCurve/Create",
             "dynFile": ["ByControlPoints1"],
-            "imageFile": ["22_ByControlPoints1"],
+            "imageFile": ["ByControlPoints1"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[]"
@@ -325,9 +324,9 @@
             "Name": "ByPointsTangents",
             "description": "Returns a BSplineCurve through the points, with tangent directions.",
             "categories": ["Geometry", "NurbsCurve"],
-            "folderPath": "08_nurbsCurve",
+            "folderPath": "Geometry/NurbsCurve/Create",
             "dynFile": ["ByPointsTangents"],
-            "imageFile": ["23_ByPointsTangents"],
+            "imageFile": ["ByPointsTangents"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[]"
@@ -343,9 +342,9 @@
             "Name": "ByPoints (points, degree)",
             "description": "Create a BSplineCurve by interpolating between points.",
             "categories": ["Geometry", "NurbsCurve"],
-            "folderPath": "08_nurbsCurve",
-            "dynFile": ["ByPoints1"],
-            "imageFile": ["24_ByPoints1"],
+            "folderPath": "Geometry/NurbsCurve/Create",
+            "dynFile": ["ByPoints_pd"],
+            "imageFile": ["ByPoints_pd"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[]"
@@ -357,9 +356,9 @@
         }, {
             "Name": "ByPoints (points, closeCurve)",
             "description": "Create a BSplineCurve by interpolating between points.",
-            "folderPath": "08_nurbsCurve",
-            "dynFile": ["ByPoints2"],
-            "imageFile": ["25_ByPoints2"],
+            "folderPath": "Geometry/NurbsCurve/Create",
+            "dynFile": ["ByPoints_pc"],
+            "imageFile": ["ByPoints_pc"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[]"
@@ -372,9 +371,9 @@
             "Name": "ByPoints (points)",
             "description": "Create a BSplineCurve by interpolating between points.",
             "categories": ["Geometry", "NurbsCurve"],
-            "folderPath": "08_nurbsCurve",
-            "dynFile": ["ByPoints3"],
-            "imageFile": ["27_ByPoints3"],
+            "folderPath": "Geometry/NurbsCurve/Create",
+            "dynFile": ["ByPoints_p"],
+            "imageFile": ["ByPoints_p"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[]"
@@ -384,9 +383,9 @@
             "Name": "ByControlPoints (points, degree)",
             "description": "Create a BSplineCurve by using explicit control points. NOTE 1: BSplineCurves with deg=1 have G1 discontinuities, which cause problems for extrusion, sweep, and other operations. They should be avoided. Use a PolyCurve instead. NOTE 2: If the curve is periodic (closed), then the first and last points MUST be the same.",
             "categories": ["Geometry", "NurbsCurve"],
-            "folderPath": "08_nurbsCurve",
-            "dynFile": ["ByControlPoints2"],
-            "imageFile": ["26_ByControlPoints2"],
+            "folderPath": "Geometry/NurbsCurve/Create",
+            "dynFile": ["ByControlPoints_p"],
+            "imageFile": ["ByControlPoints_p"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[]"
@@ -399,9 +398,9 @@
             "Name": "ByControlPoints (points, degree, closeCurve)",
             "description": "Create a BSplineCurve by using explicit control points. NOTE 1: BSplineCurves with deg=1 have G1 discontinuities, which cause problems for extrusion, sweep, and other operations. They should be avoided. Use a PolyCurve instead. NOTE 2: If the curve is periodic (closed), then the first and last points MUST be the same.",
             "categories": ["Geometry", "NurbsCurve"],
-            "folderPath": "08_nurbsCurve",
-            "dynFile": ["ByControlPoints3"],
-            "imageFile": ["28_ByControlPoints3"],
+            "folderPath": "Geometry/NurbsCurve/Create",
+            "dynFile": ["ByControlPoints_pdc"],
+            "imageFile": ["ByControlPoints_pdc"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[]"
@@ -417,9 +416,9 @@
             "Name": "ByControlPoints",
             "description": " Create a NurbsSurface by using explicit control Points, with specified U and V degrees.",
             "categories": ["Geometry", "NurbsSurface"],
-            "folderPath": "09_nurbsSurface",
+            "folderPath": "Geometry/NurbsSurface/Create",
             "dynFile": ["ByControlPoints"],
-            "imageFile": ["29_ByControlPoints"],
+            "imageFile": ["ByControlPoints"],
             "inputs": [{
                 "Name": "controlVertices",
                 "Type": "Point[][]"
@@ -435,9 +434,9 @@
             "Name": "ByPoints",
             "description": "Creates a NurbsSurface with specified interpolated points and U and V degrees. The resultant surface will pass through all of the points.",
             "categories": ["Geometry", "NurbsSurface"],
-            "folderPath": "09_nurbsSurface",
+            "folderPath": "Geometry/NurbsSurface/Create",
             "dynFile": ["ByPoints"],
-            "imageFile": ["30_ByPoints"],
+            "imageFile": ["ByPoints"],
             "inputs": [{
                 "Name": "points",
                 "Type": "Point[][]"
@@ -448,7 +447,824 @@
                 "Name": "vDegree",
                 "Type": "int"
             }],
-            "inDepth": "Nurbs Surface By Points takes in a two dimensional array of control vertices and outputs a Nurbs Surface. This node also gives us the ability to calibrate the degree in the U and V directions. In this example, a 50 by 50 grid of points is created with a Code Block Range. The grid is then scaled in the Z-direction at random, modulating the output surface from the By Control Points node. "
-        }
-         ]
-
+            "inDepth": "Nurbs Surface By Points takes in a two dimensional array of control vertices and outputs a Nurbs Surface. This node also gives us the ability to calibrate the degree in the U and V directions. In this example, a 50 by 50 grid of points is created with a Code Block Range. The grid is then scaled in the Z-direction at random, modulating the output surface from the By Control Points node. "            
+        }, {
+            "Name": "ByBestFitThroughPoints",
+            "description": "best fit arc through points.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Create",
+            "dynFile": ["ByBestFitThroughPoints"],
+            "imageFile": ["ByBestFitThroughPoints"],
+            "inputs": [{
+                "Name": "points",
+                "Type": "Point[]"
+            }],
+            "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions."
+            
+       }, {
+            "Name": "ByCenterPointRadiusAngle",
+            "description": "Create an arc by providing it's center point, radius, angle sweep, and normal vector.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Create",
+            "dynFile": ["ByCenterPointRadiusAngle"],
+            "imageFile": ["ByCenterPointRadiusAngle"],
+            "inputs": [{
+                "Name": "center",
+                "Type": "Point"
+            }, {
+                "Name": "radius",
+                "Type": "double"
+            }, {
+                "Name": "startAngle",
+                "Type": "double"
+            }, {
+                "Name": "endAngle",
+                "Type": "double"
+            }, {
+                "Name": "normal",
+                "Type": "Vector"
+           }],
+            "inDepth": "Arc ByCenterPointRadiusAngle draws an arc relative to its center and normal direction. By entering the start and end angle, you are essentially drawing a portion of a circle. In this example, a random point is generated on the XY plane and an arc is constructed around it.  "
+         }, { 
+            "Name": "ByCenterPointStartPointEndPoint",
+            "description": "Create an arc by providing it's center point, start point, and end point.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Create",
+            "dynFile": ["ByCenterPointStartPointEndPoint"],
+            "imageFile": ["ByCenterPointStartPointEndPoint"],
+            "inputs": [{
+                "Name": "centerPoint",
+                "Type": "Point"
+            }, {
+                "Name": "startPoint",
+                "Type": "Point"
+            }, {
+                "Name": "endPoint",
+                "Type": "Point"
+            }],
+            "inDepth": "Arc ByCenterPointStartPointEndPoint draws a best-fit arc around a specified Center. The arc will always begin at the Start Point and end at the closest point possible to the given End Point. This example demonstrates this property by randomly feeding the node three random points for the center, start and end point."
+         }, {
+            "Name": "ByCenterPointStartPointSweepAngle",
+            "description": "Create an arc by providing it's center point, start point, sweep point, and normal.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Create",
+            "dynFile": ["ByCenterPointStartPointSweepAngle"],
+            "imageFile": ["ByCenterPointStartPointSweepAngle"],
+            "inputs": [{
+                "Name": "centerPoint",
+                "Type": "Point"
+            }, {
+                "Name": "startPoint",
+                "Type": "Point"
+            }, {
+                "Name": "sweepAngle",
+                "Type": "double"
+            }, {
+                "Name": "normal",
+                "Type": "Vector"
+            }],
+            "inDepth": "The Arc ByCenterPointStartPointSweepAngle creates an arc around a Center Point with a given Sweep Angle. The Start Point tells Dynamo where to begin drawing the arc. This example draws an arc around a randomly generated point."
+         }, {
+            "Name": "ByFillet",
+            "description": "Create an arc by filleting twp curves with given radius.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Create",
+            "dynFile": ["ByFillet"],
+            "imageFile": ["ByFillet"],
+            "inputs": [{
+                "Name": "curve1",
+                "Type": "Curve"
+            }, {
+                "Name": "curve2",
+                "Type": "Curve"
+            }, {
+                "Name": "radius",
+                "Type": "Double"
+            }],
+            "inDepth": "Arc ByFillet draws a portion of a tangential circle along two input curves. In this example, two intersecting lines are drawn and then filleted at a controlled radius."
+         }, {
+            "Name": "ByFilletTangentToCurve",
+            "description": "Create an arc by filleting two curves tangent to given curve at internal point.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Create",
+            "dynFile": ["ByFilletTangentToCurve"],
+            "imageFile": ["ByFilletTangentToCurve"],
+            "inputs": [{
+                "Name": "curve1",
+                "Type": "Curve"
+            }, {
+                "Name": "curveTangentTo",
+                "Type": "Curve"
+            }, {
+                "Name": "curve2",
+                "Type": "Curve"
+            }],
+            "inDepth": "Arc ByFilletTangentToCurve draws the best fit arc that is tangent to three input curves. In this example, we are using two input lines as reference curves and a circle for the arc to be tangent to."
+         }, {
+            "Name": "ByStartPointEndPointStartTangent",
+            "description": "Create an Arc from start Point to end Point with start tangent to Vector.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Create",
+            "dynFile": ["ByStartPointEndPointStartTangent"],
+            "imageFile": ["ByStartPointEndPointStartTangent"],
+            "inputs": [{
+                "Name": "startPoint",
+                "Type": "Point"
+            }, {
+                "Name": "endPoint",
+                "Type": "Point"
+            }, {
+                "Name": "startTangent",
+                "Type": "Vector"
+            }],
+            "inDepth": "Arc ByStartPointEndPointStartTangent draws an arc from two specified points and any given start vector. This example draws an arc from two random points that is always tangent to the X-Axis."
+         }, {
+            "Name": "ByThreePoints",
+            "description": "Create an arc by providing three sequential points along its circumference.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Create",
+            "dynFile": ["ByThreePoints"],
+            "imageFile": ["ByThreePoints"],
+            "inputs": [{
+                "Name": "firstPoint",
+                "Type": "Point"
+            }, {
+                "Name": "secondPoint",
+                "Type": "Point"
+            }, {
+                "Name": "thirdPoint",
+                "Type": "Point"
+            }],
+            "inDepth": "Arc ByThreePoints draws an arc from three points, given the Start Point, End Point and a point in-between along the arc. This example draws an arc from three randomly created points."
+         }, {
+            "Name": "ByStartEndAndTangencies",
+            "description": "Create an arc or tangent bi arc by start and end points and tangencies at start and end.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Action",
+            "dynFile": ["ByStartEndAndTangencies"],
+            "imageFile": ["ByStartEndAndTangencies"],
+            "inputs": [{
+                "Name": "point1",
+                "Type": "Point"
+            }, {
+                "Name": "vector1",
+                "Type": "Vector"
+            }, {
+                "Name": "point2",
+                "Type": "Point"
+            }, {
+                "Name": "vector2",
+                "Type": "Vector"
+            }],
+            "inDepth": "The Arc ByStartEndAndTangencies Action creates a compound arc using two Input Points and their corresponding Vectors. In this example, two points are connected by a compound arc that is always tangent to the Y-Axis at its Start and End Points."
+         }, {
+            "Name": "CenterPoint",
+            "description": "The center point of the arc.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Query",
+            "dynFile": ["CenterPoint"],
+            "imageFile": ["CenterPoint"],
+            "inputs": [{
+                "Name": "arc",
+                "Type": "Arc"
+            }],
+            "inDepth": "Arc CenterPoint returns a Point at the Center of an Arc – the same point as the corresponding circle center. This example uses a randomly generated ArcByThreePoints to create the center point."
+         }, {
+            "Name": "Radius",
+            "description": "The radius of the arc.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Query",
+            "dynFile": ["Radius"],
+            "imageFile": ["Radius"],
+            "inputs": [{
+                "Name": "arc",
+                "Type": "Arc"
+            }],
+            "inDepth": "Arc Radius returns the Radius value of Arc geometry. In this example, we can visualize the change in Radius as the input points change in the Y-direction."
+         }, {
+            "Name": "StartAngle",
+            "description": "The start angle in degrees.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Query",
+            "dynFile": ["StartAngle"],
+            "imageFile": ["StartAngle"],
+            "inputs": [{
+            "inputs": [{
+                "Name": "arc",
+                "Type": "Arc"
+            }],
+            "inDepth": "Arc StartAngle returns the Angle of the Arc relative to its corresponding Circle. Since this example uses a Start Point to generate the Arc, our Start Angle should always be equal to zero."
+         }, {
+            "Name": "SweepAngle",
+            "description": "The total sweep angle in degrees.",
+            "categories": ["Geometry", "Arc"],
+            "folderPath": "Geometry/Arc/Query",
+            "dynFile": ["SweepAngle"],
+            "imageFile": ["SweepAngle"],
+            "inputs": [{
+                "Name": "arc",
+                "Type": "Arc"
+            }],
+            "inDepth": "Arc SweepAngle returns the total angle of the reference circle that the Arc traverses. This example shows how this property is accessed from an Arc ByThreePoints."
+        }, {
+            "Name": "ByGeometry (geom) (geom)",
+            "description": "Create an axis-aligned BoundingBox around input Geometry.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Create",
+            "dynFile": ["ByGeometry_g"],
+            "imageFile": ["ByGeometry_g"],
+            "inputs": [{
+                "Name": "geom",
+                "Type": "Geometry"
+            }],
+            "inDepth": "Bounding Box ByGeometry solves for the Bounding Box of an input Geometry. This example shows a Bounding Box drawn around an input Sphere. In order to visualize the Box, we are converting the box to a Cuboid and extracting its edge curves."
+        }, {
+            "Name": "ByGeometry (geom) (geom)",
+            "description": "Create an axis-aligned BoundingBox around input Geometry.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Create",
+            "dynFile": ["ByGeometry_gg"],
+            "imageFile": ["ByGeometry_gg"],
+            "inputs": [{
+                "Name": "geom",
+                "Type": "Geometry"
+            }],
+            "inDepth": "Bounding Box ByGeometry solves a Bounding Box of multiple input Geometry. This example shows a Bounding Box drawn around multiple Cones. In order to visualize the Box, we are converting the box to a Polysurface and extracting its edge curves."   
+        }, {
+            "Name": "ByCorners",
+            "description": "Creates the an axis-aligned BoundingBox spanning between the minimum Point and the maximum Point.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Create",
+            "dynFile": ["ByCorners"],
+            "imageFile": ["ByCorners"],
+            "inputs": [{
+                "Name": "min",
+                "Type": "Point"
+            },{
+                "Name": "max",
+                "Type": "Point"
+            }],
+            "inDepth": "Bounding Box ByCorners creates a Bounding Box from two input points. In this example we are using the diagonal vector to Translate the Start Point of the box to create its End Point. In order to visualize the Box, we are converting the box to a Polysurface and extracting its edge curves."     
+        }, {
+            "Name": "ToPolysurface",
+            "description": "Get the BoundingBox as a collection of Surfaces.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Action",
+            "dynFile": ["ToPolysurface"],
+            "imageFile": ["ToPolysurface"],
+            "inputs": [{
+                "Name": "boundingBox",
+                "Type": "BoundingBox"
+            }],
+            "inDepth": "Bounding Box ToPolysurface creates a Polysurface from a Bounding Box. In this example we are using the Bounding Box of multiple Cones to create a Polysurface. In order to visualize the relationship of the input Cones to the Polysurface we are extracting the Polysurface edge curves."
+        }, {
+            "Name": "Intersects",
+            "description": "Determine whether two BoundingBoxes intersect.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Action",
+            "dynFile": ["Intersects"],
+            "imageFile": ["Intersects"],
+            "inputs": [{
+                "Name": "boundingBox",
+                "Type": "BoundingBox"
+            },{
+                "Name": "other",
+                "Type": "BoundingBox"
+            }],
+            "inDepth": "Bounding Box Intersects tests two bounding boxes for overlap. If the boxes intersect, the node will return True, otherwise it will return False. This example tests for an intersection between the Bounding Boxes of two input Cones."
+        }, {
+            "Name": "Intersection",
+            "description": "Get the intersection of two BoundingBoxes.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Action",
+            "dynFile": ["Intersection"],
+            "imageFile": ["Intersection"],
+            "inputs": [{
+                "Name": "boundingBox",
+                "Type": "BoundingBox"
+            },{
+                "Name": "other",
+                "Type": "BoundingBox"
+            }],
+            "inDepth": "Bounding Box Intersection solves for the Intersection for two Bounding Boxes and returns the overlapping Bounding Box. This example uses two cones to demonstrate the use of this node. In order to visualize the Box we are converting it to a Cuboid."    
+        }, {
+            "Name": "Contains",
+            "description": "Determine if a point is inside of the BoundingBox.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Action",
+            "dynFile": ["Contains"],
+            "imageFile": ["Contains"],
+            "inputs": [{
+                "Name": "boundingBox",
+                "Type": "BoundingBox"
+            },{
+                "Name": "point",
+                "Type": "Point"
+            }],
+            "inDepth": "Bounding Box Contains tests if a specified Point is inside of a Bounding Box. Because the Point in this example is at (5,5,5), and our Origin Sphere’s Radius is larger than 5, the Contains node will return True."
+        }, {
+            "Name": "ToCuboid",
+            "description": "Get the BoundingBox as a Solid Cuboid.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Action",
+            "dynFile": ["ToCuboid"],
+            "imageFile": ["ToCuboid"],
+            "inputs": [{
+                "Name": "boundingBox",
+                "Type": "BoundingBox"
+            }],
+            "inDepth": "Bounding Box ToCuboid creates a Cuboid geometry from a Bounding Box. In order to visualize the relationship of the input Sphere to the Cuboid in the example, we are extracting its edge curves."
+        }, {
+            "Name": "MaxPoint",
+            "description": "The maximum point.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Query",
+            "dynFile": ["MaxPoint"],
+            "imageFile": ["MaxPoint"],
+            "inputs": [{
+                "Name": "boundingBox",
+                "Type": "BoundingBox"
+            }],
+            "inDepth": "Bounding Box MaxPoint returns the point that has the largest X, Y and Z values. This example shows a Bounding Box MaxPoint of a Sphere."
+        }, {
+            "Name": "MinPoint",
+            "description": "The minimum point.",
+            "categories": ["Geometry", "BoundingBox"],
+            "folderPath": "Geometry/BoundingBox/Query",
+            "dynFile": ["MinPoint"],
+            "imageFile": ["MinPoint"],
+            "inputs": [{
+                "Name": "boundingBox",
+                "Type": "BoundingBox"
+            }],
+            "inDepth": "Bounding Box MinPoint returns the point that has the smallest X, Y and Z values. This example shows a Bounding Box MinPoint of a Sphere."
+        }, {
+            "Name": "ByCoordinateSystemHeightRadii",
+            "description": "Creates a Cone with base Point at CoordinateSystem origin, extending in the CoordinateSystem Z axis deriction length amount, with a circular bases in the CoordinateSystem XY Plane.",
+            "categories": ["Geometry", "Cone"],
+            "folderPath": "Geometry/Cone/Create",
+            "dynFile": ["ByCoordinateSystemHeightRadii"],
+            "imageFile": ["ByCoordinateSystemHeightRadii"],
+            "inputs": [{
+                "Name": "cs",
+                "Type": "CoordinateSystem"
+            },{
+                "Name": "height",
+                "Type": "double"
+            },{
+                "Name": "startRadius",
+                "Type": "double"
+            },{
+                "Name": "endRadius",
+                "Type": "double"
+            }],
+            "inDepth": "Cone ByCoordinateSystemHeightRadii creates a truncated Cone geometry from two Radii, the starting Origin, and a Height value. This example shows a dynamic Cone around the World Origin, constructed with three Number Sliders."    
+        }, {
+            "Name": "ByCoordinateSystemHeightRadius",
+            "description": "Creates a Cone with base Point at CoordinateSystem origin, extending in the CoordinateSystem Z axis deriction length amount, with a circular base in the CoordinateSystem XY Plane.",
+            "categories": ["Geometry", "Cone"],
+            "folderPath": "Geometry/Cone/Create",
+            "dynFile": ["ByCoordinateSystemHeightRadius"],
+            "imageFile": ["ByCoordinateSystemHeightRadius"],
+            "inputs": [{
+                "Name": "cs",
+                "Type": "CoordinateSystem"
+            },{
+                "Name": "height",
+                "Type": "double"
+            },{
+                "Name": "startRadius",
+                "Type": "double"
+            }],
+            "inDepth": "Cone ByCoordinateSystemHeightRadius creates a Cone geometry from a Radius, the Cone Origin, and a Height value. This example shows a dynamic Cone around the World Origin, constructed with two Number Sliders."    
+        }, {
+            "Name": "ByPointsRadii",
+            "description": "Create a Cone with axis from start Point to end Point, with given radiuses at start and end. This object does not have an apex, and can be thought of as a trimmed Cone.",
+            "categories": ["Geometry", "Cone"],
+            "folderPath": "Geometry/Cone/Create",
+            "dynFile": ["ByPointsRadii"],
+            "imageFile": ["ByPointsRadii"],
+            "inputs": [{
+                "Name": "startPoint",
+                "Type": "Point"
+            },{
+                "Name": "endPoint",
+                "Type": "Point"
+            },{
+                "Name": "startRadius",
+                "Type": "double"
+            },{
+                "Name": "endRadius",
+                "Type": "double"    
+            }],
+            "inDepth": "Cone ByPointsRadii creates a truncated Cone geometry from a Start Point, End Point, and two Radius values. This example shows a dynamic Cone around the World Origin, constructed with three Number Sliders controlling its Height and Radius sizes."
+        }, {
+            "Name": "ByPointsRadius",
+            "description": "Create a Cone with given base radius at start Point, extending to a apex at end Point.",
+            "categories": ["Geometry", "Cone"],
+            "folderPath": "Geometry/Cone/Create",
+            "dynFile": ["ByPointsRadius"],
+            "imageFile": ["ByPointsRadius"],
+            "inputs": [{
+                "Name": "startPoint",
+                "Type": "Point"
+            },{
+                "Name": "endPoint",
+                "Type": "Point"
+            },{
+                "Name": "startRadius",
+                "Type": "double"
+            }],
+            "inDepth": "Cone ByPointsRadius creates a Cone geometry from a Start Point, End Point, and a Radius value. This example shows a dynamic Cone around the World Origin, constructed with two Number Sliders controlling its Height and Radius size."
+        }, {            
+            "Name": "ClosestPointTo",
+            "description": "Obtain the closest Point on this Geometry to the other.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["ClosestPointTo"],
+            "imageFile": ["ClosestPointTo"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "other",
+                "Type": "Geometry"
+            }],
+            "inDepth": "Geometry ClosestPointTo finds the closest point from one geometry to another, adding a 3D Point to the document. This example finds the closest point on one Sphere to another."    
+        }, {
+            "Name": "DistanceTo",
+            "description": "Obtain the distance from this Geometry to another.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["DistanceTo"],
+            "imageFile": ["DistanceTo"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            }],
+            "inDepth": "Geometry DistanceTo returns the distance between two geometries. This example finds the distance between two Spheres."
+        }, {
+            "Name": "DoesIntersect",
+            "description": "Determine if another Geometry object intersects with this one.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["DoesIntersect"],
+            "imageFile": ["DoesIntersect"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            }],
+            "inDepth": "Geometry DoesIntersect tests two geometries for an intersection. If the objects intersect, the Node will return True. This example tests for an intersection of two Sphere geometries."
+        }, {
+            "Name": "Explode",
+            "description": "Separates compound or non-separated elements into their component parts.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Explode"],
+            "imageFile": ["Explode"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            }],
+            "inDepth": "The Geometry Explode Node breaks a geometry down into smaller components. For example, a Polysurface can be Exploded into several Surfaces and a Polycurve into curves. In this example, we are extracting a single Surface from a complex Intersection of three Spheres."
+        }, {
+            "Name": "ExportToSAT (geometry, filePath)",
+            "description": "Exports the specified geometry to the given SAT file path.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["ExportToSAT_gf"],
+            "imageFile": ["ExportToSAT_gf"],
+            "inputs": [{
+                "Name": ""
+            }],
+            "inDepth": "Geometry ExportToSAT exports Geometry from Dynamo to a SAT file type. In this example, we are exporting a Polysurface from the Intersection of three Spheres."
+        }, {
+            "Name": "Intersect",
+            "description": "Get the intersection Geometry for this object and another.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Intersect"],
+            "imageFile": ["Intersect"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "entity",
+                "Type": "Geometry"
+            }],
+            "inDepth": "Geometry Intersect finds the Intersection Geometry that two Geometry objects share. In this example, the Intersection of two Spheres returns a Polysurface, otherwise known as a Solid Intersection."
+        }, {
+            "Name": "IntersectAll",
+            "description": "Get the intersection of Geometry for this object and a collection of other Geometries. Finds common geometry of all participants.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["IntersectAll"],
+            "imageFile": ["IntersectAll"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "entity",
+                "Type": "Geometry"
+            }],
+            "inDepth": "Geometry IntersectAll finds the Intersection Geometry that any number of Geometry objects share. In this example, the Intersection of three Spheres returns a Polysurface, otherwise known as a Solid Intersection."
+        }, {
+            "Name": "Mirror",
+            "description": "Mirror the object across the input Plane.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Mirror"],
+            "imageFile": ["Mirror"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "mirrorPlane",
+                "Type": "Plane"
+            }],
+            "inDepth": "Geometry Mirror reflects a Geometry across a defined Plane. In this example, we are Mirroring a Cone across the Y-Axis."
+        }, {
+            "Name": "Rotate (geometry, origin, axis, degrees)",
+            "description": "Rotates an object around the Plane origin and normal by a specified degree.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Rotate_goad"],
+            "imageFile": ["Rotate_goad"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "basePlane",
+                "Type": "Plane"
+            },{
+                "Name": "degrees",
+                "Type": "double"
+            }],
+            "inDepth": "This Geometry Rotate Node Rotates an input Geometry around a Base Plane by a defined Degree. In the example file, a Cone is Rotated around the XY-Plane with a Number Slider."
+        
+        }, {
+            "Name": "Rotate (geometry, basePlane, degrees)",
+            "description": "Rotates an object around an origin and an axis by a specified degree.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Rotate_gbd"],
+            "imageFile": ["Rotate_gbd"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "origin",
+                "Type": "Point"
+            },{
+                "Name": "axis",
+                "Type": "Vector"
+            },{
+                "Name": "degrees",
+                "Type": "double"
+            }],
+            "inDepth": "This Geometry Rotate Node Rotates an input Geometry around an Origin Point and Axis Vector by a certain Degree amount. In the example file, a Cone is Rotated about the Y-Axis Vector by its End Point."
+        }, {            
+            "Name": "Scale (geometry, basePoint, from, to)",
+            "description": "Scale uniformly around a given point, using two pick points as scalars.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Scale_gbft"],
+            "imageFile": ["Scale_gbft"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "basePoint",
+                "Type": "Point"
+            },{
+                "Name": "from",
+                "Type": "Point"
+            },{
+                "Name": "to",
+                "Type": "Point"
+            }],
+            "inDepth": "This Geometry Scale Node Scales an input Geometry from three reference Points. In this example, we are scaling a Cone relative to its End Point from its Start Point to its Centroid. The Cone Circle and side Edge are drawn as a visual reference of the Scale."
+        }, {
+            "Name": "Scale (geometry, amount)",
+            "description": "Scale uniformly around the origin.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Scale_ga"],
+            "imageFile": ["Scale_ga"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "xamount",
+                "Type": "double"
+            }],
+            "inDepth": "This Geometry Scale Node Scales an input Geometry from the object Centroid by an input factor. In the example file, a Cone is scaled down with a Number Slider. The original Cone Edges are drawn for a visual reference."
+        }, {
+            "Name": "Scale (geometry, xamount, yamount, zamount)",
+            "description": "Scale non-uniformly around the origin.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Scale_gxyz"],
+            "imageFile": ["Scale_gxyz"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "xamount",
+                "Type": "double"
+            },{
+                "Name": "yamount",
+                "Type": "double"
+            },{
+                "Name": "zamount",
+                "Type": "double"
+            }],
+            "inDepth": "This Geometry Scale Node Scales an input Geometry from the object Centroid by an input factor. In the example, a Cone’s Scale can be finely tuned with three Number Sliders. The original Cone Edges are drawn as a visual reference."
+        }, {
+            "Name": "Scale (geometry, plane, xamount, yamount, zamount)",
+            "description": "Scale non-uniformly around a given Plane.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Scale_gpxyz"],
+            "imageFile": ["Scale_gpxyz"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "plane",
+                "Type": "Plane"
+            },{
+                "Name": "xamount",
+                "Type": "double"
+            },{
+                "Name": "yamount",
+                "Type": "double"
+            },{
+                "Name": "zamount",
+                "Type": "double"
+            }],
+            "inDepth": "This Geometry Scale Node Scales an input Geometry about a Plane by specified X, Y and Z factors. This example shows a Cone before and after it is scaled in relationship to the YZ-Plane."
+        }, {
+            "Name": "Scale1D",
+            "description": "Scale in one dimension by base and 2 pick points. The scaling axis is defined by the line between base and pick0.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Scale1D"],
+            "imageFile": ["Scale1D"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "basePoint",
+                "Type": "Point"
+            },{
+                "Name": "from",
+                "Type": "Point"
+            },{
+                "Name": "to",
+                "Type": "Point"
+            }],
+            "inDepth": "Geometry Scale1D Scales a Geometry in one direction from a Base Point and two reference Points. In the example file, a Cone is scaled from its End Point to its Centroid in relation to the Cone Start Point. The original Cone Edges are drawn as a visual reference."
+        }, {
+            "Name": "Scale2D",
+            "description": "Scale in two dimension by base and 2 pick points The two pick points are projected onto the base plane in order to determine the 2d scale factors.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Scale2D"],
+            "imageFile": ["Scale2D"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "basePlane",
+                "Type": "Plane"
+            },{
+                "Name": "from",
+                "Type": "Point"
+            },{
+                "Name": "to",
+                "Type": "Point"
+            }],
+            "inDepth": "Geometry Scale2D Scales a Geometry in two directions from a Base Plane and two reference Points. In the example file, a Cone is scaled from its End Point to its Centroid in relation to the YZ-Plane."
+        }, {
+            "Name": "Split",
+            "description": "Split this Geometry using another Geometry as a cutting 'tool'.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Split"],
+            "imageFile": ["Split"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "tool",
+                "Type": "Geometry"
+            }],
+            "inDepth": "The Geometry Split Node functions similarly to the Geometry Trim Node. It inputs a Tool – any type of Geometry that you will be trimming another Geometry with – and a Geometry, and returns all of the fragments of Geometry. In this example, a Cone is Split with a similar Cone. Although all fragments are returned by the Geometry Split Node, one is previewed in the example file."
+        }, {
+            "Name": "Transform (geometry, fromCoordinateSystem, contextCoordinateSystem)",
+            "description": "Transforms this geometry from source CoordinateSystem to a new context CoordinateSystem.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Transform_gfc"],
+            "imageFile": ["Transform_gfc"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "fromCoordinateSystem",
+                "Type": "CoordinateSystem"
+            },{
+                "Name": "contextCoordinateSystem",
+                "Type": "CoordinateSystem"
+            }],
+            "inDepth": "This Geometry Transform Node moves and orients a geometry from one Coordinate System plane to another specified Coordinate System. In this example a Cone is Transformed from the ground plane to the YZ-Plane."
+        }, {
+            "Name": "Transform (geometry, cs)",
+            "description": "Transforms geometry by the given CoordinateSystem's transform.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Transform_gc"],
+            "imageFile": ["Transform_gc"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "cs",
+                "Type": "CoordinateSystem"
+            }],
+            "inDepth": "This Geometry Transform Node moves and orients a geometry from the XY-Plane to any specified Plane. In this example a Cone is Transformed from the XY-Plane to the YZ-Plane."
+        }, {
+            "Name": "Translate (geometry, direction)",
+            "description": "Translate geometry in the given direction by the vector length.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Translate_gd"],
+            "imageFile": ["Translate_gd"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "direction",
+                "Type": "Vector"
+            }],
+            "inDepth": "This Geometry Translate Node moves a geometry by any given Vector. In the example file, we are Translating a Cone by the Vector created between the Start and End Points of the Cone."
+        }, {
+            "Name": "Translate (geometry, xTranslation, yTranslation, zTranslation)",
+            "description": "Translates any given geometry by the given displacements in the x, y, and z directions defined in WCS respectively.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Translate_gxyz"],
+            "imageFile": ["Translate_gxyz"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "xTranslation",
+                "Type": "double"
+            },{
+                "Name": "yTranslation",
+                "Type": "double"
+            },{
+                "Name": "zTranslation",
+                "Type": "double"
+            }]
+            "inDepth": "This Geometry Translate Node moves a geometry by any given Vector direction and a Distance. In the example file, we are Translating a Cone in the X-Axis direction by a distance inherited by a Number Slider."
+        }, {
+            "Name": "Translate (geometry, direction, distance)",
+            "description": "Translates any geometry type by the given distance in the given direction.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Translate_gdd"],
+            "imageFile": ["Translate_gdd"],
+            "inputs": [{
+                "Name": "Geometry",
+                "Type": "Trim"
+            },{
+                "Name": "direction",
+                "Type": "Vector"
+            },{
+                "Name": "distance",
+                "Type": "double"
+            }]
+            "inDepth": "This Geometry Translate Node moves a geometry by a Vector defined in the Node by inputting all three Translation Values for X, Y and Z. In the example file, a Cone is Translated by three Number Slider values."
+        }, {
+            "Name": "Trim",
+            "description": "Removes elements of the entity closest to the pick point.",
+            "categories": ["Geometry", "Geometry"],
+            "folderPath": "Geometry/Geometry/Action",
+            "dynFile": ["Trim"],
+            "imageFile": ["Trim"],
+            "inputs": [{
+                "Name": "geometry",
+                "Type": "Geometry"
+            },{
+                "Name": "tool",
+                "Type": "Geometry"
+            },{
+                "Name": "pick",
+                "Type": "Point"
+            }],
+            "inDepth": "Geometry Trim functions similarly to the Geometry Split Node in that it inputs a Tool – any type of Geometry that you will be trimming another Geometry with – and a Geometry, but returns only a single fragment of the Geometry. The Geometry that is Picked is selected by a reference Point closest to the fragment. In this example, one Cone is Trimmed by another, with its lower portion Picked."
+        }]
+             
