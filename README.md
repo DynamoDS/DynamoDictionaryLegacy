@@ -1,2 +1,1 @@
-# DynamoDictionary
-Dynamo Dictionary development repo
+cont
