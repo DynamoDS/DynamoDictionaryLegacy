@@ -1,2 +1,2 @@
-# DynamoDictionary
-Dynamo Dictionary development repo
+# DYNAMODICTIONARY
+DYNAMO DICTIONARY DEVELOPMENT REPO
