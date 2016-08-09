@@ -1,1 +1,3 @@
-{"text":"sdfgHello Dynamo Dictionary"}
+{
+    "text": "sdfHello Dynamo Dictionary"
+}
