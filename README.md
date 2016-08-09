@@ -1,1 +1,1 @@
-asdfadsfHello Dynamo Dictionary
+Hello Dynamo Dictionary
