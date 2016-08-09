@@ -1,1 +1,1 @@
-[object Object]
+{"text":"Hello Dynamo Dictionary"}
