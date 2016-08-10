@@ -445,7 +445,7 @@
         "imageFile": [
             "ByBestFitThroughPoints"
         ],
-        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.",
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.\n\nAlso, if you go outside f the range from 0 to 4, the arc will accommodate a large number of points.",
         "index": 29
     },
     {
@@ -491,7 +491,8 @@
         "imageFile": [
             "ByCenterPointStartPointSweepAngle"
         ],
-        "inDepth": "The Arc ByCenterPointStartPointSweepAngle creates an arc around a Center Point with a given Sweep Angle. The Start Point tells Dynamo where to begin drawing the arc. This example draws an arc around a randomly generated point."
+        "inDepth": "The Arc ByCenterPointStartPointSweepAngle creates an arc around a Center Point with a given Sweep Angle. The Start Point tells Dynamo where to begin drawing the arc. This example draws an arc around a randomly generated point.",
+        "index": 32
     },
     {
         "Name": "ByFillet",
@@ -521,7 +522,8 @@
         "imageFile": [
             "ByFilletTangentToCurve"
         ],
-        "inDepth": "Arc ByFilletTangentToCurve draws the best fit arc that is tangent to three input curves. In this example, we are using two input lines as reference curves and a circle for the arc to be tangent to."
+        "inDepth": "Arc ByFilletTangentToCurve draws the best fit arc that is tangent to three input curves. In this example, we are using two input lines as reference curves and a circle for the arc to be tangent to.",
+        "index": 34
     },
     {
         "Name": "ByStartPointEndPointStartTangent",
@@ -551,7 +553,8 @@
         "imageFile": [
             "ByThreePoints"
         ],
-        "inDepth": "Arc ByThreePoints draws an arc from three points, given the Start Point, End Point and a point in-between along the arc. This example draws an arc from three randomly created points."
+        "inDepth": "Arc ByThreePoints draws an arc from three points, given the Start Point, End Point and a point in-between along the arc. This example draws an arc from three randomly created points.",
+        "index": 36
     },
     {
         "Name": "ByStartEndAndTangencies",
@@ -731,7 +734,8 @@
         "imageFile": [
             "Contains"
         ],
-        "inDepth": "Bounding Box Contains tests if a specified Point is inside of a Bounding Box. Because the Point in this example is at (5,5,5), and our Origin Sphere’s Radius is larger than 5, the Contains node will return True."
+        "inDepth": "Bounding Box Contains tests if a specified Point is inside of a Bounding Box. Because the Point in this example is at (5,5,5), and our Origin Sphere’s Radius is larger than 5, the Contains node will return True.",
+        "index": 48
     },
     {
         "Name": "ToCuboid",
