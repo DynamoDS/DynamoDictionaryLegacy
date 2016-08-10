@@ -119,7 +119,8 @@
         "imageFile": [
             "ByCenterPointRadiusNormal"
         ],
-        "inDepth": "Circle By Center Point Radius Normal creates a circle at a point with a controllable radius and normal. In this example, we create a vector from the Origin Point to the Point By Coordinates to control the direction of the circle."
+        "inDepth": "Circle By Center Point Radius Normal creates a circle at a point with a controllable radius and normal. In this example, we create a vector from the Origin Point to the Point By Coordinates to control the direction of the circle.",
+        "index": 7
     },
     {
         "Name": "ByPlaneRadius",
@@ -149,7 +150,8 @@
         "imageFile": [
             "ByCenterPointRadius"
         ],
-        "inDepth": "Circle By Center Point Radius is a simplified node to create a circle with a the Z-Plane normal. This definition uses a code block to create a point in three-dimensional space, and locates the circle around the point. The radius is controlled dynamically with a Number Slider."
+        "inDepth": "Circle By Center Point Radius is a simplified node to create a circle with a the Z-Plane normal. This definition uses a code block to create a point in three-dimensional space, and locates the circle around the point. The radius is controlled dynamically with a Number Slider.",
+        "index": 9
     },
     {
         "Name": "ByThreePoints",
@@ -179,7 +181,8 @@
         "imageFile": [
             "ByBestFitThroughPoints"
         ],
-        "inDepth": "Circle By Best Fit Through Points receives point inputs and creates a best fit circle through them. In this example, we can dynamically increase the number of randomly generated points with a Number Slider, altering the shape of the best-fit circle. "
+        "inDepth": "Circle By Best Fit Through Points receives point inputs and creates a best fit circle through them. In this example, we can dynamically increase the number of randomly generated points with a Number Slider, altering the shape of the best-fit circle. ",
+        "index": 11
     },
     {
         "Name": "ByPoints",
@@ -445,8 +448,7 @@
         "imageFile": [
             "ByBestFitThroughPoints"
         ],
-        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.\n\nAlso, you should use this with lists instead of items.",
-        "index": 29
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions."
     },
     {
         "Name": "ByCenterPointRadiusAngle",
@@ -461,7 +463,8 @@
         "imageFile": [
             "ByCenterPointRadiusAngle"
         ],
-        "inDepth": "Arc ByCenterPointRadiusAngle draws an arc relative to its center and normal direction. By entering the start and end angle, you are essentially drawing a portion of a circle. In this example, a random point is generated on the XY plane and an arc is constructed around it.  "
+        "inDepth": "Arc ByCenterPointRadiusAngle draws an arc relative to its center and normal direction. By entering the start and end angle, you are essentially drawing a portion of a circle. In this example, a random point is generated on the XY plane and an arc is constructed around it.  Also you can change the lacing to make a lot of arcs.\n\n",
+        "index": 30
     },
     {
         "Name": "ByCenterPointStartPointEndPoint",
