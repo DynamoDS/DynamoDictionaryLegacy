@@ -445,7 +445,8 @@
         "imageFile": [
             "ByBestFitThroughPoints"
         ],
-        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions."
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions. Additional Text.",
+        "index": 29
     },
     {
         "Name": "ByCenterPointRadiusAngle",
@@ -790,8 +791,7 @@
         "imageFile": [
             "ByCoordinateSystemHeightRadii"
         ],
-        "inDepth": "Cone ByCoordinateSystemHeightRadii creates a truncated Cone geometry from two Radii, the starting Origin, and a Height value. This example shows a dynamic Cone around the World Origin, constructed with three Number Sliders. Something else.",
-        "index": 52
+        "inDepth": "Cone ByCoordinateSystemHeightRadii creates a truncated Cone geometry from two Radii, the starting Origin, and a Height value. This example shows a dynamic Cone around the World Origin, constructed with three Number Sliders."
     },
     {
         "Name": "ByCoordinateSystemHeightRadius",
