@@ -1,2 +1,3 @@
-# DynamoDictionary
-Dynamo Dictionary development repo
+{
+    "text": "sdfHello Dynamo Dictionary"
+}
