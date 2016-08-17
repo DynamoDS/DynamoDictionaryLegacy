@@ -1,0 +1,36 @@
+<Workspace Version="1.0.0.1180" X="-96.3300578530784" Y="-186.337886737402" zoom="1.30764135636719" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.StringInput guid="8f335c73-8563-40f8-ab16-1a8c0eda22f1" type="CoreNodeModels.Input.StringInput" nickname="String" x="315.663790330428" y="280.315265500719" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Hello</System.String>
+      <System.String value="Hello" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Watch guid="1f79f9e3-94fc-4650-ad0f-49067625f89a" type="CoreNodeModels.Watch" nickname="Watch" x="697.786590542415" y="222.50429561769" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Input.StringInput guid="76b24f04-87ce-4d78-9321-1ecce93be062" type="CoreNodeModels.Input.StringInput" nickname="String" x="315.663790330428" y="395.937205266777" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>HI!</System.String>
+      <System.String value="HI!" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction guid="dc8a7385-a24f-4655-9371-3a7335373bd2" type="Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction" nickname="String.Join" x="483.732016393261" y="222.50429561769" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Join@string,string[]" inputcount="4" />
+    <CoreNodeModels.Input.StringInput guid="d12393e3-8a37-4a35-8ef5-7bdc2541ed13" type="CoreNodeModels.Input.StringInput" nickname="String" x="310.863790330428" y="338.126235383748" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>World</System.String>
+      <System.String value="World" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Input.StringInput guid="991d6da2-44fa-4202-ac2b-23cd43cc65e3" type="CoreNodeModels.Input.StringInput" nickname="String" x="315.663790330428" y="222.50429561769" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>_</System.String>
+      <System.String value="_" />
+    </CoreNodeModels.Input.StringInput>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="8f335c73-8563-40f8-ab16-1a8c0eda22f1" start_index="0" end="dc8a7385-a24f-4655-9371-3a7335373bd2" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="76b24f04-87ce-4d78-9321-1ecce93be062" start_index="0" end="dc8a7385-a24f-4655-9371-3a7335373bd2" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="dc8a7385-a24f-4655-9371-3a7335373bd2" start_index="0" end="1f79f9e3-94fc-4650-ad0f-49067625f89a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d12393e3-8a37-4a35-8ef5-7bdc2541ed13" start_index="0" end="dc8a7385-a24f-4655-9371-3a7335373bd2" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="991d6da2-44fa-4202-ac2b-23cd43cc65e3" start_index="0" end="dc8a7385-a24f-4655-9371-3a7335373bd2" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
