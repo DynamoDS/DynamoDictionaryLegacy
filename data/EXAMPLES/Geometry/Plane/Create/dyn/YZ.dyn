@@ -1,0 +1,15 @@
+<Workspace Version="1.0.0.1180" X="1008.57015844817" Y="-285.053498940698" zoom="1.06696975018683" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2e01472b-1139-4f8b-b5b8-30ad7017fd74" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Plane.XZ" x="-606.876292269889" y="369.743389034485" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Plane.XZ" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6bec043c-dadf-47cb-b9ec-86646b75dd49" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Plane.YZ" x="-476.788255588722" y="369.743389034485" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Plane.YZ" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b7090502-0e83-41ce-a83b-234b14f9bfbd" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Plane.XY" x="-346.700218907555" y="369.743389034485" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Plane.XY" />
+  </Elements>
+  <Connectors />
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-16.2785667272413" eyeY="8.89926367190986" eyeZ="15.316742726377" lookX="23.2524266857387" lookY="-1.23389124510778" lookZ="-16.4701148668428" upX="-0.140299380394547" upY="0.985109338052405" upZ="0.0993765677174917" />
+  </Cameras>
+</Workspace>

@@ -1,0 +1,31 @@
+<Workspace Version="1.0.0.1180" X="572.183608032089" Y="111.038112021614" zoom="0.883851929302206" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.DoubleSlider guid="a7e2011e-5417-4a1e-9c7f-881cf59addb7" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="-478.942538077797" y="29.1807451077944" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>5.5</System.Double>
+      <Range min="0" max="20" step="0.1" />
+    </CoreNodeModels.Input.DoubleSlider>
+    <CoreNodeModels.Input.DoubleSlider guid="c03ffe05-9a84-49d9-a79a-1a0a0f882e2b" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="-478.942538077797" y="91.3065834032093" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>6.4</System.Double>
+      <Range min="0" max="20" step="0.1" />
+    </CoreNodeModels.Input.DoubleSlider>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="5ee091ab-8cc0-4049-ab69-e5854de7f9c6" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Ellipse.ByPlaneRadii" x="-33.0102854674236" y="-60.2258214549009" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Ellipse.ByPlaneRadii@Autodesk.DesignScript.Geometry.Plane,double,double">
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="5e4cf733-9f91-48dc-8767-6acf898bd2c4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Plane.YZ" x="-256.542538077797" y="-59.3206924695158" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Plane.YZ" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="4568cc53-ac5f-4cc3-8eaa-1ff1fc1e9913" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Ellipse.MajorAxis" x="255.725860870435" y="-60.2258214549009" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Ellipse.MajorAxis" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="a7e2011e-5417-4a1e-9c7f-881cf59addb7" start_index="0" end="5ee091ab-8cc0-4049-ab69-e5854de7f9c6" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c03ffe05-9a84-49d9-a79a-1a0a0f882e2b" start_index="0" end="5ee091ab-8cc0-4049-ab69-e5854de7f9c6" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5ee091ab-8cc0-4049-ab69-e5854de7f9c6" start_index="0" end="4568cc53-ac5f-4cc3-8eaa-1ff1fc1e9913" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5e4cf733-9f91-48dc-8767-6acf898bd2c4" start_index="0" end="5ee091ab-8cc0-4049-ab69-e5854de7f9c6" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-16.5540169786461" eyeY="14.5366141783493" eyeZ="20.5880825929123" lookX="16.8437736729183" lookY="-7.06124156237819" lookZ="-18.9121004273023" upX="0.0371264264231968" upY="0.998440777676505" upZ="-0.041685356972707" />
+  </Cameras>
+</Workspace>

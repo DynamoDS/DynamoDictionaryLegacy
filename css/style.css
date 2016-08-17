@@ -1,5 +1,7 @@
-    ::-webkit-scrollbar {
-        width: 6px;
+::-webkit-scrollbar {
+        width: 3px;
+        background-color: rgb(84, 84, 84);
+        
     }
     
     ::-webkit-scrollbar-track {
@@ -20,13 +22,45 @@
         width: 200px;
         height: 20px;
         padding: 2px;
-/*        font: 12px sans-serif;*/
-        background: rgb(34,34,34);
+        /*        font: 12px sans-serif;*/
+        background: rgb(34, 34, 34);
         border: 1px;
         border-style: solid;
         border-color: #444 #444;
-/*        border-radius: 8px;*/
+        /*        border-radius: 8px;*/
         pointer-events: none;
+    }
+    pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+       
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    color: #f9f9f9;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    font-weight: 100;
+    outline: white;
+    line-height: 25px;
+    }
+
+    textarea {
+        resize: none;
+        width: 100%;
+        height: 150px;
+        margin: 0px;
+        padding: 0px;
+        background: none;
+        color: #f9f9f9;
+        font-family: 'Open Sans';
+        font-size: 15px;
+        font-weight: 100;
+        outline: white;
+        line-height: 25px;
     }
     
     #btnSearch {
@@ -99,7 +133,7 @@
         background: #111111;
         font-size: 12px;
         opacity: 1;
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Open Sans';
     }
     
     body {
@@ -122,19 +156,20 @@
         /*        margin-top:20px;*/
         /*        margin-left:10px;*/
         width: 100%;
-        height: 5.5%;
-        background: #111111;
+        height: 55px;
+        background: rgb(34, 34, 34);
         position: fixed;
         top: 0px;
         z-index: 2;
         text-align: center;
         vertical-align: middle;
         line-height: 10px;
+        border-bottom: 1px solid rgb(84, 84, 84);
     }
     
     .title {
         font-size: 26px;
-        color: gray;
+/*        color: whitegray;*/
         vertical-align: middle;
         line-height: 10px;
         font-weight: 100;
@@ -156,13 +191,14 @@
     .left-element {
         /*        resize:horizontal;*/
         white-space: nowrap;
-        margin-top: 0.3%;
+        margin-top: 0%;
+/*        padding-top: 24px;*/
         display: inline-block;
         position: absolute;
         overflow: hidden;
         left: 0;
         width: 22%;
-        background: rgb(34, 34, 34);
+        /*        background: rgb(34, 34, 34);*/
         border-right: 1px solid rgb(84, 84, 84);
     }
     
@@ -191,6 +227,7 @@
     
     div.left-element:hover {
         overflow: auto;
+        overflow-x: hidden;
     }
     
     div.right-element {
@@ -204,15 +241,25 @@
         /*        overflow: s;*/
     }
     
+/*
     hr {
         display: block;
         height: 1px;
         border: 0;
         border-top: 1px solid #ccc;
         margin: 1em 0;
-        /*        margin-right:5%;*/
+                margin-right:5%;
         padding: 0;
-    }
+*/
+        
+        
+hr {
+    border: 0;
+    height: 0;
+    border-bottom: 1px solid rgb(84, 84, 84);
+}
+        
+/*    }*/
     
     span {
         position: relative;
@@ -240,8 +287,8 @@
     .nodeName {
         /*        margin-left: 20px;*/
         /*        margin-right: 50px;*/
-        margin-top: 20px;
-        font-size: 28px;
+        margin-top: 0px;
+        font-size: 18px;
         font-weight: 100;
         padding-right: 4%;
     }
@@ -290,81 +337,132 @@
     
     button.accordion,
     button.accordionM {
+/*        height:28px;*/
         display: inline;
         cursor: pointer;
         padding: 0px;
         text-align: left;
         border: none;
+        
+/*        border-bottom: 1px dashed rgb(50, 50, 50);*/
         outline: none;
         transition: 0.3s ease-in-out;
+        
+        background-color: rgb(34, 34, 34);
+        
+        
     }
+button.accordion.button2,button.accordion.button3,button.accordion.button4,button.accordion.button5{
+    border-left: 1px solid rgb(84, 84, 84);
+}
+button.accordion.button2.active,button.accordion.button3.active,button.accordion.button4.active,button.accordion.button5.active{
+    border-left: 8px solid rgb(84, 84, 84);
+}
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/*
+.testborder{
+   border-left: 10px solid rgb(84, 84, 84); 
+}
+*/
+.buttonanim{
+/*    height:40px;*/
+}
+
+button{
+    color: white;
+    color: #f9f9f9;
+        font-family: 'Open Sans';
+        font-weight: 100;
+        line-height: 20px;
     
+/*
+    border: solid #fff;
+border-width: 0 1px;
+*/
+    
+}
     .button1,
     .button0 {
-        background-color: rgb(34, 34, 34);
+/*        border-left: 0px solid rgb(84, 84, 84);*/
+/*        height:40px;*/
+/*        height:2px;*/
+/*        border-left: 0px solid rgb(84, 84, 84);*/
         color: white;
+/*        border-bottom: none;*/
     }
     
     .button1.active,
     .button0.active {
-        background-color: rgb(74, 74, 74);
+/*        height:20px;*/
+/*        border-bottom: 4px solid rgb(84, 84, 84);*/
+/*       background-color: rgb(96, 96, 96); */
+        border-left: 8px solid rgb(84, 84, 84);
     }
     
     .button1:hover,
     .button0:hover {
-        background-color: rgb(114, 114, 114);
+/*        margin-left:5%;*/
+        background-color: rgb(96, 96, 96);
     }
     
     .button2 {
-        background-color: rgb(140, 140, 140);
-        color: rgb(34, 34, 34);
+/*        height:0px;*/
+        margin-left:5%;
+/*        background-color: rgb(34, 34, 34);*/
     }
+.button2.show{
+    
+}
     
     .button2.active {
-        background-color: rgb(170, 170, 170);
     }
     
     .button2:hover {
-        background-color: rgb(200, 200, 200);
+/*        margin-left:10%;*/
+        background-color: rgb(96, 96, 96);
+/*        background-color:rgb(34, 34, 34);*/
     }
     
     .button3 {
-        background-color: rgb(210, 210, 210);
-        color: rgb(34, 34, 34);
+        margin-left:10%;
+/*        background-color: rgb(34, 34, 34);*/
     }
     
     .button3.active {
-        background-color: rgb(240, 240, 240);
     }
     
     .button3:hover {
-        background-color: rgb(255, 255, 255);
+/*        margin-left:15%;*/
+        background-color: rgb(96, 96, 96);
+/*        background-color: rgb(34, 34, 34);*/
     }
     
     .button4 {
-        background-color: rgb(255, 255, 255);
-        color: rgb(34, 34, 34);
+        margin-left:15%;
+/*        background-color: rgb(34, 34, 34);*/
     }
     
     .button4.active {
-        background-color: rgb(230, 230, 230);
     }
     
     .button4:hover {
-        background-color: rgb(210, 210, 210);
+/*        margin-left:20%;*/
+        background-color: rgb(96, 96, 96);
+/*        background-color: rgb(34, 34, 34);*/
     }
     
     .button5 {
-        background-color: #666;
+        margin-left:20%;
+/*        background-color:rgb(34, 34, 34);*/
     }
     
     .button5.active {
-        background-color: rgb(150, 150, 150);
     }
     
     .button5:hover {
-        background-color: #D0D0D0;
+        margin-left:20%;
+        background-color: rgb(96, 96, 96);
+/*        background-color: rgb(34, 34, 34);*/
     }
     
     button.accordion:after {
@@ -401,12 +499,14 @@
         padding: 0 0px;
         max-height: 0;
         overflow: hidden;
-        opacity: 0;
+/*        opacity: 1;*/
+/*        transition: max-height 1s linear;*/
     }
     
     div.panel.show {
-        opacity: 1;
+/*        opacity: 1;*/
         max-height: 2500px;
+        
         /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
     }
     
@@ -414,7 +514,7 @@
         margin-right: 20%;
         display: inline-block;
         margin-top: 0.5%;
-        color: gray;
+        color: white;
     }
     
     #searchBar {
