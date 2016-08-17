@@ -1095,7 +1095,8 @@
      }
 
      d3.json("data/Dynamo_Nodes_Documentation.json", function (data) {
-         console.log(data)
+//         console.log(data)
+
          data.forEach(function (j, h) {
 //             console.log(j.Name, ob.Name, ob.Categories, j.categories)
              if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
@@ -1107,7 +1108,7 @@
      
 
      if (hit == true) {
-         console.log('cookin')
+//         console.log('cookin')
          var iconimage1 = "images/icons/download.svg";
          var iconimage2 = "images/icons/edit.svg";
          var iconimage3 = "images/icons/add.svg";
@@ -1205,8 +1206,9 @@
          var impaths = hitob.imageFile;
          impaths.forEach(function (z, v) {
              var fp = hitob.folderPath;
-             var imp = "./data/EXAMPLES/" + fp + "/img/JPEG/" + z + ".jpg";
+             var imp = "./data/EXAMPLES/" + fp + "/img/" + z + ".jpg";
              d3.select(".exampleFile").append('html').html("<br>").append("img").attr("src", imp).attr("width", "80%").attr("align", "middle")
+             d3.select(".exampleFile").append('html').html("<br><br>")
          })
 
      } else {
