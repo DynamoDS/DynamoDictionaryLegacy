@@ -1365,7 +1365,7 @@ require(["d3"], function (d3) {
         } else {
             d3.selectAll(".seeAlso").html("");
         }
-        d3.selectAll(".seeAlso").append("html")
+//        d3.selectAll(".seeAlso").append("html")
         var ims = d3.selectAll(".imageTiles").selectAll("img")
         var imcount = [];
 
