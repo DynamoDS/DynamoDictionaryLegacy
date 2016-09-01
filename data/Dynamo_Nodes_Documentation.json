@@ -522,7 +522,7 @@
             "ByBestFitThroughPoints",
             "ByBestFitThroughPoints2"
         ],
-        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.etyety",
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.",
         "index": 34
     },
     {
@@ -1723,7 +1723,8 @@
         "imageFile": [
             "ByCoordinateSystemRadii"
         ],
-        "inDepth": "Ellipse by Coordinate System Radii takes a coordinate system as an input, then creates an ellipse using the inputted radii. The input xAxisRadius and yAxisRadius correspond to the X and Y directions of the input Coordinate System (not the World X and Y directions). In the example file, we generate two random values to create a Coordinate System, then use that Coordinate System with two number sliders for the x and y radii."
+        "inDepth": "Ellipse by Coordinate System Radii takes a coordinate system as an input, then creates an ellipse using the inputted radii. The input xAxisRadius and yAxisRadius correspond to the X and Y directions of the input Coordinate System (not the World X and Y directions). In the example file, we generate two random values to create a Coordinate System, then use that Coordinate System with two number sliders for the x and y radii.",
+        "index": 114
     },
     {
         "Name": "ByOriginRadii",
