@@ -1,4 +1,5 @@
 function commitChanges(ob) {
+    console.log(JSON.parse(ob))
     //    var ob=JSON.parse(ob);
     //    console.log(ob)
     require(["githubapi"], function (Github) {
@@ -7,7 +8,7 @@ function commitChanges(ob) {
         // a generic user id and add to Github collobrator.
         // Add the token to a config file and put it in S3. Do not share the token
         var github = new Github({
-            token: "74ee7d98b33db35e94e9cd6e1cea9f32bdd1068d"
+            token: ""
         });
         //step 1: Create the branch
         //TO DO : Generate unique name for the branch
@@ -39,6 +40,7 @@ function commitChanges(ob) {
         }
         repo.createBranch("master", gitInfo.branchName, function (err) {
             //step 2 : Read / get the contents
+            
             var filelist = [];
             filelist[0] = {
                 i: ob
