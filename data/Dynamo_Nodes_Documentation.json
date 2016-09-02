@@ -6981,5 +6981,2648 @@
         ],
         "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false.",
         "index": 464
+    },
+    {
+        "Name": "IsAlmostEqualTo",
+        "categories": [
+            "Analyze",
+            "AnalysisExtensions"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Analyze/AnalysisExtensions/Action",
+        "inDepth": "Add in-depth information about IsAlmostEqualTo...",
+        "index": 465
+    },
+    {
+        "Name": "ByPointAndString",
+        "categories": [
+            "Analyze",
+            "Label"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Analyze/Label/Create",
+        "inDepth": "Add in-depth information about ByPointAndString...",
+        "index": 466
+    },
+    {
+        "Name": "AllTrue",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about AllTrue...",
+        "index": 467
+    },
+    {
+        "Name": "Contains (list, element)",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about Contains (list, element)...",
+        "index": 468
+    },
+    {
+        "Name": "ContainsKey",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about ContainsKey...",
+        "index": 469
+    },
+    {
+        "Name": "CountFalse",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about CountFalse...",
+        "index": 470
+    },
+    {
+        "Name": "CountTrue",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about CountTrue...",
+        "index": 471
+    },
+    {
+        "Name": "Equals",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about Equals...",
+        "index": 472
+    },
+    {
+        "Name": "GetKeys",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about GetKeys...",
+        "index": 473
+    },
+    {
+        "Name": "GetValues",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about GetValues...",
+        "index": 474
+    },
+    {
+        "Name": "GroupByFunction",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about GroupByFunction...",
+        "index": 475
+    },
+    {
+        "Name": "ImportFromCSV (filePath, transpose)",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about ImportFromCSV (filePath, transpose)...",
+        "index": 476
+    },
+    {
+        "Name": "ImportFromCSV (filePath)",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about ImportFromCSV (filePath)...",
+        "index": 477
+    },
+    {
+        "Name": "Insert (list, element, index)",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about Insert (list, element, index)...",
+        "index": 478
+    },
+    {
+        "Name": "IsHomogeneous",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about IsHomogeneous...",
+        "index": 479
+    },
+    {
+        "Name": "IsRectangular",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about IsRectangular...",
+        "index": 480
+    },
+    {
+        "Name": "IsUniformDepth",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about IsUniformDepth...",
+        "index": 481
+    },
+    {
+        "Name": "LoopWhile",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about LoopWhile...",
+        "index": 482
+    },
+    {
+        "Name": "Map",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about Map...",
+        "index": 483
+    },
+    {
+        "Name": "MapTo",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about MapTo...",
+        "index": 484
+    },
+    {
+        "Name": "MaximumItemByKey",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about MaximumItemByKey...",
+        "index": 485
+    },
+    {
+        "Name": "MinimumItemByKey",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about MinimumItemByKey...",
+        "index": 486
+    },
+    {
+        "Name": "NewtonRootFind1DNoDeriv",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about NewtonRootFind1DNoDeriv...",
+        "index": 487
+    },
+    {
+        "Name": "NewtonRootFind1DWithDeriv",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about NewtonRootFind1DWithDeriv...",
+        "index": 488
+    },
+    {
+        "Name": "NormalizeDepth (list)",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about NormalizeDepth (list)...",
+        "index": 489
+    },
+    {
+        "Name": "NormalizeDepth (list, rank)",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about NormalizeDepth (list, rank)...",
+        "index": 490
+    },
+    {
+        "Name": "Rank",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about Rank...",
+        "index": 491
+    },
+    {
+        "Name": "RemoveIfNot",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about RemoveIfNot...",
+        "index": 492
+    },
+    {
+        "Name": "RemoveKey",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about RemoveKey...",
+        "index": 493
+    },
+    {
+        "Name": "Reorder",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about Reorder...",
+        "index": 494
+    },
+    {
+        "Name": "SetDifference",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about SetDifference...",
+        "index": 495
+    },
+    {
+        "Name": "SetIntersection",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about SetIntersection...",
+        "index": 496
+    },
+    {
+        "Name": "SetUnion",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about SetUnion...",
+        "index": 497
+    },
+    {
+        "Name": "SortByFunction",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about SortByFunction...",
+        "index": 498
+    },
+    {
+        "Name": "SortIndexByValue (list, ascending)",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about SortIndexByValue (list, ascending)...",
+        "index": 499
+    },
+    {
+        "Name": "SortIndexByValue (list)",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about SortIndexByValue (list)...",
+        "index": 500
+    },
+    {
+        "Name": "TrueForAll",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about TrueForAll...",
+        "index": 501
+    },
+    {
+        "Name": "TrueForAny",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about TrueForAny...",
+        "index": 502
+    },
+    {
+        "Name": "AddTimeSpan",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about AddTimeSpan...",
+        "index": 503
+    },
+    {
+        "Name": "ByDate",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about ByDate...",
+        "index": 504
+    },
+    {
+        "Name": "ByDateAndTime",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about ByDateAndTime...",
+        "index": 505
+    },
+    {
+        "Name": "Date",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about Date...",
+        "index": 506
+    },
+    {
+        "Name": "DayOfWeek",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about DayOfWeek...",
+        "index": 507
+    },
+    {
+        "Name": "DayOfYear",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about DayOfYear...",
+        "index": 508
+    },
+    {
+        "Name": "DaysInMonth",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about DaysInMonth...",
+        "index": 509
+    },
+    {
+        "Name": "FromString",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about FromString...",
+        "index": 510
+    },
+    {
+        "Name": "IsDaylightSavingsTime",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about IsDaylightSavingsTime...",
+        "index": 511
+    },
+    {
+        "Name": "IsLeapYear",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about IsLeapYear...",
+        "index": 512
+    },
+    {
+        "Name": "SubtractTimeSpan",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about SubtractTimeSpan...",
+        "index": 513
+    },
+    {
+        "Name": "TimeOfDay",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Add in-depth information about TimeOfDay...",
+        "index": 514
+    },
+    {
+        "Name": "MaxValue",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Query",
+        "inDepth": "Add in-depth information about MaxValue...",
+        "index": 515
+    },
+    {
+        "Name": "MinValue (",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Query",
+        "inDepth": "Add in-depth information about MinValue (...",
+        "index": 516
+    },
+    {
+        "Name": "MinValue (year, month, day)",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Query",
+        "inDepth": "Add in-depth information about MinValue (year, month, day)...",
+        "index": 517
+    },
+    {
+        "Name": "Now",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Query",
+        "inDepth": "Add in-depth information about Now...",
+        "index": 518
+    },
+    {
+        "Name": "Today",
+        "categories": [
+            "Core",
+            "DateTime"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DateTime/Query",
+        "inDepth": "Add in-depth information about Today...",
+        "index": 519
+    },
+    {
+        "Name": "Friday",
+        "categories": [
+            "Core",
+            "DayOfWeek"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DayOfWeek/Query",
+        "inDepth": "Add in-depth information about Friday...",
+        "index": 520
+    },
+    {
+        "Name": "Monday",
+        "categories": [
+            "Core",
+            "DayOfWeek"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DayOfWeek/Query",
+        "inDepth": "Add in-depth information about Monday...",
+        "index": 521
+    },
+    {
+        "Name": "Saturday",
+        "categories": [
+            "Core",
+            "DayOfWeek"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DayOfWeek/Query",
+        "inDepth": "Add in-depth information about Saturday...",
+        "index": 522
+    },
+    {
+        "Name": "Sunday",
+        "categories": [
+            "Core",
+            "DayOfWeek"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DayOfWeek/Query",
+        "inDepth": "Add in-depth information about Sunday...",
+        "index": 523
+    },
+    {
+        "Name": "Thursday",
+        "categories": [
+            "Core",
+            "DayOfWeek"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DayOfWeek/Query",
+        "inDepth": "Add in-depth information about Thursday...",
+        "index": 524
+    },
+    {
+        "Name": "Tuesday",
+        "categories": [
+            "Core",
+            "DayOfWeek"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DayOfWeek/Query",
+        "inDepth": "Add in-depth information about Tuesday...",
+        "index": 525
+    },
+    {
+        "Name": "Wednesday",
+        "categories": [
+            "Core",
+            "DayOfWeek"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/DayOfWeek/Query",
+        "inDepth": "Add in-depth information about Wednesday...",
+        "index": 526
+    },
+    {
+        "Name": "Function.Apply",
+        "categories": [
+            "Core",
+            "Evaluate"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Evaluate/Action",
+        "inDepth": "Add in-depth information about Function.Apply...",
+        "index": 527
+    },
+    {
+        "Name": "Function.Compose",
+        "categories": [
+            "Core",
+            "Evaluate"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Evaluate/Action",
+        "inDepth": "Add in-depth information about Function.Compose...",
+        "index": 528
+    },
+    {
+        "Name": "Evaluate",
+        "categories": [
+            "Core",
+            "Formula"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Formula/Action",
+        "inDepth": "Add in-depth information about Evaluate...",
+        "index": 529
+    },
+    {
+        "Name": "Code Block (",
+        "categories": [
+            "Core",
+            "Input"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Input/Action",
+        "inDepth": "Add in-depth information about Code Block (...",
+        "index": 530
+    },
+    {
+        "Name": "Input",
+        "categories": [
+            "Core",
+            "Input"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Input/Action",
+        "inDepth": "Add in-depth information about Input...",
+        "index": 531
+    },
+    {
+        "Name": "Output",
+        "categories": [
+            "Core",
+            "Input"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Input/Action",
+        "inDepth": "Add in-depth information about Output...",
+        "index": 532
+    },
+    {
+        "Name": "Clean",
+        "categories": [
+            "Core",
+            "List"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/List/Action",
+        "inDepth": "Add in-depth information about Clean...",
+        "index": 533
+    },
+    {
+        "Name": "DiagonalLeft",
+        "categories": [
+            "Core",
+            "List"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/List/Action",
+        "inDepth": "Add in-depth information about DiagonalLeft...",
+        "index": 534
+    },
+    {
+        "Name": "DiagonalRight",
+        "categories": [
+            "Core",
+            "List"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/List/Action",
+        "inDepth": "Add in-depth information about DiagonalRight...",
+        "index": 535
+    },
+    {
+        "Name": "Empty",
+        "categories": [
+            "Core",
+            "List"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/List/Query",
+        "inDepth": "Add in-depth information about Empty...",
+        "index": 536
+    },
+    {
+        "Name": "ByLatitudeAndLongitude",
+        "categories": [
+            "Core",
+            "Location"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Location/Create",
+        "inDepth": "Add in-depth information about ByLatitudeAndLongitude...",
+        "index": 537
+    },
+    {
+        "Name": "Latitude",
+        "categories": [
+            "Core",
+            "Location"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Location/Query",
+        "inDepth": "Add in-depth information about Latitude...",
+        "index": 538
+    },
+    {
+        "Name": "Longitude",
+        "categories": [
+            "Core",
+            "Location"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Location/Query",
+        "inDepth": "Add in-depth information about Longitude...",
+        "index": 539
+    },
+    {
+        "Name": "Name",
+        "categories": [
+            "Core",
+            "Location"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Location/Query",
+        "inDepth": "Add in-depth information about Name...",
+        "index": 540
+    },
+    {
+        "Name": "ScopeIf",
+        "categories": [
+            "Core",
+            "Logic"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Logic/Action",
+        "inDepth": "Add in-depth information about ScopeIf...",
+        "index": 541
+    },
+    {
+        "Name": "Identity",
+        "categories": [
+            "Core",
+            "Object"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Object/Action",
+        "inDepth": "Add in-depth information about Identity...",
+        "index": 542
+    },
+    {
+        "Name": "IsNull",
+        "categories": [
+            "Core",
+            "Object"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Object/Action",
+        "inDepth": "Add in-depth information about IsNull...",
+        "index": 543
+    },
+    {
+        "Name": "Type",
+        "categories": [
+            "Core",
+            "Object"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Object/Action",
+        "inDepth": "Add in-depth information about Type...",
+        "index": 544
+    },
+    {
+        "Name": "Formula (IN[0]) (IN[0])",
+        "categories": [
+            "Core",
+            "Scripting"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Scripting/Action",
+        "inDepth": "Add in-depth information about Formula (IN[0]) (IN[0])...",
+        "index": 545
+    },
+    {
+        "Name": "Formula (",
+        "categories": [
+            "Core",
+            "Scripting"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Scripting/Action",
+        "inDepth": "Add in-depth information about Formula (...",
+        "index": 546
+    },
+    {
+        "Name": "Python Script",
+        "categories": [
+            "Core",
+            "Scripting"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Scripting/Action",
+        "inDepth": "Add in-depth information about Python Script...",
+        "index": 547
+    },
+    {
+        "Name": "Python Script From String",
+        "categories": [
+            "Core",
+            "Scripting"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Scripting/Action",
+        "inDepth": "Add in-depth information about Python Script From String...",
+        "index": 548
+    },
+    {
+        "Name": "String from Array",
+        "categories": [
+            "Core",
+            "String"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/String/Action",
+        "inDepth": "Add in-depth information about String from Array...",
+        "index": 549
+    },
+    {
+        "Name": "String from Object",
+        "categories": [
+            "Core",
+            "String"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/String/Action",
+        "inDepth": "Add in-depth information about String from Object...",
+        "index": 550
+    },
+    {
+        "Name": "Pause",
+        "categories": [
+            "Core",
+            "Thread"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Thread/Action",
+        "inDepth": "Add in-depth information about Pause...",
+        "index": 551
+    },
+    {
+        "Name": "ByDateDifference",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about ByDateDifference...",
+        "index": 552
+    },
+    {
+        "Name": "Create",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about Create...",
+        "index": 553
+    },
+    {
+        "Name": "Negate",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about Negate...",
+        "index": 554
+    },
+    {
+        "Name": "Scale",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about Scale...",
+        "index": 555
+    },
+    {
+        "Name": "TotalDays",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about TotalDays...",
+        "index": 556
+    },
+    {
+        "Name": "TotalHours",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about TotalHours...",
+        "index": 557
+    },
+    {
+        "Name": "TotalMilliseconds",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about TotalMilliseconds...",
+        "index": 558
+    },
+    {
+        "Name": "TotalMinutes",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about TotalMinutes...",
+        "index": 559
+    },
+    {
+        "Name": "TotalSeconds",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Action",
+        "inDepth": "Add in-depth information about TotalSeconds...",
+        "index": 560
+    },
+    {
+        "Name": "MinValue",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Query",
+        "inDepth": "Add in-depth information about MinValue...",
+        "index": 561
+    },
+    {
+        "Name": "Zero",
+        "categories": [
+            "Core",
+            "TimeSpan"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/TimeSpan/Query",
+        "inDepth": "Add in-depth information about Zero...",
+        "index": 562
+    },
+    {
+        "Name": "Convert Between Units",
+        "categories": [
+            "Core",
+            "Units"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Units/Action",
+        "inDepth": "Add in-depth information about Convert Between Units...",
+        "index": 563
+    },
+    {
+        "Name": "Number From Feet and Inches",
+        "categories": [
+            "Core",
+            "Units"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Units/Action",
+        "inDepth": "Add in-depth information about Number From Feet and Inches...",
+        "index": 564
+    },
+    {
+        "Name": "Unit Types",
+        "categories": [
+            "Core",
+            "Units"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Units/Action",
+        "inDepth": "Add in-depth information about Unit Types...",
+        "index": 565
+    },
+    {
+        "Name": "Watch",
+        "categories": [
+            "Core",
+            "View"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/View/Action",
+        "inDepth": "Add in-depth information about Watch...",
+        "index": 566
+    },
+    {
+        "Name": "Watch 3D",
+        "categories": [
+            "Core",
+            "View"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/View/Action",
+        "inDepth": "Add in-depth information about Watch 3D...",
+        "index": 567
+    },
+    {
+        "Name": "Watch Image",
+        "categories": [
+            "Core",
+            "View"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/View/Action",
+        "inDepth": "Add in-depth information about Watch Image...",
+        "index": 568
+    },
+    {
+        "Name": "Web Request",
+        "categories": [
+            "Core",
+            "Web"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Core/Web/Action",
+        "inDepth": "Add in-depth information about Web Request...",
+        "index": 569
+    },
+    {
+        "Name": "ByGeometryColor",
+        "categories": [
+            "Display",
+            "Display",
+            "Display"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Display/Display/Display/Create",
+        "inDepth": "Add in-depth information about ByGeometryColor...",
+        "index": 570
+    },
+    {
+        "Name": "BySurfaceColors",
+        "categories": [
+            "Display",
+            "Display",
+            "Display"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Display/Display/Display/Create",
+        "inDepth": "Add in-depth information about BySurfaceColors...",
+        "index": 571
+    },
+    {
+        "Name": "ToPolySurface",
+        "categories": [
+            "Geometry",
+            "BoundingBox"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/BoundingBox/Action",
+        "inDepth": "Add in-depth information about ToPolySurface...",
+        "index": 572
+    },
+    {
+        "Name": "ByMatrix",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about ByMatrix...",
+        "index": 573
+    },
+    {
+        "Name": "ByOrigin (origin)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about ByOrigin (origin)...",
+        "index": 574
+    },
+    {
+        "Name": "ByOrigin (x, y)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about ByOrigin (x, y)...",
+        "index": 575
+    },
+    {
+        "Name": "ByOrigin (x, y, z)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about ByOrigin (x, y, z)...",
+        "index": 576
+    },
+    {
+        "Name": "ByOriginVectors (origin, xAxis, yAxis, zAxis)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about ByOriginVectors (origin, xAxis, yAxis, zAxis)...",
+        "index": 577
+    },
+    {
+        "Name": "ByOriginVectors (origin, xAxis, yAxis)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about ByOriginVectors (origin, xAxis, yAxis)...",
+        "index": 578
+    },
+    {
+        "Name": "ByPlane",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about ByPlane...",
+        "index": 579
+    },
+    {
+        "Name": "Identity (",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about Identity (...",
+        "index": 580
+    },
+    {
+        "Name": "Identity (matrix)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about Identity (matrix)...",
+        "index": 581
+    },
+    {
+        "Name": "Inverse",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Inverse...",
+        "index": 582
+    },
+    {
+        "Name": "IsEqualTo",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about IsEqualTo...",
+        "index": 583
+    },
+    {
+        "Name": "PostMultiplyBy",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about PostMultiplyBy...",
+        "index": 584
+    },
+    {
+        "Name": "PreMultiplyBy",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about PreMultiplyBy...",
+        "index": 585
+    },
+    {
+        "Name": "Rotate (coordinateSystem, origin, degrees)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Rotate (coordinateSystem, origin, degrees)...",
+        "index": 586
+    },
+    {
+        "Name": "Rotate (coordinateSystem, origin, axis, degrees)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Rotate (coordinateSystem, origin, axis, degrees)...",
+        "index": 587
+    },
+    {
+        "Name": "Scale (coordinateSystem, xamount, yamount, zamount)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Scale (coordinateSystem, xamount, yamount, zamount)...",
+        "index": 588
+    },
+    {
+        "Name": "Scale (coordinateSystem, plane, xamount, yamount, zamount)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Scale (coordinateSystem, plane, xamount, yamount, zamount)...",
+        "index": 589
+    },
+    {
+        "Name": "Scale (coordinateSystem, basePoint, from, to)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Scale (coordinateSystem, basePoint, from, to)...",
+        "index": 590
+    },
+    {
+        "Name": "Scale (coordinateSystem, amount)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Scale (coordinateSystem, amount)...",
+        "index": 591
+    },
+    {
+        "Name": "ScaleFactor",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about ScaleFactor...",
+        "index": 592
+    },
+    {
+        "Name": "Transform (coordinateSystem, fromCoordinateSystem, contextCoordinateSystem)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Transform (coordinateSystem, fromCoordinateSystem, contextCoordinateSystem)...",
+        "index": 593
+    },
+    {
+        "Name": "Transform (coordinateSystem, cs)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Transform (coordinateSystem, cs)...",
+        "index": 594
+    },
+    {
+        "Name": "Translate (coordinateSystem, direction)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Translate (coordinateSystem, direction)...",
+        "index": 595
+    },
+    {
+        "Name": "Translate (coordinateSystem, direction, distance)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Translate (coordinateSystem, direction, distance)...",
+        "index": 596
+    },
+    {
+        "Name": "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation)",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Translate (coordinateSystem, xTranslation, yTranslation, zTranslation)...",
+        "index": 597
+    },
+    {
+        "Name": "Determinant",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about Determinant...",
+        "index": 598
+    },
+    {
+        "Name": "IsScaledOrtho",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about IsScaledOrtho...",
+        "index": 599
+    },
+    {
+        "Name": "IsSingular",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about IsSingular...",
+        "index": 600
+    },
+    {
+        "Name": "IsUniscaledOrtho",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about IsUniscaledOrtho...",
+        "index": 601
+    },
+    {
+        "Name": "XScaleFactor",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about XScaleFactor...",
+        "index": 602
+    },
+    {
+        "Name": "XYPlane",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about XYPlane...",
+        "index": 603
+    },
+    {
+        "Name": "YScaleFactor",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about YScaleFactor...",
+        "index": 604
+    },
+    {
+        "Name": "YZPlane",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about YZPlane...",
+        "index": 605
+    },
+    {
+        "Name": "ZAxis",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about ZAxis...",
+        "index": 606
+    },
+    {
+        "Name": "ZScaleFactor",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about ZScaleFactor...",
+        "index": 607
+    },
+    {
+        "Name": "ZXPlane",
+        "categories": [
+            "Geometry",
+            "CoordinateSystem"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Query",
+        "inDepth": "Add in-depth information about ZXPlane...",
+        "index": 608
+    },
+    {
+        "Name": "ByLengths (cs, width, length, height) (cs, width, length, height)",
+        "categories": [
+            "Geometry",
+            "Cuboid"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Cuboid/Create",
+        "inDepth": "Add in-depth information about ByLengths (cs, width, length, height) (cs, width, length, height)...",
+        "index": 609
+    },
+    {
+        "Name": "Simplify",
+        "categories": [
+            "Geometry",
+            "Curve"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Curve/Action",
+        "inDepth": "Add in-depth information about Simplify...",
+        "index": 610
+    },
+    {
+        "Name": "ByRadiusHeight",
+        "categories": [
+            "Geometry",
+            "Cylinder"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Cylinder/Create",
+        "inDepth": "Add in-depth information about ByRadiusHeight...",
+        "index": 611
+    },
+    {
+        "Name": "AdjacentFaces",
+        "categories": [
+            "Geometry",
+            "Edge"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Edge/Query",
+        "inDepth": "Add in-depth information about AdjacentFaces...",
+        "index": 612
+    },
+    {
+        "Name": "CurveGeometry",
+        "categories": [
+            "Geometry",
+            "Edge"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Edge/Query",
+        "inDepth": "Add in-depth information about CurveGeometry...",
+        "index": 613
+    },
+    {
+        "Name": "EndVertex",
+        "categories": [
+            "Geometry",
+            "Edge"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Edge/Query",
+        "inDepth": "Add in-depth information about EndVertex...",
+        "index": 614
+    },
+    {
+        "Name": "StartVertex",
+        "categories": [
+            "Geometry",
+            "Edge"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Edge/Query",
+        "inDepth": "Add in-depth information about StartVertex...",
+        "index": 615
+    },
+    {
+        "Name": "SurfaceGeometry",
+        "categories": [
+            "Geometry",
+            "Face"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Face/Action",
+        "inDepth": "Add in-depth information about SurfaceGeometry...",
+        "index": 616
+    },
+    {
+        "Name": "Edges",
+        "categories": [
+            "Geometry",
+            "Face"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Face/Query",
+        "inDepth": "Add in-depth information about Edges...",
+        "index": 617
+    },
+    {
+        "Name": "Vertices",
+        "categories": [
+            "Geometry",
+            "Face"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Face/Query",
+        "inDepth": "Add in-depth information about Vertices...",
+        "index": 618
+    },
+    {
+        "Name": "DeserializeFromSAB",
+        "categories": [
+            "Geometry",
+            "Geometry"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "Add in-depth information about DeserializeFromSAB...",
+        "index": 619
+    },
+    {
+        "Name": "ExportToSAT (geometry, filePath, unitsMM)",
+        "categories": [
+            "Geometry",
+            "Geometry"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "Add in-depth information about ExportToSAT (geometry, filePath, unitsMM)...",
+        "index": 620
+    },
+    {
+        "Name": "SerializeAsSAB (geometry)",
+        "categories": [
+            "Geometry",
+            "Geometry"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "Add in-depth information about SerializeAsSAB (geometry)...",
+        "index": 621
+    },
+    {
+        "Name": "BoundingBox",
+        "categories": [
+            "Geometry",
+            "Geometry"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Geometry/Query",
+        "inDepth": "Add in-depth information about BoundingBox...",
+        "index": 622
+    },
+    {
+        "Name": "ContextCoordinateSystem",
+        "categories": [
+            "Geometry",
+            "Geometry"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Geometry/Query",
+        "inDepth": "Add in-depth information about ContextCoordinateSystem...",
+        "index": 623
+    },
+    {
+        "Name": "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)",
+        "categories": [
+            "Geometry",
+            "IndexGroup"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/IndexGroup/Create",
+        "inDepth": "Add in-depth information about ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)...",
+        "index": 624
+    },
+    {
+        "Name": "ByIndices (a, b, c) (a, b, c)",
+        "categories": [
+            "Geometry",
+            "IndexGroup"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/IndexGroup/Create",
+        "inDepth": "Add in-depth information about ByIndices (a, b, c) (a, b, c)...",
+        "index": 625
+    },
+    {
+        "Name": "A",
+        "categories": [
+            "Geometry",
+            "IndexGroup"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/IndexGroup/Query",
+        "inDepth": "Add in-depth information about A...",
+        "index": 626
+    },
+    {
+        "Name": "B",
+        "categories": [
+            "Geometry",
+            "IndexGroup"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/IndexGroup/Query",
+        "inDepth": "Add in-depth information about B...",
+        "index": 627
+    },
+    {
+        "Name": "C",
+        "categories": [
+            "Geometry",
+            "IndexGroup"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/IndexGroup/Query",
+        "inDepth": "Add in-depth information about C...",
+        "index": 628
+    },
+    {
+        "Name": "D",
+        "categories": [
+            "Geometry",
+            "IndexGroup"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/IndexGroup/Query",
+        "inDepth": "Add in-depth information about D...",
+        "index": 629
+    },
+    {
+        "Name": "ByPointsFaceIndices",
+        "categories": [
+            "Geometry",
+            "Mesh"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Mesh/Create",
+        "inDepth": "Add in-depth information about ByPointsFaceIndices...",
+        "index": 630
+    },
+    {
+        "Name": "FaceIndices",
+        "categories": [
+            "Geometry",
+            "Mesh"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Mesh/Query",
+        "inDepth": "Add in-depth information about FaceIndices...",
+        "index": 631
+    },
+    {
+        "Name": "VertexNormals",
+        "categories": [
+            "Geometry",
+            "Mesh"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Mesh/Query",
+        "inDepth": "Add in-depth information about VertexNormals...",
+        "index": 632
+    },
+    {
+        "Name": "VertexPositions",
+        "categories": [
+            "Geometry",
+            "Mesh"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Mesh/Query",
+        "inDepth": "Add in-depth information about VertexPositions...",
+        "index": 633
+    },
+    {
+        "Name": "ByPointsTangentsKnotsDerivatives",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Create",
+        "inDepth": "Add in-depth information about ByPointsTangentsKnotsDerivatives...",
+        "index": 634
+    },
+    {
+        "Name": "UKnots",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Action",
+        "inDepth": "Add in-depth information about UKnots...",
+        "index": 635
+    },
+    {
+        "Name": "VKnots",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Action",
+        "inDepth": "Add in-depth information about VKnots...",
+        "index": 636
+    },
+    {
+        "Name": "DegreeU",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Query",
+        "inDepth": "Add in-depth information about DegreeU...",
+        "index": 637
+    },
+    {
+        "Name": "DegreeV",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Query",
+        "inDepth": "Add in-depth information about DegreeV...",
+        "index": 638
+    },
+    {
+        "Name": "IsPeriodicInU",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Query",
+        "inDepth": "Add in-depth information about IsPeriodicInU...",
+        "index": 639
+    },
+    {
+        "Name": "IsPeriodicInV",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Query",
+        "inDepth": "Add in-depth information about IsPeriodicInV...",
+        "index": 640
+    },
+    {
+        "Name": "NumControlPointsU",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Query",
+        "inDepth": "Add in-depth information about NumControlPointsU...",
+        "index": 641
+    },
+    {
+        "Name": "NumControlPointsV",
+        "categories": [
+            "Geometry",
+            "NurbsSurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/NurbsSurface/Query",
+        "inDepth": "Add in-depth information about NumControlPointsV...",
+        "index": 642
+    },
+    {
+        "Name": "ByCoordinates (x, y, z)",
+        "categories": [
+            "Geometry",
+            "Point"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Point/Create",
+        "inDepth": "Add in-depth information about ByCoordinates (x, y, z)...",
+        "index": 643
+    },
+    {
+        "Name": "CloseWithLineAndTangentArcs",
+        "categories": [
+            "Geometry",
+            "PolyCurve"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolyCurve/Action",
+        "inDepth": "Add in-depth information about CloseWithLineAndTangentArcs...",
+        "index": 644
+    },
+    {
+        "Name": "ExtendWithEllipse",
+        "categories": [
+            "Geometry",
+            "PolyCurve"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolyCurve/Action",
+        "inDepth": "Add in-depth information about ExtendWithEllipse...",
+        "index": 645
+    },
+    {
+        "Name": "ByLoftGuides",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Create",
+        "inDepth": "Add in-depth information about ByLoftGuides...",
+        "index": 646
+    },
+    {
+        "Name": "BySolid",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Create",
+        "inDepth": "Add in-depth information about BySolid...",
+        "index": 647
+    },
+    {
+        "Name": "BySweep (rail, crossSection)",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Create",
+        "inDepth": "Add in-depth information about BySweep (rail, crossSection)...",
+        "index": 648
+    },
+    {
+        "Name": "BySweep (rail, profile)",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Create",
+        "inDepth": "Add in-depth information about BySweep (rail, profile)...",
+        "index": 649
+    },
+    {
+        "Name": "EdgeCount",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Action",
+        "inDepth": "Add in-depth information about EdgeCount...",
+        "index": 650
+    },
+    {
+        "Name": "ExtractSolids",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Action",
+        "inDepth": "Add in-depth information about ExtractSolids...",
+        "index": 651
+    },
+    {
+        "Name": "LocateSurfacesByLine",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Action",
+        "inDepth": "Add in-depth information about LocateSurfacesByLine...",
+        "index": 652
+    },
+    {
+        "Name": "LocateSurfacesByPoint",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Action",
+        "inDepth": "Add in-depth information about LocateSurfacesByPoint...",
+        "index": 653
+    },
+    {
+        "Name": "SurfaceCount",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Action",
+        "inDepth": "Add in-depth information about SurfaceCount...",
+        "index": 654
+    },
+    {
+        "Name": "Surfaces",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Action",
+        "inDepth": "Add in-depth information about Surfaces...",
+        "index": 655
+    },
+    {
+        "Name": "UnconnectedBoundaries",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Action",
+        "inDepth": "Add in-depth information about UnconnectedBoundaries...",
+        "index": 656
+    },
+    {
+        "Name": "VertexCount",
+        "categories": [
+            "Geometry",
+            "PolySurface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/PolySurface/Action",
+        "inDepth": "Add in-depth information about VertexCount...",
+        "index": 657
+    },
+    {
+        "Name": "ByFourPoints",
+        "categories": [
+            "Geometry",
+            "Sphere"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Sphere/Create",
+        "inDepth": "Add in-depth information about ByFourPoints...",
+        "index": 658
+    },
+    {
+        "Name": "Join (surface, otherSurfaces)",
+        "categories": [
+            "Geometry",
+            "Surface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Surface/Action",
+        "inDepth": "Add in-depth information about Join (surface, otherSurfaces)...",
+        "index": 659
+    },
+    {
+        "Name": "Join (surface, otherSurface)",
+        "categories": [
+            "Geometry",
+            "Surface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Surface/Action",
+        "inDepth": "Add in-depth information about Join (surface, otherSurface)...",
+        "index": 660
+    },
+    {
+        "Name": "TrimWithEdgeLoops",
+        "categories": [
+            "Geometry",
+            "Surface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Surface/Action",
+        "inDepth": "Add in-depth information about TrimWithEdgeLoops...",
+        "index": 661
+    },
+    {
+        "Name": "Closed",
+        "categories": [
+            "Geometry",
+            "Surface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Surface/Query",
+        "inDepth": "Add in-depth information about Closed...",
+        "index": 662
+    },
+    {
+        "Name": "ClosedInU",
+        "categories": [
+            "Geometry",
+            "Surface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Surface/Query",
+        "inDepth": "Add in-depth information about ClosedInU...",
+        "index": 663
+    },
+    {
+        "Name": "ClosedInV",
+        "categories": [
+            "Geometry",
+            "Surface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Surface/Query",
+        "inDepth": "Add in-depth information about ClosedInV...",
+        "index": 664
+    },
+    {
+        "Name": "Perimeter",
+        "categories": [
+            "Geometry",
+            "Surface"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Surface/Query",
+        "inDepth": "Add in-depth information about Perimeter...",
+        "index": 665
+    },
+    {
+        "Name": "ByParametersOnSurface",
+        "categories": [
+            "Geometry",
+            "Tessellation",
+            "Delaunay"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Tessellation/Delaunay/Action",
+        "inDepth": "Add in-depth information about ByParametersOnSurface...",
+        "index": 666
+    },
+    {
+        "Name": "Faces",
+        "categories": [
+            "Geometry",
+            "Topology"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Topology/Query",
+        "inDepth": "Add in-depth information about Faces...",
+        "index": 667
+    },
+    {
+        "Name": "ByCoordinates",
+        "categories": [
+            "Geometry",
+            "UV"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/UV/Create",
+        "inDepth": "Add in-depth information about ByCoordinates...",
+        "index": 668
+    },
+    {
+        "Name": "U",
+        "categories": [
+            "Geometry",
+            "UV"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/UV/Query",
+        "inDepth": "Add in-depth information about U...",
+        "index": 669
+    },
+    {
+        "Name": "V",
+        "categories": [
+            "Geometry",
+            "UV"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/UV/Query",
+        "inDepth": "Add in-depth information about V...",
+        "index": 670
+    },
+    {
+        "Name": "ByCoordinates (x, y, z, normalized)",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Create",
+        "inDepth": "Add in-depth information about ByCoordinates (x, y, z, normalized)...",
+        "index": 671
+    },
+    {
+        "Name": "ByTwoPoints",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Create",
+        "inDepth": "Add in-depth information about ByTwoPoints...",
+        "index": 672
+    },
+    {
+        "Name": "AngleAboutAxis",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about AngleAboutAxis...",
+        "index": 673
+    },
+    {
+        "Name": "AngleWithVector",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about AngleWithVector...",
+        "index": 674
+    },
+    {
+        "Name": "AsPoint",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about AsPoint...",
+        "index": 675
+    },
+    {
+        "Name": "Cross",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Cross...",
+        "index": 676
+    },
+    {
+        "Name": "Dot",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Dot...",
+        "index": 677
+    },
+    {
+        "Name": "IsParallel",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about IsParallel...",
+        "index": 678
+    },
+    {
+        "Name": "Normalized",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Normalized...",
+        "index": 679
+    },
+    {
+        "Name": "Rotate (vector, origin, degrees)",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Rotate (vector, origin, degrees)...",
+        "index": 680
+    },
+    {
+        "Name": "Rotate (vector, axis, degrees)",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Rotate (vector, axis, degrees)...",
+        "index": 681
+    },
+    {
+        "Name": "Scale (vector, scale_factor)",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Scale (vector, scale_factor)...",
+        "index": 682
+    },
+    {
+        "Name": "Scale (vector, xScaleFactor, yScaleFactor, zScaleFactor)",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Scale (vector, xScaleFactor, yScaleFactor, zScaleFactor)...",
+        "index": 683
+    },
+    {
+        "Name": "Transform",
+        "categories": [
+            "Geometry",
+            "Vector"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Transform...",
+        "index": 684
+    },
+    {
+        "Name": "AdjacentEdges",
+        "categories": [
+            "Geometry",
+            "Vertex"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vertex/Query",
+        "inDepth": "Add in-depth information about AdjacentEdges...",
+        "index": 685
+    },
+    {
+        "Name": "PointGeometry",
+        "categories": [
+            "Geometry",
+            "Vertex"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Geometry/Vertex/Query",
+        "inDepth": "Add in-depth information about PointGeometry...",
+        "index": 686
+    },
+    {
+        "Name": "IsAlmostEqualTo",
+        "categories": [
+            "Analyze",
+            "AnalysisExtensions"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Analyze/AnalysisExtensions/Action",
+        "inDepth": "Add in-depth information about IsAlmostEqualTo...",
+        "index": 465
     }
 ]
