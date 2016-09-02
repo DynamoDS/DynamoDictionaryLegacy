@@ -1155,7 +1155,7 @@ require(["d3"], function (d3) {
         if (fullJson == undefined) {
             fullJson = exFiles;
         }
-        var tt = fullJson[fullJson.length - 1];
+
         hitob = {};
         fullJson.forEach(function (j, h) {
             if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
