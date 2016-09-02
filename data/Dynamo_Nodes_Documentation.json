@@ -3059,5 +3059,194 @@
         "dynFile": ["TrimWhitespace"],
         "imageFile": ["TrimWhitespace"],
         "inDepth": "TrimWhitespace will remove all the whitespace of an input string. In the example below, we start with the string '     Hello World     ', which has several leading and trailing spaces. By using TrigWhitespace, we can remove the spaces at the beginning and end of the string, as well as the space between 'Hello' and 'World'."
+        }, {
+        "Name": "Directory.FromPath",
+        "categories": ["Core", "File"],
+        "folderPath": "Core/File/Action",
+        "dynFile": ["DirectoryFromPath"],
+        "imageFile": ["DirectoryFromPath"],
+        "inDepth": "Directory FromPath will create a directory object from an input directory path. In the example below, we use a Directory Path input node, which allows us to select a directory path by clicking the 'Browse...' button. A directory path can also be created as a string. A Directory.FromPath node is used to convert the directory path string into a directory object that can be used for directory inputs, such as a Contents node."
+        }, {
+        "Name": "File.FromPath",
+        "categories": ["Core", "File"],
+        "folderPath": "Core/File/Action",
+        "dynFile": ["FileFromPath"],
+        "imageFile": ["FileFromPath"],
+        "inDepth": "File FromPath will create a file object from an input file path. In the example below, we use a File Path input node, which allows us to select a file path by clicking the 'Browse...' button. A file path can also be created manually as a string. A File.FromPath node is used to convert the file path string into a file object that can be used for file inputs, such as a ReadFromFile node"
+        }, {
+        "Name": "ReadFromFile",
+        "categories": ["Core", "File", "CSV"],
+        "folderPath": "Core/File/CSV/Action",
+        "dynFile": ["ReadFromFile"],
+        "imageFile": ["ReadFromFile"],
+        "inDepth": "Read From File takes a file as input. The file should be a text file that has data separated by commas. The different lines in the file correspond to the outer list, while the individual values in each line correspond to the inner lists. In the example below, we first use a File Path node and a File.FromPath node to create a file object that points to a text file. Then we use a ReadFromFile node to create a list from the CSV file."
+        }, {
+        "Name": "WriteToFile",
+        "categories": ["Core", "File", "CSV"],
+        "folderPath": "Core/File/CSV/Action",
+        "dynFile": ["WriteToFile"],
+        "imageFile": ["WriteToFile"],
+        "inDepth": "Write To File will produce a CSV file from list of data. The outer lists correspond to lines in the resulting file, while the inner lists correspond to individual values separated by commas in each line. In the example below, we use a File Path node to specify the file we want to write to. A Code Block node is used to create an example list that we will write as a CSV."
+        }, {
+        "Name": "Contents",
+        "categories": ["Core", "File", "Directory"],
+        "folderPath": "Core/File/Directory/Action",
+        "dynFile": ["Contents"],
+        "imageFile": ["Contents"],
+        "inDepth": "Contents will return a list of files and directories that are contained within a given directory. An optional searchString can be used to filter the results. In the example below, we first use a Directory Path node and a Directory.FromPath node to create a directory object. We can then get the contents of this directory with a Contents node. We use the search string '*.txt' to filter for only text files."
+        }, {
+        "Name": "Copy",
+        "categories": ["Core", "File", "Directory"],
+        "folderPath": "Core/File/Directory/Action",
+        "dynFile": ["Copy"],
+        "imageFile": ["Copy"],
+        "inDepth": "Copy will copy the files and subfolders from one directory to another. The directory to copy from is input as a director object, while the directory to copy to is input as a director path object. An additional boolean input gives the option to overwrite files or not. This node is automatically activated when the input values change.  In the example below, we first use a Directory Path node and a Directory.FromPath node to create a directory object. A second Directory Path node is used to specify the directory we want to copy to."
+        }, {
+        "Name": "Delete",
+        "categories": ["Core", "File", "Directory"],
+        "folderPath": "Core/File/Directory/Action",
+        "dynFile": ["Delete"],
+        "imageFile": ["Delete"],
+        "inDepth": "Delete will delete the directory specified by the input directory path. A second input accepts a boolean value to control whether the delete node is recursive or not. If recursive is set to false, this node will only delete empty directories. If recursive is set to true, the node will delete all the files and subfolders within the given directory. In the example below, we use a Directory Path node to set the directory to delete, and we use a boolean toggle to set the recursive input to true."
+        }, {
+        "Name": "Exists",
+        "categories": ["Core", "File", "Directory"],
+        "folderPath": "Core/File/Directory/Action",
+        "dynFile": ["Exists"],
+        "imageFile": ["Exists"],
+        "inDepth": "Exists takes a directory path as input and returns a boolean value based on whether that directory path exists or not. In the example below, we previously used a Delete node to delete the directory specified by the Directory Path. Using an Exists node with the same directory shows that the directory no longer exists."
+        }, {
+        "Name": "Move",
+        "categories": ["Core", "File", "Directory"],
+        "folderPath": "Core/File/Directory/Action",
+        "dynFile": ["Move"],
+        "imageFile": ["Move"],
+        "inDepth": "Move will move the files from the current directory to a new directory. If the new directory does not exist, this node will create it. This node is automatically activated when the input values change. In the example below, we use a Directory Path node to specify the directory to copy from. Since the directory we want to move to does not yet exist, we use a Code Block to manually specify the path of the directory to move to."
+        }, {
+        "Name": "Copy",
+        "categories": ["Core", "File", "File"],
+        "folderPath": "Core/File/File/Action",
+        "dynFile": ["Copy"],
+        "imageFile": ["Copy"],
+        "inDepth": "Copy will copy a file specified by an input file object to a new file specified by a file path. A boolean input gives the option to overwrite existing files. This node is automatically activated when the input values change. In the example below, we first use a File Path node followed by a File.FromPath node to create a file object to copy. A destination path is created by using a Combine node that allows us to combine a directory path with a file name."
+        }, {
+        "Name": "Delete",
+        "categories": ["Core", "File", "File"],
+        "folderPath": "Core/File/File/Action",
+        "dynFile": ["Delete"],
+        "imageFile": ["Delete"],
+        "inDepth": "Delete will delete a file specified by an input file path. In the example below, we use a File Path node to browse for the file we want to delete."
+        }, {
+        "Name": "Exists",
+        "categories": ["Core", "File", "File"],
+        "folderPath": "Core/File/File/Action",
+        "dynFile": ["Exists"],
+        "imageFile": ["Exists"],
+        "inDepth": "Exists will return a boolean value based on whether a file exists or not. In the example below, we use a File Path node to input a file path. After using a Delete node, we can see by using an Exists node that the file no longer exists."
+        }, {
+        "Name": "Move",
+        "categories": ["Core", "File", "File"],
+        "folderPath": "Core/File/File/Action",
+        "dynFile": ["Move"],
+        "imageFile": ["Move"],
+        "inDepth": "Move will move a file from a specifed path to a new path. A boolean input gives the option to overwrite any existing files. In the example below, we use a File Path node to browse for a file to move. We get the file name from that file by using a FileName node, and combine that with a Director Path to create a new file path to move the file to."
+        }, {
+        "Name": "ReadText",
+        "categories": ["Core", "File", "File"],
+        "folderPath": "Core/File/File/Action",
+        "dynFile": ["ReadText"],
+        "imageFile": ["ReadText"],
+        "inDepth": "ReadText will create a string from specified file path. In the example below, we use a File Path node to browse for the file to read. A Watch node is used to see the string that results from the ReadText node."
+        }, {
+        "Name": "WriteText",
+        "categories": ["Core", "File", "File"],
+        "folderPath": "Core/File/File/Action",
+        "dynFile": ["WriteText"],
+        "imageFile": ["WriteText"],
+        "inDepth": "WriteText will write a string to a specified file. If the file does not exists, this node will create the file. To create newlines in the output file, we can use the escape character '\\r\\n'. In the example below, we have a list of strings that we want to write as three separate lines in a text file. We join the list into a single string using '\\r\\n' as the separator. We then use a WriteText node to write this to a text file."
+        }, {
+        "Name": "ChangeExtension",
+        "categories": ["Core", "File", "FilePath"],
+        "folderPath": "Core/File/FilePath/Action",
+        "dynFile": ["ChangeExtension"],
+        "imageFile": ["ChangeExtension"],
+        "inDepth": "Change Extension will replace the extension of an input file path object with a specified new extension input as a string. In the example below, we use a File Path node to browse for a .txt file. We then use a ChangeExtension node to create a new file path with a different extension by replacing the .txt with a .exp extension."
+        }, {
+        "Name": "Combine",
+        "categories": ["Core", "File", "FilePath"],
+        "folderPath": "Core/File/FilePath/Action",
+        "dynFile": ["Combine"],
+        "imageFile": ["Combine"],
+        "inDepth": "Combine will join multiple inputs together into a single string. In the example below, we use a Director Path to select a director. We specify a file name by using a Code Block. We then use a Combine node to join the director path and file name together into a file path."
+        }, {
+        "Name": "DirectoryName",
+        "categories": ["Core", "File", "FilePath"],
+        "folderPath": "Core/File/FilePath/Action",
+        "dynFile": ["DirectoryName"],
+        "imageFile": ["DirectoryName"],
+        "inDepth": "Directory Name will return the director of a file or director path. In the example below, we use a DirectorPath node to extract the directory from a file path. In addition to FileName and Extension, this allows us to break apart a file path into separate components."
+        }, {
+        "Name": "Extension",
+        "categories": ["Core", "File", "FilePath"],
+        "folderPath": "Core/File/FilePath/Action",
+        "dynFile": ["Extension"],
+        "imageFile": ["Extension"],
+        "inDepth": "Extension will return the extension from a file path. In addition to FileName and DirectoryName, this allows us to break apart a file path into separate components."
+        }, {
+        "Name": "FileName",
+        "categories": ["Core", "File", "FilePath"],
+        "folderPath": "Core/File/FilePath/Action",
+        "dynFile": ["FileName"],
+        "imageFile": ["FileName"],
+        "inDepth": "File Name will return the file name from an input file path. A boolean input provides to option to return the file name with or without the extension. In addition to DirectoryName and Extension, this allows us to break apart a file path into separate components."
+        }, {
+        "Name": "HasExtension",
+        "categories": ["Core", "File", "FilePath"],
+        "folderPath": "Core/File/FilePath/Action",
+        "dynFile": ["HasExtension"],
+        "imageFile": ["HasExtension"],
+        "inDepth": "Has Extension returns a boolean value that is true if the input file path has an extension, and false if the input file path does not have an extension. In the example below, we use a File Path node to browse for a file. This path has the extension .txt, so HasExtension returns true."
+        }, {
+        "Name": "Dimensions",
+        "categories": ["Core", "File", "Image"],
+        "folderPath": "Core/File/Image/Action",
+        "dynFile": ["Dimensions"],
+        "imageFile": ["Dimensions"],
+        "inDepth": "Dimensions will return the width and height of an input image in pixels. In the example below, we first use a File Path node and a File.FromPath to create a file object that points to an image. Image.ReadFromFile is then used to create an image object based on the file. A Dimensions node shows us that this image has a width and height of 270 pixels."
+        }, {
+        "Name": "FromPixels (colors, width, height)",
+        "categories": ["Core", "File", "Image"],
+        "folderPath": "Core/File/Image/Action",
+        "dynFile": ["FromPixels_cwh"],
+        "imageFile": ["FromPixels_cwh"],
+        "inDepth": "From Pixels with width and height will create an image from an input flat list of colors, where each color will become one pixel. The width multiplied by the height should equal the total number of colors. In the example below, we first create a list of colors using a ByARGB node. A code block creates a range of values from 0 to 255, which when connected to the r and g inputs produces a series of colors from black to yellow. We create a image with a width of 8. A Count node and Division node are used to determine the height of the image. A Watch Image node can be used to preview the image created."
+        }, {
+        "Name": "FromPixels (colors)",
+        "categories": ["Core", "File", "Image"],
+        "folderPath": "Core/File/Image/Action",
+        "dynFile": ["FromPixels_c"],
+        "imageFile": ["FromPixels_c"],
+        "inDepth": "From Pixels will create an image object from an input two-dimensional array of colors. In the example below, we first use a code block to generate a range of numbers from 0 to 255. A Color.ByARGB node is used to create colors from this range, and the lacing of this node is set to Cross Product to create a two-dimensional array. We then use an Image.FromPixels node to create an image. A Watch Image node can be used to preview the image created."
+        }, {
+        "Name": "Pixels",
+        "categories": ["Core", "File", "Image"],
+        "folderPath": "Core/File/Image/Action",
+        "dynFile": ["Pixels"],
+        "imageFile": ["Pixels"],
+        "inDepth": "Pixels will return a list of colors from an input image as a two-dimensional array. The Pixels node has two additional inputs to specify the number of x and y samples to use to extract pixels from. In the example below, we read an image using a ReadFromFile node. This image is then input into a Pixels node to extract the pixel colors."
+        }, {
+        "Name": "ReadFromFile",
+        "categories": ["Core", "File", "Image"],
+        "folderPath": "Core/File/Image/Action",
+        "dynFile": ["ReadFromFile"],
+        "imageFile": ["ReadFromFile"],
+        "inDepth": "Read From File will create an image object from an input file object. In the example below, we use a FilePath node followed by a File.FromPath node to create a file object to use as the input to a ReadFromFile node. A Watch Image node is used to preview the loaded image."
+        }, {
+        "Name": "WriteToFile",
+        "categories": ["Core", "File", "Image"],
+        "folderPath": "Core/File/Image/Action",
+        "dynFile": ["WriteToFile"],
+        "imageFile": ["WriteToFile"],
+        "inDepth": "Write to File will write an image to a specified file path. This node is automatically activated when the inputs change. In the example below, we use an Image.FromPixels node to create an image object based on a generated set of colors. A FilePath node is used to specify the directory and file name to write this image to."
         }
   ]

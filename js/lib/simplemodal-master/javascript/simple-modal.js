@@ -83,7 +83,6 @@ var SimpleModal = new Class({
           </div> \
           <div class=\"simple-modal-footer\"></div>"
     },
-
     /**
      * Initialization
      */
@@ -176,7 +175,7 @@ var SimpleModal = new Class({
         default:
 			// Alert
 			// Add button
-			this.addButton(this.options.btn_ok, "btn primary");
+//			this.addButton(this.options.btn_ok, "btn primary");
 		
 			// Rendering
 			var node = this._drawWindow(options);
@@ -217,7 +216,6 @@ var SimpleModal = new Class({
     * return
     */
     hide: function(){
-		
 		try{
 			if( typeof(this.request) == "object" )  this.request.cancel();
 		}catch(err){}
