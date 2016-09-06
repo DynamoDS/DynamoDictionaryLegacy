@@ -1,4 +1,7 @@
+//global parameters
+var updateJsonFromXML = false;
 var ipindex = 0;
+var idval=0;
 var dlc, ilc, newdc, newic;
 var newFile = false;
 var filesToAdd = [];
@@ -9,16 +12,32 @@ var eOb = {};
 var hitob = {};
 var prd = false;
 var currob = {};
+var landingHtml; var editHtml;
 var exFiles;
+//main data for all nodes
+var fullJson;
+
+//add required libraries
 require.config({
     paths: {
-        //     githubapi: 'node_modules/github-api/dist/GitHub.bundle.min'
         githubapi: 'node_modules/github-api/dist/GitHub.bundle'
         , d3: "http://d3js.org/d3.v3.min"
         , fileSaver: "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min"
     }
 });
 
+//test array equality
+function arraysEqual(a, b) {
+    if (a === b) return true;
+    if (a == null || b == null) return false;
+    if (a.length != b.length) return false;
+    for (var i = 0; i < a.length; ++i) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
+
+//modal file edits
 function switchToModal(sampfile, v) {
     //    console.log(sampfile, v)
     if (sampfile != undefined && v != undefined) {
@@ -29,92 +48,87 @@ function switchToModal(sampfile, v) {
     }
 }
 
+//branchQueue
 function branchPopup(sampfile, v) {
-    //    console.log(currob,'lsdnaf')
-    //    if(v!=undefined){
     if (hitob.dynFile != undefined) {
         if (v > hitob.dynFile.length - 1) {
             newFile = true;
-            //console.log('new file loading')
         }
         else {
             newFile = false;
         }
     }
     switchToModal(sampfile, v);
-    //        }
 }
 
+//front end file edits
 function fileEdit(sampfile, v) {
-    //                            //console.log(eOb)upda
     ipindex = currob.it;
     var SM = new SimpleModal({
         "btn_ok": "Commit Edits"
     });
     SM.addButton("Submit", "btn primary", function () {
+        console.log($j("#dynFileLoader").val(),$j("#imgFileLoader").val())
         d3.select("#submitPR").style('display', 'block')
         prFlash();
-        //        .transition().duration(1000).style("opacity", 1.0)
-        //            //console.log(hitob)
         if (newFile == true) {
-            if ($j("#dynFileLoader").val() == '' || $j("#imgFileLoader").val() == '') {
+            
+            if ($j("#dynFileLoader").val() == '' || $j("#imgFileLoader").val() == '' ||$j("#dynFileLoader").val() == undefined || $j("#imgFileLoader").val() == undefined ) {
                 alert('Must add an Image file and a Dynamo file to add a new exercise!')
             }
         }
-        //        else {
         dynLoadSubmit();
         imgLoadSubmit();
-        //                //console.log(eOb)
         if (newFile) {
-            hitob.dynFile.push(eOb[hitob.index][ipindex]["dynName"].split(".")[0])
-            hitob.imageFile.push(eOb[hitob.index][ipindex]["imageName"].split(".")[0])
+            hitob.dynFile.push(eOb[hitob.index][ipindex]["dynFile"].split(".")[0])
+            hitob.imageFile.push(eOb[hitob.index][ipindex]["imageFile"].split(".")[0])
             newFile = false;
         }
         d3.select("#exC" + v).style("display", "block")
         this.hide();
-        //        }
     });
     addCancel(SM)
     SM.options.draggable = false;
     SM.show({
-        "title": '<a href="https://github.com/DynamoDS/DynamoPrimer" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle"></a>&nbsp<span>' + sampfile + '</span>'
-        , "contents": "<p>Update Image File</p><input id='imageFileLoader' type='file' name='pic' accept='image/*' onchange='loadImage()' onclick='clearImFile()'><br><br><br><p>Update Dynamo File</p><input id='dynFileLoader' type='file' name='graph' accept='.dyn' onchange='loadDyn()' onclick='clearDynFile()'><br><br><br>"
+        "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle"></a>&nbsp<span>' + sampfile + '</span>'
+        , "contents": "<p>Update Image File</p><input id='imgFileLoader' type='file' name='pic' accept='image/*' onchange='loadImage()' onclick='clearImFile()'><br><br><br><p>Update Dynamo File</p><input id='dynFileLoader' type='file' name='graph' accept='.dyn' onchange='loadDyn()' onclick='clearDynFile()'><br><br><br>"
     , });
 }
 
+//editing a dynamo file
 function dynLoadSubmit() {
-    //            //console.log(reader.result)
     if (eOb[hitob.index][ipindex] == undefined) {
         eOb[hitob.index][ipindex] = {};
-        eOb[hitob.index][ipindex]["index"] = ipindex;
+        eOb[hitob.index][ipindex]["index"] = idval;
     }
     eOb[hitob.index][ipindex]["dyn"] = dlc;
     if (newdc != undefined) {
-        eOb[hitob.index][ipindex]["dynName"] = checkNew(file, "dynFile");
-        //console.log('exFileName' + ipindex)
+        eOb[hitob.index][ipindex]["dynFile"] = checkNew(file, "dynFile");
         if (newFile) {
-            d3.select('#exFileName' + ipindex).text(eOb[hitob.index][ipindex]["dynName"])
+            d3.select('#exFileName' + idval).text(eOb[hitob.index][ipindex]["dynFile"])
         }
         newdc = undefined;
     }
 }
 
+//editing an image file
 function imgLoadSubmit() {
-    var photo = document.getElementById('exi' + ipindex);
+    var photo = document.getElementById('exi' + idval);
     photo.src = ilc.d;
-    //console.log(photo)
     if (eOb[hitob.index][ipindex] == undefined) {
         eOb[hitob.index][ipindex] = {};
-        eOb[hitob.index][ipindex]["index"] = ipindex;
+        eOb[hitob.index][ipindex]["index"] = idval;
     }
     eOb[hitob.index][ipindex]["image"] = ilc.d;
     if (newic != undefined) {
-        eOb[hitob.index][ipindex]["imageName"] = checkNew(ilc.f, "imageFile");
+        eOb[hitob.index][ipindex]["imageFile"] = checkNew(ilc.f, "imageFile");
         newic = undefined;
     }
-    else {}
+    else {
+        eOb[hitob.index][ipindex]["imageFile"]=hitob["imageFile"][idval];        
+    }
 }
-
+//cancel button
 function addCancel(SM) {
     SM.addButton("Cancel", "btn", function () {
         this.hide();
@@ -124,8 +138,43 @@ function addCancel(SM) {
         }
     });
 }
-var fullJson;
+
+//read the json file containing user edits
 require(["d3"], function (d3) {
+    d3.json("data/Dynamo_Nodes_Documentation.json", function (data) {
+        exFiles = data;
+    })
+
+    function addObToJson(obj) {
+        if (updateJsonFromXML == true) {
+            for (var aaa = 0; aaa < exFiles.length; aaa++) {
+                var rrr = exFiles[aaa]
+                var didithit = false;
+                if (rrr.Name == obj.Name && arraysEqual(rrr.Categories, obj.categories)) {
+                    didithit = true;
+                    break;
+                }
+            }
+            if (didithit == false) {
+                var pathList = []
+                obj["Categories"].forEach(function (ddd) {
+                    pathList.push(ddd)
+                })
+                pathList.push(obj["Group"])
+                var pathList = pathList.join('/');
+                newhit = {
+                    "Name": obj["Name"]
+                    , "categories": obj["Categories"]
+                    , "dynFile": []
+                    , "imageFile": []
+                    , "folderPath": pathList
+                    , "inDepth": "Add in-depth information about " + obj["Name"] + "..."
+                    , "index": exFiles.length
+                };
+                exFiles.push(newhit);
+            }
+        }
+    }
     d3.select("#submitPR").on('click', function () {
             //            if (branchLog == false) {
             if (gitInfo.branchName == undefined) {
@@ -134,7 +183,7 @@ require(["d3"], function (d3) {
                 , });
                 SM.addButton("Confirm", "btn primary", function () {
                     //console.log(';clkn')
-                    gitInfo.branchName = (document.getElementById("userBranch").value) + '_' + prepDate();
+                    gitInfo.branchName = (document.getElementById("userBranch").value.replace(/\s/g, "-")) + '_' + prepDate();
                     gitInfo.Message = (document.getElementById("commitMessage").value)
                     this.hide();
                     commitChanges(JSON.stringify(fullJson, null, 4))
@@ -144,8 +193,8 @@ require(["d3"], function (d3) {
                 addCancel(SM)
                 SM.options.draggable = false;
                 SM.show({
-                    "title": '<a href="https://github.com/DynamoDS/DynamoPrimer" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle"></a>&nbsp<span>Submit Pull Request</span>'
-                    , "contents": "<p font-size:'10px' style='color:gray;'>Please fill out the information to create a branch for your pull request. You only have to do this once per session.</p><br><span>Branch Name:<br></span><input size='40' id='userBranch'></input><br><br><span>Comments (optional):<br></span><input size='40' id='commitMessage'></input>"
+                    "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle"></a>&nbsp<span>Submit Pull Request</span>'
+                    , "contents": "<p font-size:'10px' style='color:gray;'>Please fill out the information to create a branch for your pull request. You only have to do this once per session.</p><span>Branch Name:<br></span><input size='40' id='userBranch'></input><br><br><span>Comments (optional):<br></span><input size='40' id='commitMessage'></input>"
                 });
                 //    }
             }
@@ -159,24 +208,10 @@ require(["d3"], function (d3) {
             d3.select("body").style("cursor", "default")
             d3.select(this).transition().duration(400).style("opacity", 0.5)
         }).style('display', 'none').style("opacity", 0.0)
-        //    $j("#editSampleFile").on("click", function () {
-        //
-        //        var SM = new SimpleModal({
-        //            "btn_ok": "Submit Pull Request"
-        //        });
-        //        SM.options.draggable = false;
-        //        SM.show({
-        //            "title": '<a href="https://github.com/DynamoDS/DynamoPrimer" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle"></a>&nbsp<span>Github Pull Request</span>',
-        //            "contents": "Please fill out the information to log a pull request. This information is optional as it will be publicly available. <br><br><span>Name:</span><input size='50%'></input><br><br><span>Email:</span><input size='50%'></input><br><br><span>Comments:</span><br><textarea style='width:95%; color:black;'></textarea>",
-        //
-        //        });
-        //    });
     d3.select("#myElement").on('mouseover', function () {
             d3.select('body').style("cursor", "pointer")
         })
-        //    
-        //    
-        //    
+
     var maindiv = d3.select(".container")
     var leftdiv = d3.select(".left-element")
     var searchBar = d3.select("#searchBar")
@@ -231,14 +266,7 @@ require(["d3"], function (d3) {
     var allData;
     d3.select(".nodeName").append("img")
     d3.select(".nodeName").append("text").text("Welcome to the Dynamo Dictionary!")
-        //    rightdiv.append("div").attr("class", "nodeHier")
-        //    rightdiv.append("div").attr("class", "nodeGroup")
-        //    rightdiv.append("div").attr("class", "nodeDesc")
-    rightdiv.append("div").attr("class", "nodeIn")
-    rightdiv.append("div").attr("class", "nodeOut")
-    rightdiv.append("div").attr("class", "inDepth")
-    rightdiv.append("div").attr("class", "exampleFile")
-    rightdiv.append("div").attr("class", "seeAlso")
+
 
     function sortArrayOfObjectsByKey(arr, key) {
         if (arr[0][key] != "Action" && arr[0][key] != "Create" && arr[0][key] != "Query") {
@@ -336,20 +364,6 @@ require(["d3"], function (d3) {
         if (wfalse == false || !but.nextElementSibling.classList.contains("show")) {
             but.nextElementSibling.classList.toggle("show");
             var bbb = but.nextElementSibling;
-            //            d3.select(bbb).style('max-height','0%')
-            //              buts=d3.selectAll(".button"+(it+1));
-            //            buts.style("height","0px").style("opacity","0")
-            //            buts[0].forEach(function(h,j){
-            //                
-            //                var he=0;
-            //                var fs=0;
-            //                if(h.parentElement.classList.contains("show")){
-            //                    he=28;
-            //                    fs=14;
-            //                }
-            //                d3.select(h).transition().duration(400).style("opacity",1)
-            //            })
-            //            //console.log(buts)
         }
         if (wfalse == true) {
             wfalse = false;
@@ -541,26 +555,7 @@ require(["d3"], function (d3) {
         if (reset == true) {
             var imdiv = d3.selectAll(".imageTiles").style("display", "none").style("pointer-events", "none")
             var loaddiv = d3.selectAll(".pageLoad")
-            loaddiv.html(`
-             <br><br><div class='imgHL'>
-                <a href='http://dynamobim.org/' target='_blank'><img src='images/home/dynamobim.jpg' width='100%'>
-                <div class='text_over_imageL'>Community</div></a>
-            </div>
-            <div class='imgHR'>
-                <a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'><img src='images/home/dynamostudio.jpg' width='100%'>
-                <div class='text_over_imageR'>Product</div></a>
-            </div>
-            <div id='clearer'><br></div>
-            <div class='imgHL'>
-                <a href='http://dynamoprimer.com/' target='_blank'><img src='images/home/dynamoprimer.jpg' width='100%'></a>
-                <div class='text_over_imageL'>Learning</div>
-            </div>
-            <div class='imgHR'>
-                <a href='https://github.com/DynamoDS/DynamoPrimer' target='_blank'><img src='images/home/dynamogithub.jpg' width='100%'></a>
-                <div class='text_over_imageR'>Development</div>
-            </div>
-            <div id='clearer'></div> 
-             `)
+            loaddiv.html(landingHtml)
             d3.select(".seeAlso").html("")
         }
     }
@@ -980,6 +975,7 @@ require(["d3"], function (d3) {
                     else {
                         spanner.append('text').text(' ' + obj.Name + '')
                     }
+                    addObToJson(obj)
                 }
                 ogo = obj;
             })
@@ -990,17 +986,8 @@ require(["d3"], function (d3) {
     });
 
     function entryText() {
-        var entryText = `<p class="graytext">Welcome to the Dynamo Dictionary, a searchable database for Dynamo functionality. Here you can find explanations for nodes, sample files, and links to more information on associated workflows. This site is constantly evolving as the community continues to add more information. Like the <a href="http://dynamoprimer.com/" target="_blank">Dynamo Primer</a>, this dictionary is open-source - check it out on our <a href="https://github.com/DynamoDS/DynamoDictionary" target="_blank">Github page</a> and contribute!</p>
-                        <hr>
-                        <br>
-                        <p class="nodeName">Editing this Dictionary</p>
-                        <p class="graytext">Not only is the Dynamo Dictionary open-sourced, you can also edit the repository straight from this webpage! Click on edit icons on node pages and add your own <span style="color:white;">in-depth description</span>, update <span style="color:white;">examples files and images</span>, or <span style="color:white;">add your own!</span>
-                            <br>
-                        </p>
-                        <li class="graytext">After making your updates, remember to click the <span style="color:white;">"Submit Pull Request"</span> icon in the top right of the page. This will allow you to open a pull request on Github without having to login. </li>
-                        <li class="graytext">The <span style="color:white;">Pull Request</span> will be opened on the Github repo. After we've reviewed it and are ready to accept the changes, we'll <span style="color:white;">merge</span> the new content onto the live site!</li>
-                        <li class="graytext"> Because of the review period, you may have to wait a few days for the Pull request to go through. If you have any <a href="https://github.com/DynamoDS/DynamoDictionary/issues" target="_blank">issues</a>, please don't hesitate to log theme <a href="https://github.com/DynamoDS/DynamoDictionary/issues" target="_blank">here.</a></li>`;
-        d3.select(".nodeDesc").append("html").html(entryText).append('html').html("<br><hr>")
+        var entryText = editHtml;
+        d3.select(".nodeDesc").append("html").html(entryText)
     }
 
     function endLoad(oo) {
@@ -1018,29 +1005,12 @@ require(["d3"], function (d3) {
     }
 
     function mainPages() {
+    
+        landingHtml=(d3.select(".pageLoad")[0][0].innerHTML)
+        editHtml=(d3.select(".nodeDesc")[0][0].innerHTML)
         //        entryText();
-        var imdiv = rightdiv.append("div").attr("class", "outer").append("div").style("display", "none").style("pointer-events", "none").attr("class", "imageTiles")
-        var loaddiv = rightdiv.append("div").attr("class", "pageLoad")
-        loaddiv.html(`
-             <br><br><div class='imgHL'>
-                <a href='http://dynamobim.org/' target='_blank'><img src='images/home/dynamobim.jpg' width='100%'>
-                <div class='text_over_imageL'>Community</div></a>
-            </div>
-            <div class='imgHR'>
-                <a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank'><img src='images/home/dynamostudio.jpg' width='100%'>
-                <div class='text_over_imageR'>Product</div></a>
-            </div>
-            <div id='clearer'><br></div>
-            <div class='imgHL'>
-                <a href='http://dynamoprimer.com/' target='_blank'><img src='images/home/dynamoprimer.jpg' width='100%'></a>
-                <div class='text_over_imageL'>Learning</div>
-            </div>
-            <div class='imgHR'>
-                <a href='https://github.com/DynamoDS/DynamoPrimer' target='_blank'><img src='images/home/dynamogithub.jpg' width='100%'></a>
-                <div class='text_over_imageR'>Development</div>
-            </div>
-            <div id='clearer'></div> 
-             `)
+        var imdiv = d3.select(".outer").append("div").style("display", "none").style("pointer-events", "none").attr("class", "imageTiles")
+        var loaddiv = d3.select(".pageLoad")
         orderedList.forEach(function (d, i) {
                 var image = getImagePath(d)
                 var newim = (d3.select(".copy" + i)[0][0].cloneNode(true))
@@ -1049,7 +1019,6 @@ require(["d3"], function (d3) {
                 theimage.className = "im" + i;
                 d3.select(".im" + i).attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
             })
-            //     d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
         d3.selectAll(".imageTiles").selectAll("img").on("mouseover", function (d, j) {
             //                d3.select(this).style("background-color", "steelblue")
             d3.select(".addedText" + j).style("color", "steelblue")
@@ -1061,7 +1030,6 @@ require(["d3"], function (d3) {
                 d3.selectAll(".seeAlso").html(tname);
             }
         }).on("mouseout", function (d, j) {
-            //         //console.log(nodelevel)
             d3.select(".addedText" + j).style("color", "white")
             d3.select(this).style("background-color", d3.rgb(34, 34, 34))
             tname = "<b>Nodes</b><br><br>";
@@ -1103,9 +1071,6 @@ require(["d3"], function (d3) {
         }
         return image;
     }
-    d3.json("data/Dynamo_Nodes_Documentation.json", function (data) {
-        exFiles = data;
-    })
 
     function updateInfo(ob) {
         currob = ob;
@@ -1142,20 +1107,9 @@ require(["d3"], function (d3) {
         hierarchize(ob);
         var rand = Math.random();
         var hit = false;
-
-        function arraysEqual(a, b) {
-            if (a === b) return true;
-            if (a == null || b == null) return false;
-            if (a.length != b.length) return false;
-            for (var i = 0; i < a.length; ++i) {
-                if (a[i] !== b[i]) return false;
-            }
-            return true;
-        }
         if (fullJson == undefined) {
             fullJson = exFiles;
         }
-
         hitob = {};
         fullJson.forEach(function (j, h) {
             if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
@@ -1164,14 +1118,14 @@ require(["d3"], function (d3) {
                 hitob.index = h;
             }
         })
-        console.log(hitob)
+//        console.log(hitob)
         var impaths = hitob.imageFile;
         var iconimage1 = "images/icons/download.svg";
         var iconimage2 = "images/icons/edit.svg";
         var iconimage3 = "images/icons/add.svg";
         var iconimage4 = "images/icons/ImageOverlay.svg";
-        
-        function inDepthText(strr){
+
+        function inDepthText(strr) {
             d3.select(".inDepth").html("<hr><b><br>In Depth:</b>&nbsp&nbsp&nbsp").append("img").attr("hspace", 2).attr("width", "20px").attr("src", iconimage2).style("opacity", .25).attr('id', 'editButton').attr("class", "edB").each(function () {
                 editAttributes()
             }).on("mouseover", function () {
@@ -1182,8 +1136,8 @@ require(["d3"], function (d3) {
                 popOut();
                 d3.select(this).style("opacity", .25);
                 d3.select("body").style("cursor", "default");
-            })            
-            d3.select(".inDepth").append("html").html("&nbsp&nbsp").append("pre").text(strr).attr("id", "inDepthDescription").style("color", "gray")
+            })
+            d3.select(".inDepth").append("html").html("&nbsp&nbsp").append("pre").html(strr).attr("id", "inDepthDescription").style("color", "gray")
             d3.select(".inDepth").append("html").html("<br><br><hr><br>")
         }
 
@@ -1197,11 +1151,9 @@ require(["d3"], function (d3) {
         function popOut() {
             ttDiv.transition().duration(500).style("opacity", 0);
         }
-
         if (hit == true) {
             var strr = hitob.inDepth;
             inDepthText(hitob.inDepth);
-            
             d3.select(".exampleFile").html("<br><b>Example File:</b>&nbsp&nbsp")
             var exImage = d3.select(".exampleFile").append('div').attr("class", "exOutline")
             var exContainer = exImage.append('div').attr("class", "exContainer")
@@ -1235,7 +1187,6 @@ require(["d3"], function (d3) {
                     if (stock == false) {
                         fp = hitob.folderPath;
                     }
-                    //console.log(d3.select(this).attr('justadded'))
                     if ((d3.select(this).attr('justadded') == 'false')) {
                         var dl = "./data/EXAMPLES/" + fp + "/dyn/" + hitob.dynFile[v] + ".dyn";
                         var linker = '<a href="' + dl + '" id="sdl" download></a>';
@@ -1285,8 +1236,13 @@ require(["d3"], function (d3) {
                 d3.select("body").style("cursor", "default");
                 popOut();
             }).on("click", function () {
-                addExamp('s', impaths.length, true);
-                document.getElementById('fileEdit' + impaths.length).click();
+                console.log(impaths)
+                idval=0;
+                if(impaths.length>0){
+                    idval=impaths.length 
+                }
+                addExamp('s', idval, true);
+                document.getElementById('fileEdit' + idval).click();
             })
             d3.select(".exampleFile").append('div').html("<hr>").attr("class", "exSample")
         }
@@ -1334,7 +1290,6 @@ require(["d3"], function (d3) {
         else {
             d3.selectAll(".seeAlso").html("");
         }
-        //        d3.selectAll(".seeAlso").append("html")
         var ims = d3.selectAll(".imageTiles").selectAll("img")
         var imcount = [];
         ims[0].forEach(function (q, w) {

@@ -35,27 +35,7 @@ function updateText() {
         $j(this).parent().append(input);
         $j(this).remove();
         input.focus();
-//                console.log(hitob,currob)
-//        console.log(currob, hitob, fullJson[1])
-        var pathList = []
-        currob["Categories"].forEach(function (d) {
-            pathList.push(d)
-        })
-        pathList.push(currob["Group"])
-        pathList.join('/');
-//                console.log(Object.keys(hitob).length)
-        if (Object.keys(hitob).length==0) {
-            hitob = {
-                "Name": currob["Name"]
-                , "categories": currob["Categories"]
-                , "dynFile": []
-                , "imageFile": []
-                , "folderPath": pathList
-                , "inDepth": "..."
-                , "index": fullJson.length
-            };
-        }
-//        console.log(fullJson[fullJson.length-1])
+
         fullJson.push(hitob)
          d3.selectAll("#inDepthDescription").on('blur', function () {
             textContent.text = $j(this).val();
@@ -83,9 +63,7 @@ function dateString() {
     var day = date.getDate();
     var monthIndex = date.getMonth();
     var year = date.getFullYear();
-    //    ////////console.log(day, monthNames[monthIndex], year);
     return ([year, monthIndex, day, hr, minutes, secs].join('-'))
-        //    document.write(day + ' ' + monthNames[monthIndex] + ' ' + year);
 }
 
 function dataURItoBlob(dataURI, callback) {
@@ -143,7 +121,6 @@ function checkNew(file, st) {
     if (newFile) {
         var arr = hitob[st];
         var blankArr = JSON.parse(JSON.stringify(arr))
-        console.log(blankArr)
         blankArr.push(file.name.split('.')[0])
             //        console.log(arr, Array.isArray(arr))
         var newarr = renameFiles(blankArr);
@@ -156,7 +133,7 @@ function checkNew(file, st) {
 
 function loadImage() {
     require(["fileSaver"], function (fs) {
-        file = document.querySelector('#imageFileLoader').files[0];
+        file = document.querySelector('#imgFileLoader').files[0];
         reader = new FileReader();
         if (file) {
             reader.readAsDataURL(file); //reads the data as a URL
@@ -169,6 +146,7 @@ function loadImage() {
             if (newFile) {
                 newic = true
             }
+//            console.log(ilc)
         }
     })
 }
@@ -185,9 +163,6 @@ function loadDyn() {
             if (newFile) {
                 newdc = true
             }
-            //            if (newFile) {
-            //                eOb[hitob.index][ipindex]["dynName"] +=prepDate();
-            //            }
         }
     })
 }

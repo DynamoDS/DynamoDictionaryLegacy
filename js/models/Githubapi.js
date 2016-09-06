@@ -1,7 +1,5 @@
 function commitChanges(ob) {
-    console.log(JSON.parse(ob))
-    //    var ob=JSON.parse(ob);
-    //    console.log(ob)
+
     require(["githubapi"], function (Github) {
         // This is a personal access token, not using oAuth.
         // Currently this is under ramramps.  We have  to create
@@ -16,45 +14,49 @@ function commitChanges(ob) {
         var pull;
 
         function commitFile(data) {
-            //            repo.getContents(gitInfo.branchName, data.if, true, function (err, contents) {
+            //currently do a commit for each file (completed in the map function below)
             var options = {
                 author: {
-                    name: 'Ram'
-                    , email: 'ram@example.com'
+                    name: 'User'
+                    , email: 'user@example.com'
                 }
                 , committer: {
-                    name: 'Ram'
-                    , email: 'Ram@example.com'
+                    name: 'User'
+                    , email: 'user@example.com'
                 }
                 , encode: data.enc // Whether to base64 encode the file. (default: true) 
             };
             repo.writeFile(gitInfo.branchName, data.if, data.i, gitInfo.Message, options, function (err) {
-                if (err) console.log(err);
-                if(prd==false){
-//                     console.log(fullJson,ob)
-                    pr();
-                    prd=true;
+                if (err) {
+                    console.log(err)
+                    onGHError()
+                }
+                else {
+                    if (prd == false) {
+                        pr();
+                        prd = true;
+                    }
                 }
             });
-            //            });
         }
         repo.createBranch("master", gitInfo.branchName, function (err) {
-            //step 2 : Read / get the contents
-            
+            //create a branch
             var filelist = [];
             filelist[0] = {
-                i: ob
-                , if: 'data/Dynamo_Nodes_Documentation.json'
-                , enc: true
-            }
-//            console.log(fullJson,JSON.parse(ob))
+                    i: ob
+                    , if: 'data/Dynamo_Nodes_Documentation.json'
+                    , enc: true
+                }
+            //eOb represents all of the nodes that have been changed.
             for (key in eOb) {
+                console.log(eOb)
                 for (keykey in eOb[key]) {
                     var mainOb = JSON.parse(ob);
                     var nodeOb = mainOb[key];
                     var subub = eOb[key][keykey]
-                    var imageFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/img/" + nodeOb.imageFile[keykey] + ".jpg";
-                    var dynFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/dyn/" + nodeOb.dynFile[keykey] + ".dyn";
+                    console.log(subub)
+                    var imageFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/img/" + subub.imageFile.split('.')[0] + ".jpg";
+                    var dynFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/dyn/" + subub.dynFile.split('.')[0] + ".dyn";
                     if (subub.image != undefined) {
                         filelist.push({
                             i: window.btoa(window.atob((subub.image.replace(/^(.+,)/, ''))))
@@ -75,8 +77,37 @@ function commitChanges(ob) {
                 filelist.map(commitFile);
             }
         });
+
         
+        function viewPR(url){
+            //view pull request after creation
+            var SM = new SimpleModal({
+                "btn_ok": "Commit Edits"
+            });
+            SM.options.draggable = false;
+            SM.show({
+                "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle;"></a>&nbsp<span>Pull Request Created!</span>'
+                , "contents": "Pull Request created! Thank you for your patience while we review before updating the site. <a href='"+url+"' target=_blank style='color:black;'>Follow your PR on Github here.</a>"
+            , });
+//            d3.selectAll(".close").on('click',function(){location.reload()})
+//            d3.selectAll("#simple-modal-overlay").on('click',function(){location.reload()})
+        }
+        
+        
+        function onGHError() {
+            //error logging
+            var SM = new SimpleModal({
+                "btn_ok": "Commit Edits"
+            });
+            SM.options.draggable = false;
+            SM.show({
+                "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle;"></a>&nbsp<span>Pull Request Error</span>'
+                , "contents": "There was an issue submitting the Pull Request to the Github repo. Visit the <a href='https://github.com/DynamoDS/DynamoDictionary' target='_blank' style='color:red;'>Dynamo Dictionary repo</a> to submit an issue or a manual pull request."
+            , });
+        }
+
         function pr() {
+            //create pull request
             repo.getContents(gitInfo.branchName, "README.md", true, function (err, contents) {
                 var pull = {
                     title: gitInfo.branchName
@@ -85,20 +116,20 @@ function commitChanges(ob) {
                     , head: gitInfo.branchName
                 };
                 repo.createPullRequest(pull, function (err, pullRequest) {
-                    
-                    if (err) {console.log(err)}
-                    else{
-                        submittedpr=true;
-                        d3.select('#prLogo').attr("src","images/icons/gh.png")
-                        d3.select('#submitPR').select("span").html("View PR on Github! &nbsp;&nbsp;&nbsp;")
-                        d3.select('#submitPR').on("click",function(){
-                            window.location=(pullRequest.html_url)
-                        })
+                    if (err) {
+                        onGHError()
                     }
-                    
-                    
-                    
-                    
+                    else {
+                        
+                        viewPR(pullRequest.html_url);
+                        submittedpr = true;
+                        d3.select('#prLogo').attr("src", "images/icons/gh.png")
+                        d3.select('#submitPR').select("span").html("View PR on Github! &nbsp;&nbsp;&nbsp;")
+                        d3.select('#submitPR').on("click", function () {
+                            window.location = (pullRequest.html_url)
+                        })
+                        
+                    }
                 });
             })
         }
