@@ -6969,7 +6969,7 @@
         "inDepth": "Write to File will write an image to a specified file path. This node is automatically activated when the inputs change. In the example below, we use an Image.FromPixels node to create an image object based on a generated set of colors. A FilePath node is used to specify the directory and file name to write this image to."
     },
     {
-        "Name": "AllFalse",
+        "Name": "AllTrue",
         "categories": [
             "BuiltIn"
         ],
@@ -6979,7 +6979,7 @@
             "BuiltIn",
             "Action"
         ],
-        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false.",
+        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is true.",
         "index": 464
     },
     {
