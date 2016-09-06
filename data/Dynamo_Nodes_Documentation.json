@@ -515,12 +515,15 @@
         ],
         "folderPath": "Geometry/Arc/Create",
         "dynFile": [
-            "ByBestFitThroughPoints"
+            "ByBestFitThroughPoints",
+            "MinPoint"
         ],
         "imageFile": [
-            "ByBestFitThroughPoints"
+            "ByBestFitThroughPoints",
+            "JYrrropt_400x400"
         ],
-        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions."
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.",
+        "index": 34
     },
     {
         "Name": "ByCenterPointRadiusAngle",
