@@ -520,7 +520,8 @@
         "imageFile": [
             "ByBestFitThroughPoints"
         ],
-        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions."
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.dfgh",
+        "index": 34
     },
     {
         "Name": "ByCenterPointRadiusAngle",
@@ -9624,5 +9625,21 @@
         "folderPath": "Analyze/AnalysisExtensions/Action",
         "inDepth": "Add in-depth information about IsAlmostEqualTo...",
         "index": 465
+    },
+    {
+        "Name": "ByBestFitThroughPoints",
+        "categories": [
+            "Geometry",
+            "Arc"
+        ],
+        "folderPath": "Geometry/Arc/Create",
+        "dynFile": [
+            "ByBestFitThroughPoints"
+        ],
+        "imageFile": [
+            "ByBestFitThroughPoints"
+        ],
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.dfgh",
+        "index": 34
     }
 ]
