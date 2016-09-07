@@ -6973,8 +6973,12 @@
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [],
-        "imageFile": [],
+        "dynFile": [
+            "ByBestFitThroughPoints2"
+        ],
+        "imageFile": [
+            "dynlogo [www"
+        ],
         "folderPath": [
             "BuiltIn",
             "Action"
