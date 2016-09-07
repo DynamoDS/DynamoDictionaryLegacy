@@ -6973,8 +6973,12 @@
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [],
-        "imageFile": [],
+        "dynFile": [
+            "MinPoint"
+        ],
+        "imageFile": [
+            "download"
+        ],
         "folderPath": [
             "BuiltIn",
             "Action"
