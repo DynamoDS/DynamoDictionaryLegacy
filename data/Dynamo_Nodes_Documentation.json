@@ -520,7 +520,8 @@
         "imageFile": [
             "ByBestFitThroughPoints"
         ],
-        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions."
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.",
+        "index": 34
     },
     {
         "Name": "ByCenterPointRadiusAngle",
@@ -1300,7 +1301,8 @@
         "imageFile": [
             "ByCorners"
         ],
-        "inDepth": "Cuboid By Corners creates a cuboid where the two input points are used as the opposite corners of the cuboid. In the example file, two points are randomly generated and used to create a cuboid."
+        "inDepth": "Cuboid By Corners creates a cuboid where the two input points are used as the opposite corners of the cuboid. In the example file, two points are randomly generated and used to create a cuboid.",
+        "index": 86
     },
     {
         "Name": "ByLengths (width, length, height)",
@@ -5095,7 +5097,8 @@
         "imageFile": [
             "Add"
         ],
-        "inDepth": "Add will add the individual channels of two colors together, and return the resulting color. Note that the resulting values must be less than 255. In the example below, we create two colors using ByARGB nodes. We then use an Add node to add the two colors together. A Display.ByGeometryColor node is used with a default cuboid in order to visualize the resulting color."
+        "inDepth": "Add will add the individual channels of two colors together, and return the resulting color. Note that the resulting values must be less than 255. In the example below, we create two colors using ByARGB nodes. We then use an Add node to add the two colors together. A Display.ByGeometryColor node is used with a default cuboid in order to visualize the resulting color.",
+        "index": 339
     },
     {
         "Name": "ByARGB",
@@ -8718,8 +8721,12 @@
             "Geometry",
             "Edge"
         ],
-        "dynFile": [],
-        "imageFile": [],
+        "dynFile": [
+            "MinPoint"
+        ],
+        "imageFile": [
+            "JYrrropt_400x400"
+        ],
         "folderPath": "Geometry/Edge/Query",
         "inDepth": "Add in-depth information about AdjacentFaces...",
         "index": 612
