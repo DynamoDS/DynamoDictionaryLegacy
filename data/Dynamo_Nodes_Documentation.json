@@ -584,7 +584,8 @@
         "imageFile": [
             "ByFillet"
         ],
-        "inDepth": "Arc ByFillet draws a portion of a tangential circle along two input curves. In this example, two intersecting lines are drawn and then filleted at a controlled radius."
+        "inDepth": "Arc.ByFillet draws a portion of a tangential circle along two input curves. In this example, two intersecting lines are drawn and then filleted at a controlled radius.",
+        "index": 38
     },
     {
         "Name": "ByFilletTangentToCurve",
@@ -9628,5 +9629,21 @@
         "folderPath": "Analyze/AnalysisExtensions/Action",
         "inDepth": "Add in-depth information about IsAlmostEqualTo...",
         "index": 465
+    },
+    {
+        "Name": "ByFillet",
+        "categories": [
+            "Geometry",
+            "Arc"
+        ],
+        "folderPath": "Geometry/Arc/Create",
+        "dynFile": [
+            "ByFillet"
+        ],
+        "imageFile": [
+            "ByFillet"
+        ],
+        "inDepth": "Arc.ByFillet draws a portion of a tangential circle along two input curves. In this example, two intersecting lines are drawn and then filleted at a controlled radius.",
+        "index": 38
     }
 ]
