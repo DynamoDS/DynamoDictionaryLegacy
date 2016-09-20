@@ -1,7 +1,7 @@
 function commitChanges(ob) {
     require(["githubapi"], function (Github) {
         var token;
-        $j.getJSON("./Configuration/config.json", function (result) {
+        $j.getJSON("./configuration/config.json", function (result) {
             token = result["GitHub_Token"];
             // This is a personal access token, not using oAuth.
             // Currently this is under ramramps.  We have  to create
