@@ -1,3 +1,19 @@
+#lightbox{
+	background-color:#eee;
+	padding: 10px;
+	border-bottom: 2px solid #666;
+	border-right: 2px solid #666;
+	}
+#lightboxDetails{
+	font-size: 0.8em;
+	padding-top: 0.4em;
+	}	
+#lightboxCaption{ float: left; }
+#keyboardMsg{ float: right; }
+
+#lightbox img{ border: none; } 
+#overlay img{ border: none; }
+
 ::selection {
     color: black;
     background: white;
@@ -137,14 +153,16 @@ a {
 /*    height: 15%;*/
     margin-right:3%;
     margin-left:3%;
+    
 /*    border-radius: 15px;*/
     
 }
 
 .imgHL img {
    
-    height: 100%;
+/*    height: 100%;*/
     width: 100%;
+    
     /*    height: 300px;*/
 /*    margin: -75px 0 0 -100px;*/
 }
@@ -169,6 +187,7 @@ a {
 }
 .pageLoad {
     text-align: center;
+    width:96%;
     /*        margin-left: -2%;*/
 /*    position: inline-block;*/
     float: left;

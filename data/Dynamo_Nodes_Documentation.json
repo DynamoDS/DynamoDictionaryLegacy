@@ -408,6 +408,10 @@
     },
     {
         "Name": "ByPoints (points, closeCurve)",
+        "categories": [
+            "Geometry",
+            "NurbsCurve"
+        ],
         "folderPath": "Geometry/NurbsCurve/Create",
         "dynFile": [
             "ByPoints_pc"

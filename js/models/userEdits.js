@@ -22,9 +22,11 @@ function checkDescription() {
 function updateText() {
     //    console.log(hitob)
     checkDescription();
+    var txt;
     d3.selectAll("#inDepthDescription").each(function () {
-        textContent.text = $j(this).html()
-            //        console.log(textContent)
+        txt = $j(this).html();
+        textContent.text = txt;
+        //        console.log(textContent)
         input = $j('<textarea />', {
             'type': 'text'
             , 'style': 'color:gray;'
@@ -35,10 +37,13 @@ function updateText() {
         $j(this).parent().append(input);
         $j(this).remove();
         input.focus();
-
         fullJson.push(hitob)
-         d3.selectAll("#inDepthDescription").on('blur', function () {
+        d3.selectAll("#inDepthDescription").on('blur', function () {
+            
             textContent.text = $j(this).val();
+            if (txt != textContent.text) {
+                prFlash();
+            }
             hitob.inDepth = textContent.text;
             input.blur();
             $j(this).parent().append($j('<pre style="color:gray;" id="inDepthDescription"/>').html(textContent.text));
@@ -49,7 +54,7 @@ function updateText() {
 
 function editAttributes() {
     d3.select('#editButton').on('click', function () {
-        prFlash();
+        //        prFlash();
         branchPopup()
     })
 }
@@ -146,7 +151,7 @@ function loadImage() {
             if (newFile) {
                 newic = true
             }
-//            console.log(ilc)
+            //            console.log(ilc)
         }
     })
 }

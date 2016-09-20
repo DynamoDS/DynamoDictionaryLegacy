@@ -1,7 +1,7 @@
 //global parameters
 var updateJsonFromXML = false;
 var ipindex = 0;
-var idval=0;
+var idval = 0;
 var dlc, ilc, newdc, newic;
 var newFile = false;
 var filesToAdd = [];
@@ -12,11 +12,11 @@ var eOb = {};
 var hitob = {};
 var prd = false;
 var currob = {};
-var landingHtml; var editHtml;
+var landingHtml;
+var editHtml;
 var exFiles;
 //main data for all nodes
 var fullJson;
-
 //add required libraries
 require.config({
     paths: {
@@ -25,7 +25,12 @@ require.config({
         , fileSaver: "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min"
     }
 });
-
+//flatten array
+function flatten(arr) {
+    return arr.reduce(function (flat, toFlatten) {
+        return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+    }, []);
+}
 //test array equality
 function arraysEqual(a, b) {
     if (a === b) return true;
@@ -36,7 +41,6 @@ function arraysEqual(a, b) {
     }
     return true;
 }
-
 //modal file edits
 function switchToModal(sampfile, v) {
     //    console.log(sampfile, v)
@@ -47,7 +51,6 @@ function switchToModal(sampfile, v) {
         updateText()
     }
 }
-
 //branchQueue
 function branchPopup(sampfile, v) {
     if (hitob.dynFile != undefined) {
@@ -60,7 +63,6 @@ function branchPopup(sampfile, v) {
     }
     switchToModal(sampfile, v);
 }
-
 //front end file edits
 function fileEdit(sampfile, v) {
     ipindex = currob.it;
@@ -68,12 +70,11 @@ function fileEdit(sampfile, v) {
         "btn_ok": "Commit Edits"
     });
     SM.addButton("Submit", "btn primary", function () {
-        console.log($j("#dynFileLoader").val(),$j("#imgFileLoader").val())
+        //        console.log($j("#dynFileLoader").val(), $j("#imgFileLoader").val())
         d3.select("#submitPR").style('display', 'block')
         prFlash();
         if (newFile == true) {
-            
-            if ($j("#dynFileLoader").val() == '' || $j("#imgFileLoader").val() == '' ||$j("#dynFileLoader").val() == undefined || $j("#imgFileLoader").val() == undefined ) {
+            if ($j("#dynFileLoader").val() == '' || $j("#imgFileLoader").val() == '' || $j("#dynFileLoader").val() == undefined || $j("#imgFileLoader").val() == undefined) {
                 alert('Must add an Image file and a Dynamo file to add a new exercise!')
             }
         }
@@ -94,7 +95,6 @@ function fileEdit(sampfile, v) {
         , "contents": "<p>Update Image File</p><input id='imgFileLoader' type='file' name='pic' accept='image/*' onchange='loadImage()' onclick='clearImFile()'><br><br><br><p>Update Dynamo File</p><input id='dynFileLoader' type='file' name='graph' accept='.dyn' onchange='loadDyn()' onclick='clearDynFile()'><br><br><br>"
     , });
 }
-
 //editing a dynamo file
 function dynLoadSubmit() {
     if (eOb[hitob.index][ipindex] == undefined) {
@@ -110,7 +110,6 @@ function dynLoadSubmit() {
         newdc = undefined;
     }
 }
-
 //editing an image file
 function imgLoadSubmit() {
     var photo = document.getElementById('exi' + idval);
@@ -125,7 +124,7 @@ function imgLoadSubmit() {
         newic = undefined;
     }
     else {
-        eOb[hitob.index][ipindex]["imageFile"]=hitob["imageFile"][idval];        
+        eOb[hitob.index][ipindex]["imageFile"] = hitob["imageFile"][idval];
     }
 }
 //cancel button
@@ -138,23 +137,74 @@ function addCancel(SM) {
         }
     });
 }
-
 //read the json file containing user edits
 require(["d3"], function (d3) {
+//    d3.select(".imgHL").attr("height",d3.select(".imgHL").attr("width"))
+    //    console.log('alnsdf')
+    function hashCheck(vlist, clist) {
+        //        console.log(fl)
+        //        console.log(nl)
+        //        (clist.map(function(a){console.log(a.Name); return 0;}))
+        //        console.log(vlist.length,fl.length)
+        var alllist = flatten(clist);
+        //        console.log(alllist)
+        if (window.location.hash != '') {
+            var catList = window.location.hash.split('-')
+            var nodeName = catList.pop();
+            if (catList.length > 0) {
+                catList[0] = catList[0].substring(1)
+            }
+            else {
+                nodeName = nodeName.substring(1)
+                catList = [];
+            }
+            //            console.log(catList)
+            if (nodeName.indexOf('..') > -1) {
+                catList = catList.concat(nodeName.split('..')[0])
+//                console.log(catList)
+                vlist.forEach(function (j, h) {
+                    var newarr = j.Categories.concat(j.Group)
+                    if (nodeName.split('..')[1] == j.Name && arraysEqual(catList, newarr)) {
+                        wfalse = true;
+                        $(j.button).click();
+                    }
+                })
+            }
+            else {
+                var fl = flatten(flatList);
+                var nl = [];
+                fl.forEach(function (d, i) {
+                    if (!d.FullCategoryName) {
+                        nl.push(d)
+                    }
+                })
+                nl.forEach(function (d, i) {
+                    if (nodeName == d.Name && arraysEqual(catList, d.Lineage)) {
+                        wfalse = true;
+                        $(d.button).click();
+                    }
+                })
+            }
+        }
+    }
     d3.json("data/Dynamo_Nodes_Documentation.json", function (data) {
+        //        console.log(data.length)
         exFiles = data;
     })
 
     function addObToJson(obj) {
+        //        console.log(obj)
         if (updateJsonFromXML == true) {
             for (var aaa = 0; aaa < exFiles.length; aaa++) {
                 var rrr = exFiles[aaa]
                 var didithit = false;
-                if (rrr.Name == obj.Name && arraysEqual(rrr.Categories, obj.categories)) {
+                if (rrr.Name == obj.Name && arraysEqual(rrr.categories, obj.Categories)) {
+                    //                    console.log(rrr)
                     didithit = true;
                     break;
                 }
             }
+            //            console.log(didithit)
             if (didithit == false) {
                 var pathList = []
                 obj["Categories"].forEach(function (ddd) {
@@ -172,46 +222,46 @@ require(["d3"], function (d3) {
                     , "index": exFiles.length
                 };
                 exFiles.push(newhit);
+                //                fullJson=exFiles;
             }
         }
     }
     d3.select("#submitPR").on('click', function () {
-            //            if (branchLog == false) {
-            if (gitInfo.branchName == undefined) {
-                var SM = new SimpleModal({
-                    "btn_ok": "Cancel"
-                , });
-                SM.addButton("Confirm", "btn primary", function () {
-                    //console.log(';clkn')
-                    gitInfo.branchName = (document.getElementById("userBranch").value.replace(/\s/g, "-")) + '_' + prepDate();
-                    gitInfo.Message = (document.getElementById("commitMessage").value)
-                    this.hide();
-                    commitChanges(JSON.stringify(fullJson, null, 4))
-                        //                    prOut();
-                        //            branchLog = true;
-                });
-                addCancel(SM)
-                SM.options.draggable = false;
-                SM.show({
-                    "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle"></a>&nbsp<span>Submit Pull Request</span>'
-                    , "contents": "<p font-size:'10px' style='color:gray;'>Please fill out the information to create a branch for your pull request. You only have to do this once per session.</p><span>Branch Name:<br></span><input size='40' id='userBranch'></input><br><br><span>Comments (optional):<br></span><input size='40' id='commitMessage'></input>"
-                });
-                //    }
-            }
-            else {
+        //            if (branchLog == false) {
+        if (gitInfo.branchName == undefined) {
+            var SM = new SimpleModal({
+                "btn_ok": "Cancel"
+            , });
+            SM.addButton("Confirm", "btn primary", function () {
+                //console.log(';clkn')
+                gitInfo.branchName = (document.getElementById("userBranch").value.replace(/\s/g, "-")) + '_' + prepDate();
+                gitInfo.Message = (document.getElementById("commitMessage").value)
+                this.hide();
                 commitChanges(JSON.stringify(fullJson, null, 4))
-            }
-        }).on('mouseover', function () {
-            d3.select("body").style("cursor", "pointer")
-            d3.select(this).transition().duration(400).style("opacity", 1.0)
-        }).on('mouseout', function () {
-            d3.select("body").style("cursor", "default")
-            d3.select(this).transition().duration(400).style("opacity", 0.5)
-        }).style('display', 'none').style("opacity", 0.0)
+                    //                    prOut();
+                    //            branchLog = true;
+            });
+            addCancel(SM)
+            SM.options.draggable = false;
+            SM.show({
+                "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle"></a>&nbsp<span>Submit Pull Request</span>'
+                , "contents": "<p font-size:'10px' style='color:gray;'>Please fill out the information to create a branch for your pull request. You only have to do this once per session.</p><span>Branch Name:<br></span><input size='40' id='userBranch'></input><br><br><span>Comments (optional):<br></span><input size='40' id='commitMessage'></input>"
+            });
+            //    }
+        }
+        else {
+            commitChanges(JSON.stringify(fullJson, null, 4))
+        }
+    }).on('mouseover', function () {
+        d3.select("body").style("cursor", "pointer")
+        d3.select(this).transition().duration(400).style("opacity", 1.0)
+    }).on('mouseout', function () {
+        d3.select("body").style("cursor", "default")
+        d3.select(this).transition().duration(400).style("opacity", 0.5)
+    }).style('display', 'none').style("opacity", 0.0)
     d3.select("#myElement").on('mouseover', function () {
-            d3.select('body').style("cursor", "pointer")
-        })
-
+        d3.select('body').style("cursor", "pointer")
+    })
     var maindiv = d3.select(".container")
     var leftdiv = d3.select(".left-element")
     var searchBar = d3.select("#searchBar")
@@ -222,10 +272,11 @@ require(["d3"], function (d3) {
     var st = "";
     var imcount = [];
     var pbar = 0;
-    var wfalse = false;
+    var wfalse = true;
     var maxhier = 0;
     var rightdiv = d3.select(".right-element")
     var matrify = false;
+    var flatList = [];
     var sbb = d3.select("#searchBar").select("span")
     addIcon("list");
     addIcon("matrix");
@@ -267,7 +318,6 @@ require(["d3"], function (d3) {
     d3.select(".nodeName").append("img")
     d3.select(".nodeName").append("text").text("Welcome to the Dynamo Dictionary!")
 
-
     function sortArrayOfObjectsByKey(arr, key) {
         if (arr[0][key] != "Action" && arr[0][key] != "Create" && arr[0][key] != "Query") {
             arr.sort(function (a, b) {
@@ -301,6 +351,7 @@ require(["d3"], function (d3) {
         d3.select('body').style("cursor", "default")
         d3.select(this).style("color", "white")
     }).on("click", function (d) {
+        window.history.pushState("", "", ' ');
         endLoad({
             "FullCategoryName": ""
         });
@@ -342,6 +393,17 @@ require(["d3"], function (d3) {
     };
 
     function accordionActivate(but, it, obj) {
+        //        console.log(but,it,obj)
+        var lineage = '';
+        if (obj.Lineage) {
+//            console.log(obj)
+            if (obj.Lineage.length > 0) {
+                lineage = obj.Lineage.join('-') + '-'
+            }
+            window.history.pushState("", "", '#' + lineage + obj.Name);
+        }
+//        console.log(lineage)
+            //        console.log(obj)
         $j('.right-element').scrollTop(0);
         childCheck(but.nextElementSibling)
         turnOffSiblings(but, it)
@@ -377,6 +439,7 @@ require(["d3"], function (d3) {
         }
 
         function parentCheck(bb) {
+//            console.log(bb.classList.contains("show"))
             if (bb.classList.contains("show") == false) {
                 bb.classList.toggle("show");
                 if (bb.previousElementSibling.classList.contains("active") == false) {
@@ -438,8 +501,8 @@ require(["d3"], function (d3) {
                         d3.select(this).style("color", "white")
                         d3.selectAll(".im" + r).style("background-color", d3.rgb(34, 34, 34))
                     }).on("click", function () {
-                        d3.select('body').style("cursor", "default")
-                        updateInfo(qq)
+                        wfalse = true;
+                        $(qq.button).click();
                     }).style("opacity", 0).transition().duration(timer * 3).style("opacity", 100);
                     lili.forEach(function (e, f) {
                         var ttt = "";
@@ -626,9 +689,18 @@ require(["d3"], function (d3) {
         xmldata = data;
         allData = [];
         data = [].map.call(data.querySelectorAll("Category"), function (cat) {
+            //            console.log(cat,cat.children)
             var catn = cat.getAttribute("Name")
-            for (var i = 0; i < cat.children.length; i++) {
-                var cn = cat.children[i]
+                //            for (var i = 0; i < cat.childNodes.length; i++) {
+//            console.log(cat)
+                //            }
+//            console.log(cat.childNodes)
+//            console.log(cat.children,cat.children.length)
+//            console.log(cat.children[0])
+            for (var i = 0; i < cat.childNodes.length-1; i+=2) {
+                var cn = cat.childNodes[i+1];
+//                var ci = cat.childNodes[(i)*2+1];
+//                console.log(cn,i)
                 var nd = {};
                 nd["FullCategoryName"] = cn.querySelector("FullCategoryName").textContent;
                 nd["Categories"] = nd["FullCategoryName"].split(".")
@@ -704,7 +776,8 @@ require(["d3"], function (d3) {
             })
             //     //console.log(allData)
         var mainlist = objectify(allData, 0)
-
+            //        var secondList= objectify(allData,1)
+            //        console.log(secondList)
         function objectify(ad, q) {
             if (Array.isArray(ad)) {
                 var ml = [];
@@ -714,12 +787,17 @@ require(["d3"], function (d3) {
                     if (q - 1 >= 0) {
                         parent = c[Math.max(0, q - 1)]
                     }
+                    var lineage = [];
+                    for (var t = 0; t < q; t++) {
+                        lineage.push(c[t]);
+                    }
                     if (q < c.length) {
                         if (ml.length == 0) {
                             ml.push({
                                 "Name": c[q]
                                 , "Arr": [d]
                                 , "Parent": parent
+                                , "Lineage": lineage
                                 , "iteration": q
                             })
                         }
@@ -736,6 +814,7 @@ require(["d3"], function (d3) {
                                     "Name": c[q]
                                     , "Arr": [d]
                                     , "Parent": parent
+                                    , "Lineage": lineage
                                     , "iteration": q
                                 })
                             }
@@ -747,6 +826,7 @@ require(["d3"], function (d3) {
                                 "Name": d.Group
                                 , "Arr": [d]
                                 , "Parent": parent
+                                , "Lineage": lineage
                                 , "iteration": q
                             })
                         }
@@ -763,6 +843,7 @@ require(["d3"], function (d3) {
                                     "Name": d.Group
                                     , "Arr": [d]
                                     , "Parent": parent
+                                    , "Lineage": lineage
                                     , "iteration": q
                                 })
                             }
@@ -814,6 +895,7 @@ require(["d3"], function (d3) {
                 return ad;
             }
         }
+        //        console.log(mainlist)
         mainlist.forEach(function (d, i) {
             d.Arr = objectify(d.Arr, 1)
             d.Arr.forEach(function (e, j) {
@@ -844,6 +926,8 @@ require(["d3"], function (d3) {
                 bk0
                 //                    .transition().duration(1600)
                     .style("height", function () {
+                    obj.button = this;
+                    obj.ita = iteration;
                     if (iteration == 1) {
                         return "40px";
                     }
@@ -852,76 +936,77 @@ require(["d3"], function (d3) {
                     }
                 }).style("width", "100%")
                 bk0.on("click", function () {
-                        endLoad(obj);
-                        document.getElementById("searchBox").value = "";
-                        imcount = [];
-                        if (obj.Arr != undefined) {
-                            d3.select(".nodeName").html()
-                            var descript = d3.select(".nodeName")
-                            descript.select('text').html('' + obj.Name + '<hr>')
-                            d3.selectAll(".nodeDesc").html("")
-                            d3.selectAll(".nodeIn").html("")
-                            d3.selectAll(".nodeOut").html("")
-                            d3.selectAll(".nodeGroup").html("")
-                            d3.selectAll(".nodeHier").html("")
-                            d3.selectAll(".inDepth").html("")
-                            d3.selectAll(".exampleFile").html("")
-                            d3.select(".nodeHier").html("<b>Dynamo Hierarchy:</b>")
-                            var catlist = grandChildren(obj)
-                            addHierarchy(catlist)
-                            d3.select(".nodeHier").append("html").html("<br><hr>")
+//                    console.log(iteration)
+//                    console.log('clicked')
+                    endLoad(obj);
+                    document.getElementById("searchBox").value = "";
+                    imcount = [];
+                    if (obj.Arr != undefined) {
+                        d3.select(".nodeName").html()
+                        var descript = d3.select(".nodeName")
+                        descript.select('text').html('' + obj.Name + '<hr>')
+                        d3.selectAll(".nodeDesc").html("")
+                        d3.selectAll(".nodeIn").html("")
+                        d3.selectAll(".nodeOut").html("")
+                        d3.selectAll(".nodeGroup").html("")
+                        d3.selectAll(".nodeHier").html("")
+                        d3.selectAll(".inDepth").html("")
+                        d3.selectAll(".exampleFile").html("")
+                        d3.select(".nodeHier").html("<b>Dynamo Hierarchy:</b>")
+                        var catlist = grandChildren(obj)
+                        addHierarchy(catlist)
+                        d3.select(".nodeHier").append("html").html("<br><hr>")
 
-                            function grandChildren(ob) {
-                                if (ob.Arr != undefined) {
-                                    return grandChildren(ob.Arr[0])
+                        function grandChildren(ob) {
+                            if (ob.Arr != undefined) {
+                                return grandChildren(ob.Arr[0])
+                            }
+                            else {
+                                var lili = [];
+                                ob.Categories.forEach(function (h, j) {
+                                    lili.push(h)
+                                })
+                                lili.push(ob.Group);
+                                return (lili.slice(0, obj.iteration + 1))
+                            }
+                        }
+                        getCats(obj.Name, obj.iteration);
+                        var ims = d3.selectAll(".imageTiles").selectAll("img")
+                        ims[0].forEach(function (q, w) {
+                            if (d3.select(q).data()[0].Categories[iteration - 1] == obj.Name || (d3.select(q).data()[0].Group == obj.Name && d3.select(q).data()[0].Categories[Math.max(0, iteration - 2)] == obj.Parent)) {
+                                if (iteration > 1) {
+                                    imageActivate(q, w, 800)
                                 }
                                 else {
-                                    var lili = [];
-                                    ob.Categories.forEach(function (h, j) {
-                                        lili.push(h)
-                                    })
-                                    lili.push(ob.Group);
-                                    return (lili.slice(0, obj.iteration + 1))
+                                    imageActivate(q, w, 800)
                                 }
                             }
-                            getCats(obj.Name, obj.iteration);
-                            var ims = d3.selectAll(".imageTiles").selectAll("img")
-                            ims[0].forEach(function (q, w) {
-                                if (d3.select(q).data()[0].Categories[iteration - 1] == obj.Name || (d3.select(q).data()[0].Group == obj.Name && d3.select(q).data()[0].Categories[Math.max(0, iteration - 2)] == obj.Parent)) {
-                                    if (iteration > 1) {
-                                        imageActivate(q, w, 800)
-                                    }
-                                    else {
-                                        imageActivate(q, w, 800)
-                                    }
+                            else {
+                                if (iteration > 1) {
+                                    imageDeactivate(q, w, 800)
                                 }
                                 else {
-                                    if (iteration > 1) {
-                                        imageDeactivate(q, w, 800)
-                                    }
-                                    else {
-                                        imageDeactivate(q, w, 800)
-                                    }
+                                    imageDeactivate(q, w, 800)
                                 }
-                                if (w == ims[0].length - 1) {
-                                    tilize();
-                                }
-                            })
-                        }
-                        else {
-                            nodelevel = true;
-                            d3.selectAll(".imageTiles").selectAll("img").attr("width", "0")
-                            var ddd = d3.select(this);
-                            var displayObject = (obj)
-                            updateInfo(displayObject);
-                        }
-                        accordionActivate(this, iteration, obj);
-                        if (d3.select(this).classed("active") == false && obj.Arr != undefined) {
-                            d3.select(this).style("background-color", "gray")
-                        }
-                    })
-                    //                    .style("font-size", 12 + "px")
-                    .style("padding-left", 10 + Math.max(0, (iteration - 1)) * 6 + "px").style("padding-right", "12px")
+                            }
+                            if (w == ims[0].length - 1) {
+                                tilize();
+                            }
+                        })
+                    }
+                    else {
+                        nodelevel = true;
+                        d3.selectAll(".imageTiles").selectAll("img").attr("width", "0")
+                        var ddd = d3.select(this);
+                        var displayObject = (obj);
+                        updateInfo(displayObject);
+                    }
+//                    console.log(this, iteration, obj, d3.select(this).classed("active"))
+                    accordionActivate(this, iteration, obj);
+                    if (d3.select(this).classed("active") == false && obj.Arr != undefined) {
+                        d3.select(this).style("background-color", "gray")
+                    }
+                }).style("padding-left", 10 + Math.max(0, (iteration - 1)) * 6 + "px").style("padding-right", "12px")
                 bk0.html("" + obj["Name"] + "")
                 if (obj["Arr"] != undefined) {
                     obj.Arr.forEach(function (k, z) {
@@ -931,9 +1016,11 @@ require(["d3"], function (d3) {
                             var spanner = bk0.append("span").attr("class", "middle")
                         }
                     })
-                    addAccordion(obj.Arr, catdiv, iteration + 1)
+                    addAccordion(obj.Arr, catdiv, iteration + 1);
+                    flatList.push(obj.Arr);
                 }
                 else {
+                    //                    console.log(obj.Categories)
                     bk0.html("")
                     var spanner = bk0.append("span").attr("class", "middle")
                     var image = getImagePath(obj)
@@ -980,9 +1067,12 @@ require(["d3"], function (d3) {
                 ogo = obj;
             })
         };
+        //        console.log(exFiles)
         var bod = leftdiv;
-        addAccordion(mainlist, bod, 1)
+        addAccordion(mainlist, bod, 1);
+        flatList.push(mainlist);
         mainPages();
+        hashCheck(allData, mainlist)
     });
 
     function entryText() {
@@ -1005,20 +1095,19 @@ require(["d3"], function (d3) {
     }
 
     function mainPages() {
-    
-        landingHtml=(d3.select(".pageLoad")[0][0].innerHTML)
-        editHtml=(d3.select(".nodeDesc")[0][0].innerHTML)
-        //        entryText();
+        landingHtml = (d3.select(".pageLoad")[0][0].innerHTML)
+        editHtml = (d3.select(".nodeDesc")[0][0].innerHTML)
+            //        entryText();
         var imdiv = d3.select(".outer").append("div").style("display", "none").style("pointer-events", "none").attr("class", "imageTiles")
         var loaddiv = d3.select(".pageLoad")
         orderedList.forEach(function (d, i) {
-                var image = getImagePath(d)
-                var newim = (d3.select(".copy" + i)[0][0].cloneNode(true))
-                var tile = imdiv.append("span").attr("class", "sp" + i);
-                var theimage = tile[0][0].appendChild(newim)
-                theimage.className = "im" + i;
-                d3.select(".im" + i).attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
-            })
+            var image = getImagePath(d)
+            var newim = (d3.select(".copy" + i)[0][0].cloneNode(true))
+            var tile = imdiv.append("span").attr("class", "sp" + i);
+            var theimage = tile[0][0].appendChild(newim)
+            theimage.className = "im" + i;
+            d3.select(".im" + i).attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
+        })
         d3.selectAll(".imageTiles").selectAll("img").on("mouseover", function (d, j) {
             //                d3.select(this).style("background-color", "steelblue")
             d3.select(".addedText" + j).style("color", "steelblue")
@@ -1073,6 +1162,8 @@ require(["d3"], function (d3) {
     }
 
     function updateInfo(ob) {
+//        console.log(ob)
+        window.history.pushState("", "", '#' + ob.Categories.join('-') + '-' + ob.Group + '..' + ob.Name);
         currob = ob;
         $j('.right-element').scrollTop(0);
         d3.select(".nodeName").html()
@@ -1111,14 +1202,16 @@ require(["d3"], function (d3) {
             fullJson = exFiles;
         }
         hitob = {};
+        //        console.log(fullJson)
         fullJson.forEach(function (j, h) {
-            if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
-                hit = true;
-                hitob = j;
-                hitob.index = h;
-            }
-        })
-//        console.log(hitob)
+                //                console.log(h, j)
+                if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
+                    hit = true;
+                    hitob = j;
+                    hitob.index = h;
+                }
+            })
+            //        console.log(hitob)
         var impaths = hitob.imageFile;
         var iconimage1 = "images/icons/download.svg";
         var iconimage2 = "images/icons/edit.svg";
@@ -1139,6 +1232,7 @@ require(["d3"], function (d3) {
             })
             d3.select(".inDepth").append("html").html("&nbsp&nbsp").append("pre").html(strr).attr("id", "inDepthDescription").style("color", "gray")
             d3.select(".inDepth").append("html").html("<br><br><hr><br>")
+            return strr;
         }
 
         function popUp(ob, text) {
@@ -1152,6 +1246,7 @@ require(["d3"], function (d3) {
             ttDiv.transition().duration(500).style("opacity", 0);
         }
         if (hit == true) {
+            //            console.log(hit)
             var strr = hitob.inDepth;
             inDepthText(hitob.inDepth);
             d3.select(".exampleFile").html("<br><b>Example File:</b>&nbsp&nbsp")
@@ -1222,7 +1317,12 @@ require(["d3"], function (d3) {
                         imp = eOb[hitob.index][v]["image"];
                     }
                 }
-                exSample.append("img").attr("src", imp).attr("width", "100%").attr("align", "middle").attr("id", "exi" + v)
+                exSample.append("img").attr("src", imp).attr("width", "100%").attr("align", "middle").attr("id", "exi" + v).attr("alt", "''").attr("data-jslghtbx", "").on("mouseover", function () {
+                    d3.select('body').style("cursor", "pointer")
+                }).on("mouseout", function () {
+                    d3.select('body').style("cursor", "default")
+                })
+                lightbox.load();
             }
             impaths.forEach(function (z, v) {
                 addExamp(z, v, false);
@@ -1237,9 +1337,9 @@ require(["d3"], function (d3) {
                 popOut();
             }).on("click", function () {
                 console.log(impaths)
-                idval=0;
-                if(impaths.length>0){
-                    idval=impaths.length 
+                idval = 0;
+                if (impaths.length > 0) {
+                    idval = impaths.length
                 }
                 addExamp('s', idval, true);
                 document.getElementById('fileEdit' + idval).click();
@@ -1317,7 +1417,7 @@ require(["d3"], function (d3) {
             lili.push(h)
         })
         lili.push(ob.Group);
-        addHierarchy(lili)
+        addHierarchy(lili);
     }
 
     function addHierarchy(lili) {
