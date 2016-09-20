@@ -2039,7 +2039,8 @@
         "imageFile": [
             "ByStartPointDirectionLength"
         ],
-        "inDepth": "Line by Start Point Direction Length creates a line beginning at the startPoint input, and with a length and direction according to the input direction vector and length. In the example below, we use a code block specify the x,y, and z coordinates of a point. We then use a number slider to control the length of the line."
+        "inDepth": "Line.by Start Point Direction Length creates a line beginning at the startPoint input, and with a length and direction according to the input direction vector and length. In the example below, we use a code block specify the x,y, and z coordinates of a point. We then use a number slider to control the length of the line.",
+        "index": 135
     },
     {
         "Name": "ByStartPointEndPoint",
@@ -10324,5 +10325,21 @@
         "folderPath": "Office/Excel/Action",
         "inDepth": "Add in-depth information about ReadFromFile... ",
         "index": 742
+    },
+    {
+        "Name": "ByStartPointDirectionLength",
+        "categories": [
+            "Geometry",
+            "Line"
+        ],
+        "folderPath": "Geometry/Line/Create",
+        "dynFile": [
+            "ByStartPointDirectionLength"
+        ],
+        "imageFile": [
+            "ByStartPointDirectionLength"
+        ],
+        "inDepth": "Line.by Start Point Direction Length creates a line beginning at the startPoint input, and with a length and direction according to the input direction vector and length. In the example below, we use a code block specify the x,y, and z coordinates of a point. We then use a number slider to control the length of the line.",
+        "index": 135
     }
 ]
