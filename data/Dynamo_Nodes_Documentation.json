@@ -408,6 +408,10 @@
     },
     {
         "Name": "ByPoints (points, closeCurve)",
+        "categories": [
+            "Geometry",
+            "NurbsCurve"
+        ],
         "folderPath": "Geometry/NurbsCurve/Create",
         "dynFile": [
             "ByPoints_pc"
@@ -535,7 +539,8 @@
         "imageFile": [
             "ByCenterPointRadiusAngle"
         ],
-        "inDepth": "Arc ByCenterPointRadiusAngle draws an arc relative to its center and normal direction. By entering the start and end angle, you are essentially drawing a portion of a circle. In this example, a random point is generated on the XY plane and an arc is constructed around it.  "
+        "inDepth": "Arc.ByCenterPointRadiusAngle draws an arc relative to its center and normal direction. By entering the start and end angle, you are essentially drawing a portion of a circle. In this example, a random point is generated on the XY plane and an arc is constructed around it.  ",
+        "index": 35
     },
     {
         "Name": "ByCenterPointStartPointEndPoint",
@@ -9624,5 +9629,21 @@
         "folderPath": "Analyze/AnalysisExtensions/Action",
         "inDepth": "Add in-depth information about IsAlmostEqualTo...",
         "index": 465
+    },
+    {
+        "Name": "ByCenterPointRadiusAngle",
+        "categories": [
+            "Geometry",
+            "Arc"
+        ],
+        "folderPath": "Geometry/Arc/Create",
+        "dynFile": [
+            "ByCenterPointRadiusAngle"
+        ],
+        "imageFile": [
+            "ByCenterPointRadiusAngle"
+        ],
+        "inDepth": "Arc.ByCenterPointRadiusAngle draws an arc relative to its center and normal direction. By entering the start and end angle, you are essentially drawing a portion of a circle. In this example, a random point is generated on the XY plane and an arc is constructed around it.  ",
+        "index": 35
     }
 ]
