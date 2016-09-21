@@ -1,3 +1,5 @@
+$j('#waitSpan').css({'line-height': 50});
+
 //global parameters
 var updateJsonFromXML = false;
 var ipindex = 0;
@@ -18,6 +20,7 @@ var exFiles;
 //main data for all nodes
 var fullJson;
 //add required libraries
+
 require.config({
     paths: {
         githubapi: 'node_modules/github-api/dist/GitHub.bundle'
@@ -139,6 +142,7 @@ function addCancel(SM) {
 }
 //read the json file containing user edits
 require(["d3"], function (d3) {
+    
 //    d3.select(".imgHL").attr("height",d3.select(".imgHL").attr("width"))
     //    console.log('alnsdf')
     function hashCheck(vlist, clist) {
@@ -302,6 +306,7 @@ require(["d3"], function (d3) {
             d3.select("body").style("cursor", "default");
         }).on("click", function () {
             if (c == "matrix") {
+                d3.selectAll('.descDiv').remove();
                 matrify = true;
                 d3.selectAll(".list").transition().duration(timer).style("opacity", 0.25)
                 d3.selectAll(".matrix").transition().duration(timer).style("opacity", 1)
@@ -429,7 +434,10 @@ require(["d3"], function (d3) {
         }
         if (wfalse == true) {
             wfalse = false;
-            parentCheck(but.parentElement)
+            if(! but.parentElement.classList.contains("left-element")){
+               parentCheck(but.parentElement) 
+            }
+            
         }
 
         function childCheck(bb) {
@@ -439,6 +447,7 @@ require(["d3"], function (d3) {
         }
 
         function parentCheck(bb) {
+//            console.log(bb,bb.previousElementSibling)
 //            console.log(bb.classList.contains("show"))
             if (bb.classList.contains("show") == false) {
                 bb.classList.toggle("show");
@@ -455,6 +464,8 @@ require(["d3"], function (d3) {
     }
 
     function imageActivate(q, w, tim) {
+        d3.select(".sp"+w).style('display','inline')
+//        console.log(matrify)
         imcount.push(w);
         var qq = d3.select(q).data()[0];
         qq.activated = true;
@@ -469,16 +480,20 @@ require(["d3"], function (d3) {
 
     function imageDeactivate(q, w, tim) {
         var qq = d3.select(q).data()[0];
+        d3.select(".sp"+w).style('display','none')
         qq.activated = false;
         if (matrify == true) {
             d3.select(q).transition().duration("" + tim + "").attr("width", 0).style("opacity", 0)
         }
         else {
+//            d3.select(q)[0][0].parentNode.selectAll('.descDiv').remove();
             d3.select(q).transition().duration(0).attr("width", 0).style("opacity", 0)
+            d3.selectAll('.descDiv').remove();
         }
     }
 
     function tilize() {
+        
         d3.selectAll(".addedText").remove();
         var ims = d3.selectAll(".imageTiles").selectAll("img")
         ims[0].forEach(function (t, r) {
@@ -490,7 +505,7 @@ require(["d3"], function (d3) {
                 })
                 lili.push(qq.Group);
                 if (matrify == false) {
-                    var tt = d3.select(t.parentNode).append("span").style("position", "relative").style("top", "4px").attr("class", 'addedText addedText' + r).text(function () {
+                    var tt = d3.select(t.parentNode).append("div").style("position", "relative").style("top", "4px").attr("class", 'addedText addedText' + r).text(function () {
                         return "  " + qq.Name + " ";
                     }).on("mouseover", function () {
                         d3.select('body').style("cursor", "pointer")
@@ -521,7 +536,7 @@ require(["d3"], function (d3) {
                         else {
                             ttt = e;
                         }
-                        var catt = d3.select(t.parentNode).append('span').style("position", "relative").style("top", "4px").attr("class", 'addedText').text(ttt).style("color", color).on("click", function () {
+                        var catt = d3.select(t.parentNode).append('div').style("position", "relative").style("top", "4px").attr("class", 'addedText').text(ttt).style("color", color).on("click", function () {
                             wfalse = true;
                             var bbb = testButton(lili, e, f)
                             bbb.click();
@@ -535,17 +550,17 @@ require(["d3"], function (d3) {
                             d3.select(this).style("color", "gray")
                         })
                         if (f == lili.length - 1) {
-                            catt.append('html')
+//                            catt.append('html')
                         }
                     })
-                    d3.select(t.parentNode).append("div").text(qq.Description).attr("class", "addedText descAdd").style("color", "gray").style("padding-left", "50px").style("padding-right", "50px").append('html').html('<br><br>')
+                    d3.select(t.parentNode).append("div").attr('class','descDiv').style("padding-left", "50px").style("padding-right", "50px").append('p').html(qq.Description+'<br><br><br>').attr("class", "addedText descAdd").style("color", "gray")
                 }
             }
             else {
                 d3.selectAll(".addedText" + r).remove();
             }
         })
-        d3.select(".imageTiles").append("html").html("<br><br>")
+        d3.select(".imageTiles")
     }
 
     function testNodeButton(r) {
@@ -667,6 +682,7 @@ require(["d3"], function (d3) {
         tilize();
     }
     d3.xml("data/Dynamo_Library.xml", function (error, data) {
+        
         $j("#searchBox").keyup(function (event) {
             if (event.keyCode == 13) {
                 handleClick();
@@ -955,7 +971,7 @@ require(["d3"], function (d3) {
                         d3.select(".nodeHier").html("<b>Dynamo Hierarchy:</b>")
                         var catlist = grandChildren(obj)
                         addHierarchy(catlist)
-                        d3.select(".nodeHier").append("html").html("<br><hr>")
+                        d3.select(".nodeHier").append("p").html("<br><hr>")
 
                         function grandChildren(ob) {
                             if (ob.Arr != undefined) {
@@ -1077,7 +1093,7 @@ require(["d3"], function (d3) {
 
     function entryText() {
         var entryText = editHtml;
-        d3.select(".nodeDesc").append("html").html(entryText)
+        d3.select(".nodeDesc").append("p").html(entryText)
     }
 
     function endLoad(oo) {
@@ -1103,7 +1119,7 @@ require(["d3"], function (d3) {
         orderedList.forEach(function (d, i) {
             var image = getImagePath(d)
             var newim = (d3.select(".copy" + i)[0][0].cloneNode(true))
-            var tile = imdiv.append("span").attr("class", "sp" + i);
+            var tile = imdiv.append("div").attr("class", "sp" + i).attr("id","spanDivs");
             var theimage = tile[0][0].appendChild(newim)
             theimage.className = "im" + i;
             d3.select(".im" + i).attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
@@ -1171,9 +1187,9 @@ require(["d3"], function (d3) {
         descript.select('text').html('' + ob.Name + '<hr>')
         d3.selectAll(".imageTiles").selectAll("img").attr("width", 0)
         d3.selectAll(".addedText").remove();
-        if (rightdiv.style("opacity") > 0) {
-            rightdiv.style("opacity", 0).transition().duration(800).style("opacity", 1).transition().duration(800)
-        }
+//        if (rightdiv.style("opacity") > 0) {
+//            rightdiv.style("opacity", 0).transition().duration(800).style("opacity", 1).transition().duration(800)
+//        }
         addInputs("Inputs", ".nodeIn", "ins", true)
         addInputs("Outputs", ".nodeOut", "outs", false)
 
@@ -1193,7 +1209,7 @@ require(["d3"], function (d3) {
                 d3.select(clas).html("")
             }
         }
-        d3.select(".nodeDesc").html("<br><b>Description:</b><br>").append("text").text(ob.Description).style('color', 'gray').append('html')
+        d3.select(".nodeDesc").html("<br><b>Description:</b><br>").append("text").text(ob.Description).style('color', 'gray')
         d3.select(".nodeHier").html("<b>Dynamo Hierarchy:</b><br>")
         hierarchize(ob);
         var rand = Math.random();
@@ -1201,9 +1217,9 @@ require(["d3"], function (d3) {
         if (fullJson == undefined) {
             fullJson = exFiles;
         }
-        hitob = {};
-        //        console.log(fullJson)
+        hitob = {};    
         fullJson.forEach(function (j, h) {
+
                 //                console.log(h, j)
                 if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
                     hit = true;
@@ -1219,7 +1235,7 @@ require(["d3"], function (d3) {
         var iconimage4 = "images/icons/ImageOverlay.svg";
 
         function inDepthText(strr) {
-            d3.select(".inDepth").html("<hr><b><br>In Depth:</b>&nbsp&nbsp&nbsp").append("img").attr("hspace", 2).attr("width", "20px").attr("src", iconimage2).style("opacity", .25).attr('id', 'editButton').attr("class", "edB").each(function () {
+            d3.select(".inDepth").html("<hr><b><br>In Depth:</b>&nbsp&nbsp&nbsp").append("img").attr("hspace", 2).attr("height", "15px").attr("width", "20px").attr("src", iconimage2).style("opacity", .25).attr('id', 'editButton').attr("class", "edB").each(function () {
                 editAttributes()
             }).on("mouseover", function () {
                 d3.select(this).style("opacity", 1);
@@ -1245,6 +1261,7 @@ require(["d3"], function (d3) {
         function popOut() {
             ttDiv.transition().duration(500).style("opacity", 0);
         }
+//        console.log(hit)
         if (hit == true) {
             //            console.log(hit)
             var strr = hitob.inDepth;
@@ -1269,7 +1286,7 @@ require(["d3"], function (d3) {
                 }
                 exIcons.append('text').attr('id', 'exFileName' + v).text(sampfile).style('opacity', .45).style("padding-right", '20px')
                     //                    //console.log(stock)
-                exIcons.append("img").style('float', 'right').attr("justadded", stock).attr("hspace", 6).attr("width", "20px").attr("src", iconimage1).style("opacity", .25).on("mouseover", function () {
+                exIcons.append("img").style('float', 'right').attr("justadded", stock).attr("hspace", 6).attr("height", "15px").attr("width", "20px").attr("src", iconimage1).style("opacity", .25).on("mouseover", function () {
                     d3.select(this).style("opacity", 1);
                     d3.select("body").style("cursor", "pointer");
                     popUp(this, "Download Example File")
@@ -1293,7 +1310,7 @@ require(["d3"], function (d3) {
                         alert("This file cannot be downloaded until the edits have been approved on the repo.")
                     }
                 })
-                exIcons.append("img").style('float', 'right').attr("hspace", 2).attr("width", "20px").attr("src", iconimage2).style("opacity", .25).attr("id", "fileEdit" + v).attr("class", "edB").on("mouseover", function () {
+                exIcons.append("img").style('float', 'right').attr("hspace", 2).attr("height", "15px").attr("width", "20px").attr("src", iconimage2).style("opacity", .25).attr("id", "fileEdit" + v).attr("class", "edB").on("mouseover", function () {
                     d3.select(this).style("opacity", 1);
                     d3.select("body").style("cursor", "pointer");
                     popUp(this, "Edit Example File")
@@ -1327,7 +1344,7 @@ require(["d3"], function (d3) {
             impaths.forEach(function (z, v) {
                 addExamp(z, v, false);
             })
-            exImage.append('div').style("padding-bottom", '25px').append("img").attr("hspace", 1).attr("width", "50px").attr("src", iconimage3).style("opacity", .15).on("mouseover", function () {
+            exImage.append('div').style("padding-bottom", '25px').append("img").attr("hspace", 1).attr("width", "50px").attr("height", "40px").attr("src", iconimage3).style("opacity", .15).on("mouseover", function () {
                 d3.select(this).style("opacity", 1);
                 d3.select("body").style("cursor", "pointer");
                 popUp(this, "Add Example File")
@@ -1347,6 +1364,7 @@ require(["d3"], function (d3) {
             d3.select(".exampleFile").append('div').html("<hr>").attr("class", "exSample")
         }
         else {
+//            console.log('tripped')
             inDepthText('...')
         }
         //        });
@@ -1469,7 +1487,7 @@ require(["d3"], function (d3) {
                 d3.select(this).style("color", "gray")
             })
             if (f == lili.length - 1) {
-                catt.append('html')
+//                catt.append('html')
             }
         })
     }

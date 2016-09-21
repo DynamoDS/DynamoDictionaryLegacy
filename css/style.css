@@ -69,7 +69,9 @@
 ::-webkit-scrollbar-thumb:hover {
     background-color: white;
 }
-
+.addedText{
+    display:inline;
+}
 div.tooltip {
     position: absolute;
     text-align: center;
@@ -249,6 +251,9 @@ body {
     font-weight: 100;
     line-height: 20px;
     -webkit-font-smoothing: subpixel-antialiased;
+    
+
+    
 }
 
 #submitPR {
@@ -384,6 +389,11 @@ span {
     /*        padding-left:20%;*/
     /*        left: 50px;*/
     /*        margin-left: 20px;*/
+}
+
+
+.im{
+    display:inline;
 }
 
 .im:hover {
@@ -606,16 +616,23 @@ button.accordion.active:after {}
     opacity: 1;
     font-size: 18px;
     line-height: 0px;
+    text-align:center;
 }
-
-#wait p {
-    margin: 0;
-    background: yellow;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+#spanDivs{
+    display:inline;
+    height:0px;
+}
+#subWait {
+/*    margin: 0;*/
+/*    background: yellow;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+    vertical-align:middle;
+    display:inline-block; 
+/*    left: 50%;*/
+/*    margin-right: -50%;*/
+/*    transform: translate(-50%, -50%)*/
+        
 }
 
 div.panel {
