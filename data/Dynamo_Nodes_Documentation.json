@@ -6983,7 +6983,7 @@
             "BuiltIn",
             "Action"
         ],
-        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false.",
+        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false..\n",
         "index": 464
     },
     {
@@ -10324,5 +10324,19 @@
         "folderPath": "Office/Excel/Action",
         "inDepth": "Add in-depth information about ReadFromFile... ",
         "index": 742
+    },
+    {
+        "Name": "AllFalse",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": [
+            "BuiltIn",
+            "Action"
+        ],
+        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false..\n",
+        "index": 464
     }
 ]
