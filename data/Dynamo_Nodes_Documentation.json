@@ -524,7 +524,8 @@
         "imageFile": [
             "ByBestFitThroughPoints"
         ],
-        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions."
+        "inDepth": "Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.",
+        "index": 34
     },
     {
         "Name": "ByCenterPointRadiusAngle",
@@ -609,12 +610,15 @@
         ],
         "folderPath": "Geometry/Arc/Create",
         "dynFile": [
-            "ByStartPointEndPointStartTangent"
+            "ByStartPointEndPointStartTangent",
+            "MinPoint"
         ],
         "imageFile": [
-            "ByStartPointEndPointStartTangent"
+            "ByStartPointEndPointStartTangent",
+            "tumblr_n6ote09Pzm1qer5szo2_r1_1280"
         ],
-        "inDepth": "Arc ByStartPointEndPointStartTangent draws an arc from two specified points and any given start vector. This example draws an arc from two random points that is always tangent to the X-Axis."
+        "inDepth": "Arc ByStartPointEndPointStartTangent draws an arc from two specified points and any given start vector. This example draws an arc from two random points that is always tangent to the X-Axis.",
+        "index": 40
     },
     {
         "Name": "ByThreePoints",
