@@ -46,7 +46,7 @@ function arraysEqual(a, b) {
 }
 //modal file edits
 function switchToModal(sampfile, v) {
-    //    console.log(sampfile, v)
+   
     if (sampfile != undefined && v != undefined) {
         fileEdit(sampfile, v);
     }
@@ -73,7 +73,7 @@ function fileEdit(sampfile, v) {
         "btn_ok": "Commit Edits"
     });
     SM.addButton("Submit", "btn primary", function () {
-        //        console.log($j("#dynFileLoader").val(), $j("#imgFileLoader").val())
+       
         d3.select("#submitPR").style('display', 'block')
         prFlash();
         if (newFile == true) {
@@ -109,8 +109,11 @@ function dynLoadSubmit() {
         eOb[hitob.index][ipindex]["dynFile"] = checkNew(file, "dynFile");
         if (newFile) {
             d3.select('#exFileName' + idval).text(eOb[hitob.index][ipindex]["dynFile"])
-        }
+        }     
         newdc = undefined;
+    }
+    else {
+        eOb[hitob.index][ipindex]["dynFile"] = hitob["dynFile"][idval];
     }
 }
 //editing an image file
@@ -135,23 +138,22 @@ function addCancel(SM) {
     SM.addButton("Cancel", "btn", function () {
         this.hide();
         if (newFile) {
-            //console.log(ipindex)
+           
             d3.select("#exC" + ipindex).remove()
         }
     });
 }
 //read the json file containing user edits
 require(["d3"], function (d3) {
-    
-//    d3.select(".imgHL").attr("height",d3.select(".imgHL").attr("width"))
-    //    console.log('alnsdf')
+
+   
     function hashCheck(vlist, clist) {
-        //        console.log(fl)
-        //        console.log(nl)
-        //        (clist.map(function(a){console.log(a.Name); return 0;}))
-        //        console.log(vlist.length,fl.length)
+       
+       
+       
+       
         var alllist = flatten(clist);
-        //        console.log(alllist)
+       
         if (window.location.hash != '') {
             var catList = window.location.hash.split('-')
             var nodeName = catList.pop();
@@ -162,10 +164,9 @@ require(["d3"], function (d3) {
                 nodeName = nodeName.substring(1)
                 catList = [];
             }
-            //            console.log(catList)
+           
             if (nodeName.indexOf('..') > -1) {
                 catList = catList.concat(nodeName.split('..')[0])
-//                console.log(catList)
                 vlist.forEach(function (j, h) {
                     var newarr = j.Categories.concat(j.Group)
                     if (nodeName.split('..')[1] == j.Name && arraysEqual(catList, newarr)) {
@@ -192,23 +193,23 @@ require(["d3"], function (d3) {
         }
     }
     d3.json("data/Dynamo_Nodes_Documentation.json", function (data) {
-        //        console.log(data.length)
+       
         exFiles = data;
     })
 
     function addObToJson(obj) {
-        //        console.log(obj)
+       
         if (updateJsonFromXML == true) {
             for (var aaa = 0; aaa < exFiles.length; aaa++) {
                 var rrr = exFiles[aaa]
                 var didithit = false;
                 if (rrr.Name == obj.Name && arraysEqual(rrr.categories, obj.Categories)) {
-                    //                    console.log(rrr)
+                   
                     didithit = true;
                     break;
                 }
             }
-            //            console.log(didithit)
+           
             if (didithit == false) {
                 var pathList = []
                 obj["Categories"].forEach(function (ddd) {
@@ -226,24 +227,24 @@ require(["d3"], function (d3) {
                     , "index": exFiles.length
                 };
                 exFiles.push(newhit);
-                //                fullJson=exFiles;
+               
             }
         }
     }
     d3.select("#submitPR").on('click', function () {
-        //            if (branchLog == false) {
+       
         if (gitInfo.branchName == undefined) {
             var SM = new SimpleModal({
                 "btn_ok": "Cancel"
             , });
             SM.addButton("Confirm", "btn primary", function () {
-                //console.log(';clkn')
+               
                 gitInfo.branchName = (document.getElementById("userBranch").value.replace(/\s/g, "-")) + '_' + prepDate();
                 gitInfo.Message = (document.getElementById("commitMessage").value)
                 this.hide();
                 commitChanges(JSON.stringify(fullJson, null, 4))
-                    //                    prOut();
-                    //            branchLog = true;
+                   
+                   
             });
             addCancel(SM)
             SM.options.draggable = false;
@@ -251,7 +252,7 @@ require(["d3"], function (d3) {
                 "title": '<a href="https://github.com/DynamoDS/DynamoDictionary" target=_blank><img src="images/src/icon.png" width="30" alt="dynamoIcon" align="middle" target="_blank" style="vertical-align:middle"></a>&nbsp<span>Submit Pull Request</span>'
                 , "contents": "<p font-size:'10px' style='color:gray;'>Please fill out the information to create a branch for your pull request. You only have to do this once per session.</p><span>Branch Name:<br></span><input size='40' id='userBranch'></input><br><br><span>Comments (optional):<br></span><input size='40' id='commitMessage'></input>"
             });
-            //    }
+           
         }
         else {
             commitChanges(JSON.stringify(fullJson, null, 4))
@@ -293,7 +294,7 @@ require(["d3"], function (d3) {
             op = 1;
         }
         d3.select("." + c).on("mouseover", function () {
-            //console.log(this)
+           
             d3.select(this).style("opacity", 1);
             d3.select("body").style("cursor", "pointer");
         }).on("mouseout", function () {
@@ -398,17 +399,16 @@ require(["d3"], function (d3) {
     };
 
     function accordionActivate(but, it, obj) {
-        //        console.log(but,it,obj)
+       
         var lineage = '';
         if (obj.Lineage) {
-//            console.log(obj)
+
             if (obj.Lineage.length > 0) {
                 lineage = obj.Lineage.join('-') + '-'
             }
             window.history.pushState("", "", '#' + lineage + obj.Name);
         }
-//        console.log(lineage)
-            //        console.log(obj)
+           
         $j('.right-element').scrollTop(0);
         childCheck(but.nextElementSibling)
         turnOffSiblings(but, it)
@@ -443,12 +443,10 @@ require(["d3"], function (d3) {
         function childCheck(bb) {
             d3.selectAll(bb.children).classed("active", false);
             d3.selectAll(bb.children).classed("show", false);
-            //            var buts=d3.selectAll(bb.children).selectAll("button")
+           
         }
 
         function parentCheck(bb) {
-//            console.log(bb,bb.previousElementSibling)
-//            console.log(bb.classList.contains("show"))
             if (bb.classList.contains("show") == false) {
                 bb.classList.toggle("show");
                 if (bb.previousElementSibling.classList.contains("active") == false) {
@@ -465,7 +463,6 @@ require(["d3"], function (d3) {
 
     function imageActivate(q, w, tim) {
         d3.select(".sp"+w).style('display','inline')
-//        console.log(matrify)
         imcount.push(w);
         var qq = d3.select(q).data()[0];
         qq.activated = true;
@@ -486,7 +483,6 @@ require(["d3"], function (d3) {
             d3.select(q).transition().duration("" + tim + "").attr("width", 0).style("opacity", 0)
         }
         else {
-//            d3.select(q)[0][0].parentNode.selectAll('.descDiv').remove();
             d3.select(q).transition().duration(0).attr("width", 0).style("opacity", 0)
             d3.selectAll('.descDiv').remove();
         }
@@ -510,7 +506,7 @@ require(["d3"], function (d3) {
                     }).on("mouseover", function () {
                         d3.select('body').style("cursor", "pointer")
                         d3.select(this).style("color", "steelblue")
-                            //                            d3.selectAll(".im" + r).style("background-color", "steelblue")
+                           
                     }).on("mouseout", function () {
                         d3.select('body').style("cursor", "default")
                         d3.select(this).style("color", "white")
@@ -629,7 +625,7 @@ require(["d3"], function (d3) {
         for (var h = 0; h < 8; h++) {
             var s = d3.selectAll(".button" + h + "");
         }
-        //          entryText();
+       
         if (reset == true) {
             var imdiv = d3.selectAll(".imageTiles").style("display", "none").style("pointer-events", "none")
             var loaddiv = d3.selectAll(".pageLoad")
@@ -646,9 +642,9 @@ require(["d3"], function (d3) {
         d3.selectAll(".nodeHier").html("")
         d3.selectAll(".inDepth").html("")
         d3.selectAll(".exampleFile").html("")
-            //     if(reset==true){
+           
         var tname = d3.selectAll(".seeAlso").html("<b>Nodes</b><br><br>");
-        //     }
+       
         d3.selectAll(".imageTiles")
         if (st == "") {
             nameDivs("Welcome to the Dynamo Dictionary!")
@@ -705,18 +701,11 @@ require(["d3"], function (d3) {
         xmldata = data;
         allData = [];
         data = [].map.call(data.querySelectorAll("Category"), function (cat) {
-            //            console.log(cat,cat.children)
+           
             var catn = cat.getAttribute("Name")
-                //            for (var i = 0; i < cat.childNodes.length; i++) {
-//            console.log(cat)
-                //            }
-//            console.log(cat.childNodes)
-//            console.log(cat.children,cat.children.length)
-//            console.log(cat.children[0])
+
             for (var i = 0; i < cat.childNodes.length-1; i+=2) {
                 var cn = cat.childNodes[i+1];
-//                var ci = cat.childNodes[(i)*2+1];
-//                console.log(cn,i)
                 var nd = {};
                 nd["FullCategoryName"] = cn.querySelector("FullCategoryName").textContent;
                 nd["Categories"] = nd["FullCategoryName"].split(".")
@@ -790,10 +779,10 @@ require(["d3"], function (d3) {
                     maxhier = ct.length;
                 }
             })
-            //     //console.log(allData)
+           
         var mainlist = objectify(allData, 0)
-            //        var secondList= objectify(allData,1)
-            //        console.log(secondList)
+           
+           
         function objectify(ad, q) {
             if (Array.isArray(ad)) {
                 var ml = [];
@@ -911,7 +900,7 @@ require(["d3"], function (d3) {
                 return ad;
             }
         }
-        //        console.log(mainlist)
+       
         mainlist.forEach(function (d, i) {
             d.Arr = objectify(d.Arr, 1)
             d.Arr.forEach(function (e, j) {
@@ -940,7 +929,7 @@ require(["d3"], function (d3) {
                 bk0.data([obj]).enter()
                 var catdiv = appendel.append("div").attr("class", "panel iteration" + iteration + "")
                 bk0
-                //                    .transition().duration(1600)
+               
                     .style("height", function () {
                     obj.button = this;
                     obj.ita = iteration;
@@ -952,8 +941,6 @@ require(["d3"], function (d3) {
                     }
                 }).style("width", "100%")
                 bk0.on("click", function () {
-//                    console.log(iteration)
-//                    console.log('clicked')
                     endLoad(obj);
                     document.getElementById("searchBox").value = "";
                     imcount = [];
@@ -1017,7 +1004,6 @@ require(["d3"], function (d3) {
                         var displayObject = (obj);
                         updateInfo(displayObject);
                     }
-//                    console.log(this, iteration, obj, d3.select(this).classed("active"))
                     accordionActivate(this, iteration, obj);
                     if (d3.select(this).classed("active") == false && obj.Arr != undefined) {
                         d3.select(this).style("background-color", "gray")
@@ -1036,7 +1022,7 @@ require(["d3"], function (d3) {
                     flatList.push(obj.Arr);
                 }
                 else {
-                    //                    console.log(obj.Categories)
+                   
                     bk0.html("")
                     var spanner = bk0.append("span").attr("class", "middle")
                     var image = getImagePath(obj)
@@ -1083,7 +1069,7 @@ require(["d3"], function (d3) {
                 ogo = obj;
             })
         };
-        //        console.log(exFiles)
+       
         var bod = leftdiv;
         addAccordion(mainlist, bod, 1);
         flatList.push(mainlist);
@@ -1113,7 +1099,7 @@ require(["d3"], function (d3) {
     function mainPages() {
         landingHtml = (d3.select(".pageLoad")[0][0].innerHTML)
         editHtml = (d3.select(".nodeDesc")[0][0].innerHTML)
-            //        entryText();
+           
         var imdiv = d3.select(".outer").append("div").style("display", "none").style("pointer-events", "none").attr("class", "imageTiles")
         var loaddiv = d3.select(".pageLoad")
         orderedList.forEach(function (d, i) {
@@ -1125,7 +1111,7 @@ require(["d3"], function (d3) {
             d3.select(".im" + i).attr("class", "im im" + i + "").attr("height", 30).attr("width", 30).data([d]).enter()
         })
         d3.selectAll(".imageTiles").selectAll("img").on("mouseover", function (d, j) {
-            //                d3.select(this).style("background-color", "steelblue")
+           
             d3.select(".addedText" + j).style("color", "steelblue")
             if (matrify == true) {
                 var tname = "<b>Node:&nbsp&nbsp</b>" + d.Name + "<br><br>";
@@ -1178,7 +1164,7 @@ require(["d3"], function (d3) {
     }
 
     function updateInfo(ob) {
-//        console.log(ob)
+
         window.history.pushState("", "", '#' + ob.Categories.join('-') + '-' + ob.Group + '..' + ob.Name);
         currob = ob;
         $j('.right-element').scrollTop(0);
@@ -1187,9 +1173,7 @@ require(["d3"], function (d3) {
         descript.select('text').html('' + ob.Name + '<hr>')
         d3.selectAll(".imageTiles").selectAll("img").attr("width", 0)
         d3.selectAll(".addedText").remove();
-//        if (rightdiv.style("opacity") > 0) {
-//            rightdiv.style("opacity", 0).transition().duration(800).style("opacity", 1).transition().duration(800)
-//        }
+
         addInputs("Inputs", ".nodeIn", "ins", true)
         addInputs("Outputs", ".nodeOut", "outs", false)
 
@@ -1220,14 +1204,14 @@ require(["d3"], function (d3) {
         hitob = {};    
         fullJson.forEach(function (j, h) {
 
-                //                console.log(h, j)
+               
                 if (ob.Name == j.Name && arraysEqual(ob.Categories, j.categories)) {
                     hit = true;
                     hitob = j;
                     hitob.index = h;
                 }
             })
-            //        console.log(hitob)
+           
         var impaths = hitob.imageFile;
         var iconimage1 = "images/icons/download.svg";
         var iconimage2 = "images/icons/edit.svg";
@@ -1253,7 +1237,7 @@ require(["d3"], function (d3) {
 
         function popUp(ob, text) {
             var re = d3.select(".right-element")[0][0].scrollTop
-                //             //console.log(re)
+               
             ttDiv.transition().duration(200).style("opacity", .9);
             ttDiv.html(text).style("left", (d3.event.pageX) - 100 + "px").style("top", (ob.offsetTop - re + 58) + "px");
         }
@@ -1261,15 +1245,15 @@ require(["d3"], function (d3) {
         function popOut() {
             ttDiv.transition().duration(500).style("opacity", 0);
         }
-//        console.log(hit)
+        
         if (hit == true) {
-            //            console.log(hit)
+           
             var strr = hitob.inDepth;
             inDepthText(hitob.inDepth);
             d3.select(".exampleFile").html("<br><b>Example File:</b>&nbsp&nbsp")
             var exImage = d3.select(".exampleFile").append('div').attr("class", "exOutline")
             var exContainer = exImage.append('div').attr("class", "exContainer")
-                //                //console.log(hitob)
+               
             function addExamp(z, v, stock) {
                 var exSample = exContainer.append('div').attr("class", "exSample").attr("id", "exC" + v).style("display", function () {
                     if (stock == false) {
@@ -1285,7 +1269,7 @@ require(["d3"], function (d3) {
                     var sampfile = hitob.dynFile[v] + ".dyn";
                 }
                 exIcons.append('text').attr('id', 'exFileName' + v).text(sampfile).style('opacity', .45).style("padding-right", '20px')
-                    //                    //console.log(stock)
+                   
                 exIcons.append("img").style('float', 'right').attr("justadded", stock).attr("hspace", 6).attr("height", "15px").attr("width", "20px").attr("src", iconimage1).style("opacity", .25).on("mouseover", function () {
                     d3.select(this).style("opacity", 1);
                     d3.select("body").style("cursor", "pointer");
@@ -1364,10 +1348,9 @@ require(["d3"], function (d3) {
             d3.select(".exampleFile").append('div').html("<hr>").attr("class", "exSample")
         }
         else {
-//            console.log('tripped')
             inDepthText('...')
         }
-        //        });
+       
         tl = (ob.SearchTags.split(','))
         related = [];
         if (tl != "") {

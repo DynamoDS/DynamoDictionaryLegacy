@@ -56,17 +56,21 @@ function commitChanges(ob) {
                         var mainOb = JSON.parse(ob);
                         var nodeOb = mainOb[key];
                         var subub = eOb[key][keykey]
+                        if(subub.imageFile){
+                            
+                        }
+                        
                         console.log(subub)
-                        var imageFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/img/" + subub.imageFile.split('.')[0] + ".jpg";
-                        var dynFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/dyn/" + subub.dynFile.split('.')[0] + ".dyn";
-                        if (subub.image != undefined) {
+                        if (subub.image && subub.imageFile) {
+                            var imageFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/img/" + subub.imageFile.split('.')[0] + ".jpg";
                             filelist.push({
                                 i: window.btoa(window.atob((subub.image.replace(/^(.+,)/, ''))))
                                 , if: imageFile
                                 , enc: false
                             });
                         }
-                        if (subub.dyn != undefined) {
+                        if (subub.dyn && subub.dynFile) {
+                            var dynFile = 'data/EXAMPLES/' + nodeOb.folderPath + "/dyn/" + subub.dynFile.split('.')[0] + ".dyn";
                             filelist.push({
                                 i: subub.dyn
                                 , if: dynFile
