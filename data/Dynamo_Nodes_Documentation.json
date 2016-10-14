@@ -12,7 +12,8 @@
         "imageFile": [
             "CodeBlock"
         ],
-        "inDepth": "The Code Block is universal and can be useful in all definitions. With this node, we can fully customize the Dynamo functionality and experience by coding directly into the graph. In this example, we see a range of possible uses including Numbers, Strings, Booleans for item based code, and Ranges and Sequences for creating lists of values."
+        "inDepth": "The Code Block is universal and can be useful in all definitions. With this node, we can fully customize the Dynamo functionality and experience by coding directly into the graph. In this example, we see a range of possible uses including Numbers, Strings, Booleans for item based code, and Ranges and Sequences for creating lists of values.",
+        "index": 0
     },
     {
         "Name": "Number Slider",
@@ -42,7 +43,8 @@
         "imageFile": [
             "IntegerSlider"
         ],
-        "inDepth": "An Integer Slider works in the same way as a Number Slider but only outputs integers. The Integer Slider in the example definition allows us to control the list length, ensuring that we always have whole-number of list outputs. "
+        "inDepth": "An Integer Slider works in the same way as a Number Slider but only outputs integers. The Integer Slider in the example definition allows us to control the list length, ensuring that we always have whole-number of list outputs. ",
+        "index": 2
     },
     {
         "Name": "ByCoordinates (x, y)",
@@ -614,7 +616,8 @@
         "imageFile": [
             "ByStartPointEndPointStartTangent"
         ],
-        "inDepth": "Arc ByStartPointEndPointStartTangent draws an arc from two specified points and any given start vector. This example draws an arc from two random points that is always tangent to the X-Axis."
+        "inDepth": "Arc ByStartPointEndPointStartTangent draws an arc from two specified points and any given start vector. This example draws an arc from two random points that is always tangent to the X-Axis.",
+        "index": 40
     },
     {
         "Name": "ByThreePoints",
@@ -944,7 +947,8 @@
         "imageFile": [
             "DistanceTo"
         ],
-        "inDepth": "Geometry DistanceTo returns the distance between two geometries. This example finds the distance between two Spheres."
+        "inDepth": "Geometry DistanceTo returns the distance between two geometries. This example finds the distance between two Spheres.",
+        "index": 62
     },
     {
         "Name": "DoesIntersect",
@@ -5264,7 +5268,8 @@
         "imageFile": [
             "Boolean"
         ],
-        "inDepth": "The Boolean node allows the user to toggle between two boolean values 'true' or 'false' by selecting the appropriate radio button. "
+        "inDepth": "The Boolean node allows the user to toggle between two boolean values 'true' or 'false' by selecting the appropriate radio button. ",
+        "index": 350
     },
     {
         "Name": "Date Time",
@@ -5324,7 +5329,8 @@
         "imageFile": [
             "Number"
         ],
-        "inDepth": "The Number node allows a user to enter a static number. This node is useful for things like constants that don't change values. Numbers can also be created by using a Code Block node. In the example below, the number is paired with a code block to create a list sequence with a variable step size."
+        "inDepth": "The Number node allows a user to enter a static number. This node is useful for things like constants that don't change values. Numbers can also be created by using a Code Block node. In the example below, the number is paired with a code block to create a list sequence with a variable step size.",
+        "index": 354
     },
     {
         "Name": "String",
@@ -5339,7 +5345,8 @@
         "imageFile": [
             "String"
         ],
-        "inDepth": "The String node allows a user to enter a string value. A string can also be created with a Code Block by surrounding the string in quotes. In the example below, we use a String node and a Code Block to create the strings 'Hello' and 'World'. A String.Join node is used to combine the two strings together. A second String node is used with a blank space to act as the separator, resulting in the output string 'Hello World'."
+        "inDepth": "The String node allows a user to enter a string value. A string can also be created with a Code Block by surrounding the string in quotes. In the example below, we use a String node and a Code Block to create the strings 'Hello' and 'World'. A String.Join node is used to combine the two strings together. A second String node is used with a blank space to act as the separator, resulting in the output string 'Hello World'.",
+        "index": 355
     },
     {
         "Name": "Abs (number)",
@@ -5354,7 +5361,8 @@
         "imageFile": [
             "Abs"
         ],
-        "inDepth": "Abs will return the absolute value of an input value. In the example below, we use a number slider to control the input to an Abs node."
+        "inDepth": "Abs will return the absolute value of an input value. In the example below, we use a number slider to control the input to an Abs node.",
+        "index": 356
     },
     {
         "Name": "Abs (integer)",
@@ -5444,7 +5452,8 @@
         "imageFile": [
             "Average"
         ],
-        "inDepth": "Average will return the average (arithmetic mean) of a list of numbers. In the example below, we first use three number sliders to create three numbers to find the average of. We then use a List.Create node combine these three numbers into a list that we can then use as the input for an Average node."
+        "inDepth": "Some horribly destructive submission that loses data.",
+        "index": 362
     },
     {
         "Name": "Ceiling",
@@ -5519,7 +5528,8 @@
         "imageFile": [
             "DivRem"
         ],
-        "inDepth": "DivRem will return the remainder of an input number after dividing by a given divisor. This is also known as Modulus, and is equivalent to the operator '%'. In the example below, we use two number sliders to set the dividend and divisor for a DivRem node."
+        "inDepth": "DivRem will return the remainder of an input number after dividing by a given divisor. This is also known as Modulus, and is equivalent to the operator '%'. In the example below, we use two number sliders to set the dividend and divisor for a DivRem node.",
+        "index": 367
     },
     {
         "Name": "Exp",
@@ -6682,7 +6692,8 @@
         "imageFile": [
             "Move"
         ],
-        "inDepth": "Move will move the files from the current directory to a new directory. If the new directory does not exist, this node will create it. This node is automatically activated when the input values change. In the example below, we use a Directory Path node to specify the directory to copy from. Since the directory we want to move to does not yet exist, we use a Code Block to manually specify the path of the directory to move to."
+        "inDepth": "Move will move the files from the current directory to a new directory. If the new directory does not exist, this node will create it. This node is automatically activated when the input values change. In the example below, we use a Directory Path node to specify the directory to copy from. Since the directory we want to move to does not yet exist, we use a Code Block to manually specify the path of the directory to move to.",
+        "index": 445
     },
     {
         "Name": "Copy",
@@ -10324,5 +10335,37 @@
         "folderPath": "Office/Excel/Action",
         "inDepth": "Add in-depth information about ReadFromFile... ",
         "index": 742
+    },
+    {
+        "Name": "ByStartPointEndPointStartTangent",
+        "categories": [
+            "Geometry",
+            "Arc"
+        ],
+        "folderPath": "Geometry/Arc/Create",
+        "dynFile": [
+            "ByStartPointEndPointStartTangent"
+        ],
+        "imageFile": [
+            "ByStartPointEndPointStartTangent"
+        ],
+        "inDepth": "Arc ByStartPointEndPointStartTangent draws an arc from two specified points and any given start vector. This example draws an arc from two random points that is always tangent to the X-Axis.",
+        "index": 40
+    },
+    {
+        "Name": "Average",
+        "categories": [
+            "Core",
+            "Math"
+        ],
+        "folderPath": "Core/Math/Create",
+        "dynFile": [
+            "Average"
+        ],
+        "imageFile": [
+            "Average"
+        ],
+        "inDepth": "Some horribly destructive submission that loses data.",
+        "index": 362
     }
 ]
