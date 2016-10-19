@@ -6166,7 +6166,8 @@
         "imageFile": [
             "Not"
         ],
-        "inDepth": "Not (also written as exclamation point) will return the opposite of an input boolean value. In the example below, we use a boolean toggle node as the input to a Not operator."
+        "inDepth": "Not (!) will return the opposite of an input boolean value. In the example below, we use a boolean toggle node as the input to a Not operator.",
+        "index": 411
     },
     {
         "Name": "||",
@@ -10324,5 +10325,20 @@
         "folderPath": "Office/Excel/Action",
         "inDepth": "Add in-depth information about ReadFromFile... ",
         "index": 742
+    },
+    {
+        "Name": "Not",
+        "categories": [
+            "Operators"
+        ],
+        "folderPath": "Operators",
+        "dynFile": [
+            "Not"
+        ],
+        "imageFile": [
+            "Not"
+        ],
+        "inDepth": "Not (!) will return the opposite of an input boolean value. In the example below, we use a boolean toggle node as the input to a Not operator.",
+        "index": 411
     }
 ]
