@@ -6161,12 +6161,15 @@
         ],
         "folderPath": "Operators",
         "dynFile": [
-            "Not"
+            "Not",
+            "MinPoint"
         ],
         "imageFile": [
-            "Not"
+            "Not",
+            "tumblr_n6ote09Pzm1qer5szo2_r1_1280"
         ],
-        "inDepth": "Not (also written as exclamation point) will return the opposite of an input boolean value. In the example below, we use a boolean toggle node as the input to a Not operator."
+        "inDepth": "Not (also written as exclamation point) will return the opposite of an input boolean value. In the example below, we use a boolean toggle node as the input to a Not operator.",
+        "index": 411
     },
     {
         "Name": "||",
