@@ -6977,8 +6977,12 @@
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [],
-        "imageFile": [],
+        "dynFile": [
+            "AllFalse"
+        ],
+        "imageFile": [
+            "AllFalse"
+        ],
         "folderPath": [
             "BuiltIn",
             "Action"
