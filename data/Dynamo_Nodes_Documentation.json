@@ -9626,8 +9626,8 @@
         "dynFile": [],
         "imageFile": [],
         "folderPath": "Analyze/AnalysisExtensions/Action",
-        "inDepth": "Add in-depth information about IsAlmostEqualTo...",
-        "index": 465
+        "inDepth": "Add in-depth information about IsAlmostEqualTo...Testing Stuff is this going to work?",
+        "index": 687
     },
     {
         "Name": "Count",
@@ -10324,5 +10324,17 @@
         "folderPath": "Office/Excel/Action",
         "inDepth": "Add in-depth information about ReadFromFile... ",
         "index": 742
+    },
+    {
+        "Name": "IsAlmostEqualTo",
+        "categories": [
+            "Analyze",
+            "AnalysisExtensions"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "Analyze/AnalysisExtensions/Action",
+        "inDepth": "Add in-depth information about IsAlmostEqualTo...Testing Stuff is this going to work?",
+        "index": 687
     }
 ]
