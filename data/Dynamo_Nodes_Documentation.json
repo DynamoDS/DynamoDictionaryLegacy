@@ -719,7 +719,8 @@
         "imageFile": [
             "ByGeometry_g"
         ],
-        "inDepth": "Bounding Box ByGeometry solves for the Bounding Box of an input Geometry. This example shows a Bounding Box drawn around an input Sphere. In order to visualize the Box, we are converting the box to a Cuboid and extracting its edge curves."
+        "inDepth": "Bounding Box ByGeometry solves for the Bounding Box of an input Geometry. This example shows a Bounding Box drawn around an input Sphere. In order to visualize the Box, we are converting the box to a Cuboid and extracting its edge curves.",
+        "index": 47
     },
     {
         "Name": "ByGeometry (geom) (geom)",
@@ -734,7 +735,8 @@
         "imageFile": [
             "ByGeometry_gg"
         ],
-        "inDepth": "Bounding Box ByGeometry solves a Bounding Box of multiple input Geometry. This example shows a Bounding Box drawn around multiple Cones. In order to visualize the Box, we are converting the box to a Polysurface and extracting its edge curves."
+        "inDepth": "Bounding Box ByGeometry solves a Bounding Box of multiple input Geometry. This example shows a Bounding Box drawn around multiple Cones. In order to visualize the Box, we are converting the box to a Polysurface and extracting its edge curves. ",
+        "index": 48
     },
     {
         "Name": "ByCorners",
@@ -10324,5 +10326,21 @@
         "folderPath": "Office/Excel/Action",
         "inDepth": "Add in-depth information about ReadFromFile... ",
         "index": 742
+    },
+    {
+        "Name": "ByGeometry (geom) (geom)",
+        "categories": [
+            "Geometry",
+            "BoundingBox"
+        ],
+        "folderPath": "Geometry/BoundingBox/Create",
+        "dynFile": [
+            "ByGeometry_gg"
+        ],
+        "imageFile": [
+            "ByGeometry_gg"
+        ],
+        "inDepth": "Bounding Box ByGeometry solves a Bounding Box of multiple input Geometry. This example shows a Bounding Box drawn around multiple Cones. In order to visualize the Box, we are converting the box to a Polysurface and extracting its edge curves. ",
+        "index": 48
     }
 ]
