@@ -6989,7 +6989,7 @@
             "Action"
         ],
         "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false.",
-        "index": 750
+        "index": 464
     },
     {
         "Name": "IsAlmostEqualTo",
@@ -7020,14 +7020,10 @@
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [
-            "AllTrue"
-        ],
-        "imageFile": [
-            "AllTrue"
-        ],
+        "dynFile": [],
+        "imageFile": [],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "AllTrue only returns <strong>true</strong> if <em>every</em> item in a list is false.",
+        "inDepth": "Add in-depth information about AllTrue...",
         "index": 467
     },
     {
@@ -7057,30 +7053,22 @@
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [
-            "CountFalse"
-        ],
-        "imageFile": [
-            "CountFalse"
-        ],
+        "dynFile": [],
+        "imageFile": [],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "CountFalse returns the amount of false <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 747
+        "inDepth": "Add in-depth information about CountFalse...",
+        "index": 470
     },
     {
         "Name": "CountTrue",
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [
-            "CountTrue"
-        ],
-        "imageFile": [
-            "CountTrue"
-        ],
+        "dynFile": [],
+        "imageFile": [],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "CountTrue returns the amount of true <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 749
+        "inDepth": "Add in-depth information about CountTrue...",
+        "index": 471
     },
     {
         "Name": "Equals",
@@ -7299,7 +7287,7 @@
         "dynFile": [],
         "imageFile": [],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Add in-depth information about Rank...",
+        "inDepth": "This node counts how many levels are in a list.",
         "index": 491
     },
     {
@@ -9651,15 +9639,11 @@
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [
-            "Count"
-        ],
-        "imageFile": [
-            "Count"
-        ],
+        "dynFile": [],
+        "imageFile": [],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Count returns the amount of items in the input list or lists.",
-        "index": 746
+        "inDepth": "Add in-depth information about Count...",
+        "index": 688
     },
     {
         "Name": "Flatten",
@@ -10347,189 +10331,14 @@
         "index": 742
     },
     {
-        "Name": "Count",
+        "Name": "Rank",
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [
-            "Count"
-        ],
-        "imageFile": [
-            "Count"
-        ],
+        "dynFile": [],
+        "imageFile": [],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Count returns the amount of items in the input list or lists.",
-        "index": 746
-    },
-    {
-        "Name": "CountFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "CountFalse"
-        ],
-        "imageFile": [
-            "CountFalse"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "CountFalse returns the amount of false <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 747
-    },
-    {
-        "Name": "CountTrue",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "CountTrue"
-        ],
-        "imageFile": [
-            "CountTrue"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "CountTrue returns the amount of true <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 749
-    },
-    {
-        "Name": "CountTrue",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "CountTrue"
-        ],
-        "imageFile": [
-            "CountTrue"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "CountTrue returns the amount of true <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 749
-    },
-    {
-        "Name": "AllFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "AllFalse"
-        ],
-        "imageFile": [
-            "AllFalse"
-        ],
-        "folderPath": [
-            "BuiltIn",
-            "Action"
-        ],
-        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false.",
-        "index": 750
-    },
-    {
-        "Name": "AllFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "AllFalse"
-        ],
-        "imageFile": [
-            "AllFalse"
-        ],
-        "folderPath": [
-            "BuiltIn",
-            "Action"
-        ],
-        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false.",
-        "index": 750
-    },
-    {
-        "Name": "AllTrue",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "AllTrue"
-        ],
-        "imageFile": [
-            "AllTrue"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "AllTrue only returns <strong>true</strong> if <em>every</em> item in a list is false.",
-        "index": 467
-    },
-    {
-        "Name": "CountFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "CountFalse"
-        ],
-        "imageFile": [
-            "CountFalse"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "CountFalse returns the amount of false <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 747
-    },
-    {
-        "Name": "CountFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "CountFalse"
-        ],
-        "imageFile": [
-            "CountFalse"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "CountFalse returns the amount of false <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 747
-    },
-    {
-        "Name": "CountFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "CountFalse"
-        ],
-        "imageFile": [
-            "CountFalse"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "CountFalse returns the amount of false <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 747
-    },
-    {
-        "Name": "CountFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "CountFalse"
-        ],
-        "imageFile": [
-            "CountFalse"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "CountFalse returns the amount of false <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 747
-    },
-    {
-        "Name": "CountTrue",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "CountTrue"
-        ],
-        "imageFile": [
-            "CountTrue"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "CountTrue returns the amount of true <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 749
+        "inDepth": "This node counts how many levels are in a list.",
+        "index": 491
     }
 ]
