@@ -7080,7 +7080,7 @@
         ],
         "folderPath": "BuiltIn/Action",
         "inDepth": "CountTrue returns the amount of true <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 749
+        "index": 471
     },
     {
         "Name": "Equals",
@@ -7299,7 +7299,7 @@
         "dynFile": [],
         "imageFile": [],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Add in-depth information about Rank...",
+        "inDepth": "Counts how many levels are in a list",
         "index": 491
     },
     {
@@ -10389,7 +10389,7 @@
         ],
         "folderPath": "BuiltIn/Action",
         "inDepth": "CountTrue returns the amount of true <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 749
+        "index": 748
     },
     {
         "Name": "CountTrue",
@@ -10530,6 +10530,17 @@
         ],
         "folderPath": "BuiltIn/Action",
         "inDepth": "CountTrue returns the amount of true <strong>(boolean)</strong> values in the input list or lists.",
-        "index": 749
+        "index": 757
+    },
+    {
+        "Name": "Rank",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [],
+        "imageFile": [],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Counts how many levels are in a list",
+        "index": 491
     }
 ]
