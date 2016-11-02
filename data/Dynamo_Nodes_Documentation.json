@@ -7406,10 +7406,14 @@
         "categories": [
             "BuiltIn"
         ],
-        "dynFile": [],
-        "imageFile": [],
+        "dynFile": [
+            "TrueForAll"
+        ],
+        "imageFile": [
+            "TrueForAll"
+        ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Add in-depth information about TrueForAll...",
+        "inDepth": "Checks to see if the condition (in the predicate input) is true for ALL of the items in the list. You need to connect a node to the predicate input that returns a boolean.",
         "index": 501
     },
     {
@@ -10542,5 +10546,20 @@
         "folderPath": "BuiltIn/Action",
         "inDepth": "Counts how many levels are in a list",
         "index": 491
+    },
+    {
+        "Name": "TrueForAll",
+        "categories": [
+            "BuiltIn"
+        ],
+        "dynFile": [
+            "TrueForAll"
+        ],
+        "imageFile": [
+            "TrueForAll"
+        ],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Checks to see if the condition (in the predicate input) is true for ALL of the items in the list. You need to connect a node to the predicate input that returns a boolean.",
+        "index": 501
     }
 ]
