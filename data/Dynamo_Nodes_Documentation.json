@@ -6007,12 +6007,15 @@
         ],
         "folderPath": "Operators",
         "dynFile": [
-            "Modulo"
+            "Modulo",
+            "Modulo(1)"
         ],
         "imageFile": [
-            "Modulo"
+            "Modulo",
+            "Modulo(1)"
         ],
-        "inDepth": "% is the Modulo operator. It returns the remainder of the x input after being divided by the y input. In the example below, we use two number sliders to control the inputs to a % operator."
+        "inDepth": "% is the Modulo operator. It returns the remainder of the x input after being divided by the y input. In the example below, we use two number sliders to control the inputs to a % operator.",
+        "index": 400
     },
     {
         "Name": "&&",
