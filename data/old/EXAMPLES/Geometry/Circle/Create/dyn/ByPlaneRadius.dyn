@@ -1,0 +1,23 @@
+<Workspace Version="1.0.1.1167" X="435.015975954865" Y="-1133.49180353194" zoom="1.10123741706302" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="a2b3b8d3-d977-478c-9e7e-fbe8b23708b1" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Circle.ByPlaneRadius" x="820.338958153813" y="1300.1045882504" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Circle.ByPlaneRadius@Autodesk.DesignScript.Geometry.Plane,double">
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.DoubleSlider guid="d9133511-49a9-4d38-86da-d2e2e71595df" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="390.096960292752" y="1376.99394682752" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>1.5</System.Double>
+      <Range min="0" max="10" step="0.1" />
+    </CoreNodeModels.Input.DoubleSlider>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="773ddb09-8bb1-4575-835f-27bb30c208b9" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Plane.YZ" x="602.943573980593" y="1285.36479200555" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Plane.YZ" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="d9133511-49a9-4d38-86da-d2e2e71595df" start_index="0" end="a2b3b8d3-d977-478c-9e7e-fbe8b23708b1" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="773ddb09-8bb1-4575-835f-27bb30c208b9" start_index="0" end="a2b3b8d3-d977-478c-9e7e-fbe8b23708b1" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-2.59406423568726" eyeY="5.44261360168457" eyeZ="5.12398815155029" lookX="2.9485023021698" lookY="-2.65695834159851" lookZ="-5.73978471755981" upX="0.0793455690145493" upY="0.984807729721069" upZ="-0.154460266232491" />
+  </Cameras>
+</Workspace>

@@ -1,0 +1,42 @@
+<Workspace Version="1.1.0.2093" X="-768.922013068079" Y="-3253.58367555" zoom="0.870814725338436" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Vector.XAxis" resolvedName="Autodesk.DesignScript.Geometry.Vector" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Vector" resolvedName="Autodesk.DesignScript.Geometry.Vector" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Math" resolvedName="DSCore.Math" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="PolyCurve" resolvedName="Autodesk.DesignScript.Geometry.PolyCurve" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="Display" resolvedName="Display.Display" assemblyName="Display.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="a045797e-1649-48b4-bd84-77291e2d0a34" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Surface.ByPatch" x="1984.68644895528" y="3799.76711931867" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="5409b29f-1a3d-4abf-b193-2d5284c07271" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Surface.TrimWithEdgeLoops" x="2219.71592723305" y="3845.89152552096" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Surface.TrimWithEdgeLoops@Autodesk.DesignScript.Geometry.PolyCurve[]" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="bee1e561-bf65-4aa1-910c-b8a77d7b0149" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Circle.ByCenterPointRadiusNormal" x="1722.69598759241" y="3799.76711931867" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadiusNormal@Autodesk.DesignScript.Geometry.Point,double,Autodesk.DesignScript.Geometry.Vector">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="d41105be-0b0c-4979-94b8-9e5d6a513e2a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1243.0126213827" y="3799.76711931867" isVisible="false" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="//Surface to trim&#xA;Point.ByCoordinates(0,0,0);&#xA;6;&#xA;Vector.XAxis();&#xA;&#xA;//Inner loop 1&#xA;pt1 = Point.ByCoordinates(0,3,4);&#xA;pt2 = Point.ByCoordinates(0,2,4);&#xA;pt3 = Point.ByCoordinates(0,x*-1,-2);&#xA;pt4 = Point.ByCoordinates(0,5,2);&#xA;pts = {pt1, pt2, pt3, pt4};&#xA;pCurve = PolyCurve.ByPoints(pts, true);&#xA;pFillet = PolyCurve.Fillet(pCurve, 0.25);&#xA;&#xA;//Inner loop 2&#xA;pt5 = Point.ByCoordinates(0,-3,-4);&#xA;pt6 = Point.ByCoordinates(0,-2,-4);&#xA;pt7 = Point.ByCoordinates(0,x,2);&#xA;pt8 = Point.ByCoordinates(0,-5,-2);&#xA;pts2 = {pt5, pt6, pt7, pt8};&#xA;pCurve2 = PolyCurve.ByPoints(pts2, true);&#xA;pFillet2 = PolyCurve.Fillet(pCurve2, 0.25);&#xA;&#xA;//Inner loops&#xA;loops = {pFillet, pFillet2};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="a33a4cf9-183d-43a9-8b2a-1c9684bff9b5" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2219.71592723305" y="3735.79378211976" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="color = Color.ByARGB(100,141,198,217);&#xA;Display.ByGeometryColor(geometry, color);" ShouldFocus="false" />
+    <CoreNodeModels.Input.DoubleSlider guid="7ef41720-91b7-4915-a2f9-6e386de9c6b7" type="CoreNodeModels.Input.DoubleSlider" nickname="Trimmed Surface Geometry" x="907.795872148175" y="3795.96667277911" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>0.3</System.Double>
+      <Range min="-4" max="1" step="0.1" />
+    </CoreNodeModels.Input.DoubleSlider>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="a045797e-1649-48b4-bd84-77291e2d0a34" start_index="0" end="5409b29f-1a3d-4abf-b193-2d5284c07271" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a045797e-1649-48b4-bd84-77291e2d0a34" start_index="0" end="a33a4cf9-183d-43a9-8b2a-1c9684bff9b5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="bee1e561-bf65-4aa1-910c-b8a77d7b0149" start_index="0" end="a045797e-1649-48b4-bd84-77291e2d0a34" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d41105be-0b0c-4979-94b8-9e5d6a513e2a" start_index="0" end="bee1e561-bf65-4aa1-910c-b8a77d7b0149" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d41105be-0b0c-4979-94b8-9e5d6a513e2a" start_index="1" end="bee1e561-bf65-4aa1-910c-b8a77d7b0149" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d41105be-0b0c-4979-94b8-9e5d6a513e2a" start_index="2" end="bee1e561-bf65-4aa1-910c-b8a77d7b0149" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d41105be-0b0c-4979-94b8-9e5d6a513e2a" start_index="17" end="5409b29f-1a3d-4abf-b193-2d5284c07271" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7ef41720-91b7-4915-a2f9-6e386de9c6b7" start_index="0" end="d41105be-0b0c-4979-94b8-9e5d6a513e2a" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="17.2162971496582" eyeY="2.31759738922119" eyeZ="-6.21722412109375" lookX="-14.7365341186523" lookY="-0.965659022331238" lookZ="11.2712650299072" upX="0.129730105400085" upY="0.986572086811066" upZ="-0.0992243140935898" />
+  </Cameras>
+</Workspace>
