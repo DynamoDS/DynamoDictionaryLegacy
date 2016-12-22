@@ -5,7 +5,7 @@ function githubSubmitter(files, mainExampleFile, branchName, message, terminate)
     })
 }
 function dynContents(f) {
-    console.log('dyn run',f)
+    // console.log('dyn run',f)
     var file_path = 'public/' + f.og.slice(2).replace("Examples", "EXAMPLES");
     var fileOb = {
         content: f.data,
@@ -15,8 +15,8 @@ function dynContents(f) {
 }
 
 function imageContents(f) {
-    console.log('img run',f)
-    var file_path = 'public/' + f.og.slice(2).replace("Examples", "EXAMPLES");
+    // console.log('img run',f)
+    var file_path = 'public/' + f.og.slice(2);
     var file_contents = window.atob((f.data.replace(/^(.+,)/, '')));
     var fileOb = {
         content: file_contents,
@@ -30,7 +30,7 @@ function runSubmit(token, files, mainExampleFile, branchName, message, terminate
     var gh = new Octokit({
         token: token
     });
-    var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
+    var repo = gh.getRepo('DynamoDS', 'DynamoDictionary');
     repo.getBranches()
         .then(function(branches) {
             if (branches.filter(function(b) {
