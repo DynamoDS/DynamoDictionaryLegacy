@@ -6980,24 +6980,6 @@
         "inDepth": "Write to File will write an image to a specified file path. This node is automatically activated when the inputs change. In the example below, we use an Image.FromPixels node to create an image object based on a generated set of colors. A FilePath node is used to specify the directory and file name to write this image to."
     },
     {
-        "Name": "AllFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "AllFalse"
-        ],
-        "imageFile": [
-            "AllFalse"
-        ],
-        "folderPath": [
-            "BuiltIn",
-            "Action"
-        ],
-        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false.",
-        "index": 750
-    },
-    {
         "Name": "IsAlmostEqualTo",
         "categories": [
             "Analyze",
@@ -10419,24 +10401,6 @@
         "folderPath": "BuiltIn/Action",
         "inDepth": "CountTrue returns the amount of true <strong>(boolean)</strong> values in the input list or lists.",
         "index": 749
-    },
-    {
-        "Name": "AllFalse",
-        "categories": [
-            "BuiltIn"
-        ],
-        "dynFile": [
-            "AllFalse"
-        ],
-        "imageFile": [
-            "AllFalse"
-        ],
-        "folderPath": [
-            "BuiltIn",
-            "Action"
-        ],
-        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false.",
-        "index": 750
     },
     {
         "Name": "AllFalse",
