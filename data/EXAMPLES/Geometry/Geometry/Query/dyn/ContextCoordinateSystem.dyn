@@ -1,0 +1,31 @@
+<Workspace Version="1.1.0.2093" X="976.74298534913" Y="-3922.98367891447" zoom="1.4635911762742" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="Display" resolvedName="Display.Display" assemblyName="Display.dll" />
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9222260d-0749-4abb-b34a-20af71030c41" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.ExtrudeAsSolid" x="-160.122289761206" y="2817.235439445" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double">
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="30a8c0ff-c030-4a5b-9119-3a44ccc5f608" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Circle.ByCenterPointRadius" x="-375.597933231544" y="2817.235439445" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="5094baae-cdfc-4763-9f3d-9e63f290ac4e" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Geometry.ContextCoordinateSystem" x="6.82863965326032" y="2817.235439445" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Geometry.ContextCoordinateSystem" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="12780dc6-37e8-4a02-98c5-75b0ef05fc16" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="9.61147865030989" y="2720.42386322978" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="color = Color.ByARGB(100,141,198,217);&#xA;Display.ByGeometryColor(geometry, color);" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="0286739f-a09a-4714-8f4f-2fc7d911500f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-655.590280633299" y="2821.39775621507" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="Point.ByCoordinates(3,0,0);" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="9222260d-0749-4abb-b34a-20af71030c41" start_index="0" end="5094baae-cdfc-4763-9f3d-9e63f290ac4e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9222260d-0749-4abb-b34a-20af71030c41" start_index="0" end="12780dc6-37e8-4a02-98c5-75b0ef05fc16" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="30a8c0ff-c030-4a5b-9119-3a44ccc5f608" start_index="0" end="9222260d-0749-4abb-b34a-20af71030c41" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0286739f-a09a-4714-8f4f-2fc7d911500f" start_index="0" end="30a8c0ff-c030-4a5b-9119-3a44ccc5f608" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="2.17111110554854" eyeY="3.85719421349718" eyeZ="2.8948638775409" lookX="-0.0200185588002979" lookY="-5.00373055896095" lookZ="-5.44538647992889" upX="-0.00184921442022491" upY="0.864274769060239" upZ="-0.50301652955178" />
+  </Cameras>
+</Workspace>

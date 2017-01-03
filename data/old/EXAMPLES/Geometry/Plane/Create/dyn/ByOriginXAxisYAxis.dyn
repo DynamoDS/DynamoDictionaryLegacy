@@ -1,0 +1,40 @@
+<Workspace Version="1.0.0.1180" X="998.170158448171" Y="-324.253498940698" zoom="1.06696975018683" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="18c8e8a5-711a-4e80-b88f-8e6c02e95b4a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-682.556669987375" y="350.83330062054" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="5;&#xA;1;&#xA;-3;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="1dfa0f01-a0ff-4e7c-9bf2-683b3d460649" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Point.ByCoordinates" x="-587.929061855738" y="338.391504424072" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2acfc8fc-c6d6-4b6f-887d-ed308fcc1d2b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Vector.YAxis" x="-547.129061855738" y="473.353156312315" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Vector.YAxis" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7c1f7e27-2341-4a90-be95-2ed92b4adb30" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Vector.ByCoordinates" x="-591.366492196884" y="555.82972135513" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Vector.ByCoordinates@double,double,double">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="7b941f93-a393-4d91-9e05-19ae7f1333fc" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-682.556669987375" y="563.781317624602" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="1;&#xA;-3;&#xA;2;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="ed609cb2-f0d5-4336-995f-bc4d8ee53616" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Plane.ByOriginXAxisYAxis" x="-331.704479808861" y="338.391504424072" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Plane.ByOriginXAxisYAxis@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Vector,Autodesk.DesignScript.Geometry.Vector">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="18c8e8a5-711a-4e80-b88f-8e6c02e95b4a" start_index="0" end="1dfa0f01-a0ff-4e7c-9bf2-683b3d460649" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="18c8e8a5-711a-4e80-b88f-8e6c02e95b4a" start_index="1" end="1dfa0f01-a0ff-4e7c-9bf2-683b3d460649" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="18c8e8a5-711a-4e80-b88f-8e6c02e95b4a" start_index="2" end="1dfa0f01-a0ff-4e7c-9bf2-683b3d460649" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1dfa0f01-a0ff-4e7c-9bf2-683b3d460649" start_index="0" end="ed609cb2-f0d5-4336-995f-bc4d8ee53616" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2acfc8fc-c6d6-4b6f-887d-ed308fcc1d2b" start_index="0" end="ed609cb2-f0d5-4336-995f-bc4d8ee53616" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7c1f7e27-2341-4a90-be95-2ed92b4adb30" start_index="0" end="ed609cb2-f0d5-4336-995f-bc4d8ee53616" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7b941f93-a393-4d91-9e05-19ae7f1333fc" start_index="0" end="7c1f7e27-2341-4a90-be95-2ed92b4adb30" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7b941f93-a393-4d91-9e05-19ae7f1333fc" start_index="1" end="7c1f7e27-2341-4a90-be95-2ed92b4adb30" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7b941f93-a393-4d91-9e05-19ae7f1333fc" start_index="2" end="7c1f7e27-2341-4a90-be95-2ed92b4adb30" end_index="2" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-16.2785667272413" eyeY="8.89926367190986" eyeZ="15.316742726377" lookX="23.2524266857387" lookY="-1.23389124510778" lookZ="-16.4701148668428" upX="-0.140299380394547" upY="0.985109338052405" upZ="0.0993765677174917" />
+  </Cameras>
+</Workspace>

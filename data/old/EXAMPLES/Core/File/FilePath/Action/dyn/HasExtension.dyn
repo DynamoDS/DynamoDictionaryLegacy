@@ -1,0 +1,21 @@
+<Workspace Version="1.1.0.2093" X="-578.668716309552" Y="-316.021509463754" zoom="1.66537098414077" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.Filename guid="5411bf49-384e-484a-8583-3c8724e456d5" type="CoreNodeModels.Input.Filename" nickname="File Path" x="509.172038609706" y="269.929676552371" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>..\..\..\..\..\..\..\..\..\..\..\Username\Folder1\sample.txt</System.String>
+      <HintPath>C:\Users\Username\Folder1\sample.txt</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <CoreNodeModels.Watch guid="698f03e5-ac0b-4580-9038-0682ee376227" type="CoreNodeModels.Watch" nickname="Watch" x="1008.58531360576" y="269.929676552371" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="c7245c7e-ae27-4f34-b7b1-c4e4fd5d14e5" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FilePath.HasExtension" x="781.147371661275" y="269.929676552371" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.FilePath.HasExtension@string" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="5411bf49-384e-484a-8583-3c8724e456d5" start_index="0" end="c7245c7e-ae27-4f34-b7b1-c4e4fd5d14e5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c7245c7e-ae27-4f34-b7b1-c4e4fd5d14e5" start_index="0" end="698f03e5-ac0b-4580-9038-0682ee376227" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

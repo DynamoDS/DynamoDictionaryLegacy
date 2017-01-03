@@ -1,0 +1,29 @@
+<Workspace Version="1.1.0.2093" X="514.754129899855" Y="-1845.40417675873" zoom="1.34736083013352" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.DoubleSlider guid="5d20ff98-fc5c-46a9-adb4-22cbfce05b4f" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="-246.838417892571" y="1506.68197073724" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>0.9</System.Double>
+      <Range min="0" max="5" step="0.1" />
+    </CoreNodeModels.Input.DoubleSlider>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="c76dd8be-6d94-45e9-b091-5c19c13c3257" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CoordinateSystem.IsSingular" x="374.735335295168" y="1486.0113270068" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.CoordinateSystem.IsSingular" />
+    <CoreNodeModels.Watch guid="0b5a08f4-ff35-4a3b-b7fd-6bcdd49bcd19" type="CoreNodeModels.Watch" nickname="Watch" x="607.95420364627" y="1486.0113270068" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="320a5c5d-5f68-4521-b56e-a3eb6bd975c6" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CoordinateSystem.ByOrigin" x="151.916466944066" y="1486.0113270068" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.CoordinateSystem.ByOrigin@double,double,double">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="5d20ff98-fc5c-46a9-adb4-22cbfce05b4f" start_index="0" end="320a5c5d-5f68-4521-b56e-a3eb6bd975c6" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5d20ff98-fc5c-46a9-adb4-22cbfce05b4f" start_index="0" end="320a5c5d-5f68-4521-b56e-a3eb6bd975c6" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="5d20ff98-fc5c-46a9-adb4-22cbfce05b4f" start_index="0" end="320a5c5d-5f68-4521-b56e-a3eb6bd975c6" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c76dd8be-6d94-45e9-b091-5c19c13c3257" start_index="0" end="0b5a08f4-ff35-4a3b-b7fd-6bcdd49bcd19" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="320a5c5d-5f68-4521-b56e-a3eb6bd975c6" start_index="0" end="c76dd8be-6d94-45e9-b091-5c19c13c3257" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="7.58525276184082" eyeY="3.8096342086792" eyeZ="-0.863186061382294" lookX="-4.61133003234863" lookY="-2.28774547576904" lookZ="-2.27799654006958" upX="-0.180280134081841" upY="0.979575157165527" upZ="-0.0890583917498589" />
+  </Cameras>
+</Workspace>

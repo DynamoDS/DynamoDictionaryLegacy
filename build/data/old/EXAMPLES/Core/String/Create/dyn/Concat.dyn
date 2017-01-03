@@ -1,0 +1,26 @@
+<Workspace Version="1.0.0.1180" X="-146.730057853078" Y="-171.137886737402" zoom="1.30764135636719" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.StringInput guid="8f335c73-8563-40f8-ab16-1a8c0eda22f1" type="CoreNodeModels.Input.StringInput" nickname="String" x="358.891625724397" y="222.669446696901" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Hello</System.String>
+      <System.String value="Hello" />
+    </CoreNodeModels.Input.StringInput>
+    <CoreNodeModels.Watch guid="1f79f9e3-94fc-4650-ad0f-49067625f89a" type="CoreNodeModels.Watch" nickname="Watch" x="697.786590542415" y="222.669446696901" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction guid="9322a36d-4125-4efe-aa21-2e9d31a009b8" type="Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction" nickname="String.Concat" x="504.532826850622" y="222.669446696901" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.String.Concat@string[]" inputcount="2" />
+    <CoreNodeModels.Input.StringInput guid="76b24f04-87ce-4d78-9321-1ecce93be062" type="CoreNodeModels.Input.StringInput" nickname="String" x="354.091625724397" y="285.917411325716" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>World</System.String>
+      <System.String value="World" />
+    </CoreNodeModels.Input.StringInput>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="8f335c73-8563-40f8-ab16-1a8c0eda22f1" start_index="0" end="9322a36d-4125-4efe-aa21-2e9d31a009b8" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9322a36d-4125-4efe-aa21-2e9d31a009b8" start_index="0" end="1f79f9e3-94fc-4650-ad0f-49067625f89a" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="76b24f04-87ce-4d78-9321-1ecce93be062" start_index="0" end="9322a36d-4125-4efe-aa21-2e9d31a009b8" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

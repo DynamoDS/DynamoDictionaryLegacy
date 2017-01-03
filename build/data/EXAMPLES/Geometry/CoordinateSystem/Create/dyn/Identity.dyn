@@ -1,0 +1,16 @@
+<Workspace Version="1.1.0.2093" X="-174.785163077025" Y="-303.247857176513" zoom="1.40273853983008" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9fae28d9-717c-4078-86ad-d5ea0c83cf3a" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CoordinateSystem.Identity" x="393.467632969043" y="292.305333287875" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.CoordinateSystem.Identity" />
+    <CoreNodeModels.Watch guid="7dc2e2c5-6b8b-4c96-9cca-b4dd74d0476d" type="CoreNodeModels.Watch" nickname="Watch" x="586.593616280178" y="292.305333287875" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="9fae28d9-717c-4078-86ad-d5ea0c83cf3a" start_index="0" end="7dc2e2c5-6b8b-4c96-9cca-b4dd74d0476d" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-8.34366893768311" eyeY="6.98868608474731" eyeZ="8.88468647003174" lookX="12.9839553833008" lookY="-5.89671277999878" lookZ="-15.9828119277954" upX="0.0395914241671562" upY="0.998026669025421" upZ="-0.0487357005476952" />
+  </Cameras>
+</Workspace>
