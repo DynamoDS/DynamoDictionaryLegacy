@@ -1,0 +1,31 @@
+<Workspace Version="1.1.0.2093" X="-1151.76368945304" Y="-4172.21093589611" zoom="1.43869752881472" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <CoreNodeModels.Watch guid="66792e81-c65a-4747-a2aa-295d87c94d99" type="CoreNodeModels.Watch" nickname="Watch" x="1743.05946625226" y="3010.1532500342" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="819027a9-253a-4339-8911-4d3c95a99767" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="815.39843776929" y="2907.83797863916" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="pt1 = Point.ByCoordinates(0,0);&#xA;pt2 = Point.ByCoordinates(8,0);&#xA;pt3 = Point.ByCoordinates(12,12);&#xA;pt4 = Point.ByCoordinates(6,6,4);&#xA;pt5 = Point.ByCoordinates(0,16,-2);&#xA;pts = {pt1,pt2,pt3,pt4, pt5};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8d35a8d7-dd54-49db-8315-54c699c74eab" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="NurbsCurve.ByControlPoints" x="1167.55329869336" y="3010.1532500342" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.NurbsCurve.ByControlPoints@Autodesk.DesignScript.Geometry.Point[],int,bool">
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.BoolSelector guid="811d35e8-2a20-4dcf-a1aa-8382db1c54b4" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="1005.79843776929" y="3085.04962758475" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="634b54dd-8801-4b4e-872a-11924c3187e0" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Surface.ByPatch" x="1382.05535454633" y="3010.1532500342" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="3500f800-319d-4974-bab1-e876e92b870f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Surface.Perimeter" x="1578.1574103993" y="3010.1532500342" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Surface.Perimeter" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="819027a9-253a-4339-8911-4d3c95a99767" start_index="5" end="8d35a8d7-dd54-49db-8315-54c699c74eab" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8d35a8d7-dd54-49db-8315-54c699c74eab" start_index="0" end="634b54dd-8801-4b4e-872a-11924c3187e0" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="811d35e8-2a20-4dcf-a1aa-8382db1c54b4" start_index="0" end="8d35a8d7-dd54-49db-8315-54c699c74eab" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="634b54dd-8801-4b4e-872a-11924c3187e0" start_index="0" end="3500f800-319d-4974-bab1-e876e92b870f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3500f800-319d-4974-bab1-e876e92b870f" start_index="0" end="66792e81-c65a-4747-a2aa-295d87c94d99" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="16.2384051872808" eyeY="6.73247079946818" eyeZ="-9.98370109415263" lookX="-11.4559309567854" lookY="-6.43995146523444" lookZ="6.35290564854454" upX="-0.208604590501842" upY="0.971134243271492" upZ="0.115682027114947" />
+  </Cameras>
+</Workspace>

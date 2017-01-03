@@ -1,0 +1,22 @@
+<Workspace Version="1.0.0.1180" X="266.746823883182" Y="74.226466896902" zoom="1.43479342472016" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="1684bc5d-de89-4f87-9e43-ddcbef7d62a9" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="81.5686910679494" y="14.3540350383029" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0..9..1;" ShouldFocus="false" />
+    <CoreNodeModels.Watch guid="1ebb7fe2-dfe5-4f25-838e-dff355209e65" type="CoreNodeModels.Watch" nickname="Watch" x="479.337397711544" y="14.3540350383029" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="13c928bd-a957-48d3-9666-9fb3746b6c9b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.Sublists" x="273.551905664235" y="14.3540350383029" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.Sublists@var[]..[],var[]..[],int" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="57738a37-f60f-4b3c-af58-35c58464cbba" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="106.568691067949" y="98.2901356749312" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0..5;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="11b83ce4-d01e-46c1-af39-2a3868f2b4f9" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="108.568691067949" y="182.226236311559" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="2;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="1684bc5d-de89-4f87-9e43-ddcbef7d62a9" start_index="0" end="13c928bd-a957-48d3-9666-9fb3746b6c9b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="13c928bd-a957-48d3-9666-9fb3746b6c9b" start_index="0" end="1ebb7fe2-dfe5-4f25-838e-dff355209e65" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="57738a37-f60f-4b3c-af58-35c58464cbba" start_index="0" end="13c928bd-a957-48d3-9666-9fb3746b6c9b" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="11b83ce4-d01e-46c1-af39-2a3868f2b4f9" start_index="0" end="13c928bd-a957-48d3-9666-9fb3746b6c9b" end_index="2" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-13.988694190979" eyeY="18.2644901275635" eyeZ="21.4298629760742" lookX="16.7237854003906" lookY="-5.27742385864258" lookZ="-19.5883941650391" upX="-0.00906574074178934" upY="0.999902546405792" upZ="0.0106186075136065" />
+  </Cameras>
+</Workspace>

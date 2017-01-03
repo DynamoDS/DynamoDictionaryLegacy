@@ -1,0 +1,27 @@
+<Workspace Version="1.1.0.2093" X="-462.302024638943" Y="-141.4110654772" zoom="1.545620359375" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="e43d0ea9-fd41-4c59-a5c3-d9a88508b1f2" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="626.074400658077" y="286.715461812496" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;*.txt&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="c4a0e85c-00ab-4cf8-b014-80771a21ffb9" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Directory.Contents" x="761.196628611919" y="198.709887357232" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Contents@var,string">
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.Directory guid="613d1fdc-74fd-47d2-a260-56acb226f12b" type="CoreNodeModels.Input.Directory" nickname="Directory Path" x="419.444542579069" y="198.709887357232" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\Users\Username</System.String>
+      <HintPath>C:\Users\Username</HintPath>
+    </CoreNodeModels.Input.Directory>
+    <CoreNodeModels.Input.DirectoryObject guid="7bcd318d-b76c-40ac-846d-a99430b05d6e" type="CoreNodeModels.Input.DirectoryObject" nickname="Directory.FromPath" x="588.450456901315" y="198.709887357232" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="91e05074-7693-4e94-8bd8-546e4d1ce4dd" type="CoreNodeModels.Watch" nickname="Watch" x="986.207263247569" y="198.709887357232" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="e43d0ea9-fd41-4c59-a5c3-d9a88508b1f2" start_index="0" end="c4a0e85c-00ab-4cf8-b014-80771a21ffb9" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c4a0e85c-00ab-4cf8-b014-80771a21ffb9" start_index="0" end="91e05074-7693-4e94-8bd8-546e4d1ce4dd" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="613d1fdc-74fd-47d2-a260-56acb226f12b" start_index="0" end="7bcd318d-b76c-40ac-846d-a99430b05d6e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7bcd318d-b76c-40ac-846d-a99430b05d6e" start_index="0" end="c4a0e85c-00ab-4cf8-b014-80771a21ffb9" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
