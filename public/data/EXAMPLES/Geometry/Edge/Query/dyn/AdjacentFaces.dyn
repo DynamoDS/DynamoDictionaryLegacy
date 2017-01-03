@@ -1,0 +1,48 @@
+<Workspace Version="1.1.0.2093" X="-1205.81466536173" Y="-3266.49042182401" zoom="0.974077389067073" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="Display" resolvedName="Display.Display" assemblyName="Display.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="ce34befe-c163-4356-a578-722ac1032e61" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Polygon.RegularPolygon" x="1567.16033256173" y="3463.69514642318" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Polygon.RegularPolygon@Autodesk.DesignScript.Geometry.Circle,int">
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="e26fb26e-ca7d-464d-a1d1-c4d846e1f65a" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Circle.ByCenterPointRadius" x="1367.41077817199" y="3463.69514642318" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="c35bd3f1-52ba-409a-81ad-915d76de1bd9" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1260.15964029302" y="3494.44487391444" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="5;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="a3edee41-e81f-478d-aad9-2bcb100dd5cc" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1676.5128162249" y="3591.59623958357" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="3;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d487b4f8-2cdf-44cb-9176-783c214d8737" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.ExtrudeAsSolid" x="1800.09928481658" y="3463.69514642318" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double">
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="3de36012-0cf6-4537-bc70-62bf5a06418d" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Edge.AdjacentFaces" x="2329.52566260345" y="3464.66820508331" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Edge.AdjacentFaces" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="bd0ce366-87c3-46fd-940e-df9e29384df3" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Topology.Edges" x="1976.25734217373" y="3464.66820508331" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Topology.Edges" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="99f1e140-8fa8-4998-b5c5-b2fed608aa48" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.GetItemAtIndex" x="2165.74627954708" y="3464.66820508331" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.GetItemAtIndex@var[]..[],int" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="d9f5803b-2ad7-4627-9b5e-db111cf8f199" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="2053.05734217372" y="3578.7389941224" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="4;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="6ea5c3ee-1151-42a3-97a1-e9c0e651c225" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1459.72059424402" y="3585.3492798946" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="6;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="145d12e9-bba9-412b-9102-483298d4e538" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1976.09926854479" y="3359.1581481556" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="color = Color.ByARGB(100,141,198,217);&#xA;Display.ByGeometryColor(geometry, color);" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="42677fcb-77f5-4e57-8a49-2cfefe3b14f6" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Face.SurfaceGeometry" x="2482.15869960538" y="3381.34367843047" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Face.SurfaceGeometry" />
+    <CoreNodeModels.Watch guid="24e8bd95-6556-4e10-a604-36aaef1d883c" type="CoreNodeModels.Watch" nickname="Watch" x="2481.87857707449" y="3465.62041079875" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="ce34befe-c163-4356-a578-722ac1032e61" start_index="0" end="d487b4f8-2cdf-44cb-9176-783c214d8737" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e26fb26e-ca7d-464d-a1d1-c4d846e1f65a" start_index="0" end="ce34befe-c163-4356-a578-722ac1032e61" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c35bd3f1-52ba-409a-81ad-915d76de1bd9" start_index="0" end="e26fb26e-ca7d-464d-a1d1-c4d846e1f65a" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a3edee41-e81f-478d-aad9-2bcb100dd5cc" start_index="0" end="d487b4f8-2cdf-44cb-9176-783c214d8737" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d487b4f8-2cdf-44cb-9176-783c214d8737" start_index="0" end="bd0ce366-87c3-46fd-940e-df9e29384df3" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d487b4f8-2cdf-44cb-9176-783c214d8737" start_index="0" end="145d12e9-bba9-412b-9102-483298d4e538" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3de36012-0cf6-4537-bc70-62bf5a06418d" start_index="0" end="42677fcb-77f5-4e57-8a49-2cfefe3b14f6" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3de36012-0cf6-4537-bc70-62bf5a06418d" start_index="0" end="24e8bd95-6556-4e10-a604-36aaef1d883c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="bd0ce366-87c3-46fd-940e-df9e29384df3" start_index="0" end="99f1e140-8fa8-4998-b5c5-b2fed608aa48" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="99f1e140-8fa8-4998-b5c5-b2fed608aa48" start_index="0" end="3de36012-0cf6-4537-bc70-62bf5a06418d" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d9f5803b-2ad7-4627-9b5e-db111cf8f199" start_index="0" end="99f1e140-8fa8-4998-b5c5-b2fed608aa48" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6ea5c3ee-1151-42a3-97a1-e9c0e651c225" start_index="0" end="ce34befe-c163-4356-a578-722ac1032e61" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-5.52875242683519" eyeY="11.3655694045527" eyeZ="12.5116173689367" lookX="13.0528682076957" lookY="-11.8922254426505" lookZ="-11.6749694144082" upX="0.276799873069931" upY="0.928485801081947" upZ="-0.24758007373497" />
+  </Cameras>
+</Workspace>

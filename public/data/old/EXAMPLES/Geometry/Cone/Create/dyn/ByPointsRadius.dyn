@@ -1,0 +1,35 @@
+<Workspace Version="1.0.1.1167" X="-758.340012952941" Y="-404.738527069531" zoom="1.07925372895183" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="21b413ac-6182-4bec-b18f-004ed2122c58" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Geometry.Translate" x="1156" y="613" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector,double" />
+    <CoreNodeModels.Input.DoubleSlider guid="45d8c600-3fd0-4e5b-943b-5cd4a1e56cef" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="824" y="776" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>4.7</System.Double>
+      <Range min="0" max="10" step="0.1" />
+    </CoreNodeModels.Input.DoubleSlider>
+    <CoreNodeModels.Input.DoubleSlider guid="728f5e73-eae4-4e73-9d4d-bb41ba19dbb2" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="824" y="877" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>4.7</System.Double>
+      <Range min="0" max="10" step="0.1" />
+    </CoreNodeModels.Input.DoubleSlider>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d2c157e1-8831-4f38-948a-4754d72c10ad" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Vector.ZAxis" x="827" y="653" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Vector.ZAxis" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="ef7d8539-c04b-4f36-9360-bd088f05cf19" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Point.Origin" x="827" y="524" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Point.Origin" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="121d1898-1b81-4f58-aab3-af625dae3b1f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Cone.ByPointsRadius" x="1589.77354934551" y="557.135769861643" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Cone.ByPointsRadius@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point,double">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="21b413ac-6182-4bec-b18f-004ed2122c58" start_index="0" end="121d1898-1b81-4f58-aab3-af625dae3b1f" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="45d8c600-3fd0-4e5b-943b-5cd4a1e56cef" start_index="0" end="21b413ac-6182-4bec-b18f-004ed2122c58" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="728f5e73-eae4-4e73-9d4d-bb41ba19dbb2" start_index="0" end="121d1898-1b81-4f58-aab3-af625dae3b1f" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d2c157e1-8831-4f38-948a-4754d72c10ad" start_index="0" end="21b413ac-6182-4bec-b18f-004ed2122c58" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ef7d8539-c04b-4f36-9360-bd088f05cf19" start_index="0" end="21b413ac-6182-4bec-b18f-004ed2122c58" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ef7d8539-c04b-4f36-9360-bd088f05cf19" start_index="0" end="121d1898-1b81-4f58-aab3-af625dae3b1f" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

@@ -1,0 +1,28 @@
+<Workspace Version="1.1.0.2093" X="-326.02954366829" Y="-656.062234921176" zoom="1.20654988893055" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Sphere.ByFourPoints" resolvedName="Autodesk.DesignScript.Geometry.Sphere" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Sphere" resolvedName="Autodesk.DesignScript.Geometry.Sphere" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+    <ClassMap partialName="Display" resolvedName="Display.Display" assemblyName="Display.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="c22bb8b6-0a35-488b-b226-78919818af34" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="BoundingBox.ToPolySurface" x="1180.05604325515" y="641.082846150347" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.BoundingBox.ToPolySurface" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="474c9b5e-3919-47f7-b7e3-c389d4ec334a" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Geometry.BoundingBox" x="957.572694671951" y="641.082846150347" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Geometry.BoundingBox" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="3132e5ea-686a-4692-b69c-34b951fd9a1b" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="316.456846404731" y="579.762201111492" isVisible="false" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="pt1 = Point.ByCoordinates(3,0,4);&#xA;pt2 = Point.ByCoordinates(4,-2,0);&#xA;pt3 = Point.ByCoordinates(0,3,4);&#xA;&#xA;Sphere.ByCenterPointRadius({pt1, pt2, pt3},3);" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="298b7526-98ea-4569-81d1-8c4793180cab" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Solid.ByUnion" x="779.098079894803" y="641.082846150347" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[]" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="0bea116e-1816-4564-9ba2-94b8e8ec552c" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1408.71610923181" y="645.230900346418" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="color = Color.ByARGB(100,141,198,217);&#xA;Display.ByGeometryColor(geometry, color);" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="c22bb8b6-0a35-488b-b226-78919818af34" start_index="0" end="0bea116e-1816-4564-9ba2-94b8e8ec552c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="474c9b5e-3919-47f7-b7e3-c389d4ec334a" start_index="0" end="c22bb8b6-0a35-488b-b226-78919818af34" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="3132e5ea-686a-4692-b69c-34b951fd9a1b" start_index="3" end="298b7526-98ea-4569-81d1-8c4793180cab" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="298b7526-98ea-4569-81d1-8c4793180cab" start_index="0" end="474c9b5e-3919-47f7-b7e3-c389d4ec334a" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="12.4732336958924" eyeY="13.1987456178341" eyeZ="-21.1732705450162" lookX="-12.1587398970238" lookY="-8.81554687992561" lookZ="12.1208688323335" upX="-0.180908944973139" upY="0.966823328236398" upZ="0.180345462706109" />
+  </Cameras>
+</Workspace>
