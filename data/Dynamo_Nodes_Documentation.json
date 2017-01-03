@@ -19,8 +19,8 @@
     },
     {
         "Name": "AllFalse",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": ["AllFalse"],
+        "dynFile": ["AllFalse"],
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about AllFalse..."
     },
