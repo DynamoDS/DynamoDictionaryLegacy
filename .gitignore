@@ -2,6 +2,8 @@
 
 **/public/configuration
 
+configuration/*.json
+
 # dependencies
 node_modules
 
