@@ -6167,10 +6167,12 @@
         ],
         "folderPath": "Operators",
         "dynFile": [
-            "Not"
+            "Not",
+            "MinPoint"
         ],
         "imageFile": [
-            "Not"
+            "Not",
+            "DynamoTowerAdaptiveInstance"
         ],
         "inDepth": "Not (also written as exclamation point) will return the opposite of an input boolean value. In the example below, we use a boolean toggle node as the input to a Not operator.",
         "index": 411
