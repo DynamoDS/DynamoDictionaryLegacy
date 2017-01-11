@@ -30,7 +30,7 @@ function runSubmit(token, files, mainExampleFile, branchName, message, terminate
     var gh = new Octokit({
         token: token
     });
-    var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
+    var repo = gh.getRepo('DynamoDS', 'DynamoDictionary');
     repo.getBranches()
         .then(function(branches) {
             if (branches.filter(function(b) {
