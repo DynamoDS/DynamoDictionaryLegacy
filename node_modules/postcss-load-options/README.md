@@ -13,7 +13,6 @@
     <img width="110" height="110" title="PostCSS"           src="http://postcss.github.io/postcss/logo.svg" hspace="10">
   </a>
   <h1>Load Options</h1>
-  <p>Autoload Options for PostCSS<p>
 </div>
 
 <h2 align="center">Install</h2>
@@ -185,11 +184,11 @@ optionsrc(ctx).then((options) => {
 [tests]: http://img.shields.io/travis/michael-ciniawsky/postcss-load-options.svg
 [tests-url]: https://travis-ci.org/michael-ciniawsky/postcss-load-options
 
-[cover]: https://coveralls.io/repos/github/michael-ciniawsky/postcss-load-options/badge.svg?branch=master
-[cover-url]: https://coveralls.io/github/michael-ciniawsky/postcss-load-options?branch=master
+[cover]: https://coveralls.io/repos/github/michael-ciniawsky/postcss-load-options/badge.svg
+[cover-url]: https://coveralls.io/github/michael-ciniawsky/postcss-load-options
 
 [style]: https://img.shields.io/badge/code%20style-standard-yellow.svg
 [style-url]: http://standardjs.com/
 
-[chat]: https://img.shields.io/gitter/room/postcss/postcss.svg?maxAge=2592000
+[chat]: https://img.shields.io/gitter/room/postcss/postcss.svg
 [chat-url]: https://gitter.im/postcss/postcss

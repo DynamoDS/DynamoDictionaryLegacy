@@ -4,6 +4,8 @@
 
 'use strict'
 
+var resolve = require('path').resolve
+
 var config = require('cosmiconfig')
 var assign = require('object-assign')
 
@@ -29,38 +31,34 @@ var loadOptions = require('./lib/options')
  * @return {Object} options PostCSS Options
  */
 module.exports = function optionsrc (ctx, path, options) {
-  var defaults = { cwd: process.cwd(), env: process.env.NODE_ENV }
+  ctx = assign({ cwd: process.cwd(), env: process.env.NODE_ENV }, ctx)
 
-  ctx = assign(defaults, ctx) || defaults
-  path = path || process.cwd()
-  options = options || {}
+  path = path ? resolve(path) : process.cwd()
+
+  options = assign({}, options)
+
+  if (!ctx.env) process.env.NODE_ENV = 'development'
+
+  var file
 
   return config('postcss', options)
     .load(path)
     .then(function (result) {
-      if (result === undefined) {
-        console.log(
-          'PostCSS Options could not be loaded. Please check your PostCSS Config.'
-        )
-      }
-      result = result === undefined ? { config: {} } : result
-      return result
+      if (!result) console.log('PostCSS Options could not be loaded')
+
+      file = result ? result.filepath : ''
+
+      return result ? result.config : {}
     })
     .then(function (options) {
-      if (typeof options === 'function') {
-        options = options(ctx)
-      }
+      if (typeof options === 'function') options = options(ctx)
 
-      if (typeof options === 'object') {
-        options = assign(options, ctx)
-      }
+      if (typeof options === 'object') options = assign(options, ctx)
 
       return options
     })
     .then(function (options) {
-      return loadOptions(options)
+      return { options: loadOptions(options), file: file }
     })
-    .catch(function (err) {
-      console.log(err)
-    })
+    .catch(console.log)
 }

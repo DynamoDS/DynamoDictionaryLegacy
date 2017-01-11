@@ -30,6 +30,13 @@ exports.getQueryDefaults = function (q) {
       }
     }
   }
+  // cast strings to int, where possible ("2" = 2)
+  try {
+    if (q.offset) q.offset = parseInt(q.offset)
+  } catch (e) {}
+  try {
+    if (q.pageSize) q.pageSize = parseInt(q.pageSize)
+  } catch (e) {}
   return Object.assign({}, {
     query: [{
       AND: {'*': ['*']}

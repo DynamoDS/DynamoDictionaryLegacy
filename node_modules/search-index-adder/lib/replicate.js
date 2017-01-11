@@ -19,8 +19,10 @@ DBWriteMergeStream.prototype._transform = function (data, encoding, end) {
     var newVal
     // concat to existing values (only if they exist)
     if (data.key.substring(0, 3) === 'TF' + sep) {
+      // sort first on magnitude then on ID
       newVal = data.value.concat(val || []).sort(function (a, b) {
-        return b[0] - a[0]
+        if (a[0] === b[0]) return b[1] - a[1]
+        else return b[0] - a[0]
       })
     } else if (data.key.substring(0, 3) === 'DF' + sep) {
       newVal = data.value.concat(val || []).sort()

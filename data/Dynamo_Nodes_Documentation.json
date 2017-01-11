@@ -19,8 +19,12 @@
     },
     {
         "Name": "AllFalse",
-        "imageFile": ["AllFalse"],
-        "dynFile": ["AllFalse"],
+        "imageFile": [
+            "AllFalse"
+        ],
+        "dynFile": [
+            "AllFalse"
+        ],
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about AllFalse..."
     },
@@ -1961,22 +1965,36 @@
     },
     {
         "Name": "And",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "And"
+        ],
+        "dynFile": [
+            "And"
+        ],
         "folderPath": "Core/Logic/Action",
         "inDepth": "Add in-depth information about And..."
     },
     {
         "Name": "If",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "If",
+            "If - Ex 2"
+        ],
+        "dynFile": [
+            "If",
+            "If - Ex 2"
+        ],
         "folderPath": "Core/Logic/Action",
-        "inDepth": "Add in-depth information about If..."
+        "inDepth": "If acts as a conditional control node. The 'test' input takes a boolean value, while the 'true' and 'false' inputs can accept any data type. If the test value is 'true', the node will return the item from the 'true' input, if test is 'false', the node will return the item from the 'false' input. In the example below, we first generate a list of random numbers between zero and 99. The number of items in the list is controlled by an integer slider. We use a code block with the formula 'x%a==0' to test for divisibility by a second number, determined by a second number slider. This generates a list of boolean values corresponding to whether the items in the random list are divisible by the number determined by the second integer slider. This list of boolean values is used as the 'test' input for an If node. We use a default Sphere as the 'true' input, and a default Cuboid as the 'false' input. The result from the If node is a list of either spheres or cuboids. Finally, we use a Translate node to spread the list of geometries apart.\n\nIF replicates on all nodes AS THOUGH SET TO SHORTEST. You can see the reason for this in the attached examples, especially when looking at what the results are when LONGEST is applied to a formula node and the \"short\" branch of the conditional is passes through. These changes were also made to allow predictable behavior when using single boolean inputs or a list of booleans."
     },
     {
         "Name": "Or",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "Or"
+        ],
+        "dynFile": [
+            "Or"
+        ],
         "folderPath": "Core/Logic/Action",
         "inDepth": "Add in-depth information about Or..."
     },
@@ -1993,8 +2011,12 @@
     },
     {
         "Name": "Xor",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "Xor"
+        ],
+        "dynFile": [
+            "Xor"
+        ],
         "folderPath": "Core/Logic/Action",
         "inDepth": "Add in-depth information about Xor..."
     },
@@ -3021,7 +3043,7 @@
             "ByBestFitThroughPoints"
         ],
         "folderPath": "Geometry/Arc/Create",
-        "inDepth": "<p>Arc ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.</p>"
+        "inDepth": "<p>Arc.ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.</p>"
     },
     {
         "Name": "ByCenterPointRadiusAngle",
@@ -7794,10 +7816,12 @@
     {
         "Name": "%",
         "imageFile": [
-            "Modulo"
+            "Modulo",
+            "Modulo - Ex 2"
         ],
         "dynFile": [
-            "Modulo"
+            "Modulo",
+            "Modulo - Ex 2"
         ],
         "folderPath": "Operators/Action",
         "inDepth": "% is the Modulo operator. It returns the remainder of the x input after being divided by the y input. In the example below, we use two number sliders to control the inputs to a % operator."
