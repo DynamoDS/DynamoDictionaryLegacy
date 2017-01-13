@@ -85,7 +85,7 @@ function runSubmit(files, mainExampleFile, branchName, message, terminate) {
                             "base": "master"
                         })
                     } else {
-                        return repo.getInfo();
+                        return repo.getPulls();
                     }
                 })
                 .then(function(result) {
