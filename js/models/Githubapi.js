@@ -1,4 +1,4 @@
-function githubSubmitter(token,files, mainExampleFile, branchName, message, terminate) {
+function githubSubmitter(files, mainExampleFile, branchName, message, terminate) {
     axios.get('./configuration/config.json').then((resolve, reject) => {
         const token = resolve.data.GitHub_Token;
         runSubmit(token,files, mainExampleFile, branchName, message, terminate)
