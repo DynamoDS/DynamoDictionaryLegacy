@@ -1,8 +1,8 @@
 function githubSubmitter(files, mainExampleFile, branchName, message, terminate) {
-    axios.get('./configuration/config.json').then((resolve, reject) => {
-        const token = resolve.data.GitHub_Token;
-        runSubmit(token,files, mainExampleFile, branchName, message, terminate)
-    })
+    // axios.get('./configuration/config.json').then((resolve, reject) => {
+    //     const token = resolve.data.GitHub_Token;
+        runSubmit(files, mainExampleFile, branchName, message, terminate)
+    // })
 }
 function dynContents(f) {
     console.log('dyn run',f)
@@ -24,29 +24,28 @@ function imageContents(f) {
     };
     return [file_path, fileOb];
 }
-function runSubmit(token,files, mainExampleFile, branchName, message, terminate) {
+function runSubmit(files, mainExampleFile, branchName, message, terminate) {
     var branchExists = false;
-    var prExists=false;
     files.push(mainExampleFile)
+    // var gh = new Octokit({
+    //     token: token
+    // });
     var gh = new Octokit({
-        token: token
+        username:'ekatzenstein',
+        password:'Tioken2436Fioken'
     });
-    var repo = gh.getRepo('DynamoDS', 'DynamoDictionary');
-    let existingPullRequests=[];
-    repo.getPulls()
-        .then(function(pulls){
-            existingPullRequests=pulls;
-            if (existingPullRequests.filter(function(pr) {
-                    return pr.head.ref === branchName;
-                }).length > 0) {
-                prExists = true;
-            }       
-            return repo.getBranches()
-        })
+
+    var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
+    console.log(repo,repo.git, repo.getCommits())
+    // repo.git.getTree().then(res=>{console.log(res)})
+    repo.getPulls().then(res=>{console.log(res);
+      return repo.getBranches()})
         .then(function(branches) {
+
             if (branches.filter(function(b) {
                     return b[2] === branchName;
                 }).length > 0) {
+                console.log('branchExists')
                 branchExists = true;
                 commitFiles(repo.getBranch(branchName));
             } else {
@@ -78,7 +77,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
             })
             branch.writeMany(contents, message)
                 .then(function() {
-                    if (!branchExists && !prExists) {
+                    if (!branchExists) {
                         return repo.createPullRequest({
                             "title": branchName,
                             "body": "files updated by user",
@@ -90,11 +89,12 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
                     }
                 })
                 .then(function(result) {
+                  console.log(repo)
                   if(result.html_url){
                     terminate(result.html_url);
                   }
                   else{
-                    existingPullRequests.forEach((d,i)=>{
+                    repo.data.forEach((d,i)=>{
                       if(d.head.ref===branchName){
                         terminate(d.html_url)
                       }
