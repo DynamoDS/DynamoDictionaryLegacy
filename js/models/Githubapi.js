@@ -30,7 +30,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
     var gh = new Octokit({
         token: token
     });
-    axios.get('https://api.github.com/repos/ekatzenstein/DynamoDictionary_React/pulls').then(res=>console.log(res))
+    axios.get('https://api.github.com/repos/DynamoDS/DynamoDictionary/pulls').then(res=>console.log(res))
     var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
     repo.getInfo().then((res)=>{console.log(res)})
     repo.getBranches()
