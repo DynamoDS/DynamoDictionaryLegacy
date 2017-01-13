@@ -28,22 +28,18 @@
             "AllFalse - Ex 2"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "<p>AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false. Again writing some more text</p>"
+        "inDepth": "<p>AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false. just want to see what happens if i try to add to an existing pr</p>"
     },
     {
         "Name": "AllTrue",
         "imageFile": [
-            "AllTrue",
-            "AllTrue - Ex 2",
-            "AllTrue - Ex 3"
+            "AllTrue"
         ],
         "dynFile": [
-            "AllTrue",
-            "AllTrue - Ex 2",
-            "AllTrue - Ex 3"
+            "AllTrue"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "<p>AllTrue only returns <strong>true</strong> if <em>every</em> item in a list is false. Let us test this out...Adding some more text here...checking it out</p>"
+        "inDepth": "AllTrue only returns <strong>true</strong> if <em>every</em> item in a list is false."
     },
     {
         "Name": "Contains (list, element)",
