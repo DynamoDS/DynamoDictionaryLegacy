@@ -1,7 +1,7 @@
-function githubSubmitter(files, mainExampleFile, branchName, message, terminate) {
+function githubSubmitter(token,files, mainExampleFile, branchName, message, terminate) {
     axios.get('./configuration/config.json').then((resolve, reject) => {
         const token = resolve.data.GitHub_Token;
-        runSubmit(token, files, mainExampleFile, branchName, message, terminate)
+        runSubmit(files, mainExampleFile, branchName, message, terminate)
     })
 }
 function dynContents(f) {
@@ -24,13 +24,15 @@ function imageContents(f) {
     };
     return [file_path, fileOb];
 }
-function runSubmit(token, files, mainExampleFile, branchName, message, terminate) {
+function runSubmit(token,files, mainExampleFile, branchName, message, terminate) {
     var branchExists = false;
     files.push(mainExampleFile)
     var gh = new Octokit({
         token: token
     });
-    var repo = gh.getRepo('DynamoDS', 'DynamoDictionary');
+    axios.get('https://api.github.com/repos/ekatzenstein/DynamoDictionary_React/pulls').then(res=>console.log(res))
+    var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
+    repo.getInfo().then((res)=>{console.log(res)})
     repo.getBranches()
         .then(function(branches) {
             if (branches.filter(function(b) {
@@ -76,13 +78,20 @@ function runSubmit(token, files, mainExampleFile, branchName, message, terminate
                             "base": "master"
                         })
                     } else {
-                        return function() {
-                            console.log('no pr created')
-                        }
+                        return axios.get('https://api.github.com/repos/DynamoDS/DynamoDictionary/pulls')
                     }
                 })
                 .then(function(result) {
+                  if(result.html_url){
                     terminate(result.html_url);
+                  }
+                  else{
+                    result.data.forEach((d,i)=>{
+                      if(d.head.ref===branchName){
+                        terminate(d.html_url)
+                      }
+                    })
+                  }
                 })
         }
     }
