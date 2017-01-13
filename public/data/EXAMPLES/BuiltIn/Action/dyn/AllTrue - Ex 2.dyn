@@ -1,0 +1,38 @@
+<Workspace Version="2.0.0.3336" X="-282.705464905048" Y="288.208782528642" zoom="0.673202564727645" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="List" resolvedName="DSCore.List" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="da7b7611-5f23-4721-8258-18761c18fa7a" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="449.082832834155" y="-255.673739523518" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" CodeText="{&#xA;	{&#xA;		{&quot;Racel&quot;,&quot;Williams&quot;},&#xA;		{&quot;Lilli&quot;,&quot;Smith&quot;},&#xA;		{&quot;Adrian&quot;,&quot;Finch&quot;}&#xA;	},&#xA;	{&#xA;		{&quot;Zach&quot;,&quot;Kron&quot;},&#xA;		{&quot;Matt&quot;,&quot;Jezyk&quot;},&#xA;		{&quot;Ram&quot;,&quot;Pollacs&quot;}&#xA;	}&#xA;};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b0952073-3202-4482-b1f1-89833f3c7149" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FirstItem" x="1297.62360519894" y="-217.64879251034" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.FirstItem@var[]..[]">
+      <PortInfo index="0" default="False" useLevels="True" level="2" shouldKeepListStructure="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="2cb0fb66-c383-46d6-a68f-48856dcf9c17" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="982.097748050257" y="-222.794779621397" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" CodeText="t2 = List.FirstItem(t1&lt;1&gt;);" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="215b4c73-83af-4349-9e92-d7cc73b17373" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.FirstItem" x="782.076172645393" y="-208.564980436451" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.List.FirstItem@var[]..[]">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="da7b7611-5f23-4721-8258-18761c18fa7a" start_index="0" end="b0952073-3202-4482-b1f1-89833f3c7149" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="da7b7611-5f23-4721-8258-18761c18fa7a" start_index="0" end="2cb0fb66-c383-46d6-a68f-48856dcf9c17" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="da7b7611-5f23-4721-8258-18761c18fa7a" start_index="0" end="215b4c73-83af-4349-9e92-d7cc73b17373" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="5f9ad668-2e53-462e-befa-ea3ab634d772" annotationText="Shortest" left="972.097748050257" top="-275.794779621397" width="297" height="146" fontSize="36" InitialTop="-222.794779621397" InitialHeight="123" TextblockHeight="43" backgrouund="#FFC1D676">
+      <Models ModelGuid="2cb0fb66-c383-46d6-a68f-48856dcf9c17" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="9fb56268-46d3-463e-9696-766da2191fb4" annotationText="Default = Auto" left="772.076172645393" top="-304.564980436451" width="183" height="189" fontSize="36" InitialTop="-208.564980436451" InitialHeight="123" TextblockHeight="86" backgrouund="#FFC1D676">
+      <Models ModelGuid="215b4c73-83af-4349-9e92-d7cc73b17373" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="6e32a250-1556-47e3-9192-e886eb713941" annotationText="List@Level with Shortest" left="1287.62360519894" top="-357.64879251034" width="183" height="233" fontSize="36" InitialTop="-217.64879251034" InitialHeight="123" TextblockHeight="130" backgrouund="#FFC1D676">
+      <Models ModelGuid="b0952073-3202-4482-b1f1-89833f3c7149" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
