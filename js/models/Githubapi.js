@@ -31,7 +31,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
         token: token
     });
     axios.get('https://api.github.com/repos/DynamoDS/DynamoDictionary/pulls').then(res=>console.log(res))
-    var repo = gh.getRepo('ekatzenstein', 'DynamoDictionary_React');
+    var repo = gh.getRepo('DynamoDS', 'DynamoDictionary');
     repo.getInfo().then((res)=>{console.log(res)})
     repo.getBranches()
         .then(function(branches) {
