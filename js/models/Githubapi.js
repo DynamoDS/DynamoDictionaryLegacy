@@ -36,7 +36,6 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
             if (branches.filter(function(b) {
                     return b[2] === branchName;
                 }).length > 0) {
-                console.log('branchExists')
                 branchExists = true;
                 commitFiles(repo.getBranch(branchName));
             } else {
@@ -66,7 +65,6 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
                         return undefined;
                 }
             })
-            console.log(contents,message);
             branch.writeMany(contents, message)
                 .then(function() {
                     if (!branchExists) {
