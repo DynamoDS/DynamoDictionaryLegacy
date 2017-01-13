@@ -34,14 +34,16 @@
         "Name": "AllTrue",
         "imageFile": [
             "AllTrue",
-            "AllTrue - Ex 2"
+            "AllTrue - Ex 2",
+            "AllTrue - Ex 3"
         ],
         "dynFile": [
             "AllTrue",
-            "AllTrue - Ex 2"
+            "AllTrue - Ex 2",
+            "AllTrue - Ex 3"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "<p>AllTrue only returns <strong>true</strong> if <em>every</em> item in a list is false. Let us test this out...</p>"
+        "inDepth": "<p>AllTrue only returns <strong>true</strong> if <em>every</em> item in a list is false. Let us test this out...Adding some more text here...checking it out</p>"
     },
     {
         "Name": "Contains (list, element)",
