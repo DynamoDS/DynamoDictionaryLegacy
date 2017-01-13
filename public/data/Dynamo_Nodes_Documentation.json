@@ -3205,7 +3205,7 @@
             "ByCenterPointStartPointEndPoint"
         ],
         "folderPath": "Geometry/Arc/Create",
-        "inDepth": "<p>Arc ByCenterPointStartPointEndPoint draws a best-fit arc around a specified Center. The arc will always begin at the Start Point and end at the closest point possible to the given End Point. This example demonstrates this property by randomly feeding the node three random points for the center, start and end point.dddd</p>"
+        "inDepth": "Arc ByCenterPointStartPointEndPoint draws a best-fit arc around a specified Center. The arc will always begin at the Start Point and end at the closest point possible to the given End Point. This example demonstrates this property by randomly feeding the node three random points for the center, start and end point."
     },
     {
         "Name": "ByCenterPointStartPointSweepAngle",
