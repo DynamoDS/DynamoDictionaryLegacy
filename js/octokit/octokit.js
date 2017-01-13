@@ -1130,6 +1130,9 @@
               queryString = toQueryString(options);
               return _request('GET', "" + this.repoPath + "/notifications" + queryString, null);
             };
+			this.getPulls = function() {
+              return _request('GET', "" + this.repoPath + "/pulls", null);
+            };
             this.getCollaborators = function() {
               return _request('GET', "" + this.repoPath + "/collaborators", null);
             };
