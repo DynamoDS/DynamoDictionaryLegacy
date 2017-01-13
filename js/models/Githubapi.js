@@ -31,7 +31,6 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
         token: token
     });
     var repo = gh.getRepo('DynamoDS', 'DynamoDictionary');
-    repo.getInfo().then((res)=>{console.log(res)})
     repo.getBranches()
         .then(function(branches) {
             if (branches.filter(function(b) {
