@@ -66,6 +66,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
                         return undefined;
                 }
             })
+            console.log(contents,message);
             branch.writeMany(contents, message)
                 .then(function() {
                     if (!branchExists) {
