@@ -26,12 +26,23 @@ function imageContents(f) {
 }
 function runSubmit(token,files, mainExampleFile, branchName, message, terminate) {
     var branchExists = false;
+    var prExists=false;
     files.push(mainExampleFile)
     var gh = new Octokit({
         token: token
     });
     var repo = gh.getRepo('DynamoDS', 'DynamoDictionary');
-    repo.getBranches()
+    let existingPullRequests=[];
+    repo.getPulls()
+        .then(function(pulls){
+            existingPullRequests=pulls;
+            if (existingPullRequests.filter(function(pr) {
+                    return pr.head.ref === branchName;
+                }).length > 0) {
+                prExists = true;
+            }       
+            return repo.getBranches()
+        })
         .then(function(branches) {
             if (branches.filter(function(b) {
                     return b[2] === branchName;
@@ -67,7 +78,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
             })
             branch.writeMany(contents, message)
                 .then(function() {
-                    if (!branchExists) {
+                    if (!branchExists && !prExists) {
                         return repo.createPullRequest({
                             "title": branchName,
                             "body": "files updated by user",
@@ -83,7 +94,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
                     terminate(result.html_url);
                   }
                   else{
-                    repo.data.forEach((d,i)=>{
+                    existingPullRequests.forEach((d,i)=>{
                       if(d.head.ref===branchName){
                         terminate(d.html_url)
                       }
