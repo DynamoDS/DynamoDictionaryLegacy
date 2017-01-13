@@ -77,7 +77,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
                             "base": "master"
                         })
                     } else {
-                        return axios.get('https://api.github.com/repos/DynamoDS/DynamoDictionary/pulls')
+                        return repo.getInfo();
                     }
                 })
                 .then(function(result) {
@@ -85,7 +85,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
                     terminate(result.html_url);
                   }
                   else{
-                    result.data.forEach((d,i)=>{
+                    repo.data.forEach((d,i)=>{
                       if(d.head.ref===branchName){
                         terminate(d.html_url)
                       }
