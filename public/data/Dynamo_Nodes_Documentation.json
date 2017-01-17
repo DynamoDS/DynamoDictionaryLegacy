@@ -28,7 +28,7 @@
             "AllFalse - Ex 2"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "<p>AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false. just want to see what happens if i try to add to an existing pr</p>"
+        "inDepth": "AllFalse only returns <strong>true</strong> if <em>every</em> item in a list is false."
     },
     {
         "Name": "AllTrue",
