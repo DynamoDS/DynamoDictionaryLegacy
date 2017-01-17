@@ -1,0 +1,19 @@
+<Workspace Version="1.1.0.2093" X="-242.884975274664" Y="-127.393672336921" zoom="1.51051845643135" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.Filename guid="5411bf49-384e-484a-8583-3c8724e456d5" type="CoreNodeModels.Input.Filename" nickname="File Path" x="493.794016285536" y="303.119599476515" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>..\..\..\..\..\..\..\..\..\..\..\Username\sample.txt</System.String>
+      <HintPath>C:\Users\Username\sample.txt</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="626959ed-37a5-4107-9b93-eb809652c3a5" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="File.Delete" x="710.258817351867" y="303.119599476515" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.File.Delete@string" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="5411bf49-384e-484a-8583-3c8724e456d5" start_index="0" end="626959ed-37a5-4107-9b93-eb809652c3a5" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

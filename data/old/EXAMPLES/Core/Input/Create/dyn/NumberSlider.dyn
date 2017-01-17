@@ -1,0 +1,21 @@
+<Workspace Version="1.0.1.1167" X="-80.5056330749534" Y="-33.2929021698948" zoom="1.2198072017255" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Input.DoubleSlider guid="bd5d43a7-7501-4ff8-a6c1-cd21c3b9062e" type="CoreNodeModels.Input.DoubleSlider" nickname="Number Slider" x="312.835921218821" y="275.932185014234" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double>5.536</System.Double>
+      <Range min="0" max="10" step="0.001" />
+    </CoreNodeModels.Input.DoubleSlider>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="916a82a8-971c-4937-b924-87d605a86b43" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Create Sequence" x="697.011192366308" y="279.932185014234" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0..#8..x;" ShouldFocus="false" />
+    <CoreNodeModels.Watch guid="0b777c21-a622-48ad-abb5-4d8d79220288" type="CoreNodeModels.Watch" nickname="Watch" x="900.835921218821" y="276.932185014234" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="bd5d43a7-7501-4ff8-a6c1-cd21c3b9062e" start_index="0" end="916a82a8-971c-4937-b924-87d605a86b43" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="916a82a8-971c-4937-b924-87d605a86b43" start_index="0" end="0b777c21-a622-48ad-abb5-4d8d79220288" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
