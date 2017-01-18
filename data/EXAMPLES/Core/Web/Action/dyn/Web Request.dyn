@@ -1,0 +1,18 @@
+<Workspace Version="1.1.0.2093" X="-494.504111967511" Y="-659.99465251756" zoom="1.68567506496238" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.WebRequest guid="cc852757-ef4b-4fa9-b869-0f7e5e5ccb5c" type="CoreNodeModels.WebRequest" nickname="Web Request" x="638.711061869913" y="477.175106050396" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="c7fd1aaf-985b-4694-899d-6e4bcc89f4af" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="354.004604418744" y="477.175106050396" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;http://www.google.com&quot;;" ShouldFocus="false" />
+    <CoreNodeModels.Watch guid="b38b6cd1-4333-4091-81e4-040b083de67c" type="CoreNodeModels.Watch" nickname="Watch" x="799.417519321081" y="477.175106050396" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="cc852757-ef4b-4fa9-b869-0f7e5e5ccb5c" start_index="0" end="b38b6cd1-4333-4091-81e4-040b083de67c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c7fd1aaf-985b-4694-899d-6e4bcc89f4af" start_index="0" end="cc852757-ef4b-4fa9-b869-0f7e5e5ccb5c" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-8.34366893768311" eyeY="6.98868608474731" eyeZ="8.88468647003174" lookX="12.9839553833008" lookY="-5.89671277999878" lookZ="-15.9828119277954" upX="0.0395914241671562" upY="0.998026669025421" upZ="-0.0487357005476952" />
+  </Cameras>
+</Workspace>

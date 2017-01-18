@@ -1,0 +1,40 @@
+<Workspace Version="1.1.0.2093" X="-53.5308992785281" Y="-3019.72170132037" zoom="1.22371114846061" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9600d4b4-31eb-42d1-abd9-4eb87688dc71" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="ImportFromCSV" x="277.766227933131" y="2715.42665398142" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="BuiltIn" function="ImportFromCSV@string" />
+    <CoreNodeModels.Input.Filename guid="85991f94-b687-43b7-8c9e-fda0976ba522" type="CoreNodeModels.Input.Filename" nickname="File Path" x="48.5503835933197" y="2715.42665398142" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>..\..\..\_REFERENCE\sample.csv</System.String>
+      <HintPath>C:\Users\Ronnie Parsons\Desktop\Dynamo Example Files\_REFERENCE\sample.csv</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <CoreNodeModels.Watch guid="cee29fc1-67d0-496e-93e2-cb7c344d8279" type="CoreNodeModels.Watch" nickname="Watch" x="474.012079444405" y="2715.42665398142" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="1770858f-f28c-452f-9f81-02871f191c0d" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="612.589695097559" y="2489.91393512096" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0..4..1;&#xA;0..2..1;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="83401a1f-9867-474d-8160-347999440a5c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Point.ByCoordinates" x="769.64542312463" y="2479.66393553067" isVisible="false" isUpstreamVisible="true" lacing="CrossProduct" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d77e975d-d07e-40a9-8c96-d617b2d8c6aa" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Geometry.Translate" x="941.851682385687" y="2599.92006118432" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector,double" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="78e95391-04af-485b-a7d5-74cf213b5777" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="/" x="783.24542312463" y="2715.42665398142" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Operators" function="/@var[]..[],var[]..[]" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="b4b55445-c3b9-4a1c-8fda-71b04ab55ca0" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="640.12855916823" y="2764.7507602683" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="4;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6aadaef2-093d-4af2-bf76-0a9846c35240" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Vector.ZAxis" x="810.44542312463" y="2625.4985086654" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Vector.ZAxis" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="9600d4b4-31eb-42d1-abd9-4eb87688dc71" start_index="0" end="cee29fc1-67d0-496e-93e2-cb7c344d8279" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="85991f94-b687-43b7-8c9e-fda0976ba522" start_index="0" end="9600d4b4-31eb-42d1-abd9-4eb87688dc71" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="cee29fc1-67d0-496e-93e2-cb7c344d8279" start_index="0" end="78e95391-04af-485b-a7d5-74cf213b5777" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1770858f-f28c-452f-9f81-02871f191c0d" start_index="0" end="83401a1f-9867-474d-8160-347999440a5c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1770858f-f28c-452f-9f81-02871f191c0d" start_index="1" end="83401a1f-9867-474d-8160-347999440a5c" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="83401a1f-9867-474d-8160-347999440a5c" start_index="0" end="d77e975d-d07e-40a9-8c96-d617b2d8c6aa" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="78e95391-04af-485b-a7d5-74cf213b5777" start_index="0" end="d77e975d-d07e-40a9-8c96-d617b2d8c6aa" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b4b55445-c3b9-4a1c-8fda-71b04ab55ca0" start_index="0" end="78e95391-04af-485b-a7d5-74cf213b5777" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6aadaef2-093d-4af2-bf76-0a9846c35240" start_index="0" end="d77e975d-d07e-40a9-8c96-d617b2d8c6aa" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-3.0809423782101" eyeY="6.58278034904571" eyeZ="4.89118827840124" lookX="4.447307619268" lookY="-7.53881371345051" lookZ="-13.8605777481249" upX="0.0790740303901089" upY="0.965925789826175" upZ="-0.246443890768185" />
+  </Cameras>
+</Workspace>

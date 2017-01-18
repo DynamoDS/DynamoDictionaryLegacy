@@ -1,0 +1,35 @@
+<Workspace Version="1.0.0.1180" X="386.00321515527" Y="72.8839607265418" zoom="0.798825425049558" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.Range guid="d86b77d5-1f15-4b1d-8503-040128b15d65" type="CoreNodeModels.Range" nickname="Range" x="183.338573109596" y="14.489734124652" isVisible="true" isUpstreamVisible="true" lacing="Longest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </CoreNodeModels.Range>
+    <CoreNodeModels.Watch guid="b62ffd65-5a06-4878-af5a-133f03dc71be" type="CoreNodeModels.Watch" nickname="Watch" x="395.076039079692" y="14.9169504372234" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Input.IntegerSlider guid="715577c7-2e25-4976-b162-a21c39b9866b" type="CoreNodeModels.Input.IntegerSlider" nickname="Integer Slider" x="-239.856180270405" y="13.9154800596997" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Int32>1</System.Int32>
+      <Range min="0" max="100" step="1" />
+    </CoreNodeModels.Input.IntegerSlider>
+    <CoreNodeModels.Input.IntegerSlider guid="6d38cdd3-27a4-460b-bca8-50c254f3c7bf" type="CoreNodeModels.Input.IntegerSlider" nickname="Integer Slider" x="-237.731112210596" y="68.9669432730331" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Int32>25</System.Int32>
+      <Range min="0" max="100" step="1" />
+    </CoreNodeModels.Input.IntegerSlider>
+    <CoreNodeModels.Input.IntegerSlider guid="c708908f-9a05-4bfb-9a43-adb393c1b213" type="CoreNodeModels.Input.IntegerSlider" nickname="Integer Slider" x="-237.623688681073" y="123.002232333604" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Int32>2</System.Int32>
+      <Range min="0" max="100" step="1" />
+    </CoreNodeModels.Input.IntegerSlider>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="d86b77d5-1f15-4b1d-8503-040128b15d65" start_index="0" end="b62ffd65-5a06-4878-af5a-133f03dc71be" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="715577c7-2e25-4976-b162-a21c39b9866b" start_index="0" end="d86b77d5-1f15-4b1d-8503-040128b15d65" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6d38cdd3-27a4-460b-bca8-50c254f3c7bf" start_index="0" end="d86b77d5-1f15-4b1d-8503-040128b15d65" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c708908f-9a05-4bfb-9a43-adb393c1b213" start_index="0" end="d86b77d5-1f15-4b1d-8503-040128b15d65" end_index="2" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-13.988694190979" eyeY="18.2644901275635" eyeZ="21.4298629760742" lookX="16.7237854003906" lookY="-5.27742385864258" lookZ="-19.5883941650391" upX="-0.00906574074178934" upY="0.999902546405792" upZ="0.0106186075136065" />
+  </Cameras>
+</Workspace>
