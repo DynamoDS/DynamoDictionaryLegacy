@@ -40,7 +40,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
                     return pr.head.ref === branchName;
                 }).length > 0) {
                 prExists = true;
-            }       
+            }
             return repo.getBranches()
         })
         .then(function(branches) {
