@@ -1235,43 +1235,67 @@
     },
     {
         "Name": "Boolean",
-        "imageFile": ["Boolean"],
-        "dynFile": ["Boolean"],
+        "imageFile": [
+            "Boolean"
+        ],
+        "dynFile": [
+            "Boolean"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "The Boolean node allows the user to toggle between two boolean values 'true' or 'false' by selecting the appropriate radio button. "
     },
     {
         "Name": "Code Block (())",
-        "imageFile": ["CodeBlock"],
-        "dynFile": ["CodeBlock"],
+        "imageFile": [
+            "CodeBlock"
+        ],
+        "dynFile": [
+            "CodeBlock"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "The Code Block is universal and can be useful in all definitions. With this node, we can fully customize the Dynamo functionality and experience by coding directly into the graph. In this example, we see a range of possible uses including Numbers, Strings, Booleans for item based code, and Ranges and Sequences for creating lists of values."
     },
     {
         "Name": "Code Block ()",
-        "imageFile": ["CodeBlock"],
-        "dynFile": ["CodeBlock"],
+        "imageFile": [
+            "CodeBlock"
+        ],
+        "dynFile": [
+            "CodeBlock"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "The Code Block is universal and can be useful in all definitions. With this node, we can fully customize the Dynamo functionality and experience by coding directly into the graph. In this example, we see a range of possible uses including Numbers, Strings, Booleans for item based code, and Ranges and Sequences for creating lists of values."
     },
     {
         "Name": "Date Time",
-        "imageFile": ["DateTime"],
-        "dynFile": ["DateTime"],
+        "imageFile": [
+            "DateTime"
+        ],
+        "dynFile": [
+            "DateTime"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "DateTime will create a datetime object with the specified input month, day, year, and time. The format must be in the form: 'January 01, 1900 12:00 AM' The month must be capitalized and written out in full. The day must be two digits, the year must be four digits."
     },
     {
         "Name": "Directory Path",
-        "imageFile": ["DirectoryPath"],
-        "dynFile": ["DirectoryPath"],
+        "imageFile": [
+            "DirectoryPath"
+        ],
+        "dynFile": [
+            "DirectoryPath"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "Directory Path allows the user to select a directory from their computer. To set the directory path, click the 'Browse...' button on the Directory Path node, then navigate to the desired directory. If this node is added to a previously saved .dyn file, this node will default to the directory of the .dyn file."
     },
     {
         "Name": "File Path",
-        "imageFile": ["FilePath"],
-        "dynFile": ["FilePath"],
+        "imageFile": [
+            "FilePath"
+        ],
+        "dynFile": [
+            "FilePath"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "File Path allows the user to select a file from their computer. To set the file path, click the 'Browse...' button on the File Path node, then navigate to the desired file."
     },
@@ -1288,22 +1312,34 @@
     },
     {
         "Name": "Integer Slider",
-        "imageFile": ["IntegerSlider"],
-        "dynFile": ["IntegerSlider"],
+        "imageFile": [
+            "IntegerSlider"
+        ],
+        "dynFile": [
+            "IntegerSlider"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "An Integer Slider works in the same way as a Number Slider but only outputs integers. The Integer Slider in the example definition allows us to control the list length, ensuring that we always have whole-number of list outputs. "
     },
     {
         "Name": "Number",
-        "imageFile": ["Number"],
-        "dynFile": ["Number"],
+        "imageFile": [
+            "Number"
+        ],
+        "dynFile": [
+            "Number"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "The Number node allows a user to enter a static number. This node is useful for things like constants that don't change values. Numbers can also be created by using a Code Block node. In the example below, the number is paired with a code block to create a list sequence with a variable step size."
     },
     {
         "Name": "Number Slider",
-        "imageFile": ["NumberSlider"],
-        "dynFile": ["NumberSlider"],
+        "imageFile": [
+            "NumberSlider"
+        ],
+        "dynFile": [
+            "NumberSlider"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "The Number Slider is a customizable, tactile node that allows us to interface with the data driving our Dynamo definitions. Here, the number slider is paired with a code block to create a dynamic list sequence with a variable step size."
     },
@@ -1320,8 +1356,12 @@
     },
     {
         "Name": "String",
-        "imageFile": ["String"],
-        "dynFile": ["String"],
+        "imageFile": [
+            "String"
+        ],
+        "dynFile": [
+            "String"
+        ],
         "folderPath": "Core/Input/Action",
         "inDepth": "The String node allows a user to enter a string value. A string can also be created with a Code Block by surrounding the string in quotes. In the example below, we use a String node and a Code Block to create the strings 'Hello' and 'World'. A String.Join node is used to combine the two strings together. A second String node is used with a blank space to act as the separator, resulting in the output string 'Hello World'."
     },
@@ -2568,120 +2608,188 @@
     },
     {
         "Name": "Center",
-        "imageFile": ["Center"],
-        "dynFile": ["Center"],
+        "imageFile": [
+            "Center"
+        ],
+        "dynFile": [
+            "Center"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Center will increase the width of an input string according to the newWidth input by adding the padChars input on both sides of the original string. If the original string is longer than the newWidth input, this node will return the original string unchanged. In the example below, we use the string 'Hello World' as the input string. A string with an underscore character is used as the padding character, while an integer slider is used to control the new width of the centered string."
     },
     {
         "Name": "ChangeCase",
-        "imageFile": ["ChangeCase"],
-        "dynFile": ["ChangeCase"],
+        "imageFile": [
+            "ChangeCase"
+        ],
+        "dynFile": [
+            "ChangeCase"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Change Case takes a string and a boolean value as input. If the boolean input is 'true', it will change the input string to upper case. If the boolean input is false, it will change the input string to lower case. In the example below, we use an example string 'Hello World' as the input string, and a boolean toggle to specify whether to change the string to all upper case or all lower case letters."
     },
     {
         "Name": "Concat",
-        "imageFile": ["Concat"],
-        "dynFile": ["Concat"],
+        "imageFile": [
+            "Concat"
+        ],
+        "dynFile": [
+            "Concat"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Concat will concatenate multiple strings together into a single string. The number of input strings can be changed by using the '+' and '-' buttons on the Concat node. In the example below, we start with two separate strings 'Hello' and 'World'. They are concatenated together to 'HelloWorld' using the Concat node."
     },
     {
         "Name": "Contains",
-        "imageFile": ["Contains"],
-        "dynFile": ["Contains"],
+        "imageFile": [
+            "Contains"
+        ],
+        "dynFile": [
+            "Contains"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Contains will search one given string for a second input string. If the first string contains the second, it will return true. If not, it will return false. By default, this node is case sensitive. A boolean value can be used to ignore the case of the strings when searching. In the example below we use the string 'Hello World' and search for the string 'E'. By using a boolean toggle set to true for the ignoreCase input, the Contains node returns true."
     },
     {
         "Name": "CountOccurrences",
-        "imageFile": ["CountOccurrences"],
-        "dynFile": ["CountOccurrences"],
+        "imageFile": [
+            "CountOccurrences"
+        ],
+        "dynFile": [
+            "CountOccurrences"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Count Occurrences will search a given string for a second input string, and will return the number of times that second string is found within the first string. By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we using the string 'Hello World' and search for the string 'L'. Because ignoreCase is set to true, the CountOccurrences finds the given string three times within 'Hello World'."
     },
     {
         "Name": "EndsWith",
-        "imageFile": ["EndsWith"],
-        "dynFile": ["EndsWith"],
+        "imageFile": [
+            "EndsWith"
+        ],
+        "dynFile": [
+            "EndsWith"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Ends With will return a boolean value based on whether a given string ends with a second input string. By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we use the string 'Hello World' as the original string, and use a second string 'orld' as the string to search for. Because 'Hello World' ends in the string 'orld', the EndsWith node returns true."
     },
     {
         "Name": "IndexOf",
-        "imageFile": ["IndexOf"],
-        "dynFile": ["IndexOf"],
+        "imageFile": [
+            "IndexOf"
+        ],
+        "dynFile": [
+            "IndexOf"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "IndexOf will search a given string for a second input string. If the second string is found, this node will return the index of the first character of the first occurrence of the string.  By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we use the string 'Hello World', and search for the character 'o', This letter occurs twice in the string, but only the index of the first occurrence is returned by the IndexOf node."
     },
     {
         "Name": "Insert",
-        "imageFile": ["Insert"],
-        "dynFile": ["Insert"],
+        "imageFile": [
+            "Insert"
+        ],
+        "dynFile": [
+            "Insert"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Insert will insert a given string into a base string at a specified index. In the example below, we start with the base string 'Hello World'. We use a second string 'Hi!' as the string to insert. An integery slider is used to control the index at which the second string will be inserted into the base string."
     },
     {
         "Name": "Join",
-        "imageFile": ["Join"],
-        "dynFile": ["Join"],
+        "imageFile": [
+            "Join"
+        ],
+        "dynFile": [
+            "Join"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Join will concatenate a series of strings together into a single string using a specified separator string between them. In the example below, we use an underscore character as the separator. We create three strings to concatenate together. The number of string inputs this node will accept can be changed by using the '+' and '-' buttons on the node."
     },
     {
         "Name": "LastIndexOf",
-        "imageFile": ["LastIndexOf"],
-        "dynFile": ["LastIndexOf"],
+        "imageFile": [
+            "LastIndexOf"
+        ],
+        "dynFile": [
+            "LastIndexOf"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Last Index Of will search a given string for a second input string. If the second string is found, this node will return the index of the last occurrence. By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we use the string 'Hello World', and search for the string 'o'. This string is found twice within the base string, and the index of the final occurrence of the string is returned."
     },
     {
         "Name": "Length",
-        "imageFile": ["Length"],
-        "dynFile": ["Length"],
+        "imageFile": [
+            "Length"
+        ],
+        "dynFile": [
+            "Length"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Length returns the number of characters in an input string. In the example below, we start with the string 'Hello World'. By using a Length node, we see that this string has 11 characters."
     },
     {
         "Name": "PadLeft",
-        "imageFile": ["PadLeft"],
-        "dynFile": ["PadLeft"],
+        "imageFile": [
+            "PadLeft"
+        ],
+        "dynFile": [
+            "PadLeft"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "PadLeft will increase the width of an input string according to the newWidth input by adding the padChars input on the left side of the original string. If the original string is longer than the newWidth input, this node will return the original string unchanged. In the example below, we use the string 'Hello World' as the input string. A string with an underscore character is used as the padding character, while an integer slider is used to control the new width of the string."
     },
     {
         "Name": "PadRight",
-        "imageFile": ["PadRight"],
-        "dynFile": ["PadRight"],
+        "imageFile": [
+            "PadRight"
+        ],
+        "dynFile": [
+            "PadRight"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "PadRight will increase the width of an input string according to the newWidth input by adding the padChars input on the right side of the original string. If the original string is longer than the newWidth input, this node will return the original string unchanged. In the example below, we use the string 'Hello World' as the input string. A string with an underscore character is used as the padding character, while an integer slider is used to control the new width of the string."
     },
     {
         "Name": "Remove",
-        "imageFile": ["Remove"],
-        "dynFile": ["Remove"],
+        "imageFile": [
+            "Remove"
+        ],
+        "dynFile": [
+            "Remove"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Remove takes a string as input, and will remove characters from that string starting at the 'startIndex' input. The number of characters to be removed is specified by the 'count' index. In the example below, we start with the string 'Hello World'. Two integer sliders are used to control the startIndex and count of the characters to be removed by a Remove node."
     },
     {
         "Name": "Replace",
-        "imageFile": ["Replace"],
-        "dynFile": ["Replace"],
+        "imageFile": [
+            "Replace"
+        ],
+        "dynFile": [
+            "Replace"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Replace will search a given string for a second input string. If that string is found, it will be replaced by a third input string. This node is case sensitive. In the example below, we start with the string 'Hello World'. The string 'o' is used as the string to search for, and a third string 'Hi!' is input as the string to replace with. Because the letter 'o' occurs twice within the original string, it is replaced in both occurrence with the string 'Hi!'."
     },
     {
         "Name": "Split",
-        "imageFile": ["Split"],
-        "dynFile": ["Split"],
+        "imageFile": [
+            "Split"
+        ],
+        "dynFile": [
+            "Split"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Split takes an input string and splits it according to a series of separators. The separator strings, if found, are removed from the original string, and a list of the fragments are returned. The number of separators to split by can be adjusted by using the '+' and '-' buttons on the node. In the example below, we start with the string 'Hello World'. The string 'o' is used as the separators string. The result is three fragments of the original string."
     },
     {
         "Name": "StartsWith",
-        "imageFile": ["StartsWith"],
-        "dynFile": ["StartsWith"],
+        "imageFile": [
+            "StartsWith"
+        ],
+        "dynFile": [
+            "StartsWith"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Starts With will return a boolean value based on whether a given string starts with a second input string. By default this node is case sensitive. A boolean value can be used in the 'ignoreCase' input to make the node ignore the case of the strings. In the example below, we use the string 'Hello World' as the original string, and use a second string 'h' as the string to search for. Because 'Hello World' starts with the string 'h' and ignoreCase is set to true, the StartsWith node returns true."
     },
@@ -2694,57 +2802,89 @@
     },
     {
         "Name": "String from Object",
-        "imageFile": ["String from Object"],
-        "dynFile": ["String from Object"],
+        "imageFile": [
+            "String from Object"
+        ],
+        "dynFile": [
+            "String from Object"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about String from Object..."
     },
     {
         "Name": "Substring",
-        "imageFile": ["Substring"],
-        "dynFile": ["Substring"],
+        "imageFile": [
+            "Substring"
+        ],
+        "dynFile": [
+            "Substring"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "Substring takes an input string and returns a sub string based on the start index and length inputs. In the example below, we start with the string 'Hello World'. Two integer sliders are used to control where to start the substring and how many characters to take."
     },
     {
         "Name": "ToLower",
-        "imageFile": ["ToLower"],
-        "dynFile": ["ToLower"],
+        "imageFile": [
+            "ToLower"
+        ],
+        "dynFile": [
+            "ToLower"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "To Lower will convert an input string to lower case letters. In the example below we start with the string 'Hello World'. By using a ToLower node, we change this string to 'hello world'."
     },
     {
         "Name": "ToNumber",
-        "imageFile": ["ToNumber"],
-        "dynFile": ["ToNumber"],
+        "imageFile": [
+            "ToNumber"
+        ],
+        "dynFile": [
+            "ToNumber"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "To Number will convert an input string to a number data type. This node requires a string that has the format of a number. In the example below, we can see that the string 'Hello World' cannot be converted to a number, while the string '5.2' can be converted to number 5.2 "
     },
     {
         "Name": "ToUpper",
-        "imageFile": ["ToUpper"],
-        "dynFile": ["ToUpper"],
+        "imageFile": [
+            "ToUpper"
+        ],
+        "dynFile": [
+            "ToUpper"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "To Upper will convert an input string to upper case letters. In the example below we start with the string 'Hello World'. By using a ToUpper node, we change this string to 'HELLO WORLD'."
     },
     {
         "Name": "TrimLeadingWhitespace",
-        "imageFile": ["TrimLeadingWhitespace"],
-        "dynFile": ["TrimLeadingWhitespace"],
+        "imageFile": [
+            "TrimLeadingWhitespace"
+        ],
+        "dynFile": [
+            "TrimLeadingWhitespace"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "TrimLeadingWhitespace will remove the whitespace at the beginning of an input string. In the example below, we start with the string '     Hello World', which has several leading and trailing spaces. By using TrimLeadingWhitespace, we can remove the spaces at the beginning of the string."
     },
     {
         "Name": "TrimTrailingWhitespace",
-        "imageFile": ["TrimTrailingWhitespace"],
-        "dynFile": ["TrimTrailingWhitespace"],
+        "imageFile": [
+            "TrimTrailingWhitespace"
+        ],
+        "dynFile": [
+            "TrimTrailingWhitespace"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "TrimTrailingWhitespace will remove the whitespace at the end of an input string. In the example below, we start with the string '     Hello World     ', which has several leading and trailing spaces. By using TrimTrailingWhitespace, we can remove the spaces at the end of the string."
     },
     {
         "Name": "TrimWhitespace",
-        "imageFile": ["TrimWhitespace"],
-        "dynFile": ["TrimWhitespace"],
+        "imageFile": [
+            "TrimWhitespace"
+        ],
+        "dynFile": [
+            "TrimWhitespace"
+        ],
         "folderPath": "Core/String/Action",
         "inDepth": "TrimWhitespace will remove all the whitespace of an input string. In the example below, we start with the string '     Hello World     ', which has several leading and trailing spaces. By using TrigWhitespace, we can remove the spaces at the beginning and end of the string, as well as the space between 'Hello' and 'World'."
     },
@@ -3043,7 +3183,7 @@
             "ByBestFitThroughPoints"
         ],
         "folderPath": "Geometry/Arc/Create",
-        "inDepth": "<p>Arc.ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions.</p>"
+        "inDepth": "<p>Arc.ByBestFitThroughPoints draws an arc that best represents three or more points. This example creates an arc from a list of random points ranging from 0 to 4 in the X and Y directions. test</p>"
     },
     {
         "Name": "ByCenterPointRadiusAngle",
@@ -3912,8 +4052,12 @@
     },
     {
         "Name": "ZXPlane",
-        "imageFile": ["ZXPlane"],
-        "dynFile": ["ZXPlane"],
+        "imageFile": [
+            "ZXPlane"
+        ],
+        "dynFile": [
+            "ZXPlane"
+        ],
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "ZXPlane will return a plane on the Z and X axes of a CoordinateSystem. In the example below, a plane is placed on the ZX axes of a rotated CoordinateSystem."
     },
@@ -4436,8 +4580,12 @@
     },
     {
         "Name": "Simplify",
-        "imageFile": ["Simplify"],
-        "dynFile": ["Simplify"],
+        "imageFile": [
+            "Simplify"
+        ],
+        "dynFile": [
+            "Simplify"
+        ],
         "folderPath": "Geometry/Curve/Action",
         "inDepth": "Add in-depth information about Simplify..."
     },
@@ -5719,8 +5867,12 @@
     },
     {
         "Name": "ByControlPointsWeightsKnots",
-        "imageFile": ["ByControlPointsWeightsKnots"],
-        "dynFile": ["ByControlPointsWeightsKnots"],
+        "imageFile": [
+            "ByControlPointsWeightsKnots"
+        ],
+        "dynFile": [
+            "ByControlPointsWeightsKnots"
+        ],
         "folderPath": "Geometry/NurbsSurface/Create",
         "inDepth": "Add in-depth information about ByControlPointsWeightsKnots..."
     },
@@ -5737,8 +5889,12 @@
     },
     {
         "Name": "ByPointsTangents",
-        "imageFile": ["ByPointsTangents"],
-        "dynFile": ["ByPointsTangents"],
+        "imageFile": [
+            "ByPointsTangents"
+        ],
+        "dynFile": [
+            "ByPointsTangents"
+        ],
         "folderPath": "Geometry/NurbsSurface/Create",
         "inDepth": "Add in-depth information about ByPointsTangents..."
     },
@@ -5817,15 +5973,23 @@
     },
     {
         "Name": "IsPeriodicInU",
-        "imageFile": ["IsPeriodicInU"],
-        "dynFile": ["IsPeriodicInU"],
+        "imageFile": [
+            "IsPeriodicInU"
+        ],
+        "dynFile": [
+            "IsPeriodicInU"
+        ],
         "folderPath": "Geometry/NurbsSurface/Query",
         "inDepth": "Add in-depth information about IsPeriodicInU..."
     },
     {
         "Name": "IsPeriodicInV",
-        "imageFile": ["IsPeriodicInV"],
-        "dynFile": ["IsPeriodicInV"],
+        "imageFile": [
+            "IsPeriodicInV"
+        ],
+        "dynFile": [
+            "IsPeriodicInV"
+        ],
         "folderPath": "Geometry/NurbsSurface/Query",
         "inDepth": "Add in-depth information about IsPeriodicInV..."
     },
@@ -6185,22 +6349,34 @@
     },
     {
         "Name": "ByJoinedCurves",
-        "imageFile": ["ByJoinedCurves"],
-        "dynFile": ["ByJoinedCurves"],
+        "imageFile": [
+            "ByJoinedCurves"
+        ],
+        "dynFile": [
+            "ByJoinedCurves"
+        ],
         "folderPath": "Geometry/PolyCurve/Create",
         "inDepth": "Polycurve By Joined Curves creates joined curves from a set of curves with matching vertices. In this example, a RegularPolygon is exploded into a curve list and is then rejoined into a Polycurve."
     },
     {
         "Name": "ByPoints",
-        "imageFile": ["ByPoints"],
-        "dynFile": ["ByPoints"],
+        "imageFile": [
+            "ByPoints"
+        ],
+        "dynFile": [
+            "ByPoints"
+        ],
         "folderPath": "Geometry/PolyCurve/Create",
         "inDepth": "Polycurve By Points creates joined curves from a set of vertices. This node also allows us to toggle between a closed and an open shape. In this example, points are created along a circle and are redrawn with a PolyCurve By Points component, creating a closed polygon shape."
     },
     {
         "Name": "ByThickeningCurve",
-        "imageFile": ["ByThickeningCurve"],
-        "dynFile": ["ByThickeningCurve"],
+        "imageFile": [
+            "ByThickeningCurve"
+        ],
+        "dynFile": [
+            "ByThickeningCurve"
+        ],
         "folderPath": "Geometry/PolyCurve/Create",
         "inDepth": "Polycurve By Thickening Curve is a node that constructs a closed, offset polygon from a single curve. In this node, we can specify the curve being thickened, the overall thickness, and the normal direction of the offset. This example shows how a randomly generated Nurbs Curve is offset perpendicular to its start and end point vector. "
     },
@@ -7786,8 +7962,12 @@
     },
     {
         "Name": "ReadFromFile",
-        "imageFile": ["ReadFromFile"],
-        "dynFile": ["ReadFromFile"],
+        "imageFile": [
+            "ReadFromFile"
+        ],
+        "dynFile": [
+            "ReadFromFile"
+        ],
         "folderPath": "Office/Excel/Action",
         "inDepth": "Read From File takes a file as input. The file should be a text file that has data separated by commas. The different lines in the file correspond to the outer list, while the individual values in each line correspond to the inner lists. In the example below, we first use a File Path node and a File.FromPath node to create a file object that points to a text file. Then we use a ReadFromFile node to create a list from the CSV file."
     },
