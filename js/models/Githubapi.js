@@ -6,7 +6,7 @@ function githubSubmitter(files, mainExampleFile, branchName, message, terminate)
 }
 function dynContents(f) {
     console.log('dyn run',f)
-    var file_path = 'public/' + f.og.slice(2).replace("Examples", "EXAMPLES");
+    var file_path = f.og.slice(2).replace("Examples", "EXAMPLES");
     var fileOb = {
         content: f.data,
         isBase64: false
@@ -16,7 +16,7 @@ function dynContents(f) {
 
 function imageContents(f) {
     console.log('img run',f)
-    var file_path = 'public/' + f.og.slice(2).replace("Examples", "EXAMPLES");
+    var file_path = f.og.slice(2).replace("Examples", "EXAMPLES");
     var file_contents = window.atob((f.data.replace(/^(.+,)/, '')));
     var fileOb = {
         content: file_contents,
@@ -72,7 +72,7 @@ function runSubmit(token,files, mainExampleFile, branchName, message, terminate)
                         contents[ob[0]] = ob[1];
                         break;
                     default:
-                        contents['public/data/Dynamo_Nodes_Documentation.json'] = JSON.stringify(f, null, 4);
+                        contents['data/Dynamo_Nodes_Documentation.json'] = JSON.stringify(f, null, 4);
                         return undefined;
                 }
             })
