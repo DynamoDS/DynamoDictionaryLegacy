@@ -1,0 +1,24 @@
+<Workspace Version="1.2.1.3083" X="7" Y="-32" zoom="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSRevitNodesUI.RevitRevisions guid="ac314c58-f8eb-44e8-80a5-c0d9570bc686" type="DSRevitNodesUI.RevitRevisions" nickname="Select Revision" x="158" y="388" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="0:Seq. 1 - Revision 1" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2403698c-c0ef-4bef-be7e-afb429d2e98c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Revision.Issued" x="441.5" y="388" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.Revision.Issued">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="ac314c58-f8eb-44e8-80a5-c0d9570bc686" start_index="0" end="2403698c-c0ef-4bef-be7e-afb429d2e98c" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="3429af53-5f1b-4b5a-a4eb-ab0840270e85" text="This Dynamo example file has been created with the basic sample project in the Revit installation directory, typically found in: &#xD;&#xA;&#xD;&#xA;C:\Program Files\Autodesk\Revit 2017\Samples" x="13.5" y="110" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="f3c0307c-56b0-4bcc-8580-a7ccb077d17e" annotationText="Revit sample file: rac_basic_sample_project.rvt" left="3.5" top="42" width="316" height="170" fontSize="24" InitialTop="110" InitialHeight="140" TextblockHeight="58" backgrouund="#FF48B9FF">
+      <Models ModelGuid="3429af53-5f1b-4b5a-a4eb-ab0840270e85" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>
