@@ -12,8 +12,12 @@
     },
     {
         "Name": "ByPointAndString",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "ByPointAndString - Ex 1"
+        ],
+        "dynFile": [
+            "ByPointAndString - Ex 1"
+        ],
         "folderPath": "Analyze/Label/Create",
         "inDepth": "Add in-depth information about ByPointAndString..."
     },
@@ -40,26 +44,9 @@
         "inDepth": "AllTrue only returns <strong>true</strong> if <em>every</em> item in a list is false."
     },
     {
-        "Name": "Contains (list, element)",
-        "imageFile": [
-            "Contains (list, element)"
-        ],
-        "dynFile": [
-            "Contains (list, element)"
-        ],
+        "Name": "Contains",
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Contains (list, element) will return a boolean value based on whether a List contains an input element. In the example below, a list of Red values extracted from a bitmap are tested for containing an input value of 0. This is helpful in establishing why the Circle.ByCenterPointRadius is displaying a warning as a circle cannot be created from a radius of 0."
-    },
-    {
-        "Name": "Contains (list, element)",
-        "imageFile": [
-            "Contains (list, element)"
-        ],
-        "dynFile": [
-            "Contains (list, element)"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "Contains (list, element) will return a boolean value based on whether a List contains an input element. In the example below, a list of Red values extracted from a bitmap are tested for containing an input value of 0. This is helpful in establishing why the Circle.ByCenterPointRadius is displaying a warning as a circle cannot be created from a radius of 0."
+        "inDepth": "Add in-depth information about Contains..."
     },
     {
         "Name": "ContainsKey",
@@ -161,17 +148,6 @@
         "inDepth": "GroupByFunction will return a new list grouped by a function. In the example below, two different lists are grouped using List.GetItemAtIndex as the function. This function creates groups (a new list) from each top level index."
     },
     {
-        "Name": "ImportFromCSV (filePath, transpose)",
-        "imageFile": [
-            "ImportFromCSV (filePath, transpose)"
-        ],
-        "dynFile": [
-            "ImportFromCSV (filePath, transpose)"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "ImportFromCSV will return the contents of a CSV (Comma Separated Value) file as a list of lists with the ability to transpose the list (swap columns with rows). In the example below, imported values from a sample CSV are used to define the Z translation distance of a grid of points. The list structure of the imported values (list of lists) corresponds to the list structure of the point grid. Switching the boolean value for transpose will use different values from the CSV for translation distances. Each row of the CSV becomes a list."
-    },
-    {
         "Name": "ImportFromCSV (filePath)",
         "imageFile": [
             "ImportFromCSV (filePath)"
@@ -181,6 +157,17 @@
         ],
         "folderPath": "BuiltIn/Action",
         "inDepth": "ImportFromCSV will return the contents of a CSV (Comma Separated Value) file as a list of lists. In the example below, imported values from the a sample CSV are used to define the Z translation distance of a grid of points. The list structure of the imported values (list of lists) corresponds to list structure of the point grid. Each row of the CSV becomes a list."
+    },
+    {
+        "Name": "ImportFromCSV (filePath, transpose)",
+        "imageFile": [
+            "ImportFromCSV (filePath, transpose)"
+        ],
+        "dynFile": [
+            "ImportFromCSV (filePath, transpose)"
+        ],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "ImportFromCSV will return the contents of a CSV (Comma Separated Value) file as a list of lists with the ability to transpose the list (swap columns with rows). In the example below, imported values from a sample CSV are used to define the Z translation distance of a grid of points. The list structure of the imported values (list of lists) corresponds to the list structure of the point grid. Switching the boolean value for transpose will use different values from the CSV for translation distances. Each row of the CSV becomes a list."
     },
     {
         "Name": "IndexOf",
@@ -305,15 +292,15 @@
     },
     {
         "Name": "NewtonRootFind1DNoDeriv",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about NewtonRootFind1DNoDeriv..."
     },
     {
         "Name": "NewtonRootFind1DWithDeriv",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about NewtonRootFind1DWithDeriv..."
     },
@@ -341,8 +328,8 @@
     },
     {
         "Name": "Rank",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "BuiltIn/Action",
         "inDepth": "Counts how many levels are in a list"
     },
@@ -424,17 +411,6 @@
         "inDepth": "SortByFunction will return a list sorted by a function. In the example below, a line is drawn through a list of randomly placed points that have been sorted with different functions. The first curve through an unsorted list is non-directional. Sorting the list using the X or Y component of each point results in directional lines progressing across X or Y."
     },
     {
-        "Name": "SortIndexByValue (list, ascending)",
-        "imageFile": [
-            "SortIndexByValue (list, ascending)"
-        ],
-        "dynFile": [
-            "SortIndexByValue (list, ascending)"
-        ],
-        "folderPath": "BuiltIn/Action",
-        "inDepth": "SortIndexByValue will return a list of indices sorted by their member's values, either ascending or descending by a boolean toggle. In the example below, a list of random numbers is sorted by ascending and descending order and a new order is returned as index values."
-    },
-    {
         "Name": "SortIndexByValue (list)",
         "imageFile": [
             "SortIndexByValue (list)"
@@ -444,6 +420,17 @@
         ],
         "folderPath": "BuiltIn/Action",
         "inDepth": "SortIndexByValue will return a list of indices sorted by their member's values in ascending order. In the example below, a list of random numbers is sorted, and a new order is returned as index values."
+    },
+    {
+        "Name": "SortIndexByValue (list, ascending)",
+        "imageFile": [
+            "SortIndexByValue (list, ascending)"
+        ],
+        "dynFile": [
+            "SortIndexByValue (list, ascending)"
+        ],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "SortIndexByValue will return a list of indices sorted by their member's values, either ascending or descending by a boolean toggle. In the example below, a list of random numbers is sorted by ascending and descending order and a new order is returned as index values."
     },
     {
         "Name": "TrueForAll",
@@ -799,8 +786,8 @@
     },
     {
         "Name": "MinValue (year, month, day)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Core/DateTime/Query",
         "inDepth": "Add in-depth information about MinValue (year, month, day)..."
     },
@@ -2061,17 +2048,6 @@
         "inDepth": "Xor will accept two boolean values, or two lists of boolean values and determines whether the values are the same or different. Xor compares two values and returns 'true' if exactly one of the inputs is 'true'. If both values are 'true' or if both values are 'false', Xor will return 'false'. In the example below, we start with two lists of boolean values. Together, these lists represent the four possible combinations of true and false values. Notice that unlike And and Or nodes, Xor only allows two values."
     },
     {
-        "Name": "Abs (number)",
-        "imageFile": [
-            "Abs"
-        ],
-        "dynFile": [
-            "Abs"
-        ],
-        "folderPath": "Core/Math/Action",
-        "inDepth": "Abs will return the absolute value of an input value. In the example below, we use a number slider to control the input to an Abs node."
-    },
-    {
         "Name": "Abs (integer)",
         "imageFile": [
             "Abs"
@@ -2081,6 +2057,17 @@
         ],
         "folderPath": "Core/Math/Action",
         "inDepth": "Abs will return the absolute value of an input value. In the example below, we use an integer slider to control the input to an Abs node."
+    },
+    {
+        "Name": "Abs (number)",
+        "imageFile": [
+            "Abs"
+        ],
+        "dynFile": [
+            "Abs"
+        ],
+        "folderPath": "Core/Math/Action",
+        "inDepth": "Abs will return the absolute value of an input value. In the example below, we use a number slider to control the input to an Abs node."
     },
     {
         "Name": "Acos",
@@ -2226,17 +2213,6 @@
         "inDepth": "Floor will find the nearest integer that less than an input number. This can also be thought of as rounding down to the nearest integer. In the example below, we use a number slider to control the input to a Floo node."
     },
     {
-        "Name": "Log (number, logBase)",
-        "imageFile": [
-            "Log_base"
-        ],
-        "dynFile": [
-            "Log_base"
-        ],
-        "folderPath": "Core/Math/Action",
-        "inDepth": "Log with logBase allows the use to specify the base to use for a logarithm with the logBase input. In the example below, we use two number sliders, one to control the input number to find the logarithm of and a second number slider to set the base of the logarithm."
-    },
-    {
         "Name": "Log (number)",
         "imageFile": [
             "Log"
@@ -2246,6 +2222,17 @@
         ],
         "folderPath": "Core/Math/Action",
         "inDepth": "Log will return the natural log (base e) of an input number. In the example below, we use a number slider to control the input to a Log node."
+    },
+    {
+        "Name": "Log (number, logBase)",
+        "imageFile": [
+            "Log_base"
+        ],
+        "dynFile": [
+            "Log_base"
+        ],
+        "folderPath": "Core/Math/Action",
+        "inDepth": "Log with logBase allows the use to specify the base to use for a logarithm with the logBase input. In the example below, we use two number sliders, one to control the input number to find the logarithm of and a second number slider to set the base of the logarithm."
     },
     {
         "Name": "Log10",
@@ -2281,17 +2268,6 @@
         "inDepth": "Max will return the greater of two input number. In the example below, we use two number sliders to control the inputs to a Max node."
     },
     {
-        "Name": "Min (int1, int2)",
-        "imageFile": [
-            "Min_int"
-        ],
-        "dynFile": [
-            "Min_int"
-        ],
-        "folderPath": "Core/Math/Action",
-        "inDepth": "Min will return the lesser of two input integers. In the example below, we use two integer sliders to control the inputs to a Min node."
-    },
-    {
         "Name": "Min (value1, value2)",
         "imageFile": [
             "Min"
@@ -2301,6 +2277,17 @@
         ],
         "folderPath": "Core/Math/Action",
         "inDepth": "Min will return the lesser of two input number. In the example below, we use two number sliders to control the inputs to a Min node."
+    },
+    {
+        "Name": "Min (int1, int2)",
+        "imageFile": [
+            "Min_int"
+        ],
+        "dynFile": [
+            "Min_int"
+        ],
+        "folderPath": "Core/Math/Action",
+        "inDepth": "Min will return the lesser of two input integers. In the example below, we use two integer sliders to control the inputs to a Min node."
     },
     {
         "Name": "Pow",
@@ -2567,13 +2554,6 @@
         "inDepth": "Type will return the type of object passed through the node as a string. In the example below, several types of geometry are passed through the node to show the resulting strings. A Point will return Autodesk.DesignScript.Geometry.Point, a NurbsSurface will return Autodesk.DesignScript.Geometry.NurbsSurface, and an integer will return System.Int32."
     },
     {
-        "Name": "Formula (IN[0])",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Core/Scripting/Action",
-        "inDepth": "Add in-depth information about Formula..."
-    },
-    {
         "Name": "Formula (())",
         "imageFile": [
             "Formula (())"
@@ -2583,6 +2563,13 @@
         ],
         "folderPath": "Core/Scripting/Action",
         "inDepth": "Formula uses the NCalc mathematical expressions evaluator to return the result of a formula. In the example below, the result of an if statement using NCalc is drawn as a NurbsCurve."
+    },
+    {
+        "Name": "Formula (IN[0])",
+        "imageFile": false,
+        "dynFile": false,
+        "folderPath": "Core/Scripting/Action",
+        "inDepth": "Add in-depth information about Formula..."
     },
     {
         "Name": "Python Script",
@@ -2605,6 +2592,11 @@
         ],
         "folderPath": "Core/Scripting/Action",
         "inDepth": "Python Script From String will return the result of the node's inputs passed through a string Python script. In the example below, a Python script is retrieved from a text file and converted into a string. A cube created from Cuboid.ByCorners is arrayed and translated by the Python script by looping through both X and Y."
+    },
+    {
+        "Name": "AllIndicesOf",
+        "folderPath": "Core/String/Action",
+        "inDepth": "Add in-depth information about AllIndicesOf..."
     },
     {
         "Name": "Center",
@@ -2795,8 +2787,8 @@
     },
     {
         "Name": "String from Array",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about String from Array..."
     },
@@ -3329,26 +3321,9 @@
         "inDepth": "Bounding Box ByCorners creates a Bounding Box from two input points. In this example we are using the diagonal vector to Translate the Start Point of the box to create its End Point. In order to visualize the Box, we are converting the box to a Polysurface and extracting its edge curves."
     },
     {
-        "Name": "ByGeometry (geom)",
-        "imageFile": [
-            "ByGeometry_gg"
-        ],
-        "dynFile": [
-            "ByGeometry_gg"
-        ],
+        "Name": "ByGeometry",
         "folderPath": "Geometry/BoundingBox/Create",
-        "inDepth": "Bounding Box ByGeometry solves a Bounding Box of multiple input Geometry. This example shows a Bounding Box drawn around multiple Cones. In order to visualize the Box, we are converting the box to a Polysurface and extracting its edge curves."
-    },
-    {
-        "Name": "ByGeometry (geom)",
-        "imageFile": [
-            "ByGeometry_gg"
-        ],
-        "dynFile": [
-            "ByGeometry_gg"
-        ],
-        "folderPath": "Geometry/BoundingBox/Create",
-        "inDepth": "Bounding Box ByGeometry solves a Bounding Box of multiple input Geometry. This example shows a Bounding Box drawn around multiple Cones. In order to visualize the Box, we are converting the box to a Polysurface and extracting its edge curves."
+        "inDepth": "Add in-depth information about ByGeometry..."
     },
     {
         "Name": "Contains",
@@ -3638,21 +3613,10 @@
     },
     {
         "Name": "ByMatrix",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "Add in-depth information about ByMatrix..."
-    },
-    {
-        "Name": "ByOrigin (origin)",
-        "imageFile": [
-            "ByOrigin (origin)"
-        ],
-        "dynFile": [
-            "ByOrigin (origin)"
-        ],
-        "folderPath": "Geometry/CoordinateSystem/Create",
-        "inDepth": "ByOrigin (origin) will return a new CoordinateSystem with it's origin at the input Point. In the example below, a new CoordinateSystem is created with its origin at (4,4,0)."
     },
     {
         "Name": "ByOrigin (x, y)",
@@ -3677,9 +3641,20 @@
         "inDepth": "ByOrigin (x, y, z) will return a new CoordinateSystem with the X, Y, and Z values of its origin as the node's inputs. In the example below, a new CoordinateSystem is created with it's origin at (4,2,1) from inputs 4, 2, and 1 into X, Y, and Z respectively."
     },
     {
+        "Name": "ByOrigin (origin)",
+        "imageFile": [
+            "ByOrigin (origin)"
+        ],
+        "dynFile": [
+            "ByOrigin (origin)"
+        ],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "ByOrigin (origin) will return a new CoordinateSystem with it's origin at the input Point. In the example below, a new CoordinateSystem is created with its origin at (4,4,0)."
+    },
+    {
         "Name": "ByOriginVectors (origin, xAxis, yAxis, zAxis)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "Add in-depth information about ByOriginVectors (origin, xAxis, yAxis, zAxis)..."
     },
@@ -3729,8 +3704,8 @@
     },
     {
         "Name": "Identity (matrix)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "Add in-depth information about Identity (matrix)..."
     },
@@ -3790,13 +3765,6 @@
         "inDepth": "PreMultiplyBy will return a new CoordinateSystem from multiplying it by an other (argument) CoordinateSystem and a CoordinateSystem. In the example below, a new CoordinateSystem is returned that is translated and rotated relative to the CoordinateSystem it was multiplied by and it's argument. This node is similar to the PostMultiplyBy node with the only difference being that the other input is applied before the coordinatesystem input."
     },
     {
-        "Name": "Rotate (coordinateSystem, origin, degrees)",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Add in-depth information about Rotate..."
-    },
-    {
         "Name": "Rotate (coordinateSystem, origin, axis, degrees)",
         "imageFile": [
             "Rotate (coordinateSystem, origin, axis, degrees)"
@@ -3808,29 +3776,23 @@
         "inDepth": "Rotate (coordinateSystem, origin, axis, degrees) will return a new CoordinateSystem rotated about an origin and vector. In the example below, a CoordinateSystem is rotated about an origin point at (2,0,0) and a vector equivalent to the Y Axis. More complex rotations can be achieved with more complex vectors."
     },
     {
-        "Name": "Scale (coordinateSystem, xamount, yamount, zamount)",
-        "imageFile": [],
-        "dynFile": [],
+        "Name": "Rotate (coordinateSystem, plane, degrees)",
         "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Add in-depth information about Scale (coordinateSystem, xamount, yamount, zamount)..."
+        "inDepth": "Add in-depth information about Rotate..."
     },
     {
         "Name": "Scale (coordinateSystem, plane, xamount, yamount, zamount)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Scale (coordinateSystem, plane, xamount, yamount, zamount)..."
     },
     {
-        "Name": "Scale (coordinateSystem, basePoint, from, to)",
-        "imageFile": [
-            "Scale (coordinateSystem, basePoint, from, to)"
-        ],
-        "dynFile": [
-            "Scale (coordinateSystem, basePoint, from, to)"
-        ],
+        "Name": "Scale (coordinateSystem, xamount, yamount, zamount)",
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Scale (coordinateSystem, basePoint, from, to) will return a scaled CoordinateSystem based on basePoint, from, and to inputs. The basePoint input will define where the scaling begins from (how much the CoordinateSystem is moved). The distance between the from and to values defines the amount to scale by. In the example below, a basePoint of (0,2,0) defines where to scale from. The distance between the from (1,1,0) and to (4.2,4.2,0) points determines how much to scale by."
+        "inDepth": "Add in-depth information about Scale (coordinateSystem, xamount, yamount, zamount)..."
     },
     {
         "Name": "Scale (coordinateSystem, amount)",
@@ -3844,16 +3806,27 @@
         "inDepth": "Scale (coordinateSystem, amount) will return a new CoordinateSystem scaled by a factor. In the example below, a CoordinateSystem at the origin is scaled by a factor of 3.5. The resulting CoordinateSystem has vector lengths and scale factors of 3.5. Adjust the slider for different scale factors."
     },
     {
+        "Name": "Scale (coordinateSystem, basePoint, from, to)",
+        "imageFile": [
+            "Scale (coordinateSystem, basePoint, from, to)"
+        ],
+        "dynFile": [
+            "Scale (coordinateSystem, basePoint, from, to)"
+        ],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Scale (coordinateSystem, basePoint, from, to) will return a scaled CoordinateSystem based on basePoint, from, and to inputs. The basePoint input will define where the scaling begins from (how much the CoordinateSystem is moved). The distance between the from and to values defines the amount to scale by. In the example below, a basePoint of (0,2,0) defines where to scale from. The distance between the from (1,1,0) and to (4.2,4.2,0) points determines how much to scale by."
+    },
+    {
         "Name": "Scale1D",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Scale1D will return a new Plane "
     },
     {
         "Name": "Scale2D",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Scale2D..."
     },
@@ -3891,15 +3864,15 @@
         "inDepth": "Transform (coordinateSystem, cs) will return a new CoordinateSystem transformed by two input CoordinateSystems. In the example below, the two input CoordinateSystems result in a new CoordinateSystem even further from the origin. The new CoordinateSystem is identified with a Cylinder created on it."
     },
     {
-        "Name": "Translate (coordinateSystem, direction)",
+        "Name": "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation)",
         "imageFile": [
-            "Translate (coordinateSystem, direction)"
+            "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation)"
         ],
         "dynFile": [
-            "Translate (coordinateSystem, direction)"
+            "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation)"
         ],
         "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Translate (coordinateSystem, direction) will return a new CoordinateSystem translated by an input vector. In the example below, a CoordinateSystem at the origin is translated a certain distance and direction as defined by the input Vector of (3.8, 2.7,0). The new CoordinateSystem is identified with a Cylinder created on it."
+        "inDepth": "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation) will return a new CoordinateSystem based on translation distances in the X, Y, Z directions. In the example below, a new CoordinateSystem is returned from translation distances of 3.8 in the X, 2.7 in the Y, and 0.8 in the Z. The new CoordinateSystem is identified with a Cylinder created on it."
     },
     {
         "Name": "Translate (coordinateSystem, direction, distance)",
@@ -3913,41 +3886,41 @@
         "inDepth": "Translate (coordinateSystem, direction, distance) will return a new CoordinateSystem translated by an input vector and distance. In the example below, a CoordinateSystem at the origin is translated in a direction by the input Vector of (3.1, 4.1,0) and a distance of 3. The distance input will override the vector input's length. The new CoordinateSystem is identified with a Cylinder created on it."
     },
     {
-        "Name": "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation)",
+        "Name": "Translate (coordinateSystem, direction)",
         "imageFile": [
-            "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation)"
+            "Translate (coordinateSystem, direction)"
         ],
         "dynFile": [
-            "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation)"
+            "Translate (coordinateSystem, direction)"
         ],
         "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Translate (coordinateSystem, xTranslation, yTranslation, zTranslation) will return a new CoordinateSystem based on translation distances in the X, Y, Z directions. In the example below, a new CoordinateSystem is returned from translation distances of 3.8 in the X, 2.7 in the Y, and 0.8 in the Z. The new CoordinateSystem is identified with a Cylinder created on it."
+        "inDepth": "Translate (coordinateSystem, direction) will return a new CoordinateSystem translated by an input vector. In the example below, a CoordinateSystem at the origin is translated a certain distance and direction as defined by the input Vector of (3.8, 2.7,0). The new CoordinateSystem is identified with a Cylinder created on it."
     },
     {
         "Name": "Determinant",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about Determinant..."
     },
     {
         "Name": "IsScaledOrtho",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsScaledOrtho..."
     },
     {
         "Name": "IsSingular",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsSingular..."
     },
     {
         "Name": "IsUniscaledOrtho",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsUniscaledOrtho..."
     },
@@ -4084,17 +4057,6 @@
         "inDepth": "This Cuboid By Lengths allows the user to input a Coordinate System. The cuboid will be created at the origin of the input Coordinate System, with the length, width, and heigh oriented according to the Coordinate System. In the example, we use three number sliders to input the length, width, and heigh, and generate random coordinates to use to create a Coordinate System."
     },
     {
-        "Name": "ByLengths (origin, width, length, height)",
-        "imageFile": [
-            "ByLengths_origin"
-        ],
-        "dynFile": [
-            "ByLengths_origin"
-        ],
-        "folderPath": "Geometry/Cuboid/Create",
-        "inDepth": "This Cuboid By Lengths allows the user to input an origin point for the center of the cuboid, as well as the length, width and height of the cuboid. In the example file, we use three number sliders to input the length, width, and height, and generate a random point to use as the origin."
-    },
-    {
         "Name": "ByLengths (width, length, height)",
         "imageFile": [
             "ByLengths"
@@ -4104,6 +4066,17 @@
         ],
         "folderPath": "Geometry/Cuboid/Create",
         "inDepth": "Cuboid By Lengths creates a cuboid with the input width, legth, and height, and is centered at the origin. In the example, we use three number sliders to input the length, width and height."
+    },
+    {
+        "Name": "ByLengths (origin, width, length, height)",
+        "imageFile": [
+            "ByLengths_origin"
+        ],
+        "dynFile": [
+            "ByLengths_origin"
+        ],
+        "folderPath": "Geometry/Cuboid/Create",
+        "inDepth": "This Cuboid By Lengths allows the user to input an origin point for the center of the cuboid, as well as the length, width and height of the cuboid. In the example file, we use three number sliders to input the length, width, and height, and generate a random point to use as the origin."
     },
     {
         "Name": "Height",
@@ -4260,17 +4233,6 @@
         "inDepth": "Extrude by distance will extrude an input curve using an input number to determine the distance of the extrusion. The direction of the normal vector along the curve will be used for the extrusion direction. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A number slider is used as the distance input in an Extrude node."
     },
     {
-        "Name": "Extrude (curve, direction)",
-        "imageFile": [
-            "Extrude_direction"
-        ],
-        "dynFile": [
-            "Extrude_direction"
-        ],
-        "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Extrude by direction will extrude an input curve using an input vector to determine the direction of the extrusion. The length of the vector will be used for the extrusion distance. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an Extrude node."
-    },
-    {
         "Name": "Extrude (curve, direction, distance)",
         "imageFile": [
             "Extrude_direction_distance"
@@ -4282,15 +4244,15 @@
         "inDepth": "Extrude by direction and distance will extrude an input curve using an input vector to determine the direction of the extrusion. A separate distance input will be used for the extrusion distance. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an Extrude node while a number slider is used to control the distance input."
     },
     {
-        "Name": "ExtrudeAsSolid (curve, distance)",
+        "Name": "Extrude (curve, direction)",
         "imageFile": [
-            "ExtrudeAsSolid_distance"
+            "Extrude_direction"
         ],
         "dynFile": [
-            "ExtrudeAsSolid_distance"
+            "Extrude_direction"
         ],
         "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Extrude As Solid by distance will extrude an input closed, planar curve using an input number to determine the distance of the extrusion. The direction of the extrusion is determined by the normal vector of the plane the curve lies in. This node will cap the the ends of the extrusion to create a solid. In the example below, we first create a Nurbs Curve using a ByPoints node, with a set of randomly generated points as the input. A Number Slider is used as the distance input in an ExtrudeAsSolid node."
+        "inDepth": "Extrude by direction will extrude an input curve using an input vector to determine the direction of the extrusion. The length of the vector will be used for the extrusion distance. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an Extrude node."
     },
     {
         "Name": "ExtrudeAsSolid (curve, direction)",
@@ -4302,6 +4264,17 @@
         ],
         "folderPath": "Geometry/Curve/Action",
         "inDepth": "Extrude As Solid by direction will extrude an input closed, planar curve using an input vector to determine the direction of the extrusion. The length of the vector will be used for the extrusion distance. This node will cap the the ends of the extrusion to create a solid. In the example below, we first create a Nurbs Curve using a ByPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an ExtrudeAsSolid node."
+    },
+    {
+        "Name": "ExtrudeAsSolid (curve, distance)",
+        "imageFile": [
+            "ExtrudeAsSolid_distance"
+        ],
+        "dynFile": [
+            "ExtrudeAsSolid_distance"
+        ],
+        "folderPath": "Geometry/Curve/Action",
+        "inDepth": "Extrude As Solid by distance will extrude an input closed, planar curve using an input number to determine the distance of the extrusion. The direction of the extrusion is determined by the normal vector of the plane the curve lies in. This node will cap the the ends of the extrusion to create a solid. In the example below, we first create a Nurbs Curve using a ByPoints node, with a set of randomly generated points as the input. A Number Slider is used as the distance input in an ExtrudeAsSolid node."
     },
     {
         "Name": "ExtrudeAsSolid (curve, direction, distance)",
@@ -4326,26 +4299,9 @@
         "inDepth": "Horizontal Frame At Parameter will return a coordinate system aligned with the input curve at the specified parameter. The parameterization of a curve is measured in the range from zero to one, with zero representing the start of the curve and one representing the end of the curve. The resulting coordinate system will have its z-axis in the world Z direction, and the y-axis in the direction of the tangent of the curve at the specified parameter. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A number slider set to the range 0 to 1 is used to control the parameter input for a HorizontalFrameAtParameter node."
     },
     {
-        "Name": "Join (curve, curves)",
-        "imageFile": [
-            "Join_curves"
-        ],
-        "dynFile": [
-            "Join_curves"
-        ],
+        "Name": "Join",
         "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Join will take one input curve and one list of input curves, and will return a PolyCurve that results from joining the curves together.  In the example below, we start with one arc and one line. We blend between the start of the arch and the end of the line to connect the two curves. The arc and line are put into a single list by using a List.Create node. This list is then used as the input along with the blended curve in a Join node to create a single PolyCurve out of the three curves."
-    },
-    {
-        "Name": "Join (curve, curve)",
-        "imageFile": [
-            "Join_curve"
-        ],
-        "dynFile": [
-            "Join_curve"
-        ],
-        "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Join will take two curves as input and return a PolyCurve that results from joining the two curves together.  In the example below, we start with one arc and one line. We blend between the start of the arch and the end of the line to connect the two curves. The Arc and the resulting blended curve are then joined into a PolyCurve using a Join node."
+        "inDepth": "Add in-depth information about Join..."
     },
     {
         "Name": "NormalAtParameter",
@@ -5140,17 +5096,6 @@
         "inDepth": "Geometry ExportToSAT exports Geometry from Dynamo to a SAT file type. In this example, we are exporting a Polysurface from the Intersection of three Spheres."
     },
     {
-        "Name": "ExportToSAT (geometry, filePath, unitsMM)",
-        "imageFile": [
-            "ExportToSAT (geometry, filePath, unitsMM)"
-        ],
-        "dynFile": [
-            "ExportToSAT (geometry, filePath, unitsMM)"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "ExportToSAT (geometry, filePath, unitsMM) will return an .SAT file export at the input file path with input units. In the example below, a Cylinder is exported to a file path of C://_REFERENCE/exportsample.sat with millimeters as its units. "
-    },
-    {
         "Name": "ExportToSAT (geometry, filePath)",
         "imageFile": [
             "ExportToSAT_gf"
@@ -5160,39 +5105,6 @@
         ],
         "folderPath": "Geometry/Geometry/Action",
         "inDepth": "Geometry ExportToSAT exports Geometry from Dynamo to a SAT file type. In this example, we are exporting a Polysurface from the Intersection of three Spheres."
-    },
-    {
-        "Name": "ExportToSAT (geometry, filePath, unitsMM)",
-        "imageFile": [
-            "ExportToSAT (geometry, filePath, unitsMM)"
-        ],
-        "dynFile": [
-            "ExportToSAT (geometry, filePath, unitsMM)"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "ExportToSAT (geometry, filePath, unitsMM) will return an .SAT file export at the input file path with input units. In the example below, a Cylinder is exported to a file path of C://_REFERENCE/exportsample.sat with millimeters as its units. "
-    },
-    {
-        "Name": "ExportToSAT (geometry, filePath)",
-        "imageFile": [
-            "ExportToSAT_gf"
-        ],
-        "dynFile": [
-            "ExportToSAT_gf"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "Geometry ExportToSAT exports Geometry from Dynamo to a SAT file type. In this example, we are exporting a Polysurface from the Intersection of three Spheres."
-    },
-    {
-        "Name": "ImportFromSAT (filePath)",
-        "imageFile": [
-            "ImportFromSAT"
-        ],
-        "dynFile": [
-            "ImportFromSAT"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "Geometry ImportFromSAT imports Geometry to Dynamo from a SAT file type. This node takes a filePath as input, and also accepts a string with a valid file path. For the example below, we previously exported geometry to a SAT file (see ExportToSAT). The file name we chose was example.sat and it was exported to a folder on the users desktop. In the example, we show two different nodes used to import geometry from a SAT file. One has a filePath as the input type, and the other has a 'file' as the input type. The filePath is created using a FilePath node, which can select a file by clicking the Browse button. In the second example, we specify the file path manually by using a string element."
     },
     {
         "Name": "ImportFromSAT (file)",
@@ -5204,6 +5116,17 @@
         ],
         "folderPath": "Geometry/Geometry/Action",
         "inDepth": "Geometry ImportFromSAT imports Geometry to Dynamo from a SAT file type. This node takes a file as input, and also accepts a string with a valid file path. For the example below, we previously exported geometry to a SAT file (see ExportToSAT). The file name we chose was example.sat and it was exported to a folder on the users desktop. In the example, we show two different nodes used to import geometry from a SAT file. One has a filePath as the input type, and the other has a 'file' as the input type. The filePath is created using a FilePath node, which can select a file by clicking the Browse button. In the second example, we specify the file path manually by using a string element."
+    },
+    {
+        "Name": "ImportFromSAT (filePath)",
+        "imageFile": [
+            "ImportFromSAT"
+        ],
+        "dynFile": [
+            "ImportFromSAT"
+        ],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "Geometry ImportFromSAT imports Geometry to Dynamo from a SAT file type. This node takes a filePath as input, and also accepts a string with a valid file path. For the example below, we previously exported geometry to a SAT file (see ExportToSAT). The file name we chose was example.sat and it was exported to a folder on the users desktop. In the example, we show two different nodes used to import geometry from a SAT file. One has a filePath as the input type, and the other has a 'file' as the input type. The filePath is created using a FilePath node, which can select a file by clicking the Browse button. In the second example, we specify the file path manually by using a string element."
     },
     {
         "Name": "Intersect",
@@ -5272,17 +5195,6 @@
         "inDepth": "This Geometry Rotate Node Rotates an input Geometry around a Base Plane by a defined Degree. In the example file, a Cone is Rotated around the XY-Plane with a Number Slider."
     },
     {
-        "Name": "Scale (geometry, basePoint, from, to)",
-        "imageFile": [
-            "Scale_gbft"
-        ],
-        "dynFile": [
-            "Scale_gbft"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "This Geometry Scale Node Scales an input Geometry from three reference Points. In this example, we are scaling a Cone relative to its End Point from its Start Point to its Centroid. The Cone Circle and side Edge are drawn as a visual reference of the Scale."
-    },
-    {
         "Name": "Scale (geometry, amount)",
         "imageFile": [
             "Scale_ga"
@@ -5303,6 +5215,17 @@
         ],
         "folderPath": "Geometry/Geometry/Action",
         "inDepth": "This Geometry Scale Node Scales an input Geometry from the object Centroid by an input factor. In the example, a Cone’s Scale can be finely tuned with three Number Sliders. The original Cone Edges are drawn as a visual reference."
+    },
+    {
+        "Name": "Scale (geometry, basePoint, from, to)",
+        "imageFile": [
+            "Scale_gbft"
+        ],
+        "dynFile": [
+            "Scale_gbft"
+        ],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "This Geometry Scale Node Scales an input Geometry from three reference Points. In this example, we are scaling a Cone relative to its End Point from its Start Point to its Centroid. The Cone Circle and side Edge are drawn as a visual reference of the Scale."
     },
     {
         "Name": "Scale (geometry, plane, xamount, yamount, zamount)",
@@ -5393,17 +5316,6 @@
         "inDepth": "This Geometry Transform Node moves and orients a geometry from the XY-Plane to any specified Plane. In this example a Cone is Transformed from the XY-Plane to the YZ-Plane."
     },
     {
-        "Name": "Translate (geometry, direction)",
-        "imageFile": [
-            "Translate_gd"
-        ],
-        "dynFile": [
-            "Translate_gd"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "This Geometry Translate Node moves a geometry by any given Vector. In the example file, we are Translating a Cone by the Vector created between the Start and End Points of the Cone."
-    },
-    {
         "Name": "Translate (geometry, xTranslation, yTranslation, zTranslation)",
         "imageFile": [
             "Translate_gxyz"
@@ -5424,6 +5336,17 @@
         ],
         "folderPath": "Geometry/Geometry/Action",
         "inDepth": "This Geometry Translate Node moves a geometry by a Vector defined in the Node by inputting all three Translation Values for X, Y and Z. In the example file, a Cone is Translated by three Number Slider values."
+    },
+    {
+        "Name": "Translate (geometry, direction)",
+        "imageFile": [
+            "Translate_gd"
+        ],
+        "dynFile": [
+            "Translate_gd"
+        ],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "This Geometry Translate Node moves a geometry by any given Vector. In the example file, we are Translating a Cone by the Vector created between the Start and End Points of the Cone."
     },
     {
         "Name": "Trim",
@@ -5525,17 +5448,6 @@
         "inDepth": "Radius will return the distance from the central axis to the point on the helix on a plane perpendicular to the axis. In the example below, we create a helix using Helix by Axis, then use Radius to find the radius of the helix."
     },
     {
-        "Name": "ByIndices (a, b, c, d)",
-        "imageFile": [
-            "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)"
-        ],
-        "dynFile": [
-            "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)"
-        ],
-        "folderPath": "Geometry/IndexGroup/Create",
-        "inDepth": "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d) will return an IndexGroup of four Indices. In the example below, four indices are defined for a four-sided Mesh created with Mesh.ByPointsFacesIndices."
-    },
-    {
         "Name": "ByIndices (a, b, c)",
         "imageFile": [
             "ByIndices (a, b, c) (a, b, c)"
@@ -5545,6 +5457,17 @@
         ],
         "folderPath": "Geometry/IndexGroup/Create",
         "inDepth": "ByIndices (a, b, c) (a, b, c) will return an IndexGroup of three Indices. In the example below, three indices are defined for a three-sided Mesh created with Mesh.ByPointsFacesIndices."
+    },
+    {
+        "Name": "ByIndices (a, b, c, d)",
+        "imageFile": [
+            "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)"
+        ],
+        "dynFile": [
+            "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)"
+        ],
+        "folderPath": "Geometry/IndexGroup/Create",
+        "inDepth": "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d) will return an IndexGroup of four Indices. In the example below, four indices are defined for a four-sided Mesh created with Mesh.ByPointsFacesIndices."
     },
     {
         "Name": "A",
@@ -5701,17 +5624,6 @@
         "inDepth": "VertexPositions will return a Mesh face's Vertex positions as Points. In the example below, the Vertex positions of a four-sided Mesh face are returned as Points."
     },
     {
-        "Name": "ByControlPoints (points, degree, closeCurve)",
-        "imageFile": [
-            "ByControlPoints_pdc"
-        ],
-        "dynFile": [
-            "ByControlPoints_pdc"
-        ],
-        "folderPath": "Geometry/NurbsCurve/Create",
-        "inDepth": "Nurbs Curve By Control Points inputs a list of control points to draw the Nurbs Curve and also allows us to control the degree of the curve. We also have the option to close the curve back to the first point in the list. This example generates four random points on the World XY plane and connects them in order in the X and Y directions."
-    },
-    {
         "Name": "ByControlPoints (points, degree)",
         "imageFile": [
             "ByControlPoints_p"
@@ -5721,6 +5633,17 @@
         ],
         "folderPath": "Geometry/NurbsCurve/Create",
         "inDepth": "Nurbs Curve By Control Points inputs a list of control points to draw the Nurbs Curve and also allows us to control the degree of the curve. This example generates four random points on the World XY plane and connects them in order in the X and Y directions."
+    },
+    {
+        "Name": "ByControlPoints (points, degree, closeCurve)",
+        "imageFile": [
+            "ByControlPoints_pdc"
+        ],
+        "dynFile": [
+            "ByControlPoints_pdc"
+        ],
+        "folderPath": "Geometry/NurbsCurve/Create",
+        "inDepth": "Nurbs Curve By Control Points inputs a list of control points to draw the Nurbs Curve and also allows us to control the degree of the curve. We also have the option to close the curve back to the first point in the list. This example generates four random points on the World XY plane and connects them in order in the X and Y directions."
     },
     {
         "Name": "ByControlPoints (points)",
@@ -5756,17 +5679,6 @@
         "inDepth": "Nurbs Curve By Points inputs a list of points to draw a Nurbs Curve through. This example generates six random points on the World XY plane and connects them in order in the X and Y directions. "
     },
     {
-        "Name": "ByPoints (points, degree)",
-        "imageFile": [
-            "ByPoints_pd"
-        ],
-        "dynFile": [
-            "ByPoints_pd"
-        ],
-        "folderPath": "Geometry/NurbsCurve/Create",
-        "inDepth": "Nurbs Curve By Points inputs a list of points to draw a Nurbs Curve through, and also allows us to change the degree of the curve. This example generates six random points on the World XY plane and connects them in order in the X and Y directions. "
-    },
-    {
         "Name": "ByPoints (points, closeCurve)",
         "imageFile": [
             "ByPoints_pc"
@@ -5776,6 +5688,17 @@
         ],
         "folderPath": "Geometry/NurbsCurve/Create",
         "inDepth": "Nurbs Curve By Points inputs a list of points to draw a Nurbs Curve through and also allows us to close the curve. This example generates four random points on the World XY plane and connects them in order in the X and Y directions, closing the curve back to the first point in the list."
+    },
+    {
+        "Name": "ByPoints (points, degree)",
+        "imageFile": [
+            "ByPoints_pd"
+        ],
+        "dynFile": [
+            "ByPoints_pd"
+        ],
+        "folderPath": "Geometry/NurbsCurve/Create",
+        "inDepth": "Nurbs Curve By Points inputs a list of points to draw a Nurbs Curve through, and also allows us to change the degree of the curve. This example generates six random points on the World XY plane and connects them in order in the X and Y directions. "
     },
     {
         "Name": "ByPointsTangents",
@@ -5900,8 +5823,8 @@
     },
     {
         "Name": "ByPointsTangentsKnotsDerivatives",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/NurbsSurface/Create",
         "inDepth": "Add in-depth information about ByPointsTangentsKnotsDerivatives..."
     },
@@ -6203,6 +6126,17 @@
         "inDepth": "Point By Cartesian Coordinates gives us the ability to set the X, Y and Z values of a point’s location. In this example, we are setting multiple Code Block Ranges controlled by sliders to drive the three-dimensional array of points."
     },
     {
+        "Name": "ByCoordinates (x, y, z)",
+        "imageFile": [
+            "ByCoordinates (x, y, z)"
+        ],
+        "dynFile": [
+            "ByCoordinates (x, y, z)"
+        ],
+        "folderPath": "Geometry/Point/Create",
+        "inDepth": "ByCoordinates (x, y, z) will return a Point from X, Y, and Z values. In the example below, a Point is created with coordinate values of 2 for X, 3 for Y, and 4 for Z."
+    },
+    {
         "Name": "ByCoordinates (x, y)",
         "imageFile": [
             "ByCoordinates",
@@ -6214,17 +6148,6 @@
         ],
         "folderPath": "Geometry/Point/Create",
         "inDepth": "The Point By Coordinates (XY) calls for two number inputs and generates a point on the Dynamo base plane.  In the first example,  we are using two sliders to dynamically control the point’s X and Y location on the Z-plane. In the second, we are using two Number Sliders and a Code Block Range to determine the maximum extents of the grid and the spacing between points. By changing the Points By Coordinates lacing to Cross-Reference, we can create multi-dimensional set of points along the X and Y axis."
-    },
-    {
-        "Name": "ByCoordinates (x, y, z)",
-        "imageFile": [
-            "ByCoordinates (x, y, z)"
-        ],
-        "dynFile": [
-            "ByCoordinates (x, y, z)"
-        ],
-        "folderPath": "Geometry/Point/Create",
-        "inDepth": "ByCoordinates (x, y, z) will return a Point from X, Y, and Z values. In the example below, a Point is created with coordinate values of 2 for X, 3 for Y, and 4 for Z."
     },
     {
         "Name": "ByCylindricalCoordinates",
@@ -6546,17 +6469,6 @@
         "inDepth": "BySolid will return a PolySurface from a Solid. In the example below, a Solid is returned as a PolySurface for it to be an acceptable input to Display.BySurfaceColors."
     },
     {
-        "Name": "BySweep (rail, crossSection)",
-        "imageFile": [
-            "BySweep (rail, crossSection)"
-        ],
-        "dynFile": [
-            "BySweep (rail, crossSection)"
-        ],
-        "folderPath": "Geometry/PolySurface/Create",
-        "inDepth": "BySweep (rail, crossSection) will return a PolySurface by sweeping a list of connected, non-intersecting lines along a rail. In the example below, a Line and an Arc form a cross section to sweep along an Arc. The crossSection input can receive a list of connected Curves that must meet at a start or end point, or the node will not return a PolySurface. This node is similar to BySweep (rail, profile) with the only difference being that crossSection takes a list of Curves while profile only takes one."
-    },
-    {
         "Name": "BySweep (rail, profile)",
         "imageFile": [
             "BySweep (rail, profile)"
@@ -6566,6 +6478,17 @@
         ],
         "folderPath": "Geometry/PolySurface/Create",
         "inDepth": "BySweep (rail, profile) will return a PolySurface by sweeping a profile along a rail. In the example below, an Arc is swept along another Arc as its rail."
+    },
+    {
+        "Name": "BySweep (rail, crossSection)",
+        "imageFile": [
+            "BySweep (rail, crossSection)"
+        ],
+        "dynFile": [
+            "BySweep (rail, crossSection)"
+        ],
+        "folderPath": "Geometry/PolySurface/Create",
+        "inDepth": "BySweep (rail, crossSection) will return a PolySurface by sweeping a list of connected, non-intersecting lines along a rail. In the example below, a Line and an Arc form a cross section to sweep along an Arc. The crossSection input can receive a list of connected Curves that must meet at a start or end point, or the node will not return a PolySurface. This node is similar to BySweep (rail, profile) with the only difference being that crossSection takes a list of Curves while profile only takes one."
     },
     {
         "Name": "Chamfer",
@@ -6766,17 +6689,6 @@
         "inDepth": "Points will return a list of points that are the end points of the segments of the given polygon. In the example below, we first generate a set of random points sorted by angle to use with Polygon By Points. We can get the points back out as a list by using Points."
     },
     {
-        "Name": "ByCornerPoints (points)",
-        "imageFile": [
-            "ByCornerPoints"
-        ],
-        "dynFile": [
-            "ByCornerPoints"
-        ],
-        "folderPath": "Geometry/Rectangle/Create",
-        "inDepth": "The Rectangle By Corner Points node takes a list of four input points and creates a rectangle from them. The input points must reflect a rectangle form. In this example, two Number Sliders are used to create the Points By Coordinates at the rectangle’s vertices. A similar but distinct Rectangle ByCornerPoints node uses four separate inputs for eacher point rather than as a single list. Both nodes are shown in this example."
-    },
-    {
         "Name": "ByCornerPoints (p1, p2, p3, p4)",
         "imageFile": [
             "ByCornerPoints"
@@ -6786,6 +6698,17 @@
         ],
         "folderPath": "Geometry/Rectangle/Create",
         "inDepth": "The Rectangle By Corner Points node takes four input points and creates a rectangle from them. The input points must reflect a rectangle form. In this example, two Number Sliders are used to create the Points By Coordinates at the rectangle’s vertices. A similar but distinct Rectangle ByCornerPoints node uses a list of points as the input rather than each input separately. Both nodes are shown in this example."
+    },
+    {
+        "Name": "ByCornerPoints (points)",
+        "imageFile": [
+            "ByCornerPoints"
+        ],
+        "dynFile": [
+            "ByCornerPoints"
+        ],
+        "folderPath": "Geometry/Rectangle/Create",
+        "inDepth": "The Rectangle By Corner Points node takes a list of four input points and creates a rectangle from them. The input points must reflect a rectangle form. In this example, two Number Sliders are used to create the Points By Coordinates at the rectangle’s vertices. A similar but distinct Rectangle ByCornerPoints node uses four separate inputs for eacher point rather than as a single list. Both nodes are shown in this example."
     },
     {
         "Name": "ByWidthLength (cs, width, length)",
@@ -6863,17 +6786,6 @@
         ],
         "folderPath": "Geometry/Solid/Create",
         "inDepth": "ByLoft with crossSections and guideCurves allows us to input a list of guide curves to produce different profiles along the perimeter of a lofted solid. In the example below, we use two offset rectangles as the crossSections. Two different guide curves are generate around the perimeter, one based on a Cosine function, and the other a simple line."
-    },
-    {
-        "Name": "ByLoft (crossSections, guideCurve)",
-        "imageFile": [
-            "ByLoft_guideCurve"
-        ],
-        "dynFile": [
-            "ByLoft_guideCurve"
-        ],
-        "folderPath": "Geometry/Solid/Create",
-        "inDepth": "ByLoft with crossSections and guideCurve will create a solid by lofting between the input list of closed Cross Section curves. A guide Curve is provided to control the profile of the loft, rather than just lofting as a straight line. In the example below, we start with a rectangle as the base. The rectangle is translated, and then combined with the original into a list to provide the list of cross sections for ByLoft. A set of points is created using a cosine function to control the coordinates, and used to create a NurbsCurve ByPoints. ByLoft is used with the list of rectangles as the crossSections, and the NurbsCurve as the guide, producing a solid with rectangular cross sections, and a wave profile."
     },
     {
         "Name": "ByLoft (crossSections)",
@@ -7019,17 +6931,6 @@
         "inDepth": "Union will create a new solid by adding one solid to another. The 'solid' input indicates the solid to add to, while the 'tool' input is the solid that will be added. In the example below, we start with a default cube as the solid we are going to add to. We use a series of number sliders to control the position and radius of a sphere, which we use as the tool. If the sphere is intersecting the cube, then the result is a cube with the intersecting part of the sphere added to it."
     },
     {
-        "Name": "UnionAll",
-        "imageFile": [
-            "UnionAll"
-        ],
-        "dynFile": [
-            "UnionAll"
-        ],
-        "folderPath": "Geometry/Solid/Action",
-        "inDepth": "Union All will create a new solid by adding a list of solids to one single solid. The 'solid' input indicates the solid to add to, while the 'tools' input is the list of solids that will be added. The solids in this list will be unioned together to create a single solid, which is then added to the 'solid' input. In the example below, we start with a default cube as the solid we are going to add to. We use a series of number sliders to control the position and radius of a sphere. By using a sequence of numbers as the z-coordinate, we create a list of several spheres. If the spheres are intersecting the cube, then the result is a cube with the intersecting parts of the spheres added to it."
-    },
-    {
         "Name": "Area",
         "imageFile": [
             "Area"
@@ -7107,28 +7008,6 @@
         "inDepth": "Radius will return the center of an input sphere. In the example below, we use a ByBestFit node to create a sphere based on a set of random points. We then use a Radius node to determine the size of the best fit sphere."
     },
     {
-        "Name": "ByLoft (crossSections, guideCurves)",
-        "imageFile": [
-            "ByLoft_gcs"
-        ],
-        "dynFile": [
-            "ByLoft_gcs"
-        ],
-        "folderPath": "Geometry/Surface/Create",
-        "inDepth": "Surface by Loft with cross sections and guide curves takes a list of cross sections to loft between, and a separate list of guide curves to determine the profile of the loft. In the example below, we use two straight lines as the input cross sections. For the guide curves, we create one sine curve and one straight line. A number slider controls the distance between the sine curve and the straight line. The resulting loft interpolates between the sine curve and the straight line."
-    },
-    {
-        "Name": "ByLoft (crossSections, guideCurve)",
-        "imageFile": [
-            "ByLoft_gc"
-        ],
-        "dynFile": [
-            "ByLoft_gc"
-        ],
-        "folderPath": "Geometry/Surface/Create",
-        "inDepth": "Surface by Loft with cross sections and guide curves uses an extra input in addition to a list of cross sections to loft. This extra curve is a guide curve that directs the lofted surface. In the example below, we use two straight lines as the input cross sections. We create a sine curve to use as a guide curve. By using the guide curve, we create a surface with a sine curve profile, instead of just a flat surface lofted directly between the two cross section lines. "
-    },
-    {
         "Name": "ByLoft (crossSections)",
         "imageFile": [
             "ByLoft"
@@ -7138,6 +7017,17 @@
         ],
         "folderPath": "Geometry/Surface/Create",
         "inDepth": "Surface ByLoft with cross sections takes a list of curves as an input. It will produce a surface by lofting between the list of curves in order. In the example below we create two curves, a line and a sine curve. We use List.Create to combine these two curves into a list, which we use as an input for Surface ByLoft. The result is a surface that is lofted between a sine curve on one side, and a line on the other."
+    },
+    {
+        "Name": "ByLoft (crossSections, guideCurves)",
+        "imageFile": [
+            "ByLoft_gcs"
+        ],
+        "dynFile": [
+            "ByLoft_gcs"
+        ],
+        "folderPath": "Geometry/Surface/Create",
+        "inDepth": "Surface by Loft with cross sections and guide curves takes a list of cross sections to loft between, and a separate list of guide curves to determine the profile of the loft. In the example below, we use two straight lines as the input cross sections. For the guide curves, we create one sine curve and one straight line. A number slider controls the distance between the sine curve and the straight line. The resulting loft interpolates between the sine curve and the straight line."
     },
     {
         "Name": "ByPatch",
@@ -7283,22 +7173,9 @@
         "inDepth": "Get Isoline will return the isoline of a surface at an input U or V parameter. The input isoDirection is used to determine whether the U direction or V direction is used. An isoDirection of 0 corresponds to the U direction, while an isoDirection of 1 corresponds to the V direction. In the example below, we first create a surface by using a BySweep2Rails. We then use two number sliders. The first slider controls the U or V direction of the isolines, while the second determines the parameter to find the isoline of."
     },
     {
-        "Name": "Join (surface, otherSurfaces)",
-        "imageFile": [
-            "Join (surface, otherSurfaces)"
-        ],
-        "dynFile": [
-            "Join (surface, otherSurfaces)"
-        ],
+        "Name": "Join",
         "folderPath": "Geometry/Surface/Action",
-        "inDepth": "Join (surface, otherSurfaces) will return a single PolySurface by joining one Surface will a collection of others. In the example below, an extruded Surface is joined with a Surface that matches it's profile returning a PolySurface."
-    },
-    {
-        "Name": "Join (surface, otherSurface)",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Geometry/Surface/Action",
-        "inDepth": "Add in-depth information about Join (surface, otherSurface)..."
+        "inDepth": "Add in-depth information about Join..."
     },
     {
         "Name": "NormalAtParameter",
@@ -7422,17 +7299,6 @@
         "inDepth": "Tangent at U Parameter will return the tangent vector in the V direction at a specified UV position on a surface.  In the example below, we first create a surface by using a BySweep2Rails. We then use two number sliders to determine the U and V parameters to find the V tangent vector."
     },
     {
-        "Name": "Thicken (surface, thickness, both_sides)",
-        "imageFile": [
-            "Thicken_bothSides"
-        ],
-        "dynFile": [
-            "Thicken_bothSides"
-        ],
-        "folderPath": "Geometry/Surface/Action",
-        "inDepth": "Thicken will create a solid by offsetting a surface according to the thickness input and capping the ends to close the solid. This Thicken node has an extra input to specify whether to thicken on both sides or not. The both_sides input takes a boolean value. In the example below, we first create a surface by using a BySweep2Rails. We then create a solid by using a number slider to dermine the thickness input of a Thicken node. A boolean toggle controls whether to thicken on both sides or just one. Note that the thickness parameter determines the total thickness of the final solid, so if both_sides is set to true, the result will be offset from the original surface by half the input thickness on both sides."
-    },
-    {
         "Name": "Thicken (surface, thickness)",
         "imageFile": [
             "Thicken"
@@ -7442,6 +7308,17 @@
         ],
         "folderPath": "Geometry/Surface/Action",
         "inDepth": "Thicken will create a solid by offsetting a surface according to the thickness input and capping the ends to close the solid. In  the example below, we first create a surface by using a BySweep2Rails. We then create a solid by using a number slider to dermine the thickness input of a Thicken node."
+    },
+    {
+        "Name": "Thicken (surface, thickness, both_sides)",
+        "imageFile": [
+            "Thicken_bothSides"
+        ],
+        "dynFile": [
+            "Thicken_bothSides"
+        ],
+        "folderPath": "Geometry/Surface/Action",
+        "inDepth": "Thicken will create a solid by offsetting a surface according to the thickness input and capping the ends to close the solid. This Thicken node has an extra input to specify whether to thicken on both sides or not. The both_sides input takes a boolean value. In the example below, we first create a surface by using a BySweep2Rails. We then create a solid by using a number slider to dermine the thickness input of a Thicken node. A boolean toggle controls whether to thicken on both sides or just one. Note that the thickness parameter determines the total thickness of the final solid, so if both_sides is set to true, the result will be offset from the original surface by half the input thickness on both sides."
     },
     {
         "Name": "ToNurbsSurface",
@@ -7530,6 +7407,741 @@
         ],
         "folderPath": "Geometry/Surface/Query",
         "inDepth": "Perimeter will return the length of a Surface's perimeter as a double. In the example below, a complex NurbsSurface's perimeter returns a value of 36.432."
+    },
+    {
+        "Name": "Info",
+        "folderPath": "Geometry/TSpline/TSplineEdge/Action",
+        "inDepth": "Add in-depth information about Info..."
+    },
+    {
+        "Name": "Index",
+        "folderPath": "Geometry/TSpline/TSplineEdge/Query",
+        "inDepth": "Add in-depth information about Index..."
+    },
+    {
+        "Name": "IsBorder",
+        "folderPath": "Geometry/TSpline/TSplineEdge/Query",
+        "inDepth": "Add in-depth information about IsBorder..."
+    },
+    {
+        "Name": "IsManifold",
+        "folderPath": "Geometry/TSpline/TSplineEdge/Query",
+        "inDepth": "Add in-depth information about IsManifold..."
+    },
+    {
+        "Name": "UVNFrame",
+        "folderPath": "Geometry/TSpline/TSplineEdge/Query",
+        "inDepth": "Add in-depth information about UVNFrame..."
+    },
+    {
+        "Name": "Info",
+        "folderPath": "Geometry/TSpline/TSplineFace/Action",
+        "inDepth": "Add in-depth information about Info..."
+    },
+    {
+        "Name": "Index",
+        "folderPath": "Geometry/TSpline/TSplineFace/Query",
+        "inDepth": "Add in-depth information about Index..."
+    },
+    {
+        "Name": "Sides",
+        "folderPath": "Geometry/TSpline/TSplineFace/Query",
+        "inDepth": "Add in-depth information about Sides..."
+    },
+    {
+        "Name": "UVNFrame",
+        "folderPath": "Geometry/TSpline/TSplineFace/Query",
+        "inDepth": "Add in-depth information about UVNFrame..."
+    },
+    {
+        "Name": "Valence",
+        "folderPath": "Geometry/TSpline/TSplineFace/Query",
+        "inDepth": "Add in-depth information about Valence..."
+    },
+    {
+        "Name": "ByAxial",
+        "folderPath": "Geometry/TSpline/TSplineInitialSymmetry/Create",
+        "inDepth": "Add in-depth information about ByAxial..."
+    },
+    {
+        "Name": "ByRadial",
+        "folderPath": "Geometry/TSpline/TSplineInitialSymmetry/Create",
+        "inDepth": "Add in-depth information about ByRadial..."
+    },
+    {
+        "Name": "IsRadial",
+        "folderPath": "Geometry/TSpline/TSplineInitialSymmetry/Query",
+        "inDepth": "Add in-depth information about IsRadial..."
+    },
+    {
+        "Name": "RadialSymmetryFaces",
+        "folderPath": "Geometry/TSpline/TSplineInitialSymmetry/Query",
+        "inDepth": "Add in-depth information about RadialSymmetryFaces..."
+    },
+    {
+        "Name": "XAxis",
+        "folderPath": "Geometry/TSpline/TSplineInitialSymmetry/Query",
+        "inDepth": "Add in-depth information about XAxis..."
+    },
+    {
+        "Name": "YAxis",
+        "folderPath": "Geometry/TSpline/TSplineInitialSymmetry/Query",
+        "inDepth": "Add in-depth information about YAxis..."
+    },
+    {
+        "Name": "ZAxis",
+        "folderPath": "Geometry/TSpline/TSplineInitialSymmetry/Query",
+        "inDepth": "Add in-depth information about ZAxis..."
+    },
+    {
+        "Name": "ByAxial",
+        "folderPath": "Geometry/TSpline/TSplineReflection/Create",
+        "inDepth": "Add in-depth information about ByAxial..."
+    },
+    {
+        "Name": "ByRadial",
+        "folderPath": "Geometry/TSpline/TSplineReflection/Create",
+        "inDepth": "Add in-depth information about ByRadial..."
+    },
+    {
+        "Name": "Axis",
+        "folderPath": "Geometry/TSpline/TSplineReflection/Query",
+        "inDepth": "Add in-depth information about Axis..."
+    },
+    {
+        "Name": "IsRadial",
+        "folderPath": "Geometry/TSpline/TSplineReflection/Query",
+        "inDepth": "Add in-depth information about IsRadial..."
+    },
+    {
+        "Name": "Plane",
+        "folderPath": "Geometry/TSpline/TSplineReflection/Query",
+        "inDepth": "Add in-depth information about Plane..."
+    },
+    {
+        "Name": "SegmentAngle",
+        "folderPath": "Geometry/TSpline/TSplineReflection/Query",
+        "inDepth": "Add in-depth information about SegmentAngle..."
+    },
+    {
+        "Name": "SegmentsCount",
+        "folderPath": "Geometry/TSpline/TSplineReflection/Query",
+        "inDepth": "Add in-depth information about SegmentsCount..."
+    },
+    {
+        "Name": "BuildFromLines",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about BuildFromLines..."
+    },
+    {
+        "Name": "BuildPipes",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about BuildPipes..."
+    },
+    {
+        "Name": "ByBoxCorners",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByBoxCorners..."
+    },
+    {
+        "Name": "ByBoxLengths (width, length, height, xSpans, ySpans, zSpans, symmetry, inSmoothMode)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByBoxLengths..."
+    },
+    {
+        "Name": "ByBoxLengths (cs, width, length, height, xSpans, ySpans, zSpans, symmetry, inSmoothMode)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByBoxLengths..."
+    },
+    {
+        "Name": "ByBoxLengths (origin, width, length, height, xSpans, ySpans, zSpans, symmetry, inSmoothMode)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByBoxLengths..."
+    },
+    {
+        "Name": "ByCombinedTSplineSurfaces",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByCombinedTSplineSurfaces..."
+    },
+    {
+        "Name": "ByConeCoordinateSystemHeightRadii",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByConeCoordinateSystemHeightRadii..."
+    },
+    {
+        "Name": "ByConeCoordinateSystemHeightRadius",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByConeCoordinateSystemHeightRadius..."
+    },
+    {
+        "Name": "ByConePointsRadii",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByConePointsRadii..."
+    },
+    {
+        "Name": "ByConePointsRadius",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByConePointsRadius..."
+    },
+    {
+        "Name": "ByCylinderPointsRadius",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByCylinderPointsRadius..."
+    },
+    {
+        "Name": "ByCylinderRadiusHeight",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByCylinderRadiusHeight..."
+    },
+    {
+        "Name": "ByExtrude",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByExtrude..."
+    },
+    {
+        "Name": "ByNurbsSurfaceCurvature",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByNurbsSurfaceCurvature..."
+    },
+    {
+        "Name": "ByNurbsSurfaceUniform",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByNurbsSurfaceUniform..."
+    },
+    {
+        "Name": "ByPlaneBestFitThroughPoints",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByPlaneBestFitThroughPoints..."
+    },
+    {
+        "Name": "ByPlaneLineAndPoint",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByPlaneLineAndPoint..."
+    },
+    {
+        "Name": "ByPlaneOriginNormal",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByPlaneOriginNormal..."
+    },
+    {
+        "Name": "ByPlaneOriginNormalXAxis",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByPlaneOriginNormalXAxis..."
+    },
+    {
+        "Name": "ByPlaneOriginXAxisYAxis",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByPlaneOriginXAxisYAxis..."
+    },
+    {
+        "Name": "ByPlaneThreePoints",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByPlaneThreePoints..."
+    },
+    {
+        "Name": "ByQuadballCenterRadius",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByQuadballCenterRadius..."
+    },
+    {
+        "Name": "ByQuadballCoordinateSystemRadius",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByQuadballCoordinateSystemRadius..."
+    },
+    {
+        "Name": "ByRevolve",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByRevolve..."
+    },
+    {
+        "Name": "BySphereBestFit",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about BySphereBestFit..."
+    },
+    {
+        "Name": "BySphereCenterPointRadius",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about BySphereCenterPointRadius..."
+    },
+    {
+        "Name": "BySphereFourPoints",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about BySphereFourPoints..."
+    },
+    {
+        "Name": "BySweep",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about BySweep..."
+    },
+    {
+        "Name": "ByTorusCenterRadii",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByTorusCenterRadii..."
+    },
+    {
+        "Name": "ByTorusCoordinateSystemRadii",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Create",
+        "inDepth": "Add in-depth information about ByTorusCoordinateSystemRadii..."
+    },
+    {
+        "Name": "AddReflections",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about AddReflections..."
+    },
+    {
+        "Name": "BevelEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about BevelEdges..."
+    },
+    {
+        "Name": "BridgeEdgesToEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about BridgeEdgesToEdges..."
+    },
+    {
+        "Name": "BridgeEdgesToFaces",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about BridgeEdgesToFaces..."
+    },
+    {
+        "Name": "BridgeFacesToEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about BridgeFacesToEdges..."
+    },
+    {
+        "Name": "BridgeFacesToFaces",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about BridgeFacesToFaces..."
+    },
+    {
+        "Name": "CompressIndexes",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about CompressIndexes..."
+    },
+    {
+        "Name": "CreaseEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about CreaseEdges..."
+    },
+    {
+        "Name": "CreaseVertices",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about CreaseVertices..."
+    },
+    {
+        "Name": "CreateMatch (tSplineSurface, tsEdges, brepEdges, continuity, useArclength, useRefinement, numRefinementSteps, refinementTolerance, usePropagation, widthOfPropagation, tangentScale, curvParamWeight, flipSourceTargetAlignment)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about CreateMatch..."
+    },
+    {
+        "Name": "CreateMatch (tSplineSurface, tsEdges, curves, continuity, useArclength, useRefinement, numRefinementSteps, refinementTolerance, usePropagation, widthOfPropagation, tangentScale, curvParamWeight, flipSourceTargetAlignment)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about CreateMatch..."
+    },
+    {
+        "Name": "DeleteEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about DeleteEdges..."
+    },
+    {
+        "Name": "DeleteFaces",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about DeleteFaces..."
+    },
+    {
+        "Name": "DeleteVertices",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about DeleteVertices..."
+    },
+    {
+        "Name": "DeserializeFromTSM",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about DeserializeFromTSM..."
+    },
+    {
+        "Name": "DuplicateFaces",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about DuplicateFaces..."
+    },
+    {
+        "Name": "EnableSmoothMode",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about EnableSmoothMode..."
+    },
+    {
+        "Name": "ExportToTSM",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ExportToTSM..."
+    },
+    {
+        "Name": "ExportToTSS",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ExportToTSS..."
+    },
+    {
+        "Name": "ExtrudeEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ExtrudeEdges..."
+    },
+    {
+        "Name": "ExtrudeEdgesAlongCurve",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ExtrudeEdgesAlongCurve..."
+    },
+    {
+        "Name": "ExtrudeFaces",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ExtrudeFaces..."
+    },
+    {
+        "Name": "ExtrudeFacesAlongCurve",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ExtrudeFacesAlongCurve..."
+    },
+    {
+        "Name": "FillHole",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about FillHole..."
+    },
+    {
+        "Name": "FlattenVertices (tSplineSurface, vertices)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about FlattenVertices..."
+    },
+    {
+        "Name": "FlattenVertices (tSplineSurface, vertices, parallelPlane)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about FlattenVertices..."
+    },
+    {
+        "Name": "FlipNormals",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about FlipNormals..."
+    },
+    {
+        "Name": "ImportFromTSM (file, inSmoothMode)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ImportFromTSM..."
+    },
+    {
+        "Name": "ImportFromTSM (filePath, inSmoothMode)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ImportFromTSM..."
+    },
+    {
+        "Name": "ImportFromTSS (file, inSmoothMode)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ImportFromTSS..."
+    },
+    {
+        "Name": "ImportFromTSS (filePath, inSmoothMode)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ImportFromTSS..."
+    },
+    {
+        "Name": "Interpolate",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about Interpolate..."
+    },
+    {
+        "Name": "MakeUniform",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about MakeUniform..."
+    },
+    {
+        "Name": "MergeEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about MergeEdges..."
+    },
+    {
+        "Name": "MoveVertices",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about MoveVertices..."
+    },
+    {
+        "Name": "PullVertices",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about PullVertices..."
+    },
+    {
+        "Name": "RemoveReflections",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about RemoveReflections..."
+    },
+    {
+        "Name": "SerializeAsTSM",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about SerializeAsTSM..."
+    },
+    {
+        "Name": "SlideEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about SlideEdges..."
+    },
+    {
+        "Name": "Standardize",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about Standardize..."
+    },
+    {
+        "Name": "SubdivideFaces",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about SubdivideFaces..."
+    },
+    {
+        "Name": "Thicken (tSplineSurface, vector, softEdges)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about Thicken..."
+    },
+    {
+        "Name": "Thicken (tSplineSurface, distance, softEdges)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about Thicken..."
+    },
+    {
+        "Name": "ToBRep",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ToBRep..."
+    },
+    {
+        "Name": "ToMesh",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about ToMesh..."
+    },
+    {
+        "Name": "UncreaseEdges",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about UncreaseEdges..."
+    },
+    {
+        "Name": "UncreaseVertices",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about UncreaseVertices..."
+    },
+    {
+        "Name": "Unweld (tSplineSurface, edges)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about Unweld..."
+    },
+    {
+        "Name": "Unweld (tSplineSurface, vertices)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about Unweld..."
+    },
+    {
+        "Name": "WeldCoincidentVertices",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about WeldCoincidentVertices..."
+    },
+    {
+        "Name": "WeldVertices (tSplineSurface, firstGroup, secondGroup, keepSubdCreases)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about WeldVertices..."
+    },
+    {
+        "Name": "WeldVertices (tSplineSurface, vertices, newPosition, keepSubdCreases)",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Action",
+        "inDepth": "Add in-depth information about WeldVertices..."
+    },
+    {
+        "Name": "IsClosed",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Query",
+        "inDepth": "Add in-depth information about IsClosed..."
+    },
+    {
+        "Name": "IsExtractable",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Query",
+        "inDepth": "Add in-depth information about IsExtractable..."
+    },
+    {
+        "Name": "IsInBoxMode",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Query",
+        "inDepth": "Add in-depth information about IsInBoxMode..."
+    },
+    {
+        "Name": "IsStandard",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Query",
+        "inDepth": "Add in-depth information about IsStandard..."
+    },
+    {
+        "Name": "IsWaterTight",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Query",
+        "inDepth": "Add in-depth information about IsWaterTight..."
+    },
+    {
+        "Name": "Reflections",
+        "folderPath": "Geometry/TSpline/TSplineSurface/Query",
+        "inDepth": "Add in-depth information about Reflections..."
+    },
+    {
+        "Name": "DecomposedEdges",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Action",
+        "inDepth": "Add in-depth information about DecomposedEdges..."
+    },
+    {
+        "Name": "DecomposedFaces",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Action",
+        "inDepth": "Add in-depth information about DecomposedFaces..."
+    },
+    {
+        "Name": "DecomposedVertices",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Action",
+        "inDepth": "Add in-depth information about DecomposedVertices..."
+    },
+    {
+        "Name": "EdgeByIndex",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Action",
+        "inDepth": "Add in-depth information about EdgeByIndex..."
+    },
+    {
+        "Name": "FaceByIndex",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Action",
+        "inDepth": "Add in-depth information about FaceByIndex..."
+    },
+    {
+        "Name": "VertexByIndex",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Action",
+        "inDepth": "Add in-depth information about VertexByIndex..."
+    },
+    {
+        "Name": "BorderEdges",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about BorderEdges..."
+    },
+    {
+        "Name": "BorderFaces",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about BorderFaces..."
+    },
+    {
+        "Name": "BorderVertices",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about BorderVertices..."
+    },
+    {
+        "Name": "EdgesCount",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about EdgesCount..."
+    },
+    {
+        "Name": "FacesCount",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about FacesCount..."
+    },
+    {
+        "Name": "InnerEdges",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about InnerEdges..."
+    },
+    {
+        "Name": "InnerFaces",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about InnerFaces..."
+    },
+    {
+        "Name": "InnerVertices",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about InnerVertices..."
+    },
+    {
+        "Name": "NGonFaces",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about NGonFaces..."
+    },
+    {
+        "Name": "NonManifoldEdges",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about NonManifoldEdges..."
+    },
+    {
+        "Name": "NonManifoldVertices",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about NonManifoldVertices..."
+    },
+    {
+        "Name": "RegularFaces",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about RegularFaces..."
+    },
+    {
+        "Name": "RegularVertices",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about RegularVertices..."
+    },
+    {
+        "Name": "StarPointVertices",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about StarPointVertices..."
+    },
+    {
+        "Name": "TPointVertices",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about TPointVertices..."
+    },
+    {
+        "Name": "VerticesCount",
+        "folderPath": "Geometry/TSpline/TSplineTopology/Query",
+        "inDepth": "Add in-depth information about VerticesCount..."
+    },
+    {
+        "Name": "Normal",
+        "folderPath": "Geometry/TSpline/TSplineUVNFrame/Query",
+        "inDepth": "Add in-depth information about Normal..."
+    },
+    {
+        "Name": "Position",
+        "folderPath": "Geometry/TSpline/TSplineUVNFrame/Query",
+        "inDepth": "Add in-depth information about Position..."
+    },
+    {
+        "Name": "U",
+        "folderPath": "Geometry/TSpline/TSplineUVNFrame/Query",
+        "inDepth": "Add in-depth information about U..."
+    },
+    {
+        "Name": "V",
+        "folderPath": "Geometry/TSpline/TSplineUVNFrame/Query",
+        "inDepth": "Add in-depth information about V..."
+    },
+    {
+        "Name": "Info",
+        "folderPath": "Geometry/TSpline/TSplineVertex/Action",
+        "inDepth": "Add in-depth information about Info..."
+    },
+    {
+        "Name": "FunctionalValence",
+        "folderPath": "Geometry/TSpline/TSplineVertex/Query",
+        "inDepth": "Add in-depth information about FunctionalValence..."
+    },
+    {
+        "Name": "Index",
+        "folderPath": "Geometry/TSpline/TSplineVertex/Query",
+        "inDepth": "Add in-depth information about Index..."
+    },
+    {
+        "Name": "IsManifold",
+        "folderPath": "Geometry/TSpline/TSplineVertex/Query",
+        "inDepth": "Add in-depth information about IsManifold..."
+    },
+    {
+        "Name": "IsStarPoint",
+        "folderPath": "Geometry/TSpline/TSplineVertex/Query",
+        "inDepth": "Add in-depth information about IsStarPoint..."
+    },
+    {
+        "Name": "IsTPoint",
+        "folderPath": "Geometry/TSpline/TSplineVertex/Query",
+        "inDepth": "Add in-depth information about IsTPoint..."
+    },
+    {
+        "Name": "UVNFrame",
+        "folderPath": "Geometry/TSpline/TSplineVertex/Query",
+        "inDepth": "Add in-depth information about UVNFrame..."
+    },
+    {
+        "Name": "Valence",
+        "folderPath": "Geometry/TSpline/TSplineVertex/Query",
+        "inDepth": "Add in-depth information about Valence..."
     },
     {
         "Name": "ByPoints",
@@ -7818,17 +8430,6 @@
         "inDepth": "Reverse will return a new Vector pointing in the opposite direction from its input. In the example below, a Vector of (1,0,1) will return a Vector of (-1,0,-1). Adjusting the Vector Direction slider will change the vector's coordinate values and return a different reversed vector. The Vectors are represented as Lines."
     },
     {
-        "Name": "Rotate (vector, origin, degrees)",
-        "imageFile": [
-            "Rotate (vector, origin, degrees)"
-        ],
-        "dynFile": [
-            "Rotate (vector, origin, degrees)"
-        ],
-        "folderPath": "Geometry/Vector/Action",
-        "inDepth": "Rotate (vector, origin, degrees) will return a new Vector rotated about the normal of a Plane. In the example below, a Vector represented as a Line is rotated about the normal of the XZ Plane. Plugging in different Planes will give different rotation axes."
-    },
-    {
         "Name": "Rotate (vector, axis, degrees)",
         "imageFile": [
             "Rotate (vector, axis, degrees)"
@@ -7838,6 +8439,11 @@
         ],
         "folderPath": "Geometry/Vector/Action",
         "inDepth": "Rotate (vector, axis, degrees) will return a new Vector rotated about an input axis. In the example below, a Vector represented as a Line is rotated about a Z axis Vector. Try plugging in different Vectors for different rotation axes."
+    },
+    {
+        "Name": "Rotate (vector, plane, degrees)",
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Add in-depth information about Rotate..."
     },
     {
         "Name": "Scale (vector, scale_factor)",
