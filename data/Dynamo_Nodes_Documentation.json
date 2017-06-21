@@ -8392,7 +8392,7 @@
             "Id"
         ],
         "folderPath": "Revit/Elements/Category/Query",
-        "inDepth": "Id turns an input category's id number as an integer."
+        "inDepth": "<p>Id turns an input category's id number as an integer. Test</p>"
     },
     {
         "Name": "Name",
