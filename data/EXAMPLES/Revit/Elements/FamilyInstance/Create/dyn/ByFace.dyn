@@ -1,0 +1,31 @@
+<Workspace Version="1.2.1.3083" X="71.2964450344857" Y="11.1151203137046" zoom="1.29289109579114" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <DSRevitNodesUI.FamilyTypes guid="e3c25c8a-9228-4e4a-b91b-18b73a8d0017" type="DSRevitNodesUI.FamilyTypes" nickname="Family Types" x="54.7567724863822" y="292.337973077559" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="48:M_Slab Edge-Thickened:600 x 300mm" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="49091c55-b0c6-4f80-a55d-1b6109abf4df" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyInstance.ByFace" x="426.245933768268" y="325.457004905287" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.FamilyInstance.ByFace@Revit.Elements.FamilyType,Autodesk.DesignScript.Geometry.Surface,Autodesk.DesignScript.Geometry.Line">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Nodes.DSFaceSelection guid="35ec168a-2aa2-4e35-875e-9665349cf7f6" type="Dynamo.Nodes.DSFaceSelection" nickname="Select Face" x="136.507359877207" y="388.868247181118" isVisible="false" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <instance id="17836a3c-e764-47fa-a2e0-08216444f621-00078881:8:SURFACE" />
+    </Dynamo.Nodes.DSFaceSelection>
+    <Dynamo.Nodes.SelectEdges guid="9feafe70-d481-433d-9a57-a5f781b03640" type="Dynamo.Nodes.SelectEdges" nickname="Select Edges" x="203.157549358891" y="491.991928427946" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <instance id="17836a3c-e764-47fa-a2e0-08216444f621-00078881:44:LINEAR" />
+    </Dynamo.Nodes.SelectEdges>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="e3c25c8a-9228-4e4a-b91b-18b73a8d0017" start_index="0" end="49091c55-b0c6-4f80-a55d-1b6109abf4df" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="35ec168a-2aa2-4e35-875e-9665349cf7f6" start_index="0" end="49091c55-b0c6-4f80-a55d-1b6109abf4df" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9feafe70-d481-433d-9a57-a5f781b03640" start_index="0" end="49091c55-b0c6-4f80-a55d-1b6109abf4df" end_index="2" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>
