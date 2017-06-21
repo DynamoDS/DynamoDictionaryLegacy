@@ -11557,11 +11557,11 @@
         "Name": "All Elements at Level",
         "imageFile": [
             "All Elements at Level",
-            "All Elements at Level-Ex2"
+            "All Elements at Level-Ex2.jpg"
         ],
         "dynFile": [
             "All Elements at Level",
-            "All Elements at Level-Ex2"
+            "All Elements at Level-Ex2.dyn"
         ],
         "folderPath": "Revit/Selection/Action",
         "inDepth": "Use with the Selection.Levels node to get elements associated with any level in a document."
