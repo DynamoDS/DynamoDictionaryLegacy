@@ -8220,10 +8220,10 @@
     {
         "Name": "ByViewAndFaceAnalysisData",
         "imageFile": [
-            "ByViewAndFaceAnalysisData.jpg"
+            "ByViewAndFaceAnalysisData-Ex1.jpg"
         ],
         "dynFile": [
-            "ByViewAndFaceAnalysisData.dyn"
+            "ByViewAndFaceAnalysisData-Ex1.dyn"
         ],
         "folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewAndFaceAnalysisData..."
