@@ -8226,10 +8226,16 @@
     },
     {
         "Name": "ByViewFacePointsAndValues",
-        "imageFile": false,
-        "dynFile": false,
+        "imageFile": [
+            "ByViewFacePointsAndValues",
+            "ByViewFacePointsAndValues-Ex2"
+        ],
+        "dynFile": [
+            "ByViewFacePointsAndValues",
+            "ByViewFacePointsAndValues-Ex2"
+        ],
         "folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create",
-        "inDepth": "Add in-depth information about ByViewFacePointsAndValues..."
+        "inDepth": "<p>Add in-depth information about ByViewFacePointsAndValues...adsf</p>"
     },
     {
         "Name": "ByViewAndPointAnalysisData",
@@ -11556,10 +11562,12 @@
     {
         "Name": "All Elements at Level",
         "imageFile": [
-            "All Elements at Level"
+            "All Elements at Level",
+            "All Elements at Level-Ex2"
         ],
         "dynFile": [
-            "All Elements at Level"
+            "All Elements at Level",
+            "All Elements at Level-Ex2"
         ],
         "folderPath": "Revit/Selection/Action",
         "inDepth": "Use with the Selection.Levels node to get elements associated with any level in a document."
