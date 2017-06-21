@@ -8226,8 +8226,14 @@
     },
     {
         "Name": "ByViewFacePointsAndValues",
-        "imageFile": false,
-        "dynFile": false,
+        "imageFile": [
+            "ByViewFacePointsAndValues-Ex1",
+            "ByViewFacePointsAndValues-Ex1-Ex2"
+        ],
+        "dynFile": [
+            "ByViewFacePointsAndValues-Ex1",
+            "ByViewFacePointsAndValues-Ex1-Ex2"
+        ],
         "folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewFacePointsAndValues..."
     },
