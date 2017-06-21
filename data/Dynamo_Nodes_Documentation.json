@@ -8219,8 +8219,12 @@
     },
     {
         "Name": "ByViewAndFaceAnalysisData",
-        "imageFile": false,
-        "dynFile": false,
+        "imageFile": [
+            "ByViewAndFaceAnalysisData-Ex1.jpg"
+        ],
+        "dynFile": [
+            "ByViewAndFaceAnalysisData-Ex1.dyn"
+        ],
         "folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewAndFaceAnalysisData..."
     },
