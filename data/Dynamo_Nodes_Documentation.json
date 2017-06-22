@@ -1,8 +1,12 @@
 [
     {
         "Name": "SiteLocation",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "SiteLocation-Ex1.jpg"
+        ],
+        "dynFile": [
+            "SiteLocation-Ex1.dyn"
+        ],
         "folderPath": "Analyze/Action",
         "inDepth": "Add in-depth information about SiteLocation..."
     },
@@ -19,190 +23,190 @@
     },
     {
         "Name": "ByViewNameDivisionsGridBoundary",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/CloudDaylightingJob/Create",
         "inDepth": "Add in-depth information about ByViewNameDivisionsGridBoundary..."
     },
     {
         "Name": "Parse",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Create",
         "inDepth": "Add in-depth information about Parse..."
     },
     {
         "Name": "Colors",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Add in-depth information about Colors..."
     },
     {
         "Name": "IlluminanceValues",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Add in-depth information about IlluminanceValues..."
     },
     {
         "Name": "Normals",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Add in-depth information about Normals..."
     },
     {
         "Name": "Points",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Add in-depth information about Points..."
     },
     {
         "Name": "ToImage",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
         "inDepth": "Add in-depth information about ToImage..."
     },
     {
         "Name": "Resolution",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
         "inDepth": "Add in-depth information about Resolution..."
     },
     {
         "Name": "XResolution",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
         "inDepth": "Add in-depth information about XResolution..."
     },
     {
         "Name": "YResolution",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
         "inDepth": "Add in-depth information about YResolution..."
     },
     {
         "Name": "ByRGB",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/Illuminance/Create",
         "inDepth": "Add in-depth information about ByRGB..."
     },
     {
         "Name": "ToFootCandles",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/Illuminance/Action",
         "inDepth": "Add in-depth information about ToFootCandles..."
     },
     {
         "Name": "ToSRGB",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/Illuminance/Action",
         "inDepth": "Add in-depth information about ToSRGB..."
     },
     {
         "Name": "B",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
         "inDepth": "Add in-depth information about B..."
     },
     {
         "Name": "G",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
         "inDepth": "Add in-depth information about G..."
     },
     {
         "Name": "R",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
         "inDepth": "Add in-depth information about R..."
     },
     {
         "Name": "ByPointAndString",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Label/Create",
         "inDepth": "Add in-depth information about ByPointAndString..."
     },
     {
         "Name": "Do Cloud Render",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/Action",
         "inDepth": "Add in-depth information about Do Cloud Render..."
     },
     {
         "Name": "Export Cloud Render Data",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/Action",
         "inDepth": "Add in-depth information about Export Cloud Render Data..."
     },
     {
         "Name": "Select RenderQuality",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/Action",
         "inDepth": "Add in-depth information about Select RenderQuality..."
     },
     {
         "Name": "Select RenderType",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/Action",
         "inDepth": "Add in-depth information about Select RenderType..."
     },
     {
         "Name": "Select SkyModelType",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/Action",
         "inDepth": "Add in-depth information about Select SkyModelType..."
     },
     {
         "Name": "Upload Cloud Render Data",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/Action",
         "inDepth": "Add in-depth information about Upload Cloud Render Data..."
     },
     {
         "Name": "ByViewNameWidthHeight",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/CloudRenderingJob/Create",
         "inDepth": "Add in-depth information about ByViewNameWidthHeight..."
     },
     {
         "Name": "ByDateInformation",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/DateTime/Create",
         "inDepth": "Add in-depth information about ByDateInformation..."
     },
     {
         "Name": "BySkyModelLocationDate",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/RenderingEnvironment/Create",
         "inDepth": "Add in-depth information about BySkyModelLocationDate..."
     },
     {
         "Name": "ByTypeConstants",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Analyze/Render/SkyModel/Create",
         "inDepth": "Add in-depth information about ByTypeConstants..."
     },
@@ -230,8 +234,8 @@
     },
     {
         "Name": "Contains",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about Contains..."
     },
@@ -479,15 +483,15 @@
     },
     {
         "Name": "NewtonRootFind1DNoDeriv",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about NewtonRootFind1DNoDeriv..."
     },
     {
         "Name": "NewtonRootFind1DWithDeriv",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about NewtonRootFind1DWithDeriv..."
     },
@@ -515,8 +519,8 @@
     },
     {
         "Name": "Rank",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "BuiltIn/Action",
         "inDepth": "Counts how many levels are in a list"
     },
@@ -896,8 +900,8 @@
     },
     {
         "Name": "Format",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Core/DateTime/Action",
         "inDepth": "Add in-depth information about Format..."
     },
@@ -980,8 +984,8 @@
     },
     {
         "Name": "MinValue (dateTime, format)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Core/DateTime/Query",
         "inDepth": "Add in-depth information about MinValue..."
     },
@@ -2760,8 +2764,8 @@
     },
     {
         "Name": "Formula (IN[0])",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Core/Scripting/Action",
         "inDepth": "Add in-depth information about Formula..."
     },
@@ -2789,8 +2793,8 @@
     },
     {
         "Name": "AllIndicesOf",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about AllIndicesOf..."
     },
@@ -2983,8 +2987,8 @@
     },
     {
         "Name": "String from Array",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Core/String/Action",
         "inDepth": "Add in-depth information about String from Array..."
     },
@@ -3518,8 +3522,8 @@
     },
     {
         "Name": "ByGeometry",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/BoundingBox/Create",
         "inDepth": "Add in-depth information about ByGeometry..."
     },
@@ -3811,8 +3815,8 @@
     },
     {
         "Name": "ByMatrix",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "Add in-depth information about ByMatrix..."
     },
@@ -3862,8 +3866,8 @@
     },
     {
         "Name": "ByOriginVectors (origin, xAxis, yAxis, zAxis)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "Add in-depth information about ByOriginVectors (origin, xAxis, yAxis, zAxis)..."
     },
@@ -3902,8 +3906,8 @@
     },
     {
         "Name": "Identity (matrix)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "Add in-depth information about Identity (matrix)..."
     },
@@ -3964,8 +3968,8 @@
     },
     {
         "Name": "Rotate (coordinateSystem, plane, degrees)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Rotate..."
     },
@@ -3982,8 +3986,8 @@
     },
     {
         "Name": "Scale (coordinateSystem, plane, xamount, yamount, zamount)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Scale (coordinateSystem, plane, xamount, yamount, zamount)..."
     },
@@ -4000,8 +4004,8 @@
     },
     {
         "Name": "Scale (coordinateSystem, xamount, yamount, zamount)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Scale (coordinateSystem, xamount, yamount, zamount)..."
     },
@@ -4018,15 +4022,15 @@
     },
     {
         "Name": "Scale1D",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Scale1D will return a new Plane "
     },
     {
         "Name": "Scale2D",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Scale2D..."
     },
@@ -4098,29 +4102,29 @@
     },
     {
         "Name": "Determinant",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about Determinant..."
     },
     {
         "Name": "IsScaledOrtho",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsScaledOrtho..."
     },
     {
         "Name": "IsSingular",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsSingular..."
     },
     {
         "Name": "IsUniscaledOrtho",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/CoordinateSystem/Query",
         "inDepth": "Add in-depth information about IsUniscaledOrtho..."
     },
@@ -4500,8 +4504,8 @@
     },
     {
         "Name": "Join",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/Curve/Action",
         "inDepth": "Add in-depth information about Join..."
     },
@@ -6027,8 +6031,8 @@
     },
     {
         "Name": "ByPointsTangentsKnotsDerivatives",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/NurbsSurface/Create",
         "inDepth": "Add in-depth information about ByPointsTangentsKnotsDerivatives..."
     },
@@ -7378,8 +7382,8 @@
     },
     {
         "Name": "Join",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/Surface/Action",
         "inDepth": "Add in-depth information about Join..."
     },
@@ -7913,8 +7917,8 @@
     },
     {
         "Name": "Rotate (vector, plane, degrees)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Geometry/Vector/Action",
         "inDepth": "Add in-depth information about Rotate..."
     },
@@ -8219,43 +8223,43 @@
     },
     {
         "Name": "ByViewAndFaceAnalysisData",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewAndFaceAnalysisData..."
     },
     {
         "Name": "ByViewFacePointsAndValues",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Analysis/FaceAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewFacePointsAndValues..."
     },
     {
         "Name": "ByViewAndPointAnalysisData",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Analysis/PointAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewAndPointAnalysisData..."
     },
     {
         "Name": "ByViewPointsAndValues",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Analysis/PointAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewPointsAndValues..."
     },
     {
         "Name": "ByViewAndVectorAnalysisData",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Analysis/VectorAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewAndVectorAnalysisData..."
     },
     {
         "Name": "ByViewPointsAndVectorValues",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Analysis/VectorAnalysisDisplay/Create",
         "inDepth": "Add in-depth information about ByViewPointsAndVectorValues..."
     },
@@ -8360,15 +8364,15 @@
     },
     {
         "Name": "Locations",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/AdaptiveComponent/Query",
         "inDepth": "Locations returns the point location of each adaptive point."
     },
     {
         "Name": "Type",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/AdaptiveComponent/Query",
         "inDepth": "Type returns the Revit family type of each adaptive component."
     },
@@ -8550,43 +8554,43 @@
     },
     {
         "Name": "ByFace",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/CurtainSystem/Create",
         "inDepth": "Add in-depth information about ByFace..."
     },
     {
         "Name": "AddCurtainGrid",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/CurtainSystem/Action",
         "inDepth": "Add in-depth information about AddCurtainGrid..."
     },
     {
         "Name": "RemoveCurtainGrid",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/CurtainSystem/Action",
         "inDepth": "Add in-depth information about RemoveCurtainGrid..."
     },
     {
         "Name": "CurtainSystemType",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/CurtainSystem/Query",
         "inDepth": "Add in-depth information about CurtainSystemType..."
     },
     {
         "Name": "ByName",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/CurtainSystemType/Create",
         "inDepth": "Add in-depth information about ByName..."
     },
     {
         "Name": "Name",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/CurtainSystemType/Query",
         "inDepth": "Add in-depth information about Name..."
     },
@@ -8746,15 +8750,15 @@
     },
     {
         "Name": "FromExisting",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/DimensionType/Create",
         "inDepth": "Add in-depth information about FromExisting..."
     },
     {
         "Name": "StyleType",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/DimensionType/Query",
         "inDepth": "Add in-depth information about StyleType..."
     },
@@ -8782,8 +8786,8 @@
     },
     {
         "Name": "Select Direct Shape Room Bounding Option (geometry, category, material, name)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/DirectShape/Action",
         "inDepth": "Add in-depth information about Select Direct Shape Room Bounding Option..."
     },
@@ -8833,8 +8837,8 @@
     },
     {
         "Name": "Spacing Rule Layout (dividedPath)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/DividedPath/Action",
         "inDepth": "Add in-depth information about Spacing Rule Layout..."
     },
@@ -8950,8 +8954,8 @@
     },
     {
         "Name": "MoveByVector",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Element/Action",
         "inDepth": "Add in-depth information about MoveByVector..."
     },
@@ -9001,8 +9005,8 @@
     },
     {
         "Name": "ToString",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Element/Action",
         "inDepth": "Add in-depth information about ToString..."
     },
@@ -9140,22 +9144,22 @@
     },
     {
         "Name": "Description",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FailureMessage/Query",
         "inDepth": "Add in-depth information about Description..."
     },
     {
         "Name": "FailingElements",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FailureMessage/Query",
         "inDepth": "Add in-depth information about FailingElements..."
     },
     {
         "Name": "Severity",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FailureMessage/Query",
         "inDepth": "Add in-depth information about Severity..."
     },
@@ -9205,15 +9209,15 @@
     },
     {
         "Name": "ByFace (familyType, face, location, referenceDirection)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FamilyInstance/Create",
         "inDepth": "Add in-depth information about ByFace..."
     },
     {
         "Name": "ByFace (familyType, face, line)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FamilyInstance/Create",
         "inDepth": "Add in-depth information about ByFace..."
     },
@@ -9351,8 +9355,8 @@
     },
     {
         "Name": "ByGeometry",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FamilyType/Create",
         "inDepth": "Add in-depth information about ByGeometry..."
     },
@@ -9369,8 +9373,8 @@
     },
     {
         "Name": "VoidByGeometry",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FamilyType/Create",
         "inDepth": "Add in-depth information about VoidByGeometry..."
     },
@@ -9420,8 +9424,8 @@
     },
     {
         "Name": "Fill Patterns (name, fillPatternTarget)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FillPatternElement/Action",
         "inDepth": "Add in-depth information about Fill Patterns..."
     },
@@ -9460,8 +9464,8 @@
     },
     {
         "Name": "Select Filled Region Type (name)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/FilledRegionType/Action",
         "inDepth": "Add in-depth information about Select Filled Region Type..."
     },
@@ -9533,22 +9537,22 @@
     },
     {
         "Name": "AddPoint",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Floor/Action",
         "inDepth": "Add in-depth information about AddPoint..."
     },
     {
         "Name": "MovePoint",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Floor/Action",
         "inDepth": "Add in-depth information about MovePoint..."
     },
     {
         "Name": "Points",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Floor/Query",
         "inDepth": "Add in-depth information about Points..."
     },
@@ -9598,64 +9602,64 @@
     },
     {
         "Name": "ByName",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Create",
         "inDepth": "Add in-depth information about ByName..."
     },
     {
         "Name": "FindByName",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Create",
         "inDepth": "Add in-depth information about FindByName..."
     },
     {
         "Name": "SetValue",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Action",
         "inDepth": "Add in-depth information about SetValue..."
     },
     {
         "Name": "SetValueToElementId",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Action",
         "inDepth": "Add in-depth information about SetValueToElementId..."
     },
     {
         "Name": "Name",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Query",
         "inDepth": "Add in-depth information about Name..."
     },
     {
         "Name": "ParameterGroup",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Query",
         "inDepth": "Add in-depth information about ParameterGroup..."
     },
     {
         "Name": "ParameterType",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Query",
         "inDepth": "Add in-depth information about ParameterType..."
     },
     {
         "Name": "Value",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Query",
         "inDepth": "Add in-depth information about Value..."
     },
     {
         "Name": "Visible",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/GlobalParameter/Query",
         "inDepth": "Add in-depth information about Visible..."
     },
@@ -9848,8 +9852,8 @@
     },
     {
         "Name": "Line Patterns (name)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/LinePatternElement/Action",
         "inDepth": "Add in-depth information about Line Patterns..."
     },
@@ -10152,50 +10156,50 @@
     },
     {
         "Name": "CreateProjectParameter",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about CreateProjectParameter..."
     },
     {
         "Name": "CreateProjectParameterForAllCategories",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about CreateProjectParameterForAllCategories..."
     },
     {
         "Name": "CreateSharedParameter",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about CreateSharedParameter..."
     },
     {
         "Name": "CreateSharedParameterForAllCategories",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about CreateSharedParameterForAllCategories..."
     },
     {
         "Name": "Select BuiltIn Parameter Group",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about Select BuiltIn Parameter Group..."
     },
     {
         "Name": "Select Parameter Type (())",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about Select Parameter Type..."
     },
     {
         "Name": "Select Parameter Type (parameter)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about Select Parameter Type..."
     },
@@ -10212,15 +10216,15 @@
     },
     {
         "Name": "SharedParameterFile",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about SharedParameterFile..."
     },
     {
         "Name": "Group",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Parameter/Query",
         "inDepth": "Add in-depth information about Group..."
     },
@@ -10325,57 +10329,57 @@
     },
     {
         "Name": "ById",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Create",
         "inDepth": "Add in-depth information about ById..."
     },
     {
         "Name": "Execute",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
         "inDepth": "Add in-depth information about Execute..."
     },
     {
         "Name": "Performance Adviser Rules (())",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
         "inDepth": "Add in-depth information about Performance Adviser Rules..."
     },
     {
         "Name": "Performance Adviser Rules (performanceAdviserRule)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
         "inDepth": "Add in-depth information about Performance Adviser Rules..."
     },
     {
         "Name": "Description",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
         "inDepth": "Add in-depth information about Description..."
     },
     {
         "Name": "Enabled",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
         "inDepth": "Add in-depth information about Enabled..."
     },
     {
         "Name": "Name",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
         "inDepth": "Add in-depth information about Name..."
     },
     {
         "Name": "RuleId",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
         "inDepth": "Add in-depth information about RuleId..."
     },
@@ -10392,8 +10396,8 @@
     },
     {
         "Name": "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Phase/Action",
         "inDepth": "Add in-depth information about Select Phase..."
     },
@@ -10597,8 +10601,8 @@
     },
     {
         "Name": "Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Revision/Action",
         "inDepth": "Add in-depth information about Select Revision..."
     },
@@ -10769,50 +10773,50 @@
     },
     {
         "Name": "ByOutlineExtrusionTypeAndLevel",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Roof/Create",
         "inDepth": "Add in-depth information about ByOutlineExtrusionTypeAndLevel..."
     },
     {
         "Name": "ByOutlineTypeAndLevel",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Roof/Create",
         "inDepth": "Add in-depth information about ByOutlineTypeAndLevel..."
     },
     {
         "Name": "AddPoint",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Roof/Action",
         "inDepth": "Add in-depth information about AddPoint..."
     },
     {
         "Name": "MovePoint",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Roof/Action",
         "inDepth": "Add in-depth information about MovePoint..."
     },
     {
         "Name": "Points",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Roof/Query",
         "inDepth": "Add in-depth information about Points..."
     },
     {
         "Name": "ByName",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/RoofType/Create",
         "inDepth": "Add in-depth information about ByName..."
     },
     {
         "Name": "Name",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/RoofType/Query",
         "inDepth": "Add in-depth information about Name..."
     },
@@ -11049,36 +11053,36 @@
     },
     {
         "Name": "Beam",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/StructuralType/Query",
         "inDepth": "Add in-depth information about Beam..."
     },
     {
         "Name": "Brace",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/StructuralType/Query",
         "inDepth": "Add in-depth information about Brace..."
     },
     {
         "Name": "Column",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/StructuralType/Query",
         "inDepth": "Add in-depth information about Column..."
     },
     {
         "Name": "Footing",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/StructuralType/Query",
         "inDepth": "Add in-depth information about Footing..."
     },
     {
         "Name": "NonStructural",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/StructuralType/Query",
         "inDepth": "Add in-depth information about NonStructural..."
     },
@@ -11161,15 +11165,15 @@
     },
     {
         "Name": "ByElementAndLocation",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Tag/Create",
         "inDepth": "Add in-depth information about ByElementAndLocation..."
     },
     {
         "Name": "ByElementAndOffset",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Tag/Create",
         "inDepth": "Add in-depth information about ByElementAndOffset..."
     },
@@ -11395,22 +11399,22 @@
     },
     {
         "Name": "ByFace",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Wall/Action",
         "inDepth": "Add in-depth information about ByFace..."
     },
     {
         "Name": "Wall Location (())",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Wall/Action",
         "inDepth": "Add in-depth information about Wall Location..."
     },
     {
         "Name": "Wall Location (curve, height, level, wallType)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Elements/Wall/Action",
         "inDepth": "Add in-depth information about Wall Location..."
     },
@@ -11438,8 +11442,8 @@
     },
     {
         "Name": "ByRuleType",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Filter/FilterRule/Create",
         "inDepth": "Add in-depth information about ByRuleType..."
     },
@@ -11467,29 +11471,29 @@
     },
     {
         "Name": "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Filter/OverrideGraphicSettings/Action",
         "inDepth": "Add in-depth information about Detail Level..."
     },
     {
         "Name": "ByRules",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Filter/ParameterFilterElement/Create",
         "inDepth": "Add in-depth information about ByRules..."
     },
     {
         "Name": "Select Rule Type (())",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Filter/RuleType/Action",
         "inDepth": "Add in-depth information about Select Rule Type..."
     },
     {
         "Name": "Select Rule Type (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Filter/RuleType/Action",
         "inDepth": "Add in-depth information about Select Rule Type..."
     },
@@ -11506,50 +11510,50 @@
     },
     {
         "Name": "Name",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Schedules/SchedulableField/Query",
         "inDepth": "Add in-depth information about Name..."
     },
     {
         "Name": "ByProperties",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Schedules/ScheduleExportOptions/Create",
         "inDepth": "Add in-depth information about ByProperties..."
     },
     {
         "Name": "Name",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Schedules/ScheduleField/Query",
         "inDepth": "Add in-depth information about Name..."
     },
     {
         "Name": "ByFieldTypeAndValue",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Schedules/ScheduleFilter/Create",
         "inDepth": "Add in-depth information about ByFieldTypeAndValue..."
     },
     {
         "Name": "FiledId",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Schedules/ScheduleFilter/Query",
         "inDepth": "Add in-depth information about FiledId..."
     },
     {
         "Name": "FilterType",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Schedules/ScheduleFilter/Query",
         "inDepth": "Add in-depth information about FilterType..."
     },
     {
         "Name": "Value",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Schedules/ScheduleFilter/Query",
         "inDepth": "Add in-depth information about Value..."
     },
@@ -11720,8 +11724,8 @@
     },
     {
         "Name": "Select Model Element (Family Type)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Selection/Action",
         "inDepth": "Add in-depth information about Select Model Element..."
     },
@@ -11815,15 +11819,15 @@
     },
     {
         "Name": "End",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Transaction/Transaction/Action",
         "inDepth": "Add in-depth information about End..."
     },
     {
         "Name": "Start",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Transaction/Transaction/Action",
         "inDepth": "Add in-depth information about Start..."
     },
@@ -11972,15 +11976,15 @@
     },
     {
         "Name": "AddFilters",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Views/ScheduleView/Action",
         "inDepth": "Add in-depth information about AddFilters..."
     },
     {
         "Name": "ClearAllFilters",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Views/ScheduleView/Action",
         "inDepth": "Add in-depth information about ClearAllFilters..."
     },
@@ -12030,22 +12034,22 @@
     },
     {
         "Name": "Schedule Filter Type",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Views/ScheduleView/Action",
         "inDepth": "Add in-depth information about Schedule Filter Type..."
     },
     {
         "Name": "Schedule Type (())",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Views/ScheduleView/Action",
         "inDepth": "Add in-depth information about Schedule Type..."
     },
     {
         "Name": "Schedule Type (category, name, scheduleType)",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Views/ScheduleView/Action",
         "inDepth": "Add in-depth information about Schedule Type..."
     },
@@ -12073,8 +12077,8 @@
     },
     {
         "Name": "ScheduleFilters",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": false,
+        "dynFile": false,
         "folderPath": "Revit/Views/ScheduleView/Query",
         "inDepth": "Add in-depth information about ScheduleFilters..."
     },
