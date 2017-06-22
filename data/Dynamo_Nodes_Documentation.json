@@ -1,15 +1,19 @@
 [
     {
         "Name": "SiteLocation",
-        "imageFile": false,
-        "dynFile": false,
+        "imageFile": [
+            "SiteLocation-Ex1.gif"
+        ],
+        "dynFile": [
+            "SiteLocation-Ex1.dyn"
+        ],
         "folderPath": "Analyze/Action",
         "inDepth": "Add in-depth information about SiteLocation..."
     },
     {
         "Name": "IsAlmostEqualTo",
         "imageFile": [
-            "IsAlmostEqualTo"
+            "IsAlmostEqualTo-Ex1.jpg"
         ],
         "dynFile": [
             "IsAlmostEqualTo"
