@@ -1,0 +1,35 @@
+<Workspace Version="1.2.1.3083" X="7" Y="-32" zoom="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="92db8f7c-83c2-47be-a07a-a8a237dca46f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Document.FilePath" x="163.5" y="85" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Application.Document.FilePath">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="406864c9-5621-43dd-932d-c1546b68d139" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Document.Current" x="18.5" y="85" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Application.Document.Current" />
+    <Dynamo.Nodes.DSModelElementSelection guid="fe841dd6-040d-4e49-a1a8-4739fea6c1e0" type="Dynamo.Nodes.DSModelElementSelection" nickname="Select Model Element" x="222.1" y="468.8" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <instance id="0d713075-d3b4-4abf-af2d-86a32fea39dc-00022c5e" />
+    </Dynamo.Nodes.DSModelElementSelection>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="aeddf5f0-82dc-47a4-a7cf-da7f831077d7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.OverrideColorInView" x="475.156756652995" y="503.2" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.OverrideColorInView@DSCore.Color">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="ce3724ce-9cc6-4bc0-b8dc-3b1e06eb256d" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="35.7" y="575.8" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="color = Color.ByARGB(100,141,198,217);" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="406864c9-5621-43dd-932d-c1546b68d139" start_index="0" end="92db8f7c-83c2-47be-a07a-a8a237dca46f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="fe841dd6-040d-4e49-a1a8-4739fea6c1e0" start_index="0" end="aeddf5f0-82dc-47a4-a7cf-da7f831077d7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ce3724ce-9cc6-4bc0-b8dc-3b1e06eb256d" start_index="0" end="aeddf5f0-82dc-47a4-a7cf-da7f831077d7" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="d4ca2b7b-ef56-4eda-84f4-899db923b2a5" annotationText="Current Revit Document:" left="8.5" top="46.2" width="374.6" height="131.4" fontSize="24" InitialTop="85" InitialHeight="123" TextblockHeight="28.8" backgrouund="#FF48B9FF">
+      <Models ModelGuid="92db8f7c-83c2-47be-a07a-a8a237dca46f" />
+      <Models ModelGuid="406864c9-5621-43dd-932d-c1546b68d139" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-6636.8056640625" eyeY="12641.052734375" eyeZ="7765.76611328125" lookX="7376.34765625" lookY="-9412.58203125" lookZ="-9757.04296875" upX="0.256770431995392" upY="0.904826998710632" upZ="-0.339642345905304" />
+  </Cameras>
+</Workspace>
