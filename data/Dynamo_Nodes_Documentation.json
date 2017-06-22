@@ -1,8 +1,12 @@
 [
     {
         "Name": "SiteLocation",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "SiteLocation-Ex1.jpg"
+        ],
+        "dynFile": [
+            "SiteLocation-Ex1.dyn"
+        ],
         "folderPath": "Analyze/Action",
         "inDepth": "Add in-depth information about SiteLocation..."
     },
