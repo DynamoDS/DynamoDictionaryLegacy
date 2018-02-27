@@ -8345,7 +8345,7 @@
             "ByParametersOnFace"
         ],
         "folderPath": "Revit/Elements/AdaptiveComponent/Create",
-        "inDepth": "Add in-depth information about ByParametersOnFace..."
+        "inDepth": "<p>Which Family Types should I use/</p>"
     },
     {
         "Name": "ByPoints",
