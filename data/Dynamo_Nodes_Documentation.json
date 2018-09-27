@@ -1705,10 +1705,12 @@
     {
         "Name": "DiagonalRight",
         "imageFile": [
-            "DiagonalRight"
+            "DiagonalRight",
+            "DiagonalRight-Ex2.png"
         ],
         "dynFile": [
-            "DiagonalRight"
+            "DiagonalRight",
+            "DiagonalRight-Ex2.dyn"
         ],
         "folderPath": "Core/List/Action",
         "inDepth": "DiagonalRight will return a new list of lists of values along each diagonal in the list matrix from lower right to the top left. In the example below, a list created by DiagonalRight is compared to it's source list."
