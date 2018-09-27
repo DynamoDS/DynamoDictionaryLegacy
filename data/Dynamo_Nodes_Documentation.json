@@ -1731,10 +1731,12 @@
     {
         "Name": "DropItems",
         "imageFile": [
-            "DropItems"
+            "DropItems",
+            "DropItems-Ex2.png"
         ],
         "dynFile": [
-            "DropItems"
+            "DropItems",
+            "DropItems-Ex2.dyn"
         ],
         "folderPath": "Core/List/Action",
         "inDepth": "Drop Items will remove the input 'amount' number of items from the list. If the 'amount' is positive, the numbers will be removed from the beginning of the list. If the 'amount' is negative, the items will be removed from the end of the list.  In the example below, we first create a list using Range, then drop the first item in the list by using Drop Item with an 'amount' of 1."

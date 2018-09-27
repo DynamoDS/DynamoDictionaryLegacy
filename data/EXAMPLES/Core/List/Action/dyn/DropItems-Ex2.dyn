@@ -1,0 +1,326 @@
+{
+  "Uuid": "3071e77e-fc87-460d-9dd5-6e785c9d5add",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "DropItems",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point.ByCoordinates": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "0376263372804a40b1647dad6347ef23",
+      "Inputs": [
+        {
+          "Id": "59e3292208194d2f920f4f821a1295f3",
+          "Name": "x",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e7b97ed9b1fc497abc6a8cb89581d910",
+          "Name": "y",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5b4e7b2ca5a4476bbd4e0e643c02c759",
+          "Name": "z",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4cfa1774909948dba0f1ce980e65b04d",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Form a Point given 3 cartesian coordinates\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..5;",
+      "Id": "10fef2c05b9741eda2fbbbaf831dd4fa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cb6c23412da648fbaabda2d477afda67",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0.5;",
+      "Id": "bf422536b19c412ea75605d1d7eeba64",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cfdf485805b94dd8add4b18cf2a55072",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "9331e315c82848b2afa0f5dccc1ec6e9",
+      "Inputs": [
+        {
+          "Id": "0a2fff5f859c48efbaf62fcbf0447d5b",
+          "Name": "centerPoint",
+          "Description": "Point\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8719cd70591246709e8a7bd0b297c2cc",
+          "Name": "radius",
+          "Description": "double\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dd3b77b4df304cda89b3d37ba4a99df6",
+          "Name": "Circle",
+          "Description": "Circle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a Circle with input center Point and radius in the world XY plane, with world Z as normal.\n\nCircle.ByCenterPointRadius (centerPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), radius: double = 1): Circle"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "3;",
+      "Id": "398a6b18347840bb803c591b032a2edf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4bf049d966e94cb0a17c7963a248b9d4",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.DropItems@var[]..[],int",
+      "Id": "cf9d8e0c06ec43ccacf14220a707dd37",
+      "Inputs": [
+        {
+          "Id": "300bfbd30e844c3e8140303fa6395673",
+          "Name": "list",
+          "Description": "List to remove items from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "009ce7948cc74f9b86a6d44f9f85b902",
+          "Name": "amount",
+          "Description": "Amount of items to remove. If negative, items are removed from the end of the list.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "458eb81ee327412a8ae6fc78db01476b",
+          "Name": "list",
+          "Description": "List of remaining items.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Removes an amount of items from the start of the list. If the amount is a negative value, items are removed from the end of the list.\n\nList.DropItems (list: var[]..[], amount: int): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "4cfa1774909948dba0f1ce980e65b04d",
+      "End": "300bfbd30e844c3e8140303fa6395673",
+      "Id": "c25e3d982d6a457483a7a35c8f92e90b"
+    },
+    {
+      "Start": "cb6c23412da648fbaabda2d477afda67",
+      "End": "59e3292208194d2f920f4f821a1295f3",
+      "Id": "fe38f308aa3b4a76980032d4bfb1238d"
+    },
+    {
+      "Start": "cb6c23412da648fbaabda2d477afda67",
+      "End": "e7b97ed9b1fc497abc6a8cb89581d910",
+      "Id": "be8eb671f7354429b9932d2852470d64"
+    },
+    {
+      "Start": "cfdf485805b94dd8add4b18cf2a55072",
+      "End": "8719cd70591246709e8a7bd0b297c2cc",
+      "Id": "dffc84a4c5a14646a694eb4f15595ca5"
+    },
+    {
+      "Start": "4bf049d966e94cb0a17c7963a248b9d4",
+      "End": "009ce7948cc74f9b86a6d44f9f85b902",
+      "Id": "ccb298be38e54040925821cbda16651d"
+    },
+    {
+      "Start": "458eb81ee327412a8ae6fc78db01476b",
+      "End": "0a2fff5f859c48efbaf62fcbf0447d5b",
+      "Id": "34d866cf8c1545cead92e2a623772e62"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 2.6053319574683749,
+      "EyeY": 26.617469414617513,
+      "EyeZ": 7.7294628284327374,
+      "LookX": 0.00748262426893076,
+      "LookY": -28.013018269312404,
+      "LookZ": -2.2639441091921171,
+      "UpX": 0.0031606920254485006,
+      "UpY": 0.29237170472273805,
+      "UpZ": -0.956299532732003
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "0376263372804a40b1647dad6347ef23",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1017.713944490933,
+        "Y": -826.3902204644088
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "10fef2c05b9741eda2fbbbaf831dd4fa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1144.3252457182007,
+        "Y": -809.28852254105232
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "bf422536b19c412ea75605d1d7eeba64",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -276.94793823218163,
+        "Y": -710.27572265388631
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Circle.ByCenterPointRadius",
+        "Id": "9331e315c82848b2afa0f5dccc1ec6e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -152.39981828406053,
+        "Y": -830.30095446431346
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "398a6b18347840bb803c591b032a2edf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -742.21443867312826,
+        "Y": -695.03438244222934
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.DropItems",
+        "Id": "cf9d8e0c06ec43ccacf14220a707dd37",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -549.01626828783014,
+        "Y": -812.18099855390437
+      }
+    ],
+    "Annotations": [],
+    "X": 1338.3530502442402,
+    "Y": 1228.1392776518073,
+    "Zoom": 1.0697573963345171
+  }
+}
