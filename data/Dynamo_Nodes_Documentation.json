@@ -282,10 +282,12 @@
     {
         "Name": "Equals",
         "imageFile": [
-            "Equals"
+            "Equals",
+            "Equals-Ex2.png"
         ],
         "dynFile": [
-            "Equals"
+            "Equals",
+            "Equals-Ex2.dyn"
         ],
         "folderPath": "BuiltIn/Action",
         "inDepth": "Equals will return a boolean value that is true if ObjectA is equal to ObjectB. In the example below, the radii (doubles) of two circles are compared. Adjusting the sliders can change the circles' radii, making them equal or unequal."
