@@ -1,0 +1,446 @@
+{
+  "Uuid": "3071e77e-fc87-460d-9dd5-6e785c9d5add",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "List.Contains",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..4;",
+      "Id": "7e0051cd3e8640c989e565d8fef8e981",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "00d92b0f79454e11a8937ace1f753891",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Cycle@var[]..[],int",
+      "Id": "aa56db824d8f438eb552582487535df8",
+      "Inputs": [
+        {
+          "Id": "f60bdce142da477bb65d9159f7ae13c6",
+          "Name": "list",
+          "Description": "List to repeat.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f6b2312d6d4040bd98a9596e5c680f0b",
+          "Name": "amount",
+          "Description": "Number of times to repeat.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9fe97e3e0a634aab8de6e15fbfaad259",
+          "Name": "list",
+          "Description": "List of repeated lists.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a new list by concatenining copies of a given list.\n\nList.Cycle (list: var[]..[], amount: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "4;",
+      "Id": "db30c60d31c142a1955c76ad2ca12b8d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "718e09637c4045afb9435bca0b5a128f",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Shuffle@var[]..[]",
+      "Id": "399dba34c53040199f1d477e14b458e8",
+      "Inputs": [
+        {
+          "Id": "1bcd9de7666c4590bf170cbc4898180b",
+          "Name": "list",
+          "Description": "List to shuffle.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3aa56650baa548a0897aed3ac07d9859",
+          "Name": "list",
+          "Description": "Randomized list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Shuffles a list, randomizing the order of its items.\n\nList.Shuffle (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Contains@var[]..[],var[]..[]",
+      "Id": "fb5c5eae2bfe468b9acdbe963efbc6a2",
+      "Inputs": [
+        {
+          "Id": "80548725a61a40e69d42af10808bceff",
+          "Name": "list",
+          "Description": "List to search in.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 1,
+          "UseLevels": true,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "81c123ce98c243c7838807710e30471e",
+          "Name": "item",
+          "Description": "Item to look for.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eb3e216588e746bd89f78a7abd0c36c1",
+          "Name": "bool",
+          "Description": "Whether list contains the given item.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Determines if the given list contains the given item. This function searches through the sublists contained in it.\n\nList.Contains (list: var[]..[], item: var[]..[]): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "4;",
+      "Id": "39c194c332444295b7ad3e75903efdbc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e4bea6951ef8434694b58d224e18e629",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Contains@var[]..[],var[]..[]",
+      "Id": "79c4bfc470164d1580b678e4934a8890",
+      "Inputs": [
+        {
+          "Id": "0a7ceaca992f41459e4adffbe0409d5d",
+          "Name": "list",
+          "Description": "List to search in.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "09d68aa92cea42acafba61392ad0bfdc",
+          "Name": "item",
+          "Description": "Item to look for.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bbaa91e8d6cb49eb90cfbede8576016a",
+          "Name": "bool",
+          "Description": "Whether list contains the given item.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Determines if the given list contains the given item. This function searches through the sublists contained in it.\n\nList.Contains (list: var[]..[], item: var[]..[]): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Contains@var[]..[],var[]..[]",
+      "Id": "9271b7436abc4a629c51c6c62e9626e0",
+      "Inputs": [
+        {
+          "Id": "3e1a4307e9224de08733f3329ff11f82",
+          "Name": "list",
+          "Description": "List to search in.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "228e306748ef4575889e4b34bd83b761",
+          "Name": "item",
+          "Description": "Item to look for.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9afa2aa5640645f8b73abe70be13700c",
+          "Name": "bool",
+          "Description": "Whether list contains the given item.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Determines if the given list contains the given item. This function searches through the sublists contained in it.\n\nList.Contains (list: var[]..[], item: var[]..[]): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "d242da345f004e239473cdb435459bda",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "edd0f69c84d5401382ec31ff44de1fa8",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "00d92b0f79454e11a8937ace1f753891",
+      "End": "f60bdce142da477bb65d9159f7ae13c6",
+      "Id": "0f848e34326d4a0f8da39c158de29240"
+    },
+    {
+      "Start": "9fe97e3e0a634aab8de6e15fbfaad259",
+      "End": "1bcd9de7666c4590bf170cbc4898180b",
+      "Id": "e013f3a308cf4ef7b9e95b7243b36fc8"
+    },
+    {
+      "Start": "718e09637c4045afb9435bca0b5a128f",
+      "End": "f6b2312d6d4040bd98a9596e5c680f0b",
+      "Id": "301cd0c180d2477ca80b4ca02642a8f2"
+    },
+    {
+      "Start": "3aa56650baa548a0897aed3ac07d9859",
+      "End": "80548725a61a40e69d42af10808bceff",
+      "Id": "71b6801549254a2c9989b11cdd0ffaee"
+    },
+    {
+      "Start": "3aa56650baa548a0897aed3ac07d9859",
+      "End": "0a7ceaca992f41459e4adffbe0409d5d",
+      "Id": "3308023d908e4c5182d8eef8a2a4341b"
+    },
+    {
+      "Start": "3aa56650baa548a0897aed3ac07d9859",
+      "End": "3e1a4307e9224de08733f3329ff11f82",
+      "Id": "f382bb084d7043b8801663dfd03565d5"
+    },
+    {
+      "Start": "e4bea6951ef8434694b58d224e18e629",
+      "End": "81c123ce98c243c7838807710e30471e",
+      "Id": "fe09224283ab4f57a11251a6d08cca76"
+    },
+    {
+      "Start": "e4bea6951ef8434694b58d224e18e629",
+      "End": "09d68aa92cea42acafba61392ad0bfdc",
+      "Id": "83fcf8ab053146c48a864157be8e7496"
+    },
+    {
+      "Start": "edd0f69c84d5401382ec31ff44de1fa8",
+      "End": "228e306748ef4575889e4b34bd83b761",
+      "Id": "ef58fd86a0a4475cb94e85b6f8e89c86"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 11.331746377176948,
+      "EyeY": 160.43919703550557,
+      "EyeZ": -15.05521818121068,
+      "LookX": 35.147286842473392,
+      "LookY": -95.777779597967935,
+      "LookZ": -60.414866384709462,
+      "UpX": 0.33320483777202742,
+      "UpY": 0.7489557207890043,
+      "UpZ": -0.57274764458943417
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "7e0051cd3e8640c989e565d8fef8e981",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -712.0,
+        "Y": -863.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Cycle",
+        "Id": "aa56db824d8f438eb552582487535df8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -497.01137297439317,
+        "Y": -864.09396097846275
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "db30c60d31c142a1955c76ad2ca12b8d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -707.0738964035047,
+        "Y": -641.05792848088231
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Shuffle",
+        "Id": "399dba34c53040199f1d477e14b458e8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -232.08366825823589,
+        "Y": -851.09396097846275
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Contains",
+        "Id": "fb5c5eae2bfe468b9acdbe963efbc6a2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 275.75854786384161,
+        "Y": -628.51128215547919
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "39c194c332444295b7ad3e75903efdbc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -19.262311509181018,
+        "Y": -659.39249879233148
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Contains",
+        "Id": "79c4bfc470164d1580b678e4934a8890",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 265.12056010190872,
+        "Y": -870.75499782504721
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Contains",
+        "Id": "9271b7436abc4a629c51c6c62e9626e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 290.804124616345,
+        "Y": -193.12463813488819
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "d242da345f004e239473cdb435459bda",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 13.118923491637815,
+        "Y": -141.70609676827178
+      }
+    ],
+    "Annotations": [],
+    "X": 745.46408936766989,
+    "Y": 796.08740786950125,
+    "Zoom": 0.78953173013097477
+  }
+}
