@@ -142,8 +142,12 @@
     },
     {
         "Name": "Do Cloud Render",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "Do Cloud Render-Ex1.png"
+        ],
+        "dynFile": [
+            "Do Cloud Render-Ex1.dyn"
+        ],
         "folderPath": "Analyze/Render/Action",
         "inDepth": "Add in-depth information about Do Cloud Render..."
     },
