@@ -238,8 +238,12 @@
     },
     {
         "Name": "Contains",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "Contains-Ex1.png"
+        ],
+        "dynFile": [
+            "Contains-Ex1.dyn"
+        ],
         "folderPath": "BuiltIn/Action",
         "inDepth": "Add in-depth information about Contains..."
     },
