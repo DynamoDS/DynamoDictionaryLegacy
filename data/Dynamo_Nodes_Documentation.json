@@ -1,8 +1,12 @@
 [
     {
         "Name": "SiteLocation",
-        "imageFile": [],
-        "dynFile": [],
+        "imageFile": [
+            "SiteLocation-Ex1.png"
+        ],
+        "dynFile": [
+            "SiteLocation-Ex1.dyn"
+        ],
         "folderPath": "Analyze/Action",
         "inDepth": "Add in-depth information about SiteLocation..."
     },
@@ -968,13 +972,6 @@
         "inDepth": "MaxValue will return the maximum value that a dateTime can have. In the example below, a dateTime of December 31, 9999 11:59PM is returned."
     },
     {
-        "Name": "MinValue (dateTime, format)",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Core/DateTime/Query",
-        "inDepth": "Add in-depth information about MinValue..."
-    },
-    {
         "Name": "MinValue (())",
         "imageFile": [
             "MinValue (())"
@@ -984,6 +981,13 @@
         ],
         "folderPath": "Core/DateTime/Query",
         "inDepth": "MinValue will return the minimum value that a dateTime can have. In the example below, a dateTime of January 01, 0001 12:00AM is returned."
+    },
+    {
+        "Name": "MinValue (dateTime, format)",
+        "imageFile": [],
+        "dynFile": [],
+        "folderPath": "Core/DateTime/Query",
+        "inDepth": "Add in-depth information about MinValue..."
     },
     {
         "Name": "Now",
@@ -1426,7 +1430,7 @@
         "inDepth": "The Boolean node allows the user to toggle between two boolean values 'true' or 'false' by selecting the appropriate radio button. "
     },
     {
-        "Name": "Code Block ()",
+        "Name": "Code Block (())",
         "imageFile": [
             "CodeBlock"
         ],
@@ -1437,7 +1441,7 @@
         "inDepth": "The Code Block is universal and can be useful in all definitions. With this node, we can fully customize the Dynamo functionality and experience by coding directly into the graph. In this example, we see a range of possible uses including Numbers, Strings, Booleans for item based code, and Ranges and Sequences for creating lists of values."
     },
     {
-        "Name": "Code Block (())",
+        "Name": "Code Block ()",
         "imageFile": [
             "CodeBlock"
         ],
@@ -2561,17 +2565,6 @@
         "inDepth": "RemapRange will take a list of numbers and produce a linear scaling of those numbers into a new specified range. The minimum value of the original list is mapped to the newMin input, while the maximum value of the orginila list is mapped to the newMax input. The remaining numbers are scaled to maintain the distribution ratio. In the example below, we use a RandomList node to generate a list of numbers to remap. We use two number sliders to control the new minimum and maximum values of the resulting list."
     },
     {
-        "Name": "Round (number)",
-        "imageFile": [
-            "Round"
-        ],
-        "dynFile": [
-            "Round"
-        ],
-        "folderPath": "Core/Math/Action",
-        "inDepth": "Round will round the input number to the nearest integer. In the example below, we use a number slider to control the input to a Round node."
-    },
-    {
         "Name": "Round (number, digits)",
         "imageFile": [
             "Round_digits"
@@ -2583,7 +2576,18 @@
         "inDepth": "Round with digits allows the user to select the number of decimal places to round the input number to. An input of zero will round to the nearest whole number. Values less than zero are not permitted. In the example below, we use a Rand node to generate a random number. An integer slider is used to control the 'digits' input in a Round node."
     },
     {
-        "Name": "Sign (number)",
+        "Name": "Round (number)",
+        "imageFile": [
+            "Round"
+        ],
+        "dynFile": [
+            "Round"
+        ],
+        "folderPath": "Core/Math/Action",
+        "inDepth": "Round will round the input number to the nearest integer. In the example below, we use a number slider to control the input to a Round node."
+    },
+    {
+        "Name": "Sign (integer)",
         "imageFile": [
             "Sign"
         ],
@@ -2594,7 +2598,7 @@
         "inDepth": "Sign will return 1, 0, or -1 depending on whether the input number is greater than, equal to, or less than zero. In the example below, we use a number slider to control the input to a Sign node."
     },
     {
-        "Name": "Sign (integer)",
+        "Name": "Sign (number)",
         "imageFile": [
             "Sign"
         ],
@@ -2748,13 +2752,6 @@
         "inDepth": "Type will return the type of object passed through the node as a string. In the example below, several types of geometry are passed through the node to show the resulting strings. A Point will return Autodesk.DesignScript.Geometry.Point, a NurbsSurface will return Autodesk.DesignScript.Geometry.NurbsSurface, and an integer will return System.Int32."
     },
     {
-        "Name": "Formula (IN[0])",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Core/Scripting/Action",
-        "inDepth": "Add in-depth information about Formula..."
-    },
-    {
         "Name": "Formula (())",
         "imageFile": [
             "Formula (())"
@@ -2764,6 +2761,13 @@
         ],
         "folderPath": "Core/Scripting/Action",
         "inDepth": "Formula uses the NCalc mathematical expressions evaluator to return the result of a formula. In the example below, the result of an if statement using NCalc is drawn as a NurbsCurve."
+    },
+    {
+        "Name": "Formula (IN[0])",
+        "imageFile": [],
+        "dynFile": [],
+        "folderPath": "Core/Scripting/Action",
+        "inDepth": "Add in-depth information about Formula..."
     },
     {
         "Name": "Python Script",
@@ -3817,17 +3821,6 @@
         "inDepth": "Add in-depth information about ByMatrix..."
     },
     {
-        "Name": "ByOrigin (x, y)",
-        "imageFile": [
-            "ByOrigin (x, y)"
-        ],
-        "dynFile": [
-            "ByOrigin (x, y)"
-        ],
-        "folderPath": "Geometry/CoordinateSystem/Create",
-        "inDepth": "ByOrigin (x, y) will return a new CoordinateSystem with the X and Y values of its origin as inputs. In the example below, a new CoordinateSystem is created with it's origin at (4,2,0) from inputs 4 and 2 into X and Y respectively."
-    },
-    {
         "Name": "ByOrigin (x, y, z)",
         "imageFile": [
             "ByOrigin (x, y, z)"
@@ -3848,6 +3841,17 @@
         ],
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "ByOrigin (origin) will return a new CoordinateSystem with it's origin at the input Point. In the example below, a new CoordinateSystem is created with its origin at (4,4,0)."
+    },
+    {
+        "Name": "ByOrigin (x, y)",
+        "imageFile": [
+            "ByOrigin (x, y)"
+        ],
+        "dynFile": [
+            "ByOrigin (x, y)"
+        ],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "ByOrigin (x, y) will return a new CoordinateSystem with the X and Y values of its origin as inputs. In the example below, a new CoordinateSystem is created with it's origin at (4,2,0) from inputs 4 and 2 into X and Y respectively."
     },
     {
         "Name": "ByOriginVectors (origin, xAxis, yAxis)",
@@ -3890,13 +3894,6 @@
         "inDepth": "BySphericalCoordinates will return a CoordinateSystem at a spherical coordinate location. Instead of X, Y, and Z describing the coordinate location, we use radius, theta, and phi. In the example below, a Surface is mapped to a Sphere by using Lists of phi and theta values. The number sliders can be adjusted to change how the Surface wraps the Sphere."
     },
     {
-        "Name": "Identity (matrix)",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Geometry/CoordinateSystem/Create",
-        "inDepth": "Add in-depth information about Identity (matrix)..."
-    },
-    {
         "Name": "Identity (())",
         "imageFile": [
             "Identity"
@@ -3906,6 +3903,13 @@
         ],
         "folderPath": "Geometry/CoordinateSystem/Create",
         "inDepth": "Identity will return a CoordinateSystem equal to the World CoordinateSystem. In the example below, the CoordinateSystem returned has an origin of (0,0,0), X, Y, Z axes of (1,0,0), (0,1,0), (0,0,1) respectively, and scale factors of 1."
+    },
+    {
+        "Name": "Identity (matrix)",
+        "imageFile": [],
+        "dynFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about Identity (matrix)..."
     },
     {
         "Name": "Inverse",
@@ -3963,6 +3967,13 @@
         "inDepth": "PreMultiplyBy will return a new CoordinateSystem from multiplying it by an other (argument) CoordinateSystem and a CoordinateSystem. In the example below, a new CoordinateSystem is returned that is translated and rotated relative to the CoordinateSystem it was multiplied by and it's argument. This node is similar to the PostMultiplyBy node with the only difference being that the other input is applied before the coordinatesystem input."
     },
     {
+        "Name": "Rotate (coordinateSystem, plane, degrees)",
+        "imageFile": [],
+        "dynFile": [],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Add in-depth information about Rotate..."
+    },
+    {
         "Name": "Rotate (coordinateSystem, origin, axis, degrees)",
         "imageFile": [
             "Rotate (coordinateSystem, origin, axis, degrees)"
@@ -3974,11 +3985,11 @@
         "inDepth": "Rotate (coordinateSystem, origin, axis, degrees) will return a new CoordinateSystem rotated about an origin and vector. In the example below, a CoordinateSystem is rotated about an origin point at (2,0,0) and a vector equivalent to the Y Axis. More complex rotations can be achieved with more complex vectors."
     },
     {
-        "Name": "Rotate (coordinateSystem, plane, degrees)",
+        "Name": "Scale (coordinateSystem, plane, xamount, yamount, zamount)",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Add in-depth information about Rotate..."
+        "inDepth": "Add in-depth information about Scale (coordinateSystem, plane, xamount, yamount, zamount)..."
     },
     {
         "Name": "Scale (coordinateSystem, amount)",
@@ -3997,13 +4008,6 @@
         "dynFile": [],
         "folderPath": "Geometry/CoordinateSystem/Action",
         "inDepth": "Add in-depth information about Scale (coordinateSystem, xamount, yamount, zamount)..."
-    },
-    {
-        "Name": "Scale (coordinateSystem, plane, xamount, yamount, zamount)",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Add in-depth information about Scale (coordinateSystem, plane, xamount, yamount, zamount)..."
     },
     {
         "Name": "Scale (coordinateSystem, basePoint, from, to)",
@@ -4246,17 +4250,6 @@
         "inDepth": "Cuboid By Corners creates a cuboid where the two input points are used as the opposite corners of the cuboid. In the example file, two points are randomly generated and used to create a cuboid."
     },
     {
-        "Name": "ByLengths (width, length, height)",
-        "imageFile": [
-            "ByLengths"
-        ],
-        "dynFile": [
-            "ByLengths"
-        ],
-        "folderPath": "Geometry/Cuboid/Create",
-        "inDepth": "Cuboid By Lengths creates a cuboid with the input width, legth, and height, and is centered at the origin. In the example, we use three number sliders to input the length, width and height."
-    },
-    {
         "Name": "ByLengths (origin, width, length, height)",
         "imageFile": [
             "ByLengths_origin"
@@ -4266,6 +4259,17 @@
         ],
         "folderPath": "Geometry/Cuboid/Create",
         "inDepth": "This Cuboid By Lengths allows the user to input an origin point for the center of the cuboid, as well as the length, width and height of the cuboid. In the example file, we use three number sliders to input the length, width, and height, and generate a random point to use as the origin."
+    },
+    {
+        "Name": "ByLengths (width, length, height)",
+        "imageFile": [
+            "ByLengths"
+        ],
+        "dynFile": [
+            "ByLengths"
+        ],
+        "folderPath": "Geometry/Cuboid/Create",
+        "inDepth": "Cuboid By Lengths creates a cuboid with the input width, legth, and height, and is centered at the origin. In the example, we use three number sliders to input the length, width and height."
     },
     {
         "Name": "ByLengths (cs, width, length, height)",
@@ -4422,15 +4426,15 @@
         "inDepth": "Extend Start will extend a input curve by a given input distance, starting from the start point of the curve. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A number slider allows us to control the distance of the extension."
     },
     {
-        "Name": "Extrude (curve, distance)",
+        "Name": "Extrude (curve, direction, distance)",
         "imageFile": [
-            "Extrude_distance"
+            "Extrude_direction_distance"
         ],
         "dynFile": [
-            "Extrude_distance"
+            "Extrude_direction_distance"
         ],
         "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Extrude by distance will extrude an input curve using an input number to determine the distance of the extrusion. The direction of the normal vector along the curve will be used for the extrusion direction. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A number slider is used as the distance input in an Extrude node."
+        "inDepth": "Extrude by direction and distance will extrude an input curve using an input vector to determine the direction of the extrusion. A separate distance input will be used for the extrusion distance. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an Extrude node while a number slider is used to control the distance input."
     },
     {
         "Name": "Extrude (curve, direction)",
@@ -4444,26 +4448,26 @@
         "inDepth": "Extrude by direction will extrude an input curve using an input vector to determine the direction of the extrusion. The length of the vector will be used for the extrusion distance. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an Extrude node."
     },
     {
-        "Name": "Extrude (curve, direction, distance)",
+        "Name": "Extrude (curve, distance)",
         "imageFile": [
-            "Extrude_direction_distance"
+            "Extrude_distance"
         ],
         "dynFile": [
-            "Extrude_direction_distance"
+            "Extrude_distance"
         ],
         "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Extrude by direction and distance will extrude an input curve using an input vector to determine the direction of the extrusion. A separate distance input will be used for the extrusion distance. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an Extrude node while a number slider is used to control the distance input."
+        "inDepth": "Extrude by distance will extrude an input curve using an input number to determine the distance of the extrusion. The direction of the normal vector along the curve will be used for the extrusion direction. In the example below, we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A number slider is used as the distance input in an Extrude node."
     },
     {
-        "Name": "ExtrudeAsSolid (curve, distance)",
+        "Name": "ExtrudeAsSolid (curve, direction, distance)",
         "imageFile": [
-            "ExtrudeAsSolid_distance"
+            "ExtrudeAsSolid_direction_distance"
         ],
         "dynFile": [
-            "ExtrudeAsSolid_distance"
+            "ExtrudeAsSolid_direction_distance"
         ],
         "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Extrude As Solid by distance will extrude an input closed, planar curve using an input number to determine the distance of the extrusion. The direction of the extrusion is determined by the normal vector of the plane the curve lies in. This node will cap the the ends of the extrusion to create a solid. In the example below, we first create a Nurbs Curve using a ByPoints node, with a set of randomly generated points as the input. A Number Slider is used as the distance input in an ExtrudeAsSolid node."
+        "inDepth": "Extrude As Solid by direction and distance will extrude an input closed, planar curve using an input vector to determine the direction of the extrusion. A separate distance input will be used for the extrusion distance. This node will cap the the ends of the extrusion to create a solid. In the example below, we first create a Nurbs Curve using a ByPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an ExtrudeAsSolid node while a number slider is used to control the distance input."
     },
     {
         "Name": "ExtrudeAsSolid (curve, direction)",
@@ -4477,15 +4481,15 @@
         "inDepth": "Extrude As Solid by direction will extrude an input closed, planar curve using an input vector to determine the direction of the extrusion. The length of the vector will be used for the extrusion distance. This node will cap the the ends of the extrusion to create a solid. In the example below, we first create a Nurbs Curve using a ByPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an ExtrudeAsSolid node."
     },
     {
-        "Name": "ExtrudeAsSolid (curve, direction, distance)",
+        "Name": "ExtrudeAsSolid (curve, distance)",
         "imageFile": [
-            "ExtrudeAsSolid_direction_distance"
+            "ExtrudeAsSolid_distance"
         ],
         "dynFile": [
-            "ExtrudeAsSolid_direction_distance"
+            "ExtrudeAsSolid_distance"
         ],
         "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Extrude As Solid by direction and distance will extrude an input closed, planar curve using an input vector to determine the direction of the extrusion. A separate distance input will be used for the extrusion distance. This node will cap the the ends of the extrusion to create a solid. In the example below, we first create a Nurbs Curve using a ByPoints node, with a set of randomly generated points as the input. A Code Block is used to specify the x,y, and z components of a Vector.ByCoordinates node. This vector is then used as the direction input in an ExtrudeAsSolid node while a number slider is used to control the distance input."
+        "inDepth": "Extrude As Solid by distance will extrude an input closed, planar curve using an input number to determine the distance of the extrusion. The direction of the extrusion is determined by the normal vector of the plane the curve lies in. This node will cap the the ends of the extrusion to create a solid. In the example below, we first create a Nurbs Curve using a ByPoints node, with a set of randomly generated points as the input. A Number Slider is used as the distance input in an ExtrudeAsSolid node."
     },
     {
         "Name": "HorizontalFrameAtParameter",
@@ -4882,17 +4886,6 @@
         "inDepth": "Trim Interior By Parameter will remove the interior portion of a given curve, based on the two input parameters. This node will output the two remaining exterior parts of the curve as a list of two curves.  In the example below, we use two sets of random numbers to generate a list of points. These points are used to create a Nurbs Curve by Control Points. Two number sliders set to the range zero to one is used for the parameter inputs in a TrimInteriorByParameter node."
     },
     {
-        "Name": "TrimSegmentsByParameter (curve, parameters)",
-        "imageFile": [
-            "TrimSegmentsByParameter"
-        ],
-        "dynFile": [
-            "TrimSegmentsByParameter"
-        ],
-        "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Trim Segments By Parameter first splits a curve at points determined by an input list of parameters. It then returns only the even numbered segments that result from the split. In the example below,  we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to create a range of number between zero and one, stepping by 0.1. Using this as the input parameters for a TrimSegmentsByParameter node results in a list of curve that are effectively a dashed line version of the original curve."
-    },
-    {
         "Name": "TrimSegmentsByParameter (curve, parameters, discardEvenSegments)",
         "imageFile": [
             "TrimSegmentsByParameter_even"
@@ -4902,6 +4895,17 @@
         ],
         "folderPath": "Geometry/Curve/Action",
         "inDepth": "Trim Segments By Parameter, with discardEvenSegments first splits a curve at points determined by an input list of parameters. It then returns either the odd numbered segments or the even numbered sugements, as determined by the boolean value of the discardEvenSegments input. In the example below,  we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to create a range of number between zero and one, stepping by 0.1. Using this as the input parameters for a TrimSegmentsByParameter node results in a list of curve that are effectively a dashed line version of the original curve."
+    },
+    {
+        "Name": "TrimSegmentsByParameter (curve, parameters)",
+        "imageFile": [
+            "TrimSegmentsByParameter"
+        ],
+        "dynFile": [
+            "TrimSegmentsByParameter"
+        ],
+        "folderPath": "Geometry/Curve/Action",
+        "inDepth": "Trim Segments By Parameter first splits a curve at points determined by an input list of parameters. It then returns only the even numbered segments that result from the split. In the example below,  we first create a Nurbs Curve using a ByControlPoints node, with a set of randomly generated points as the input. A Code Block is used to create a range of number between zero and one, stepping by 0.1. Using this as the input parameters for a TrimSegmentsByParameter node results in a list of curve that are effectively a dashed line version of the original curve."
     },
     {
         "Name": "EndPoint",
@@ -5311,17 +5315,6 @@
         "inDepth": "Geometry ExportToSAT exports Geometry from Dynamo to a SAT file type. In this example, we are exporting a Polysurface from the Intersection of three Spheres."
     },
     {
-        "Name": "ImportFromSAT (file)",
-        "imageFile": [
-            "ImportFromSAT"
-        ],
-        "dynFile": [
-            "ImportFromSAT"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "Geometry ImportFromSAT imports Geometry to Dynamo from a SAT file type. This node takes a file as input, and also accepts a string with a valid file path. For the example below, we previously exported geometry to a SAT file (see ExportToSAT). The file name we chose was example.sat and it was exported to a folder on the users desktop. In the example, we show two different nodes used to import geometry from a SAT file. One has a filePath as the input type, and the other has a 'file' as the input type. The filePath is created using a FilePath node, which can select a file by clicking the Browse button. In the second example, we specify the file path manually by using a string element."
-    },
-    {
         "Name": "ImportFromSAT (filePath)",
         "imageFile": [
             "ImportFromSAT"
@@ -5331,6 +5324,17 @@
         ],
         "folderPath": "Geometry/Geometry/Action",
         "inDepth": "Geometry ImportFromSAT imports Geometry to Dynamo from a SAT file type. This node takes a filePath as input, and also accepts a string with a valid file path. For the example below, we previously exported geometry to a SAT file (see ExportToSAT). The file name we chose was example.sat and it was exported to a folder on the users desktop. In the example, we show two different nodes used to import geometry from a SAT file. One has a filePath as the input type, and the other has a 'file' as the input type. The filePath is created using a FilePath node, which can select a file by clicking the Browse button. In the second example, we specify the file path manually by using a string element."
+    },
+    {
+        "Name": "ImportFromSAT (file)",
+        "imageFile": [
+            "ImportFromSAT"
+        ],
+        "dynFile": [
+            "ImportFromSAT"
+        ],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "Geometry ImportFromSAT imports Geometry to Dynamo from a SAT file type. This node takes a file as input, and also accepts a string with a valid file path. For the example below, we previously exported geometry to a SAT file (see ExportToSAT). The file name we chose was example.sat and it was exported to a folder on the users desktop. In the example, we show two different nodes used to import geometry from a SAT file. One has a filePath as the input type, and the other has a 'file' as the input type. The filePath is created using a FilePath node, which can select a file by clicking the Browse button. In the second example, we specify the file path manually by using a string element."
     },
     {
         "Name": "Intersect",
@@ -5377,17 +5381,6 @@
         "inDepth": "Geometry Mirror reflects a Geometry across a defined Plane. In this example, we are Mirroring a Cone across the Y-Axis."
     },
     {
-        "Name": "Rotate (geometry, origin, axis, degrees)",
-        "imageFile": [
-            "Rotate_goad"
-        ],
-        "dynFile": [
-            "Rotate_goad"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "This Geometry Rotate Node Rotates an input Geometry around a Base Plane by a defined Degree. In the example file, a Cone is Rotated around the XY-Plane with a Number Slider."
-    },
-    {
         "Name": "Rotate (geometry, basePlane, degrees)",
         "imageFile": [
             "Rotate_gbd"
@@ -5399,15 +5392,15 @@
         "inDepth": "This Geometry Rotate Node Rotates an input Geometry around an Origin Point and Axis Vector by a certain Degree amount. In the example file, a Cone is Rotated about the Y-Axis Vector by its End Point."
     },
     {
-        "Name": "Scale (geometry, amount)",
+        "Name": "Rotate (geometry, origin, axis, degrees)",
         "imageFile": [
-            "Scale_ga"
+            "Rotate_goad"
         ],
         "dynFile": [
-            "Scale_ga"
+            "Rotate_goad"
         ],
         "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "This Geometry Scale Node Scales an input Geometry from the object Centroid by an input factor. In the example file, a Cone is scaled down with a Number Slider. The original Cone Edges are drawn for a visual reference."
+        "inDepth": "This Geometry Rotate Node Rotates an input Geometry around a Base Plane by a defined Degree. In the example file, a Cone is Rotated around the XY-Plane with a Number Slider."
     },
     {
         "Name": "Scale (geometry, xamount, yamount, zamount)",
@@ -5419,6 +5412,17 @@
         ],
         "folderPath": "Geometry/Geometry/Action",
         "inDepth": "This Geometry Scale Node Scales an input Geometry from the object Centroid by an input factor. In the example, a Cone’s Scale can be finely tuned with three Number Sliders. The original Cone Edges are drawn as a visual reference."
+    },
+    {
+        "Name": "Scale (geometry, amount)",
+        "imageFile": [
+            "Scale_ga"
+        ],
+        "dynFile": [
+            "Scale_ga"
+        ],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "This Geometry Scale Node Scales an input Geometry from the object Centroid by an input factor. In the example file, a Cone is scaled down with a Number Slider. The original Cone Edges are drawn for a visual reference."
     },
     {
         "Name": "Scale (geometry, plane, xamount, yamount, zamount)",
@@ -5498,17 +5502,6 @@
         "inDepth": "The Geometry Split Node functions similarly to the Geometry Trim Node. It inputs a Tool – any type of Geometry that you will be trimming another Geometry with – and a Geometry, and returns all of the fragments of Geometry. In this example, a Cone is Split with a similar Cone. Although all fragments are returned by the Geometry Split Node, one is previewed in the example file."
     },
     {
-        "Name": "Transform (geometry, cs)",
-        "imageFile": [
-            "Transform_gc"
-        ],
-        "dynFile": [
-            "Transform_gc"
-        ],
-        "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "This Geometry Transform Node moves and orients a geometry from the XY-Plane to any specified Plane. In this example a Cone is Transformed from the XY-Plane to the YZ-Plane."
-    },
-    {
         "Name": "Transform (geometry, fromCoordinateSystem, contextCoordinateSystem)",
         "imageFile": [
             "Transform_gfc"
@@ -5520,15 +5513,15 @@
         "inDepth": "This Geometry Transform Node moves and orients a geometry from one Coordinate System plane to another specified Coordinate System. In this example a Cone is Transformed from the ground plane to the YZ-Plane."
     },
     {
-        "Name": "Translate (geometry, xTranslation, yTranslation, zTranslation)",
+        "Name": "Transform (geometry, cs)",
         "imageFile": [
-            "Translate_gxyz"
+            "Transform_gc"
         ],
         "dynFile": [
-            "Translate_gxyz"
+            "Transform_gc"
         ],
         "folderPath": "Geometry/Geometry/Action",
-        "inDepth": "This Geometry Translate Node moves a geometry by any given Vector direction and a Distance. In the example file, we are Translating a Cone in the X-Axis direction by a distance inherited by a Number Slider."
+        "inDepth": "This Geometry Transform Node moves and orients a geometry from the XY-Plane to any specified Plane. In this example a Cone is Transformed from the XY-Plane to the YZ-Plane."
     },
     {
         "Name": "Translate (geometry, direction)",
@@ -5551,6 +5544,17 @@
         ],
         "folderPath": "Geometry/Geometry/Action",
         "inDepth": "This Geometry Translate Node moves a geometry by a Vector defined in the Node by inputting all three Translation Values for X, Y and Z. In the example file, a Cone is Translated by three Number Slider values."
+    },
+    {
+        "Name": "Translate (geometry, xTranslation, yTranslation, zTranslation)",
+        "imageFile": [
+            "Translate_gxyz"
+        ],
+        "dynFile": [
+            "Translate_gxyz"
+        ],
+        "folderPath": "Geometry/Geometry/Action",
+        "inDepth": "This Geometry Translate Node moves a geometry by any given Vector direction and a Distance. In the example file, we are Translating a Cone in the X-Axis direction by a distance inherited by a Number Slider."
     },
     {
         "Name": "Trim",
@@ -5652,17 +5656,6 @@
         "inDepth": "Radius will return the distance from the central axis to the point on the helix on a plane perpendicular to the axis. In the example below, we create a helix using Helix by Axis, then use Radius to find the radius of the helix."
     },
     {
-        "Name": "ByIndices (a, b, c, d)",
-        "imageFile": [
-            "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)"
-        ],
-        "dynFile": [
-            "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)"
-        ],
-        "folderPath": "Geometry/IndexGroup/Create",
-        "inDepth": "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d) will return an IndexGroup of four Indices. In the example below, four indices are defined for a four-sided Mesh created with Mesh.ByPointsFacesIndices."
-    },
-    {
         "Name": "ByIndices (a, b, c)",
         "imageFile": [
             "ByIndices (a, b, c) (a, b, c)"
@@ -5672,6 +5665,17 @@
         ],
         "folderPath": "Geometry/IndexGroup/Create",
         "inDepth": "ByIndices (a, b, c) (a, b, c) will return an IndexGroup of three Indices. In the example below, three indices are defined for a three-sided Mesh created with Mesh.ByPointsFacesIndices."
+    },
+    {
+        "Name": "ByIndices (a, b, c, d)",
+        "imageFile": [
+            "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)"
+        ],
+        "dynFile": [
+            "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d)"
+        ],
+        "folderPath": "Geometry/IndexGroup/Create",
+        "inDepth": "ByIndices (a, b, c, d) (a, b, c, d) (a, b, c, d) will return an IndexGroup of four Indices. In the example below, four indices are defined for a four-sided Mesh created with Mesh.ByPointsFacesIndices."
     },
     {
         "Name": "A",
@@ -5828,6 +5832,17 @@
         "inDepth": "VertexPositions will return a Mesh face's Vertex positions as Points. In the example below, the Vertex positions of a four-sided Mesh face are returned as Points."
     },
     {
+        "Name": "ByControlPoints (points, degree, closeCurve)",
+        "imageFile": [
+            "ByControlPoints_pdc"
+        ],
+        "dynFile": [
+            "ByControlPoints_pdc"
+        ],
+        "folderPath": "Geometry/NurbsCurve/Create",
+        "inDepth": "Nurbs Curve By Control Points inputs a list of control points to draw the Nurbs Curve and also allows us to control the degree of the curve. We also have the option to close the curve back to the first point in the list. This example generates four random points on the World XY plane and connects them in order in the X and Y directions."
+    },
+    {
         "Name": "ByControlPoints (points)",
         "imageFile": [
             "ByControlPoints_p"
@@ -5850,17 +5865,6 @@
         "inDepth": "Nurbs Curve By Control Points inputs a list of control points to draw the Nurbs Curve and also allows us to control the degree of the curve. This example generates four random points on the World XY plane and connects them in order in the X and Y directions."
     },
     {
-        "Name": "ByControlPoints (points, degree, closeCurve)",
-        "imageFile": [
-            "ByControlPoints_pdc"
-        ],
-        "dynFile": [
-            "ByControlPoints_pdc"
-        ],
-        "folderPath": "Geometry/NurbsCurve/Create",
-        "inDepth": "Nurbs Curve By Control Points inputs a list of control points to draw the Nurbs Curve and also allows us to control the degree of the curve. We also have the option to close the curve back to the first point in the list. This example generates four random points on the World XY plane and connects them in order in the X and Y directions."
-    },
-    {
         "Name": "ByControlPointsWeightsKnots",
         "imageFile": [
             "ByControlPointsWeightsKnots"
@@ -5870,17 +5874,6 @@
         ],
         "folderPath": "Geometry/NurbsCurve/Create",
         "inDepth": "Nurbs Curve by Control Points Weights Knots allows us to manually control the weights and knots of a Nurbs Curve. The list of weights should be the same length as the list of control points. The size of the the list of knots must be equal to the number of control points plus the degree plus one. In the example, we first create a Nurbs Curve by interpolating between a series of random points. We use Knots, Weigts, and Control Points to find the corresponding parts of that curve. We can use ReplaceItemAtIndex to modify the list of weights. Finally we use ByControlPointsWeightsKnots to recreate the Nurbs Curve with the modified weights. "
-    },
-    {
-        "Name": "ByPoints (points)",
-        "imageFile": [
-            "ByPoints_p"
-        ],
-        "dynFile": [
-            "ByPoints_p"
-        ],
-        "folderPath": "Geometry/NurbsCurve/Create",
-        "inDepth": "Nurbs Curve By Points inputs a list of points to draw a Nurbs Curve through. This example generates six random points on the World XY plane and connects them in order in the X and Y directions. "
     },
     {
         "Name": "ByPoints (points, closeCurve)",
@@ -5903,6 +5896,17 @@
         ],
         "folderPath": "Geometry/NurbsCurve/Create",
         "inDepth": "Nurbs Curve By Points inputs a list of points to draw a Nurbs Curve through, and also allows us to change the degree of the curve. This example generates six random points on the World XY plane and connects them in order in the X and Y directions. "
+    },
+    {
+        "Name": "ByPoints (points)",
+        "imageFile": [
+            "ByPoints_p"
+        ],
+        "dynFile": [
+            "ByPoints_p"
+        ],
+        "folderPath": "Geometry/NurbsCurve/Create",
+        "inDepth": "Nurbs Curve By Points inputs a list of points to draw a Nurbs Curve through. This example generates six random points on the World XY plane and connects them in order in the X and Y directions. "
     },
     {
         "Name": "ByPointsTangents",
@@ -6673,17 +6677,6 @@
         "inDepth": "BySolid will return a PolySurface from a Solid. In the example below, a Solid is returned as a PolySurface for it to be an acceptable input to Display.BySurfaceColors."
     },
     {
-        "Name": "BySweep (rail, crossSection)",
-        "imageFile": [
-            "BySweep (rail, crossSection)"
-        ],
-        "dynFile": [
-            "BySweep (rail, crossSection)"
-        ],
-        "folderPath": "Geometry/PolySurface/Create",
-        "inDepth": "BySweep (rail, crossSection) will return a PolySurface by sweeping a list of connected, non-intersecting lines along a rail. In the example below, a Line and an Arc form a cross section to sweep along an Arc. The crossSection input can receive a list of connected Curves that must meet at a start or end point, or the node will not return a PolySurface. This node is similar to BySweep (rail, profile) with the only difference being that crossSection takes a list of Curves while profile only takes one."
-    },
-    {
         "Name": "BySweep (rail, profile)",
         "imageFile": [
             "BySweep (rail, profile)"
@@ -6693,6 +6686,17 @@
         ],
         "folderPath": "Geometry/PolySurface/Create",
         "inDepth": "BySweep (rail, profile) will return a PolySurface by sweeping a profile along a rail. In the example below, an Arc is swept along another Arc as its rail."
+    },
+    {
+        "Name": "BySweep (rail, crossSection)",
+        "imageFile": [
+            "BySweep (rail, crossSection)"
+        ],
+        "dynFile": [
+            "BySweep (rail, crossSection)"
+        ],
+        "folderPath": "Geometry/PolySurface/Create",
+        "inDepth": "BySweep (rail, crossSection) will return a PolySurface by sweeping a list of connected, non-intersecting lines along a rail. In the example below, a Line and an Arc form a cross section to sweep along an Arc. The crossSection input can receive a list of connected Curves that must meet at a start or end point, or the node will not return a PolySurface. This node is similar to BySweep (rail, profile) with the only difference being that crossSection takes a list of Curves while profile only takes one."
     },
     {
         "Name": "Chamfer",
@@ -6893,17 +6897,6 @@
         "inDepth": "Points will return a list of points that are the end points of the segments of the given polygon. In the example below, we first generate a set of random points sorted by angle to use with Polygon By Points. We can get the points back out as a list by using Points."
     },
     {
-        "Name": "ByCornerPoints (points)",
-        "imageFile": [
-            "ByCornerPoints"
-        ],
-        "dynFile": [
-            "ByCornerPoints"
-        ],
-        "folderPath": "Geometry/Rectangle/Create",
-        "inDepth": "The Rectangle By Corner Points node takes a list of four input points and creates a rectangle from them. The input points must reflect a rectangle form. In this example, two Number Sliders are used to create the Points By Coordinates at the rectangle’s vertices. A similar but distinct Rectangle ByCornerPoints node uses four separate inputs for eacher point rather than as a single list. Both nodes are shown in this example."
-    },
-    {
         "Name": "ByCornerPoints (p1, p2, p3, p4)",
         "imageFile": [
             "ByCornerPoints"
@@ -6915,15 +6908,15 @@
         "inDepth": "The Rectangle By Corner Points node takes four input points and creates a rectangle from them. The input points must reflect a rectangle form. In this example, two Number Sliders are used to create the Points By Coordinates at the rectangle’s vertices. A similar but distinct Rectangle ByCornerPoints node uses a list of points as the input rather than each input separately. Both nodes are shown in this example."
     },
     {
-        "Name": "ByWidthLength (width, length)",
+        "Name": "ByCornerPoints (points)",
         "imageFile": [
-            "ByWidthLength"
+            "ByCornerPoints"
         ],
         "dynFile": [
-            "ByWidthLength"
+            "ByCornerPoints"
         ],
         "folderPath": "Geometry/Rectangle/Create",
-        "inDepth": "The Rectangle By Width Length node creates a rectangle on the Z-base plane with a specified length and width dimension. The center of the rectangle will be located at the grid origin. In this example, we use two Number Sliders to drive the shape of the rectangle. "
+        "inDepth": "The Rectangle By Corner Points node takes a list of four input points and creates a rectangle from them. The input points must reflect a rectangle form. In this example, two Number Sliders are used to create the Points By Coordinates at the rectangle’s vertices. A similar but distinct Rectangle ByCornerPoints node uses four separate inputs for eacher point rather than as a single list. Both nodes are shown in this example."
     },
     {
         "Name": "ByWidthLength (plane, width, length)",
@@ -6946,6 +6939,17 @@
         ],
         "folderPath": "Geometry/Rectangle/Create",
         "inDepth": "Create a Rectangle centered at the input origin in the CoordinateSystem XY Plane, with specified width (X Axis length), and length (Y Axis length)."
+    },
+    {
+        "Name": "ByWidthLength (width, length)",
+        "imageFile": [
+            "ByWidthLength"
+        ],
+        "dynFile": [
+            "ByWidthLength"
+        ],
+        "folderPath": "Geometry/Rectangle/Create",
+        "inDepth": "The Rectangle By Width Length node creates a rectangle on the Z-base plane with a specified length and width dimension. The center of the rectangle will be located at the grid origin. In this example, we use two Number Sliders to drive the shape of the rectangle. "
     },
     {
         "Name": "Height",
@@ -8821,13 +8825,6 @@
         "inDepth": "ByCurvesAndDivisions creates a divided path from multiple curves. Divided paths must be created in the Revit conceptual design environment."
     },
     {
-        "Name": "Spacing Rule Layout (dividedPath)",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Revit/Elements/DividedPath/Action",
-        "inDepth": "Add in-depth information about Spacing Rule Layout..."
-    },
-    {
         "Name": "Spacing Rule Layout (())",
         "imageFile": [
             "Spacing Rule Layout"
@@ -8837,6 +8834,13 @@
         ],
         "folderPath": "Revit/Elements/DividedPath/Action",
         "inDepth": "Spacing Rule Layout reflects several options in Revit for dividing a path in a conceptual design environment. This node has a drop-down menu with all these options."
+    },
+    {
+        "Name": "Spacing Rule Layout (dividedPath)",
+        "imageFile": [],
+        "dynFile": [],
+        "folderPath": "Revit/Elements/DividedPath/Action",
+        "inDepth": "Add in-depth information about Spacing Rule Layout..."
     },
     {
         "Name": "Points",
@@ -9204,14 +9208,14 @@
         "inDepth": "ByCoordinates uses X, Y, and Z coordinate values to place a Revit FamilyInstance. This is useful for placing large collections of families. The coordinate values and the FamilyInstance within Revit are dynamically linked, allowing real-time manipulation from Dynamo."
     },
     {
-        "Name": "ByFace (familyType, face, line)",
+        "Name": "ByFace (familyType, face, location, referenceDirection)",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Elements/FamilyInstance/Create",
         "inDepth": "Add in-depth information about ByFace..."
     },
     {
-        "Name": "ByFace (familyType, face, location, referenceDirection)",
+        "Name": "ByFace (familyType, face, line)",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Elements/FamilyInstance/Create",
@@ -10186,14 +10190,14 @@
         "inDepth": "Add in-depth information about Select BuiltIn Parameter Group..."
     },
     {
-        "Name": "Select Parameter Type (parameter)",
+        "Name": "Select Parameter Type (())",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Elements/Parameter/Action",
         "inDepth": "Add in-depth information about Select Parameter Type..."
     },
     {
-        "Name": "Select Parameter Type (())",
+        "Name": "Select Parameter Type (parameter)",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Elements/Parameter/Action",
@@ -10338,14 +10342,14 @@
         "inDepth": "Add in-depth information about Execute..."
     },
     {
-        "Name": "Performance Adviser Rules (performanceAdviserRule)",
+        "Name": "Performance Adviser Rules (())",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
         "inDepth": "Add in-depth information about Performance Adviser Rules..."
     },
     {
-        "Name": "Performance Adviser Rules (())",
+        "Name": "Performance Adviser Rules (performanceAdviserRule)",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
@@ -10380,13 +10384,6 @@
         "inDepth": "Add in-depth information about RuleId..."
     },
     {
-        "Name": "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Revit/Elements/Phase/Action",
-        "inDepth": "Add in-depth information about Select Phase..."
-    },
-    {
         "Name": "Select Phase (())",
         "imageFile": [
             "Select Phase"
@@ -10396,6 +10393,13 @@
         ],
         "folderPath": "Revit/Elements/Phase/Action",
         "inDepth": "The Select Phase node contains a drop-down menu that shows all phases in the Revit document."
+    },
+    {
+        "Name": "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
+        "imageFile": [],
+        "dynFile": [],
+        "folderPath": "Revit/Elements/Phase/Action",
+        "inDepth": "Add in-depth information about Select Phase..."
     },
     {
         "Name": "ByLine",
@@ -11401,14 +11405,14 @@
         "inDepth": "Add in-depth information about ByFace..."
     },
     {
-        "Name": "Wall Location (curve, height, level, wallType)",
+        "Name": "Wall Location (())",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Elements/Wall/Action",
         "inDepth": "Add in-depth information about Wall Location..."
     },
     {
-        "Name": "Wall Location (())",
+        "Name": "Wall Location (curve, height, level, wallType)",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Elements/Wall/Action",
@@ -11455,13 +11459,6 @@
         "inDepth": "ByProperties gives access to the visibility/graphic override parameters that exist in Revit. This is especially useful for creating highly specific view overrides that would otherwise require significant manual customization in Revit."
     },
     {
-        "Name": "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
-        "imageFile": [],
-        "dynFile": [],
-        "folderPath": "Revit/Filter/OverrideGraphicSettings/Action",
-        "inDepth": "Add in-depth information about Detail Level..."
-    },
-    {
         "Name": "Detail Level (())",
         "imageFile": [
             "Detail Level"
@@ -11473,6 +11470,13 @@
         "inDepth": "Detail Level contains the four Revit detail level settings (Coarse, Fine, Medium, and Undefined). The OverrideGraphicSettings.ByProperties node takes the Detail Level node as an input."
     },
     {
+        "Name": "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
+        "imageFile": [],
+        "dynFile": [],
+        "folderPath": "Revit/Filter/OverrideGraphicSettings/Action",
+        "inDepth": "Add in-depth information about Detail Level..."
+    },
+    {
         "Name": "ByRules",
         "imageFile": [],
         "dynFile": [],
@@ -11480,14 +11484,14 @@
         "inDepth": "Add in-depth information about ByRules..."
     },
     {
-        "Name": "Select Rule Type (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
+        "Name": "Select Rule Type (())",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Filter/RuleType/Action",
         "inDepth": "Add in-depth information about Select Rule Type..."
     },
     {
-        "Name": "Select Rule Type (())",
+        "Name": "Select Rule Type (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Filter/RuleType/Action",
@@ -12036,14 +12040,14 @@
         "inDepth": "Add in-depth information about Schedule Filter Type..."
     },
     {
-        "Name": "Schedule Type (category, name, scheduleType)",
+        "Name": "Schedule Type (())",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Views/ScheduleView/Action",
         "inDepth": "Add in-depth information about Schedule Type..."
     },
     {
-        "Name": "Schedule Type (())",
+        "Name": "Schedule Type (category, name, scheduleType)",
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Revit/Views/ScheduleView/Action",
