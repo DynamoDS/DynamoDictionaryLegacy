@@ -1,0 +1,29 @@
+<Workspace Version="1.3.2.2480" X="1626.5557815988" Y="-46.50774776267" zoom="1" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <CoreNodeModels.HigherOrder.Replace guid="6f9d6c5d-1661-4b32-a5f6-5a2042acd610" type="CoreNodeModels.HigherOrder.Replace" nickname="ReplaceByCondition" x="-757.991031751255" y="381.691577417693" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </CoreNodeModels.HigherOrder.Replace>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="c2f85791-0145-4f8b-afc8-13e623881857" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-1381.37363060301" y="169.41549552534" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" CodeText="{1,&quot;&quot;,3,&quot;&quot;,5,&quot;&quot;,7};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="833069aa-3c20-4b20-ae9a-6eda423ff347" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-1386.32053144634" y="413.520698761167" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" CodeText="{&quot;&quot;,2,&quot;&quot;,4,&quot;&quot;,6,&quot;&quot;};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9788ef88-084f-48d7-8d16-60c40a13b2c4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="==" x="-995.187128898659" y="472.581836929013" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Operators" function="==@var[]..[],var[]..[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="b2fd2461-ce38-4368-8806-b3aa7f34a713" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-1132" y="522" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;&quot;;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="c2f85791-0145-4f8b-afc8-13e623881857" start_index="0" end="6f9d6c5d-1661-4b32-a5f6-5a2042acd610" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="833069aa-3c20-4b20-ae9a-6eda423ff347" start_index="0" end="6f9d6c5d-1661-4b32-a5f6-5a2042acd610" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9788ef88-084f-48d7-8d16-60c40a13b2c4" start_index="0" end="6f9d6c5d-1661-4b32-a5f6-5a2042acd610" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b2fd2461-ce38-4368-8806-b3aa7f34a713" start_index="0" end="9788ef88-084f-48d7-8d16-60c40a13b2c4" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-2.60038809791998" eyeY="70.8676961738527" eyeZ="88.1678715756423" lookX="2.60038809791998" lookY="-70.8676961738527" lookZ="-88.1678715756423" upX="0.0131081929425108" upY="0.895711760239412" upZ="-0.444441917292456" />
+  </Cameras>
+</Workspace>
