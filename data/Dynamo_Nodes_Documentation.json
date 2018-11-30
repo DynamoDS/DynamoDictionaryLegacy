@@ -2228,7 +2228,7 @@
             "ScopeIf"
         ],
         "folderPath": "Core/Logic/Action",
-        "inDepth": "<p>ScopeIf will return the input of either the True or False input depending on what boolean value is toggled in the test input. In the example file below, a large and small list of numbers is plugged into the true and false inputs. By sending the result of ScopeIfThrough a point creation node, we can toggle between two different sizes of point grids.</p>\n<p>The two condition branches must completely independent.</p>"
+        "inDepth": "<p>ScopeIf will return the input of either the True or False input depending on what boolean value is toggled in the test input. In the example file below, a large and small list of numbers is plugged into the true and false inputs. By sending the result of ScopeIfThrough a point creation node, we can toggle between two different sizes of point grids.</p>\n<p>The two condition branches must be completely independent.</p>"
     },
     {
         "Name": "Xor",
