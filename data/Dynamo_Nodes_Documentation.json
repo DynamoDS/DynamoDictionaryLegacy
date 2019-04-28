@@ -2094,7 +2094,7 @@
             "TakeEveryNthItem"
         ],
         "folderPath": "Core/List/Action",
-        "inDepth": "<p>Take Every Nth Item will produce a new list keeping items from the input list at intervals of the input 'n' value. The starting point of the interval can be changed with the 'offset' input. For example, putting 3 into 'n' and leaving the 'offset' as the default of zero will keep items with indices 2, 5, 8, etc. Changing the offset to 1 would instead keep items with indices 0, 3, 6, etc. Notice that the offset 'wraps' through the entire list. To remove selected items instead of keeping them, see 'DropEveryNthItem'. In the example below, we first generate a list of numbers using Range, and then keep every other number by using 2 as the input for 'n'.</p>"
+        "inDepth": "Drop Every Nth Item will produce a new list keeping items from the input list at intervals of the input 'n' value. The starting point of the interval can be changed with the 'offset' input. For example, putting 3 into 'n' and leaving the 'offset' as the default of zero will keep items with indices 2, 5, 8, etc. Changing the offset to 1 would instead keep items with indices 0, 3, 6, etc. Notice that the offset 'wraps' through the entire list. To remove selected items instead of keeping them, see 'DropEveryNthItem'. In the example below, we first generate a list of numbers using Range, and then keep every other number by using 2 as the input for 'n'."
     },
     {
         "Name": "TakeItems",
