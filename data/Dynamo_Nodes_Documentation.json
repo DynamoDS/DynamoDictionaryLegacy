@@ -899,7 +899,7 @@
         "imageFile": [],
         "dynFile": [],
         "folderPath": "Core/DateTime/Action",
-        "inDepth": "Add in-depth information about Format..."
+        "inDepth": "<p>Data format input needs to follow format specifiers so Dynamo can understand it.&nbsp;</p>\n<p>Format specifiers:</p>\n<p>TIME OF THE DAY:</p>\n<p>\"tt\" AM/PM</p>\n<p>SECONDS:</p>\n<p>\"ss\" The second, from 0 to 59.</p>\n<p>MINUTES:</p>\n<p>\"mm\" The minute, from 0 to 59.</p>\n<p>HOURS:</p>\n<p>\"hh\" The hour, using a 12-hour clock from 01 to 12.<br>\n\"HH\" The hour, using a 24-hour clock from 00 to 23.</p>\n<p>DAYS:</p>\n<p>\"dd\" The day of the month, from 01 through 31.<br>\n\"ddd\" The abbreviated name of the day of the week.<br>\n\"dddd\" The full name of the day of the week.</p>\n<p>MONTHS:</p>\n<p>\"M\" The full name of the month</p>\n<p>\"MM\" The month, from 01 to 12.</p>\n<p>\"MMM\" The abbreviated name of the month.&nbsp;</p>\n<p><br>\nYEARS:</p>\n<p>\"yy\" Last two digits of the year.</p>\n<p>\"yyy\"/\"yyyy\" All digits of the year.<br>\n</p>\n<p>Find more here: &nbsp;<a href=\"https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings\">https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings</a>&nbsp;</p>\n<p><br></p>"
     },
     {
         "Name": "FromString",
@@ -2094,7 +2094,7 @@
             "TakeEveryNthItem"
         ],
         "folderPath": "Core/List/Action",
-        "inDepth": "<p>Take Every Nth Item will produce a new list keeping items from the input list at intervals of the input 'n' value. The starting point of the interval can be changed with the 'offset' input. For example, putting 3 into 'n' and leaving the 'offset' as the default of zero will keep items with indices 2, 5, 8, etc. Changing the offset to 1 would instead keep items with indices 0, 3, 6, etc. Notice that the offset 'wraps' through the entire list. To remove selected items instead of keeping them, see 'DropEveryNthItem'. In the example below, we first generate a list of numbers using Range, and then keep every other number by using 2 as the input for 'n'.</p>"
+        "inDepth": "Drop Every Nth Item will produce a new list keeping items from the input list at intervals of the input 'n' value. The starting point of the interval can be changed with the 'offset' input. For example, putting 3 into 'n' and leaving the 'offset' as the default of zero will keep items with indices 2, 5, 8, etc. Changing the offset to 1 would instead keep items with indices 0, 3, 6, etc. Notice that the offset 'wraps' through the entire list. To remove selected items instead of keeping them, see 'DropEveryNthItem'. In the example below, we first generate a list of numbers using Range, and then keep every other number by using 2 as the input for 'n'."
     },
     {
         "Name": "TakeItems",
