@@ -2094,7 +2094,7 @@
             "TakeEveryNthItem"
         ],
         "folderPath": "Core/List/Action",
-        "inDepth": "<p>Take Every Nth Item will produce a new list keeping items from the input list at intervals of the input 'n' value. The starting point of the interval can be changed with the 'offset' input. For example, putting 3 into 'n' and leaving the 'offset' as the default of zero will keep items with indices 2, 5, 8, etc. Changing the offset to 1 would instead keep items with indices 0, 3, 6, etc. Notice that the offset 'wraps' through the entire list. To remove selected items instead of keeping them, see 'DropEveryNthItem'. In the example below, we first generate a list of numbers using Range, and then keep every other number by using 2 as the input for 'n'.</p>"
+        "inDepth": "Drop Every Nth Item will produce a new list keeping items from the input list at intervals of the input 'n' value. The starting point of the interval can be changed with the 'offset' input. For example, putting 3 into 'n' and leaving the 'offset' as the default of zero will keep items with indices 2, 5, 8, etc. Changing the offset to 1 would instead keep items with indices 0, 3, 6, etc. Notice that the offset 'wraps' through the entire list. To remove selected items instead of keeping them, see 'DropEveryNthItem'. In the example below, we first generate a list of numbers using Range, and then keep every other number by using 2 as the input for 'n'."
     },
     {
         "Name": "TakeItems",
@@ -7055,7 +7055,7 @@
             "Centroid"
         ],
         "folderPath": "Geometry/Solid/Action",
-        "inDepth": "Centroid will return a point that is at the centroid of a solid. The centroid can be thought of as the center of mass of an solid object. Note that it is possible for the center of mass to exist outside the actual solid. In the example below, we use a set of circles to create a Solid ByLoft, and input the resulting solid into a Centroid node."
+        "inDepth": "<p>Centroid will return a point that is at the centroid of a solid. The centroid can be thought of as the center of mass of a solid object. Note that it is possible for the center of mass to exist outside the actual solid. In the example below, we use a set of circles to create a Solid ByLoft, and input the resulting solid into a Centroid node.</p>"
     },
     {
         "Name": "Chamfer",
